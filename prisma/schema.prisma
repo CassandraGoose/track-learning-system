@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id                String                  @id @default(cuid())
+  createdAt         DateTime                @default(now())
+  username          String                  @unique
+  email             String                  @unique
+  role              Role                    @default(USER)
+  profileVisibility Boolean                 @default(true)
+  competencies      PersonsOnCompetencies[]
+  proofs            Proof[]
+}
+
+model Competency {
+  id           Int                          @id @default(autoincrement())
+  createdAt    DateTime                     @default(now())
+  updatedAt    DateTime                     @default(now())
+  title        String                       @unique
+  description  String
+  persons      PersonsOnCompetencies[]
+  contentAreas CompetenciesOnContentAreas[]
+  proofs       Proof[]
+}
+
+model ContentArea {
+  id           Int                          @id @default(autoincrement())
+  createdAt    DateTime                     @default(now())
+  title        String                       @unique
+  description  String
+  competencies CompetenciesOnContentAreas[]
+}
+
+model Proof {
+  id            Int        @id @default(autoincrement())
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @default(now())
+  justification String
+  title         String
+  description   String
+  author        Person     @relation(fields: [personId], references: [id])
+  personId      String
+  competency    Competency @relation(fields: [competencyId], references: [id])
+  competencyId  Int
+}
+
+model PersonsOnCompetencies {
+  competency   Competency @relation(fields: [competencyId], references: [id])
+  competencyId Int
+  person       Person     @relation(fields: [personId], references: [id])
+  personId     String
+
+  @@id([competencyId, personId])
+}
+
+model CompetenciesOnContentAreas {
+  competency    Competency  @relation(fields: [competencyId], references: [id])
+  competencyId  Int
+  contentArea   ContentArea @relation(fields: [contentAreaId], references: [id])
+  contentAreaId Int
+
+  @@id([competencyId, contentAreaId])
+}
+
+enum Role {
+  USER
+  ADMIN
+}

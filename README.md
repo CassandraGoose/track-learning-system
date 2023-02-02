@@ -6,7 +6,16 @@ This is a personal project that I'm building for fun. More info to come later. P
 
 ## Getting Started
 
-First, run the development server:
+set up the env:
+
+- you'll need the following values in your .env: DATABASE_URL, TEST_USER_ID
+
+create tables in your db
+
+- it seems like there are multiple ways to do this, but for a fresh db, it seems like: `npx prisma db push` creates the table just fine.
+- you'll need to create a user in the db in whatever way you desire, but set your TEST_USER_ID in the env to the id of whatever user you created. 
+
+run the development server:
 
 ```bash
 npm run dev

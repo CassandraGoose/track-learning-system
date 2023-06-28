@@ -5,7 +5,7 @@ import prisma from '@/lib/prisma';
 import { GetStaticProps } from 'next/types';
 
 export const getStaticProps: GetStaticProps = async () => {
-  // TODO: make a login or something
+
   const find = await prisma.person.findUnique({
     where: {
       id: process.env.TEST_USER_ID,

@@ -19,6 +19,7 @@ model Person {
   profileVisibility Boolean                 @default(true)
   competencies      PersonsOnCompetencies[]
   proofs            Proof[]
+  pathways PersonsOnPathways[]
 }
 
 model Competency {
@@ -29,6 +30,7 @@ model Competency {
   description  String
   persons      PersonsOnCompetencies[]
   contentAreas CompetenciesOnContentAreas[]
+  pathways     CompetenciesOnPathways[]
   proofs       Proof[]
 }
 
@@ -38,6 +40,15 @@ model ContentArea {
   title        String                       @unique
   description  String
   competencies CompetenciesOnContentAreas[]
+}
+
+model Pathway {
+  id           Int                          @id @default(autoincrement())
+  createdAt    DateTime                     @default(now())
+  title        String                       @unique
+  description  String
+  competencies CompetenciesOnPathways[]
+  persons PersonsOnPathways[]
 }
 
 model Proof {
@@ -62,6 +73,15 @@ model PersonsOnCompetencies {
   @@id([competencyId, personId])
 }
 
+model PersonsOnPathways {
+  pathway   Pathway @relation(fields: [pathwayId], references: [id])
+  pathwayId Int
+  person       Person     @relation(fields: [personId], references: [id])
+  personId     String
+
+  @@id([pathwayId, personId])
+}
+
 model CompetenciesOnContentAreas {
   competency    Competency  @relation(fields: [competencyId], references: [id])
   competencyId  Int
@@ -69,6 +89,15 @@ model CompetenciesOnContentAreas {
   contentAreaId Int
 
   @@id([competencyId, contentAreaId])
+}
+
+model CompetenciesOnPathways {
+  competency    Competency  @relation(fields: [competencyId], references: [id])
+  competencyId  Int
+  pathway   Pathway @relation(fields: [pathwayId], references: [id])
+  pathwayId Int
+
+  @@id([competencyId, pathwayId])
 }
 
 enum Role {

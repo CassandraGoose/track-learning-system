@@ -50,6 +50,7 @@ Create tables in your db:
 
 - it seems like there are multiple ways to do this, but for a fresh db, it seems like: `npx prisma db push` creates the table just fine.
 - you'll need to create a user in the db in whatever way you desire, but set your TEST_USER_ID in the env to the id of whatever user you created. 
+- for anything to function, you'll need to seed the db as well. you'll have to do this by hand, as I have not included seed data. 
 
 run the development server:
 

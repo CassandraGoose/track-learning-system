@@ -74,10 +74,10 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Context
 
-<img src="https://i.imgur.com/INUWwx5.png" alt="DB ERD" width="400" />
+<img src="https://i.imgur.com/tLM5u7E.png" alt="DB ERD" width="400" />
 
 ---
 
 ## Notice
 
-This work is not open source. While there are instructions to get started, etc - this is provided solely as documentation for the developer. This project has no license. This means that: This work is under exclusive copyright by default. Nobody else can copy, distribute, or modify this work without being at risk of take-downs, shake-downs, or litigation.
+This work is **not** open source. While there are instructions to get started, etc - this is provided solely as documentation for the developer. This project has no license. This means that: This work is under exclusive copyright by default. Nobody else can copy, distribute, or modify this work without being at risk of take-downs, shake-downs, or litigation.

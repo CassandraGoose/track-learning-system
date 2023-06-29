@@ -11,35 +11,35 @@ datasource db {
 }
 
 model Person {
-  id                String                  @id @default(cuid())
-  createdAt         DateTime                @default(now())
-  username          String                  @unique
-  email             String                  @unique
-  role              Role                    @default(USER)
-  profileVisibility Boolean                 @default(true)
-  competencies      PersonsOnCompetencies[]
+  id                String   @id @default(cuid())
+  createdAt         DateTime @default(now())
+  username          String   @unique
+  email             String   @unique
+  role              Role     @default(USER)
+  profileVisibility Boolean  @default(true)
+  competencies      Competency[]
   proofs            Proof[]
-  pathways PersonsOnPathways[]
+  pathways Pathway[]
 }
 
 model Competency {
-  id           Int                          @id @default(autoincrement())
-  createdAt    DateTime                     @default(now())
-  updatedAt    DateTime                     @default(now())
-  title        String                       @unique
+  id           Int           @id @default(autoincrement())
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @default(now())
+  title        String        @unique
   description  String
-  persons      PersonsOnCompetencies[]
-  contentAreas CompetenciesOnContentAreas[]
-  pathways     CompetenciesOnPathways[]
+  persons      Person[]
+  contentAreas ContentArea[]
+  pathways     Pathway[]
   proofs       Proof[]
 }
 
 model ContentArea {
-  id           Int                          @id @default(autoincrement())
-  createdAt    DateTime                     @default(now())
-  title        String                       @unique
+  id           Int          @id @default(autoincrement())
+  createdAt    DateTime     @default(now())
+  title        String       @unique
   description  String
-  competencies CompetenciesOnContentAreas[]
+  competencies Competency[]
 }
 
 model Pathway {
@@ -47,8 +47,8 @@ model Pathway {
   createdAt    DateTime                     @default(now())
   title        String                       @unique
   description  String
-  competencies CompetenciesOnPathways[]
-  persons PersonsOnPathways[]
+  competencies Competency[]
+  persons Person[]
 }
 
 model Proof {
@@ -62,42 +62,6 @@ model Proof {
   personId      String
   competency    Competency @relation(fields: [competencyId], references: [id])
   competencyId  Int
-}
-
-model PersonsOnCompetencies {
-  competency   Competency @relation(fields: [competencyId], references: [id])
-  competencyId Int
-  person       Person     @relation(fields: [personId], references: [id])
-  personId     String
-
-  @@id([competencyId, personId])
-}
-
-model PersonsOnPathways {
-  pathway   Pathway @relation(fields: [pathwayId], references: [id])
-  pathwayId Int
-  person       Person     @relation(fields: [personId], references: [id])
-  personId     String
-
-  @@id([pathwayId, personId])
-}
-
-model CompetenciesOnContentAreas {
-  competency    Competency  @relation(fields: [competencyId], references: [id])
-  competencyId  Int
-  contentArea   ContentArea @relation(fields: [contentAreaId], references: [id])
-  contentAreaId Int
-
-  @@id([competencyId, contentAreaId])
-}
-
-model CompetenciesOnPathways {
-  competency    Competency  @relation(fields: [competencyId], references: [id])
-  competencyId  Int
-  pathway   Pathway @relation(fields: [pathwayId], references: [id])
-  pathwayId Int
-
-  @@id([competencyId, pathwayId])
 }
 
 enum Role {

@@ -11,15 +11,14 @@ datasource db {
 }
 
 model Person {
-  id                String   @id @default(cuid())
-  createdAt         DateTime @default(now())
-  username          String   @unique
-  email             String   @unique
-  role              Role     @default(USER)
-  profileVisibility Boolean  @default(true)
-  competencies      Competency[]
+  id                String       @id @default(cuid())
+  createdAt         DateTime     @default(now())
+  username          String       @unique
+  email             String       @unique
+  role              Role         @default(USER)
+  profileVisibility Boolean      @default(true)
   proofs            Proof[]
-  pathways Pathway[]
+  pathways          Pathway[]
 }
 
 model Competency {
@@ -28,9 +27,7 @@ model Competency {
   updatedAt    DateTime      @default(now())
   title        String        @unique
   description  String
-  persons      Person[]
   contentAreas ContentArea[]
-  pathways     Pathway[]
   proofs       Proof[]
 }
 
@@ -40,15 +37,16 @@ model ContentArea {
   title        String       @unique
   description  String
   competencies Competency[]
+  pathways     Pathway[]
 }
 
 model Pathway {
-  id           Int                          @id @default(autoincrement())
-  createdAt    DateTime                     @default(now())
-  title        String                       @unique
-  description  String
-  competencies Competency[]
-  persons Person[]
+  id          Int           @id @default(autoincrement())
+  createdAt   DateTime      @default(now())
+  title       String        @unique
+  description String
+  contentArea ContentArea[]
+  persons     Person[]
 }
 
 model Proof {

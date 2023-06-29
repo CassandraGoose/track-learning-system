@@ -74,7 +74,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Context
 
-<img src="https://i.imgur.com/tLM5u7E.png" alt="DB ERD" width="400" />
+<img src="https://i.imgur.com/K4G46VZ.png" alt="DB ERD" width="400" />
 
 ---
 

@@ -23,7 +23,7 @@ export default function Home({ user }) {
   return (
     <>
     <pre>
-      {user}
+      user: {user}
     </pre>
       <Head>
         <title>Base App</title>

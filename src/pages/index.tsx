@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const find = await prisma.person.findUnique({
     where: {
-      id: process.env.TEST_USER_ID,
+      email: process.env.TEST_USER_EMAIL,
     },
   });
 

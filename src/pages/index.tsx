@@ -19,11 +19,11 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Home({ user }) {
+export default function Home({ }) {
   return (
     <>
     <pre>
-      user: {user}
+      user: {}
     </pre>
       <Head>
         <title>Base App</title>

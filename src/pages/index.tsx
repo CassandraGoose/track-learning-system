@@ -8,7 +8,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const find = await prisma.person.findUnique({
     where: {
-      id: process.env.TEST_USER_ID,
+      email: process.env.TEST_USER_EMAIL,
     },
   });
 
@@ -19,11 +19,11 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Home({ user }) {
+export default function Home({ }) {
   return (
     <>
     <pre>
-      {user}
+      user: {}
     </pre>
       <Head>
         <title>Base App</title>
@@ -39,7 +39,7 @@ export default function Home({ user }) {
           </h5>
           <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
             Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+            bulk of the card content.
           </p>
           <button
             type='button'

@@ -5,21 +5,22 @@ import prisma from '@/lib/prisma';
 import { GetStaticProps } from 'next/types';
 
 export const getStaticProps: GetStaticProps = async () => {
-
-  const res = await fetch('https://api.github.com/repos/vercel/next.js')
-  const repo = await res.json()
-  return { props: { repo } }
-  // const find = await prisma.person.findUnique({
-  //   where: {
-  //     email: process.env.TEST_USER_EMAIL,
-  //   },
-  // });
-
-  // const user = JSON.stringify(find);
-  // return {
-  //   props: { user },
-  //   revalidate: 10,
-  // };
+  let find;
+  try {
+    find = await prisma.person.findUnique({
+      where: {
+        email: process.env.TEST_USER_EMAIL,
+      },
+    });
+  } catch(e) {
+    console.error(e);
+  } finally {
+    const user = JSON.stringify(find);
+    return {
+      props: { user },
+      revalidate: 10,
+    };
+  }
 };
 
 export default function Home({ }) {

@@ -8,7 +8,12 @@ on:
       - main
 jobs:
   Deploy-Production:
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL}}
+      TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
     runs-on: ubuntu-latest
+    environment: Production
+    concurrency: Production
     steps:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI

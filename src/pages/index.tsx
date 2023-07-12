@@ -2,22 +2,27 @@ import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
 import prisma from '@/lib/prisma';
+
 import { GetStaticProps } from 'next/types';
 
-// export const getStaticProps: GetStaticProps = async () => {
-
-  // const find = await prisma.person.findUnique({
-  //   where: {
-  //     email: process.env.TEST_USER_EMAIL,
-  //   },
-  // });
-
-  // const user = JSON.stringify(find);
-  // return {
-  //   props: { user },
-  //   revalidate: 10,
-  // };
-// };
+export const getStaticProps: GetStaticProps = async () => {
+  let find;
+  try {
+    find = await prisma.person.findUnique({
+      where: {
+        email: process.env.TEST_USER_EMAIL,
+      },
+    });
+  } catch(e) {
+    console.error(e);
+  } finally {
+    const user = JSON.stringify(find);
+    return {
+      props: { user },
+      revalidate: 10,
+    };
+  }
+};
 
 export default function Home({ }) {
   return (

@@ -4,6 +4,9 @@ on: [push]
 
 jobs:
   cypress-run:
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL}}
+      TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
     runs-on: ubuntu-latest
     environment: Production
     concurrency: Production

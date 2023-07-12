@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Qual</h1>
-  <h2>Track Your learning; prove your learning</h2>
+  <h2>Track your learning; prove your learning</h2>
   <picture>
     <img alt="nextjs badge" src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
   </picture>

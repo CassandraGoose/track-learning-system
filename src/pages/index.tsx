@@ -6,39 +6,21 @@ import prisma from '@/lib/prisma';
 import { GetStaticProps } from 'next/types';
 
 export const getStaticProps: GetStaticProps = async () => {
-  //note to future self. 
-  // this is the code that is causing the next build to fail in 
-  // githuv actions only. 
-  // process.env.blah blah matches up when logged. can confirm bc github blurs it out 
-  // with asterisks. 
-  // getStatic props works if you just put in a standard fetch instead. 
-  // what am i doing wrong? 
-  // is it possibly that the neon database branch isnt' working? i confirmed that it has tables and the expected data. 
-  // have confirmed everything works fine with no errors locally.
-  // let find;
-  // try {
-  //   find = await prisma.person.findUnique({
-  //     where: {
-  //       email: process.env.TEST_USER_EMAIL,
-  //     },
-  //   });
-  // } catch(e) {
-  //   console.error(e);
-  // } finally {
-  //   const user = JSON.stringify(find);
-  //   return {
-  //     props: { user },
-  //     revalidate: 10,
-  //   };
-  // }
-  console.log('first')
-  const findUsers = await prisma.person.findMany()
-  console.log('second')
-  const thing = JSON.stringify(findUsers);
-  console.log(thing);
-  return {
-    props: {thing},
-    revalidate: 10,
+  let find;
+  try {
+    find = await prisma.person.findUnique({
+      where: {
+        email: process.env.TEST_USER_EMAIL,
+      },
+    });
+  } catch(e) {
+    console.error(e);
+  } finally {
+    const user = JSON.stringify(find);
+    return {
+      props: { user },
+      revalidate: 10,
+    };
   }
 };
 

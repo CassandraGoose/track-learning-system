@@ -2,6 +2,8 @@ name: Cypress Tests
 
 on: [push]
 
+environment: Preview
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest

@@ -44,7 +44,7 @@ export default function Home({ }) {
           </h5>
           <p className='mb-4 text-base text-neutral-600 dark:text-neutral-200'>
             Some quick example text to build on the card title and make up the
-            bulk of the card content.
+            bulk of the card content. card card
           </p>
           <button
             type='button'

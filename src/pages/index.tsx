@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css';
 import prisma from '@/lib/prisma';
 import { GetStaticProps } from 'next/types';
 
+console.log("env variables:", process.env.TEST_USER_EMAIL, process.env.DATABASE_URL);
 // export const getStaticProps: GetStaticProps = async () => {
 
   // const find = await prisma.person.findUnique({

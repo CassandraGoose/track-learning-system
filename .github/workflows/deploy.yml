@@ -7,7 +7,25 @@ on:
     branches:
       - main
 jobs:
+  cypress-run:
+    env:
+      DATABASE_URL: ${{ secrets.TEST_DATABASE_URL}}
+      TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
+    runs-on: ubuntu-latest
+    environment: Production
+    concurrency: Production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.5.1 # use the explicit version number
+        with:
+          build: npm run build
+          start: npm start
   Deploy-Production:
+    needs: cypress-run
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}

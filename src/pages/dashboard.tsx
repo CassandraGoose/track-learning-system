@@ -2,8 +2,6 @@ import prisma from '@/lib/prisma';
 
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-
-
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const pathwayData = await prisma.person.findFirst({
@@ -46,12 +44,15 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <section className='mx-12 flex flex-col space-y-12'>
-      <h2 className='text-4xl self-center mt-8'>My Pathways</h2>
+      <h2 className='text-4xl self-center mt-8' data-cy='pathways-title'>
+        My Pathways
+      </h2>
       {pathways.pathways.map((pathway: Pathway) => {
         return (
-          <div
+          <article
             key={pathway.id}
-            className='bg-gray-light block drop-shadow-lg p-6 space-y-3'>
+            className='bg-gray-light block drop-shadow-lg p-6 space-y-3'
+            data-cy="pathway-card">
             <div className='flex justify-between items-center'>
               <div className='flex flex-col '>
                 <h5 className='text-lg'>{pathway.title}</h5>
@@ -68,7 +69,7 @@ export default function Home({
                 25%
               </div>
             </div>
-          </div>
+          </article>
         );
       })}
     </section>

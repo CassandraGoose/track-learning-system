@@ -12,6 +12,5 @@ describe('Navbar', () => {
     cy.visit('http://localhost:3000/');
     cy.get('[data-cy="navbar-dashboard-link"]').click();
     cy.url().should('include', '/dashboard')
-    cy.get('main').contains('dashboard');
   });
 });

@@ -12,7 +12,7 @@
     "test:headless": "cypress run --headless"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
+    "@next/font": "^13.1.6",
     "@prisma/client": "^4.9.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",

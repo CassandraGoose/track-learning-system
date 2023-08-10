@@ -3,11 +3,11 @@ describe('Dashboard', () => {
     cy.visit('http://localhost:3000/dashboard');
   })
 
-  it('can navigate to the dashboard', () => {
+  it('should navigate to the dashboard', () => {
     cy.get('[data-cy="pathways-title"]').should('be.visible');
   });
 
-  it('renders expected pathways', () => {
+  it('should render expected pathways', () => {
     cy.get('[data-cy="pathway-card"]').should('have.length', 2);
     cy.get('[data-cy="pathway-card"]').then((items) => {
       expect(items[0]).to.contain.text('Use Qual');

@@ -17,8 +17,8 @@ module.exports = {
         xl: '1440px',
       },
       fontFamily: {
-        sans: ['Graphik', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        open: ['var(--font-open)'],
+        pt: ['var(--font-pt)']
       },
       colors: {
         'blue': '#4FAEAF',

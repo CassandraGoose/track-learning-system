@@ -12,10 +12,13 @@ export default function Home({}) {
       <section className='mx-12 flex flex-col space-y-12'>
         <div className='flex justify-between h-screen'>
           <div className='flex flex-col w-full self-center text-center'>
-            <h1 className={`text-8xl ${open_sans.variable} font-open font-bold`} data-cy='splash-title'>
+            <h1
+              className={`text-8xl ${open_sans.variable} font-open font-bold`}
+              data-cy='splash-title'>
               Track
             </h1>
-            <div className={`${pt_sans.variable} font-pt flex flex-col space-y-12`}>
+            <div
+              className={`${pt_sans.variable} font-pt flex flex-col space-y-12`}>
               <h2 className='text-4xl' data-cy='splash-tag'>
                 Learn and prove it.
               </h2>
@@ -69,15 +72,15 @@ export default function Home({}) {
             className='flex flex-col items-center text-center'
             data-cy='splash-info-2'>
             <p className='text-2xl mb-4'>
-              Track was designed to put you in the driver's seat of your
+              Track was designed to put you in the driver&apos;s seat of your
               learning, while also allowing you to proove your understaning and
               share your accomplishments with the world.
             </p>
             <p className='text-2xl mb-4'>
               As you complete your learning, you can add artifacts to back up
-              your understanding and skills. Once you're ready, send the link to
+              your understanding and skills. Once you&apos;re ready, send the link to
               your portofolio for any given pathway. Potential employers,
-              colleagues, and friends can verify you're learning by reveiwing
+              colleagues, and friends can verify you&apos;re learning by reveiwing
               your portfolio.
             </p>
           </div>

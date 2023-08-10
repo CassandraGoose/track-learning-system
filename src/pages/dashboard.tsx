@@ -45,7 +45,9 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <section className='mx-12 flex flex-col space-y-12'>
-      <h2 className={`text-4xl self-center mt-8 ${open_sans.variable} font-open`} data-cy='pathways-title'>
+      <h2
+        className={`text-4xl self-center mt-8 ${open_sans.variable} font-open`}
+        data-cy='pathways-title'>
         My Pathways
       </h2>
       {pathways.pathways.map((pathway: Pathway) => {
@@ -53,13 +55,17 @@ export default function Home({
           <article
             key={pathway.id}
             className={`bg-gray-light block drop-shadow-lg p-6 space-y-3 border-4 border-black rounded ${pt_sans.variable} font-pt`}
-            data-cy="pathway-card">
+            data-cy='pathway-card'>
             <div className='flex justify-between items-center'>
               <div className='flex flex-col '>
-                <h5 className={`text-lg ${open_sans.variable} font-open`}>{pathway.title}</h5>
+                <h5 className={`text-lg ${open_sans.variable} font-open`}>
+                  {pathway.title}
+                </h5>
                 <p>{pathway.description}</p>
               </div>
-              <button type='button' className='bg-blue p-2 border-4 border-black rounded'>
+              <button
+                type='button'
+                className='bg-blue p-2 border-4 border-black rounded'>
                 View Pathway
               </button>
             </div>

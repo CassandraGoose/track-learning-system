@@ -1,5 +1,6 @@
 import prisma from '@/lib/prisma';
-
+import { Pathway } from '../lib/interface';
+import { open_sans, pt_sans } from '../lib/fonts';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -44,27 +45,33 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <section className='mx-12 flex flex-col space-y-12'>
-      <h2 className='text-4xl self-center mt-8' data-cy='pathways-title'>
+      <h2
+        className={`text-4xl self-center mt-8 ${open_sans.variable} font-open`}
+        data-cy='pathways-title'>
         My Pathways
       </h2>
       {pathways.pathways.map((pathway: Pathway) => {
         return (
           <article
             key={pathway.id}
-            className='bg-gray-light block drop-shadow-lg p-6 space-y-3'
-            data-cy="pathway-card">
+            className={`bg-gray-light block drop-shadow-lg p-6 space-y-3 border-4 border-black rounded ${pt_sans.variable} font-pt`}
+            data-cy='pathway-card'>
             <div className='flex justify-between items-center'>
               <div className='flex flex-col '>
-                <h5 className='text-lg'>{pathway.title}</h5>
+                <h5 className={`text-lg ${open_sans.variable} font-open`}>
+                  {pathway.title}
+                </h5>
                 <p>{pathway.description}</p>
               </div>
-              <button type='button' className='bg-blue p-2'>
+              <button
+                type='button'
+                className='bg-blue p-2 border-4 border-black rounded'>
                 View Pathway
               </button>
             </div>
-            <div className='mb-6 h-5 w-full bg-gray-mid'>
+            <div className='mb-6 h-8 w-full bg-gray-mid border-black border-4 rounded'>
               <div
-                className='h-5 bg-purple-light text-center'
+                className='h-6 bg-purple-light text-center '
                 style={{ width: '25%' }}>
                 25%
               </div>

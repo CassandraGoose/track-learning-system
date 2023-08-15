@@ -1,30 +1,12 @@
-import prisma from '@/lib/prisma';
-import { Pathway } from '../lib/interface';
-import { open_sans, pt_sans } from '../lib/fonts';
+import { Pathway } from '../../lib/interface';
+import { open_sans, pt_sans } from '../../lib/fonts';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
+import { getPathwaysByEmail } from '../../lib/queries';
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const pathwayData = await prisma.person.findFirst({
-      where: {
-        email: process.env.TEST_USER_EMAIL,
-      },
-      include: {
-        pathways: {
-          include: {
-            contentArea: {
-              include: {
-                competencies: {
-                  include: {
-                    proofs: true,
-                  },
-                },
-              },
-            },
-          },
-        },
-      },
-    });
+    const pathwayData = await getPathwaysByEmail();
     // nextjs gets mad if you just straight up pop the returned object into props, so we'll try stringifying and parsing for now.
     // i'm sure there's a better solution, but this will work for now.
     return {
@@ -63,11 +45,13 @@ export default function Home({
                 </h5>
                 <p>{pathway.description}</p>
               </div>
-              <button
-                type='button'
-                className='bg-blue p-2 border-4 border-black rounded'>
-                View Pathway
-              </button>
+              <Link href={`/dashboard/${pathway.id}`}>
+                <button
+                  type='button'
+                  className='bg-blue p-2 border-4 border-black rounded'>
+                  View Pathway
+                </button>
+              </Link>
             </div>
             <div className='mb-6 h-8 w-full bg-gray-mid border-black border-4 rounded'>
               <div

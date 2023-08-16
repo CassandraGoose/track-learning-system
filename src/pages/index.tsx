@@ -20,7 +20,7 @@ export default function Home({}) {
           <div>
             <h1 className='text-5xl font-bold'>TRACK</h1>
             <p className='py-6'>Learn it. Prove it.</p>
-            <button className='btn btn-primary' data-cy='get-started'>
+            <button className='btn btn-secondary' data-cy='get-started'>
               <Link href='/pathways'>Get Started</Link>
             </button>
           </div>
@@ -68,7 +68,7 @@ export default function Home({}) {
           </div>
         </div>
       </div>
-      
+
       <div className='flex flex-col justify-center h-screen'>
         <Image
           src={Splash2}

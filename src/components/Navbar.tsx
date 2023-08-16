@@ -13,9 +13,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='navbar bg-base-100'>
+    <nav className='navbar border-b border-black'>
       <div className='flex-1'>
-        <a className='btn btn-ghost normal-case text-xl' data-cy="home-link">TRACK</a>
+        <Link href="/" className='btn btn-ghost normal-case text-xl' data-cy="home-link">TRACK</Link>
       </div>
       <div>
         <ul className='flex p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>

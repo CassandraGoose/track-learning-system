@@ -1,5 +1,4 @@
 import { Pathway } from '../../lib/interface';
-import { open_sans, pt_sans } from '../../lib/fonts';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Link from 'next/link';
 import { getPathwaysByEmail } from '../../lib/queries';
@@ -28,7 +27,7 @@ export default function Home({
   return (
     <section className='mx-12 flex flex-col space-y-12'>
       <h2
-        className={`text-4xl self-center mt-8 ${open_sans.variable} font-open`}
+        className={`text-4xl self-center mt-8 `}
         data-cy='pathways-title'>
         My Pathways
       </h2>
@@ -36,11 +35,11 @@ export default function Home({
         return (
           <article
             key={pathway.id}
-            className={`bg-gray-light block drop-shadow-lg p-6 space-y-3 border-4 border-black rounded ${pt_sans.variable} font-pt`}
+            className={`bg-gray-light block drop-shadow-lg p-6 space-y-3 border-4 border-black rounded`}
             data-cy='pathway-card'>
             <div className='flex justify-between items-center'>
               <div className='flex flex-col '>
-                <h5 className={`text-lg ${open_sans.variable} font-open`}>
+                <h5 className={`text-lg `}>
                   {pathway.title}
                 </h5>
                 <p>{pathway.description}</p>

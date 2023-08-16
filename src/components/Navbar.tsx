@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Avatar from '../../public/temp_profile_image.png';
-import { open_sans } from '../lib/fonts';
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
@@ -19,7 +18,7 @@ export default function Navbar() {
         <a className='btn btn-ghost normal-case text-xl' data-cy="home-link">TRACK</a>
       </div>
       <div>
-        <ul className='flex font-medium p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>
+        <ul className='flex p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>
           <li className={isActive('/dashboard')}>
             <Link
               className="px-2"

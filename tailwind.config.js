@@ -16,10 +16,9 @@ module.exports = {
         lg: '976px',
         xl: '1440px',
       },
-      fontFamily: {
-        open: ['var(--font-open)'],
-        pt: ['var(--font-pt)'],
-      },
+      width: {
+        "10xl": "50rem",
+      }
       // colors: {
       //   'blue': '#4FAEAF',
       //   'blue-light': '#7CCFCF',

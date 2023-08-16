@@ -26,37 +26,36 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <section className='mx-12 flex flex-col space-y-12'>
-      <h2
-        className={`text-4xl self-center mt-8 `}
-        data-cy='pathways-title'>
+      <h2 className={`text-4xl self-center mt-8 `} data-cy='pathways-title'>
         My Pathways
       </h2>
       {pathways.pathways.map((pathway: Pathway) => {
         return (
           <article
+            className='card w-full border rounded-md border-black'
             key={pathway.id}
-            className={`bg-gray-light block drop-shadow-lg p-6 space-y-3 border-4 border-black rounded`}
             data-cy='pathway-card'>
-            <div className='flex justify-between items-center'>
-              <div className='flex flex-col '>
-                <h5 className={`text-lg `}>
-                  {pathway.title}
-                </h5>
+            <div className='flex'>
+              <div className='card-body'>
+                <p className='card-title'>{pathway.title}</p>
                 <p>{pathway.description}</p>
+                <div className='card-actions'>
+                  <Link
+                    href={`/dashboard/${pathway.id}`}
+                    className='btn btn-secondary'>
+                    View Pathway
+                  </Link>
+                </div>
               </div>
-              <Link href={`/dashboard/${pathway.id}`}>
-                <button
-                  type='button'
-                  className='bg-blue p-2 border-4 border-black rounded'>
-                  View Pathway
-                </button>
-              </Link>
-            </div>
-            <div className='mb-6 h-8 w-full bg-gray-mid border-black border-4 rounded'>
-              <div
-                className='h-6 bg-purple-light text-center '
-                style={{ width: '25%' }}>
-                25%
+              <div className='p-8'>
+                <div
+                  className='radial-progress bg-secondary text-secondary-content border-4 border-secondary'
+                  style={{
+                    ['--value' as string]: 70,
+                    ['--size' as string]: '8rem',
+                  }}>
+                  70%
+                </div>
               </div>
             </div>
           </article>

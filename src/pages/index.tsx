@@ -105,4 +105,3 @@ export default function Home({}) {
     </section>
   );
 }
-// todo: put htis in the footer: <div>Icons made by <a href="https://www.flaticon.com/authors/karyative" title="Karyative">Karyative</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>

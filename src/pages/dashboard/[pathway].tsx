@@ -39,7 +39,7 @@ export default function Pathway({
             <div>
               {selectedPathway.contentArea.map((contentArea: ContentArea) => {
                 return (
-                  <div className='badge badge-accent' data-cy="pathway-content-area">{contentArea.title}</div>
+                  <div className='badge badge-accent' key={contentArea.title} data-cy="pathway-content-area">{contentArea.title}</div>
                 );
               })}
             </div>
@@ -60,7 +60,3 @@ export default function Pathway({
     </section>
   );
 }
-
-//todo update all dbs to have 'Web Literacy' as the content area for use qual
-//update all dbs to have Use the Track Learning System instead of Use Qual
-// update all dbs to hav eMetacognition as the content area of teh learn to learn track.

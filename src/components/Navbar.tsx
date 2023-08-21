@@ -1,8 +1,6 @@
-import NavLink from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
-import SmallLogo from '../components/SmallLogo';
 import Avatar from '../../public/temp_profile_image.png';
-import { open_sans } from '../lib/fonts';
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
@@ -10,60 +8,63 @@ export default function Navbar() {
 
   const isActive = (pathname: string) => {
     return router.pathname === pathname
-      ? ' border-b-4 border-black font-bold'
+      ? ' border-b border-black'
       : '';
   };
 
   return (
-    <nav
-      className={`border-b-4 border-black ${open_sans.variable} font-open text-lg `}>
-      <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <SmallLogo />
-        <div className='flex items-center order-2'>
-          <button
-            type='button'
-            className='flex text-sm rounded-full'
-            aria-expanded='false'
-            data-dropdown-toggle='user-dropdown'
-            data-dropdown-placement='bottom'>
-            <span className='sr-only'>Open User Menu</span>
-            <div className='w-24 h-auto flex justify-center'>
-              <Image
-                data-cy='navbar-user-avatar'
-                className='w-1/2 h-auto rounded-full'
-                src={Avatar}
-                alt='user photo'
-              />
+    <nav className='navbar border-b border-black'>
+      <div className='flex-1'>
+        <Link href="/" className='btn btn-ghost normal-case text-xl' data-cy="home-link">TRACK</Link>
+      </div>
+      <div>
+        <ul className='flex p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>
+          <li className={isActive('/dashboard')}>
+            <Link
+              className="px-2"
+              href='/dashboard'
+              data-cy='navbar-dashboard-link'>
+              Dashboard
+            </Link>
+          </li>
+          <li className={isActive('/pathways')}>
+            <Link
+              className="px-2"
+
+              href='/'
+              data-cy='navbar-pathways-link'>
+              Pathways
+            </Link>
+          </li>
+          <li className={isActive('/about')}>
+            <Link
+              className="pl-2 pr-4"
+
+              href='/'
+              data-cy='navbar-about-link'>
+              About
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <div className='flex-none gap-2'>
+        <div className='dropdown dropdown-end'>
+          <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
+            <div className='w-10 rounded-full'>
+              <Image src={Avatar} alt='default avatar blank face' data-cy="navbar-user-avatar" />
             </div>
-          </button>
-        </div>
-        <div
-          className='items-center justify-between flex w-auto order-1 h-fit'
-          id='navbar-user'>
-          <ul className='flex font-medium p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>
-            <li className={isActive('/dashboard')}>
-              <NavLink
-                className='py-2 pl-3 pr-4 rounded md:bg-transparent'
-                href='/dashboard'
-                data-cy='navbar-dashboard-link'>
-                Dashboard
-              </NavLink>
+          </label>
+          <ul
+            tabIndex={0}
+            className='mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52'>
+            <li>
+              <a className='justify-between'>Profile</a>
             </li>
-            <li className={isActive('/pathways')}>
-              <NavLink
-                className=' py-2 pl-3 pr-4 rounded md:bg-transparent'
-                href='/'
-                data-cy='navbar-pathways-link'>
-                Pathways
-              </NavLink>
+            <li>
+              <a>Settings</a>
             </li>
-            <li className={isActive('/about')}>
-              <NavLink
-                className=' py-2 pl-3 pr-4 rounded md:bg-transparent'
-                href='/'
-                data-cy='navbar-about-link'>
-                About
-              </NavLink>
+            <li>
+              <a>Logout</a>
             </li>
           </ul>
         </div>

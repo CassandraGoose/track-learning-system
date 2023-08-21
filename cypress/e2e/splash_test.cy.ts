@@ -8,8 +8,8 @@ describe('Dashboard', () => {
   });
 
   it('should render expected title and tag', () => {
-    cy.get('[data-cy="splash-title"]').should('have.text', 'Track');
-    cy.get('[data-cy="splash-tag"]').should('have.text', 'Learn and prove it.');
+    cy.get('[data-cy="splash-title"]').should('have.text', 'TRACK');
+    cy.get('[data-cy="splash-tag"]').should('have.text', 'Learn it. Prove it.');
   });
 
   it('should render get started button', () => {

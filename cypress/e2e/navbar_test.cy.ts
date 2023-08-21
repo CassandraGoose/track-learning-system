@@ -5,7 +5,7 @@ describe('Navbar', () => {
     cy.get('[data-cy="navbar-pathways-link"]').should('be.visible');
     cy.get('[data-cy="navbar-about-link"]').should('be.visible');
     cy.get('[data-cy="navbar-user-avatar"]').should('be.visible');
-    cy.get('[data-cy="small-logo"]').should('be.visible');
+    cy.get('[data-cy="home-link"]').should('be.visible');
   });
 
   it('should navigate to the dashboard', () => {

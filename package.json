@@ -12,7 +12,6 @@
     "test:headless": "cypress run --headless"
   },
   "dependencies": {
-    "@next/font": "^13.4.19",
     "@prisma/client": "^5.2.0",
     "@types/node": "20.5.6",
     "@types/react": "18.2.21",

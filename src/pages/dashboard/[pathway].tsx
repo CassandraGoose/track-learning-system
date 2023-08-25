@@ -31,22 +31,29 @@ export default function Pathway({
   const selectedPathway = pathway.pathways[0];
   console.log(selectedPathway.contentArea);
   return (
-    <section className='flex flex-col my-12 items-center'>
-      <div className='flex w-3/4 justify-between'>
+    <section className='flex flex-col my-12 items-center mx-12'>
+      <div className='flex w-full p-8 justify-between border rounded-md border-black'>
         <div className='flex flex-col space-y-8'>
           <div className='flex flex-col'>
-            <h1 className='text-2xl' data-cy="pathway-title">{selectedPathway.title}</h1>
+            <h1 className='text-2xl' data-cy='pathway-title'>
+              {selectedPathway.title}
+            </h1>
             <div>
               {selectedPathway.contentArea.map((contentArea: ContentArea) => {
                 return (
-                  <div className='badge badge-accent' key={contentArea.title} data-cy="pathway-content-area">{contentArea.title}</div>
+                  <div
+                    className='badge badge-accent'
+                    key={contentArea.title}
+                    data-cy='pathway-content-area'>
+                    {contentArea.title}
+                  </div>
                 );
               })}
             </div>
           </div>
-          <h2 data-cy="pathway-description">{selectedPathway.description}</h2>
+          <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
         </div>
-        <div className='p-8'>
+        <div className='flex mt-0'>
           <div
             className='radial-progress bg-secondary text-secondary-content border-4 border-secondary'
             style={{

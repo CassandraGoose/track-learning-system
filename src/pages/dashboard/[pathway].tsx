@@ -1,6 +1,7 @@
+import React from 'react';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { getPathwayByUserId } from '../../lib/queries';
-import { ContentArea } from '../../lib/interface';
+import { ContentArea, Competency } from '../../lib/interface';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { pathway } = context.params! as { pathway: string };
@@ -29,7 +30,7 @@ export default function Pathway({
   pathway,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const selectedPathway = pathway.pathways[0];
-  console.log(selectedPathway.contentArea);
+  console.log(selectedPathway);
   return (
     <section className='flex flex-col my-12 items-center mx-12'>
       <div className='flex w-full p-8 justify-between border rounded-md border-black'>
@@ -38,20 +39,56 @@ export default function Pathway({
             <h1 className='text-2xl' data-cy='pathway-title'>
               {selectedPathway.title}
             </h1>
+            <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
             <div>
               {selectedPathway.contentArea.map((contentArea: ContentArea) => {
                 return (
-                  <div
-                    className='badge badge-accent'
-                    key={contentArea.title}
-                    data-cy='pathway-content-area'>
-                    {contentArea.title}
-                  </div>
+                  <table className='table'>
+                    <caption>
+                      <p>{contentArea.title}</p>
+                      <p>{contentArea.description}</p>
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th>Prgoress</th>
+                        <th>Competency</th>
+                        <th>Description</th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {contentArea.competencies.map(
+                        (competency: Competency) => {
+                          return (
+                            <tr key={competency.id}>
+                              <td>
+                                <span className='flex items-center space-x-3'>
+                                  <span>✅</span>
+                                </span>
+                              </td>
+                              <td>
+                                <span className='flex items-center space-x-3'>
+                                  <p>{competency.title}</p>
+                                </span>
+                              </td>
+                              <td>
+                                <p>{competency.description}</p>
+                              </td>
+                              <td>
+                                <button className='btn btn-secondary'>
+                                  Proof
+                                </button>
+                              </td>
+                            </tr>
+                          );
+                        }
+                      )}
+                    </tbody>
+                  </table>
                 );
               })}
             </div>
           </div>
-          <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
         </div>
         <div className='flex mt-0'>
           <div

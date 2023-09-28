@@ -15,7 +15,7 @@ export default function PathwayProgressDetails({
             <p className='font-medium text-lg'>{contentArea.title}</p>
             <p>{contentArea.description}</p>
             <div className='flex items-center justify-center pt-8'>
-              <p className="font-thin">3/7 competencies met</p>
+              <p className='font-thin'>3/7 competencies met</p>
             </div>
           </div>
           <div className='collapse-content'>

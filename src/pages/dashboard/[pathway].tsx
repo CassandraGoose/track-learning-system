@@ -30,7 +30,6 @@ export default function Pathway({
   pathway,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const selectedPathway = pathway.pathways[0];
-  console.log(selectedPathway);
   return (
     <section className='flex flex-col my-12 items-center mx-12'>
       <div className='flex w-full p-8 justify-between border rounded-md border-black'>
@@ -39,19 +38,18 @@ export default function Pathway({
             <h1 className='text-2xl' data-cy='pathway-title'>
               {selectedPathway.title}
             </h1>
-            <div className="flex items-center">
-            <progress className="progress progress-secondary" value={70} max="100" ></progress>
-          <span className="text-secondary">70%</span>  
+            <div className='flex items-center'>
+              <progress
+                className='progress progress-secondary'
+                value={70}
+                max='100'></progress>
+              <span className='text-secondary'>70%</span>
             </div>
-          
             <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
             <div>
-              <PathwayProgressDetails contentAreas={selectedPathway.contentArea} />
-              {/* {selectedPathway.contentArea.map((contentArea: ContentArea) => {
-                return (
-                  
-                );
-              })} */}
+              <PathwayProgressDetails
+                contentAreas={selectedPathway.contentArea}
+              />
             </div>
           </div>
         </div>

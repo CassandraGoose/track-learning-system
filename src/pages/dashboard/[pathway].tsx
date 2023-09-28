@@ -1,6 +1,7 @@
+import React from 'react';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { getPathwayByUserId } from '../../lib/queries';
-import { ContentArea } from '../../lib/interface';
+import PathwayProgressDetails from '../../components/PathwayProgressDetails';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { pathway } = context.params! as { pathway: string };
@@ -29,7 +30,6 @@ export default function Pathway({
   pathway,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const selectedPathway = pathway.pathways[0];
-  console.log(selectedPathway.contentArea);
   return (
     <section className='flex flex-col my-12 items-center mx-12'>
       <div className='flex w-full p-8 justify-between border rounded-md border-black'>
@@ -38,29 +38,19 @@ export default function Pathway({
             <h1 className='text-2xl' data-cy='pathway-title'>
               {selectedPathway.title}
             </h1>
-            <div>
-              {selectedPathway.contentArea.map((contentArea: ContentArea) => {
-                return (
-                  <div
-                    className='badge badge-accent'
-                    key={contentArea.title}
-                    data-cy='pathway-content-area'>
-                    {contentArea.title}
-                  </div>
-                );
-              })}
+            <div className='flex items-center'>
+              <progress
+                className='progress progress-secondary'
+                value={70}
+                max='100'></progress>
+              <span className='text-secondary-low'>70%</span>
             </div>
-          </div>
-          <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
-        </div>
-        <div className='flex mt-0'>
-          <div
-            className='radial-progress bg-secondary text-secondary-content border-4 border-secondary'
-            style={{
-              ['--value' as string]: 70,
-              ['--size' as string]: '8rem',
-            }}>
-            70%
+            <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
+            <div>
+              <PathwayProgressDetails
+                contentAreas={selectedPathway.contentArea}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -20,6 +20,9 @@ module.exports = {
         "10xl": "50rem",
       }
     },
+    colors: {
+      'secondary-low': '#505dd4',
+    },
   },
   plugins: [require('daisyui')],
   daisyui: {

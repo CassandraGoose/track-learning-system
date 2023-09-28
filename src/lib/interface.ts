@@ -27,10 +27,10 @@ export interface ContentArea {
   createdAt: string;
   title: string;
   description: string;
-  competencies: [Competencies];
+  competencies: [Competency];
 }
 
-export interface Competencies {
+export interface Competency {
   id: number;
   createdAt: string;
   title: string;

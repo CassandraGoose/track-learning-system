@@ -43,7 +43,7 @@ export default function Pathway({
                 className='progress progress-secondary'
                 value={70}
                 max='100'></progress>
-              <span className='text-secondary'>70%</span>
+              <span className='text-secondary-low'>70%</span>
             </div>
             <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
             <div>

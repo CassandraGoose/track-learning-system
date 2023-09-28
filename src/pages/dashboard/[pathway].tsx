@@ -1,7 +1,7 @@
 import React from 'react';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import { getPathwayByUserId } from '../../lib/queries';
-import { ContentArea, Competency } from '../../lib/interface';
+import PathwayProgressDetails from '../../components/PathwayProgressDetails';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { pathway } = context.params! as { pathway: string };
@@ -39,65 +39,20 @@ export default function Pathway({
             <h1 className='text-2xl' data-cy='pathway-title'>
               {selectedPathway.title}
             </h1>
+            <div className="flex items-center">
+            <progress className="progress progress-secondary" value={70} max="100" ></progress>
+          <span className="text-secondary">70%</span>  
+            </div>
+          
             <h2 data-cy='pathway-description'>{selectedPathway.description}</h2>
             <div>
-              {selectedPathway.contentArea.map((contentArea: ContentArea) => {
+              <PathwayProgressDetails contentAreas={selectedPathway.contentArea} />
+              {/* {selectedPathway.contentArea.map((contentArea: ContentArea) => {
                 return (
-                  <table className='table'>
-                    <caption>
-                      <p>{contentArea.title}</p>
-                      <p>{contentArea.description}</p>
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th>Prgoress</th>
-                        <th>Competency</th>
-                        <th>Description</th>
-                        <th></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {contentArea.competencies.map(
-                        (competency: Competency) => {
-                          return (
-                            <tr key={competency.id}>
-                              <td>
-                                <span className='flex items-center space-x-3'>
-                                  <span>✅</span>
-                                </span>
-                              </td>
-                              <td>
-                                <span className='flex items-center space-x-3'>
-                                  <p>{competency.title}</p>
-                                </span>
-                              </td>
-                              <td>
-                                <p>{competency.description}</p>
-                              </td>
-                              <td>
-                                <button className='btn btn-secondary'>
-                                  Proof
-                                </button>
-                              </td>
-                            </tr>
-                          );
-                        }
-                      )}
-                    </tbody>
-                  </table>
+                  
                 );
-              })}
+              })} */}
             </div>
-          </div>
-        </div>
-        <div className='flex mt-0'>
-          <div
-            className='radial-progress bg-secondary text-secondary-content border-4 border-secondary'
-            style={{
-              ['--value' as string]: 70,
-              ['--size' as string]: '8rem',
-            }}>
-            70%
           </div>
         </div>
       </div>

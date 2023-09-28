@@ -10,6 +10,7 @@ export default function PathwayProgressDetails({
       {contentAreas.map((contentArea: ContentArea) => (
         <div
           tabIndex={0}
+          key={contentArea.id}
           className='collapse collapse-plus border border-base-300 bg-base-200 mt-16 rounded-md'>
           <div className='collapse-title'>
             <p className='font-medium text-lg' data-cy="content-area-title">{contentArea.title}</p>

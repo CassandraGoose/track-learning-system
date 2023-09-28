@@ -12,10 +12,10 @@ export default function PathwayProgressDetails({
           tabIndex={0}
           className='collapse collapse-plus border border-base-300 bg-base-200 mt-16 rounded-md'>
           <div className='collapse-title'>
-            <p className='font-medium text-lg'>{contentArea.title}</p>
-            <p>{contentArea.description}</p>
+            <p className='font-medium text-lg' data-cy="content-area-title">{contentArea.title}</p>
+            <p data-cy="content-area-description">{contentArea.description}</p>
             <div className='flex items-center justify-center pt-8'>
-              <p className='font-thin'>3/7 competencies met</p>
+              <p className='font-thin' data-cy="competency-progress">3/7 competencies met</p>
             </div>
           </div>
           <div className='collapse-content'>

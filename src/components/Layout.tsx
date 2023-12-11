@@ -1,4 +1,5 @@
 import Navbar from './Navbar';
+import SiteFooter from './SiteFooter';
 import { Children } from '../lib/interface';
 
 export default function Layout({ children }: Children) {
@@ -6,6 +7,7 @@ export default function Layout({ children }: Children) {
     <>
       <Navbar />
         <main>{children}</main>
+      <SiteFooter />
     </>
   )
 }

@@ -12,7 +12,7 @@ describe('Dashboard', () => {
   });
 
   it('should render competency progress', () => {
-    cy.get('[data-cy="competency-progress"]').contains('3/7 competencies');
+    cy.get('[data-cy="competency-progress"]').contains('3/7 competencies met');
   });
 
   it('should show the table of competencies for a content area', () => {

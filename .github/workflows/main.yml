@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  cypress-run:
+  playwright-test:
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}

@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Playwright Tests
 
 on:
   push:
@@ -13,12 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     environment: Test
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v5.5.1 # use the explicit version number
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          build: npm run build
-          start: npm start
+          node-version: 18
+      - name: Install dependencies
+        run: npm i
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npm run test

@@ -34,7 +34,7 @@ export default function Home({
           <article
             className='card w-full border rounded-md border-black'
             key={pathway.id}
-            data-cy='pathway-card'>
+            data-testid='pathway-card'>
             <div className='flex'>
               <div className='card-body'>
                 <p className='card-title'>{pathway.title}</p>

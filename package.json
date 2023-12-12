@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "tsx ./prisma/seed.ts",
-    "test": "cypress open",
-    "test:headless": "cypress run --headless"
+    "test": "npx playwright test"
   },
   "dependencies": {
     "@next/font": "^13.1.6",

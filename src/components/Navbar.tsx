@@ -13,9 +13,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='navbar border-b border-black'>
+    <nav className='navbar border-b border-black' data-testid="navbar">
       <div className='flex-1'>
-        <Link href="/" className='btn btn-ghost normal-case text-xl' data-cy="home-link">TRACK</Link>
+        <Link href="/" className='btn btn-ghost normal-case text-xl' data-testid="home-link">TRACK</Link>
       </div>
       <div>
         <ul className='flex p-4 md:p-0 borderrounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0'>
@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link
               className="px-2"
               href='/dashboard'
-              data-cy='navbar-dashboard-link'>
+              data-testid='navbar-dashboard-link'>
               Dashboard
             </Link>
           </li>
@@ -32,7 +32,7 @@ export default function Navbar() {
               className="px-2"
 
               href='/'
-              data-cy='navbar-pathways-link'>
+              data-testid='navbar-pathways-link'>
               Pathways
             </Link>
           </li>
@@ -41,7 +41,7 @@ export default function Navbar() {
               className="pl-2 pr-4"
 
               href='/'
-              data-cy='navbar-about-link'>
+              data-testid='navbar-about-link'>
               About
             </Link>
           </li>
@@ -51,7 +51,7 @@ export default function Navbar() {
         <div className='dropdown dropdown-end'>
           <label tabIndex={0} className='btn btn-ghost btn-circle avatar'>
             <div className='w-10 rounded-full'>
-              <Image src={Avatar} alt='default avatar blank face' data-cy="navbar-user-avatar" />
+              <Image src={Avatar} alt='default avatar blank face' data-testid="navbar-user-avatar" />
             </div>
           </label>
           <ul

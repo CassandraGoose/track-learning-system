@@ -5,13 +5,13 @@ function SiteFooter() {
     <>
       <footer
         className="footer p-10 bg-base-200 text-base-content"
-        data-cy="footer1"
+        data-testid="footer1"
       >
-        <aside data-cy="footer-logo">
+        <aside>
           <Link
             href="/"
             className="btn btn-ghost normal-case text-xl"
-            data-cy="home-link"
+            data-testid="footer-home-link"
           >
             TRACK
           </Link>
@@ -21,7 +21,7 @@ function SiteFooter() {
             Your personal LMS and learning portfolio
           </p>
         </aside>
-        <nav data-cy="footer-company-links">
+        <nav>
           <header className="footer-title">Company - coming soon</header>
           <a className="link link-hover">About us - coming soon</a>
           <a className="link link-hover">Contact - coming soon</a>
@@ -29,7 +29,7 @@ function SiteFooter() {
           <a className="link link-hover">Press kit - coming soon</a>
         </nav>
         <nav>
-          <header className="footer-title" data-cy="footer-legal-links">
+          <header className="footer-title">
             Legal - coming soon
           </header>
           <a className="link link-hover">Terms of use - coming soon</a>
@@ -39,9 +39,9 @@ function SiteFooter() {
       </footer>
       <footer
         className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300"
-        data-cy="footer2"
+        data-testid="footer2"
       >
-        <aside data-cy="footer-icon-info">
+        <aside>
           <p>
             Icons made by{" "}
             <a
@@ -55,7 +55,7 @@ function SiteFooter() {
               www.flaticon.com
             </a>
           </p>
-          <p data-cy="footer-copyright">
+          <p>
             Copyright © 2023 - All right reserved by Track
           </p>
         </aside>

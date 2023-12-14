@@ -17,7 +17,7 @@ export default function PathwayProgressDetails({
         >
           <div>
             <div className="flex justify-between">
-              <p className="font-medium text-lg" data-cy="content-area-title">
+              <p className="font-medium text-lg" data-testid="content-area-title">
                 {contentArea.title}
               </p>
               <button
@@ -29,9 +29,9 @@ export default function PathwayProgressDetails({
                 {collapsed ? "+" : "-"}
               </button>
             </div>
-            <p data-cy="content-area-description">{contentArea.description}</p>
+            <p data-testid="content-area-description">{contentArea.description}</p>
             <div className="flex items-center justify-center pt-8">
-              <p className="font-thin" data-cy="competency-progress">
+              <p className="font-thin" data-testid="competency-progress">
                 3/7 competencies met
               </p>
             </div>

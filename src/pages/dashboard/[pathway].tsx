@@ -34,7 +34,7 @@ export default function Pathway({
     <section className="flex flex-col my-12 items-center mx-12">
       <div className="flex w-full p-8 justify-between border rounded-md border-black">
         <div className="flex flex-col space-y-8 w-full">
-          <h1 className="text-2xl" data-cy="pathway-title">
+          <h1 className="text-2xl" data-testid="pathway-title">
             {selectedPathway.title}
           </h1>
           <div className="flex items-center">
@@ -45,7 +45,7 @@ export default function Pathway({
             ></progress>
             <span className="text-secondary-low">70%</span>
           </div>
-          <h2 data-cy="pathway-description">{selectedPathway.description}</h2>
+          <h2 data-testid="pathway-description">{selectedPathway.description}</h2>
           <PathwayProgressDetails contentAreas={selectedPathway.contentArea} />
         </div>
       </div>

@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Splash from '../../public/temp_splash.png';
-import Happiness from '../../public/happiness.png';
-import Community from '../../public/community.png';
-import Certification from '../../public/certification.png';
-import Splash2 from '../../public/temp_splash2.png';
-import Video from '../../public/temp_video.png';
+import Splash from '../public/temp_splash.png';
+import Happiness from '../public/happiness.png';
+import Community from '../public/community.png';
+import Certification from '../public/certification.png';
+import Splash2 from '../public/temp_splash2.png';
+import Video from '../public/temp_video.png';
 
 export default function Page() {
   return (

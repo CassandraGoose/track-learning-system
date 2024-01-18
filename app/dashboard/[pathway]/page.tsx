@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from 'next/navigation';
-import { getPathwayByUserId } from "../../../lib/queries";
-import PathwayProgressDetails from "../../../components/PathwayProgressDetails";
+import { getPathwayByUserId } from "../../lib/queries";
+import PathwayProgressDetails from "../../components/PathwayProgressDetails";
 
 export default async function Pathway({ params }: { params: { pathway: string }}) {
   const pathway = params.pathway;

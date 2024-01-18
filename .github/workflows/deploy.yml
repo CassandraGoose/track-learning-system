@@ -29,6 +29,7 @@ jobs:
   Deploy-Production:
     needs: test
     env:
+      NODE_ENV: ${{ secrets.NODE_ENV }}
       DATABASE_URL: ${{ secrets.DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
     runs-on: ubuntu-latest

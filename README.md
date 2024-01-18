@@ -44,7 +44,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Set up the env:
 
 - you'll need the following values in your .env: DATABASE_URL, TEST_USER_ID
-- the database URL should match a PostgreSQL db.
+- the database URL should match a PostgreSQL db. Note that I've created this application with connection pooling through PgBouncer according to Prisma's statement "For Prisma Client to work relialy, PgBouncer must run in transaction mod. Add `pgbouncer=true` to the connection URL"
 
 Create tables in your db:
 

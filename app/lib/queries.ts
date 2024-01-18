@@ -1,7 +1,7 @@
 import prisma from '@/app/lib/prisma';
 
-export async function getPathwaysByEmail() {
-  return await prisma.person.findFirst({
+export function getPathwaysByEmail() {
+  return prisma.person.findFirst({
     where: {
       email: process.env.TEST_USER_EMAIL,
     },
@@ -23,8 +23,10 @@ export async function getPathwaysByEmail() {
   });
 }
 
-export async function getPathwayByUserId(userId:string, pathwayId:string) {
-  return await prisma.person.findFirst({
+export function getPathwayByUserId(userId:string, pathwayId:string) {
+  console.log('prod debug pathway: ', pathwayId);
+  console.log('prod debug user:', userId);
+  return prisma.person.findFirst({
     where: {
       id: userId,
     },

@@ -16,10 +16,10 @@ export interface PathwayProps {
 
 export interface Pathway {
   id: number;
-  createdAt: string;
+  createdAt: Date;
   title: string;
   description: string;
-  contentArea: [ContentArea];
+  contentArea: [ContentArea] | [];
 }
 
 export interface ContentArea {

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { ContentArea, Competency } from "../lib/interface";
 
@@ -13,7 +15,7 @@ export default function PathwayProgressDetails({
       {contentAreas.map((contentArea: ContentArea) => (
         <div
           key={contentArea.id}
-          className="w-full border border-base-300 bg-base-200 mt-16 rounded-md p-4"
+          className="w-full border border-secondary bg-bright mt-16 rounded-md p-4"
         >
           <div>
             <div className="flex justify-between">
@@ -26,7 +28,7 @@ export default function PathwayProgressDetails({
                 aria-expanded={!collapsed}
                 onClick={() => setCollapsed(!collapsed)}
               >
-                {collapsed ? "+" : "-"}
+                {collapsed ? "-" : "+"}
               </button>
             </div>
             <p data-testid="content-area-description">{contentArea.description}</p>

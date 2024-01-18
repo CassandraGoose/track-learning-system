@@ -7,7 +7,7 @@ import Certification from '../../public/certification.png';
 import Splash2 from '../../public/temp_splash2.png';
 import Video from '../../public/temp_video.png';
 
-export default function Home({}) {
+export default function Page() {
   return (
     <section className='flex flex-col'>
       <div className='hero min-h-screen'>
@@ -20,14 +20,14 @@ export default function Home({}) {
           <div>
             <h1 className='text-5xl font-bold' data-testid="splash-title">TRACK</h1>
             <p className='py-6' data-testid="splash-tag">Learn it. Prove it.</p>
-            <button className='btn btn-secondary'>
+            <button className='btn btn-secondary text-bright' role="link">
               <Link href='/pathways'>Get Started</Link>
             </button>
           </div>
         </div>
       </div>
 
-      <div className='bg-base-200 flex flex-col items-center p-24'>
+      <div className='flex flex-col items-center p-24 border-t border-b border-secondary'>
         <div className='flex justify-center items-start' data-testid='splash-info1'>
           <div className='flex flex-col items-center flex-1 flex-grow'>
             <Image

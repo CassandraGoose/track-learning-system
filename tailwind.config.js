@@ -21,24 +21,21 @@ module.exports = {
       }
     },
     colors: {
-      'secondary-low': '#505dd4',
+      'bright': '#f8f7ff',
     },
   },
   plugins: [require('daisyui')],
   daisyui: {
     themes: [
       {
+        // i don't appreciate DaisyUI's lack of communication regarding how they use colors, so I'm just over-riding everything to be dark grey and utilizing colors on my own beyond that.
+        // for example, i don't know what they use and where, and i dont' want to spend time chasing the information down, since my style is fundamentally different than what DaisyUI prescribes. 
         mytheme: {
-          primary: '#fdba74',
-          secondary: '#818cf8',
-          'secondary-content': '#f5f5f4',
-          accent: '#4ade80',
-          neutral: '#292524',
-          'base-100': '#f5f5f4',
-          info: '#818cf8',
-          success: '#4ade80',
-          warning: '#fca5a5',
-          error: '#ef4444',
+          primary: '#323031', // daisy requires, currently dark grey
+          secondary: '#323031', // daisy requires, currently dark grey
+          accent: '#323031', //daisy requires, currently dark grey
+          'base-100': '#323031', // daisy requires, currently dark grey
+          neutral: '#323031' // daisy requires
         },
       },
     ],

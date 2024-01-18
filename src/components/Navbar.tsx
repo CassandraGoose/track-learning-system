@@ -1,13 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Avatar from '../../public/temp_profile_image.png';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
-  const router = useRouter();
+  const currentPathname = usePathname();
 
   const isActive = (pathname: string) => {
-    return router.pathname === pathname
+    return currentPathname === pathname
       ? ' border-b border-black'
       : '';
   };
@@ -56,7 +58,7 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className='mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52'>
+            className='mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content rounded-box w-52'>
             <li>
               <a className='justify-between'>Profile</a>
             </li>

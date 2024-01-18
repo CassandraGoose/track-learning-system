@@ -4,7 +4,7 @@ function SiteFooter() {
   return (
     <>
       <footer
-        className="footer p-10 bg-base-200 text-base-content"
+        className="footer p-10 border-t border-secondary"
         data-testid="footer1"
       >
         <aside>
@@ -38,7 +38,7 @@ function SiteFooter() {
         </nav>
       </footer>
       <footer
-        className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300"
+        className="footer px-10 py-4 border-t border-secondary"
         data-testid="footer2"
       >
         <aside>

@@ -11,6 +11,7 @@ test('has a title', async ({ page }) => {
 
 test('contains pathways', async ({ page }) => {
   await expect(page.getByTestId('pathway-card')).toHaveCount(2)
-  await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Use QualLearn to use the tool so you can leverage it to your advantage.View Pathway70%');
-  await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('Learn to LearnUtilize a growth mindset and grit to learn anythingView Pathway70%');
+
+  await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Learn to LearnUtilize a growth mindset and grit to learn anythingView Pathway70%');
+  await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('Use TrackLearn to use the tool so you can leverage it to your advantage.View Pathway70%');
 });

@@ -38,13 +38,3 @@ export default async function Pathway({ params }: { params: { pathway: string }}
     </section>
   );
 }
-
-// contentArea: [
-//   {
-//     id: 2,
-//     createdAt: 2023-08-02T22:36:14.906Z,
-//     title: 'General Education',
-//     description: 'Skills and content knowledge',
-//     competencies: [Array]
-//   }
-// ]

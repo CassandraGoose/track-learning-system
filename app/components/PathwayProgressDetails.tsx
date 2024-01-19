@@ -3,11 +3,7 @@
 import { useState } from "react";
 import { ContentArea, Competency } from "../lib/interface";
 
-export default function PathwayProgressDetails({
-  contentAreas,
-}: {
-  contentAreas: Array<ContentArea>;
-}) {
+export default function PathwayProgressDetails({ contentAreas }: { contentAreas: ContentArea[] }) {
   const [collapsed, setCollapsed] = useState(false);
 
   return (

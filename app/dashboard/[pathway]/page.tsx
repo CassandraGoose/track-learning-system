@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getPathwayByUserId } from "../../lib/queries";
 import PathwayProgressDetails from "../../components/PathwayProgressDetails";
 
-export default async function Pathway({ params }: { params: { pathway: string }}) {
+export default async function Page({ params }: { params: { pathway: string }}) {
   const pathway = params.pathway;
   const userPathway = await getPathwayByUserId("cljvusdou00003ntltwo9mhm5",
   pathway)
@@ -13,7 +13,7 @@ export default async function Pathway({ params }: { params: { pathway: string }}
   }
 
   const selectedPathway = userPathway.pathways[0];
-  
+
   return (
     <section className="flex flex-col my-12 items-center mx-12">
       <div className="flex w-full p-8 justify-between border rounded-md border-black">

@@ -1,16 +1,21 @@
 import { Pathway } from '../lib/interface';
 import Link from 'next/link';
 import { getPathwaysByEmail } from '../lib/queries';
+import { notFound } from 'next/navigation';
 
-export default async function Home() {
-  const pathways = await getPathwaysByEmail();
+export default async function Page() {
+  let pathways = await getPathwaysByEmail();
+
+  if (!pathways) {
+    notFound();
+  }
 
   return (
     <section className='mx-12 flex flex-col space-y-12'>
       <h2 className={`text-4xl self-center mt-8 `}>
         My Pathways
       </h2>
-      {pathways && pathways.pathways.map((pathway: Pathway) => {
+      {pathways && pathways.pathways.map((pathway) => {
         return (
           <article
             className='card w-full border rounded-md border-black'

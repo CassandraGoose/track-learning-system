@@ -12,7 +12,10 @@ export default async function Pathway({ params }: { params: { pathway: string }}
     notFound();
   }
 
+  
   const selectedPathway = userPathway.pathways[0];
+  console.log('whole pathway: ', selectedPathway);
+  console.log('content area specifically: ', selectedPathway.contentArea);
   return (
     <section className="flex flex-col my-12 items-center mx-12">
       <div className="flex w-full p-8 justify-between border rounded-md border-black">
@@ -35,3 +38,13 @@ export default async function Pathway({ params }: { params: { pathway: string }}
     </section>
   );
 }
+
+// contentArea: [
+//   {
+//     id: 2,
+//     createdAt: 2023-08-02T22:36:14.906Z,
+//     title: 'General Education',
+//     description: 'Skills and content knowledge',
+//     competencies: [Array]
+//   }
+// ]

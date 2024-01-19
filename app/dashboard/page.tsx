@@ -4,7 +4,7 @@ import { getPathwaysByEmail } from '../lib/queries';
 
 export default async function Home() {
   const pathways = await getPathwaysByEmail();
-const chicken = '';
+
   return (
     <section className='mx-12 flex flex-col space-y-12'>
       <h2 className={`text-4xl self-center mt-8 `}>

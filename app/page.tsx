@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Splash from '../../public/temp_splash.png';
-import Happiness from '../../public/happiness.png';
-import Community from '../../public/community.png';
-import Certification from '../../public/certification.png';
-import Splash2 from '../../public/temp_splash2.png';
-import Video from '../../public/temp_video.png';
+import Splash from '../public/temp_splash.png';
+import Happiness from '../public/happiness.png';
+import Community from '../public/community.png';
+import Certification from '../public/certification.png';
+import Splash2 from '../public/temp_splash2.png';
+import Video from '../public/temp_video.png';
 
-export default function Home({}) {
+export default function Page() {
   return (
     <section className='flex flex-col'>
       <div className='hero min-h-screen'>
@@ -18,23 +18,22 @@ export default function Home({}) {
             alt='train illustration'
           />
           <div>
-            <h1 className='text-5xl font-bold' data-cy="splash-title">TRACK</h1>
-            <p className='py-6' data-cy="splash-tag">Learn it. Prove it.</p>
-            <button className='btn btn-secondary' data-cy='get-started'>
+            <h1 className='text-5xl font-bold' data-testid="splash-title">TRACK</h1>
+            <p className='py-6' data-testid="splash-tag">Learn it. Prove it.</p>
+            <button className='btn btn-secondary text-bright' role="link">
               <Link href='/pathways'>Get Started</Link>
             </button>
           </div>
         </div>
       </div>
 
-      <div className='bg-base-200 flex flex-col items-center p-24'>
-        <div className='flex justify-center items-start' data-cy='splash-info1'>
+      <div className='flex flex-col items-center p-24 border-t border-b border-secondary'>
+        <div className='flex justify-center items-start' data-testid='splash-info1'>
           <div className='flex flex-col items-center flex-1 flex-grow'>
             <Image
               src={Happiness}
               className='w-1/8 h-auto mb-8'
               alt='happy person icon'
-              data-cy='splash-mock1'
             />
             <p className='text-2xl mb-4 text-center'>
               Track is a learning tool built for you, not for some corporate
@@ -46,7 +45,6 @@ export default function Home({}) {
               src={Community}
               className='w-1/8 h-auto mb-8'
               alt='icon of community'
-              data-cy='splash-mock1'
             />
             <p className='text-2xl mb-4 text-center'>
               Community-driven learning paths provide learning opportunities
@@ -59,7 +57,6 @@ export default function Home({}) {
               src={Certification}
               className='w-1/8 h-auto mb-8'
               alt='icon of blue ribbon on a paper'
-              data-cy='splash-mock1'
             />
             <p className='text-2xl text-center'>
               Find pathways created by educators, curriculum designers,
@@ -74,11 +71,10 @@ export default function Home({}) {
           src={Splash2}
           className='w-1/4 h-auto self-center mb-12'
           alt='laptop displaying the use of the Track tool'
-          data-cy='splash-mock2'
         />
         <div
           className='flex flex-col items-center text-center'
-          data-cy='splash-info-2'>
+          data-testid='splash-info2'>
           <p className='text-2xl mb-4'>
             Track was designed to put you in the driver&apos;s seat of your
             learning, while also allowing you to proove your understaning and
@@ -99,7 +95,7 @@ export default function Home({}) {
           src={Video}
           className='w-100 h-auto'
           alt='laptop displaying the use of the Track tool'
-          data-cy='splash-video'
+          data-testid='splash-video'
         />
       </div>
     </section>

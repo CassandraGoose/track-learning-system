@@ -6,7 +6,7 @@ import { ContentArea, Competency } from "../lib/interface";
 export default function PathwayProgressDetails({
   contentAreas,
 }: {
-  contentAreas: [ContentArea];
+  contentAreas: Array<ContentArea>;
 }) {
   const [collapsed, setCollapsed] = useState(false);
 

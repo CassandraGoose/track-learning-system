@@ -6,12 +6,12 @@ export interface Children {
 
 export interface PathwayProps {
   id: string;
-  createdAt: string;
+  createdAt: Date;
   username: string;
   email: string;
   role: string;
   profileVisibility: boolean;
-  pathways: [Pathway];
+  pathways: Array<Pathway>;
 }
 
 export interface Pathway {
@@ -19,28 +19,28 @@ export interface Pathway {
   createdAt: Date;
   title: string;
   description: string;
-  contentArea: [ContentArea] | [];
+  contentArea: Array<ContentArea>;
 }
 
 export interface ContentArea {
   id: number;
-  createdAt: string;
+  createdAt: Date;
   title: string;
   description: string;
-  competencies: [Competency];
+  competencies: Array<Competency>;
 }
 
 export interface Competency {
   id: number;
-  createdAt: string;
+  createdAt: Date;
   title: string;
   description: string;
-  proofs: [Proof];
+  proofs: Array<Proof>;
 }
 
 export interface Proof {
   id: number;
-  createdAt: string;
+  createdAt: Date;
   updatedAt: string;
   title: string;
   description: string;

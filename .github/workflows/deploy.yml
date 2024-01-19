@@ -37,6 +37,8 @@ jobs:
     concurrency: Production
     steps:
       - uses: actions/checkout@v2
+      - name: Clean .next directory artifacts
+        run: rm -rf .next
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Pull Vercel Environment Information

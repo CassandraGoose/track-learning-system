@@ -6,7 +6,7 @@ async function main() {
   await prisma.pathway.upsert({
     where: { id: 1 },
     create: {
-      title: "Use Qual",
+      title: "Use Track",
       description: 'Learn to use the tool so you can leverage it to your advantage.'
     },
     update: {},

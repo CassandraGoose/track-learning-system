@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('has a title', async ({ page }) => {
-  await expect(page.getByTestId('pathway-title')).toHaveText('Use Qual');
+  await expect(page.getByTestId('pathway-title')).toHaveText('Use Track');
 });
 
 test('has a description', async ({ page }) => {

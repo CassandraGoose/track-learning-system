@@ -1,32 +1,25 @@
 import React from 'react';
-import { getPathwayByUserId } from '../../../lib/queries';
+import { getCompetency } from '../../../lib/queries';
 import { notFound } from 'next/navigation';
 import { Proof } from '../../../lib/interface';
 export default async function Page({
   params,
 }: {
-  params: { pathway: string; competencyId: string };
+  params: { competencyId: string };
 }) {
-  const pathway = params.pathway;
-  const userPathway = await getPathwayByUserId(
+  const competency = await getCompetency(
     'cljvusdou00003ntltwo9mhm5',
-    pathway,
+    params.competencyId,
   );
 
-  if (!userPathway) {
+  if (!competency) {
     notFound();
   }
 
-  const selectedPathway = userPathway.pathways[0];
-
-  const proofs = (selectedPathway.contentArea[0].competencies.find(
-    (element) => element.id === parseInt(params.competencyId),
-  ) || []) as Proof[];
+  const proofs = competency.proofs;
   return (
     <section className="mx-12 my-12 flex flex-col items-center">
-      <p className="self-start pb-8 text-2xl">
-        Competency: {selectedPathway.contentArea[0].competencies[0].title}
-      </p>
+      <p className="self-start pb-8 text-2xl">Competency: {competency.title}</p>
       {!!proofs && proofs.length > 0 && (
         <table className="table table-zebra table-lg">
           <thead>

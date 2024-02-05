@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: { pathway: string }}) {
             <span className="text-secondary">70%</span>
           </div>
           <h2 data-testid="pathway-description">{selectedPathway.description}</h2>
-          <PathwayProgressDetails contentAreas={selectedPathway.contentArea} />
+          <PathwayProgressDetails contentAreas={selectedPathway.contentArea} pathwayId={pathway}/>
         </div>
       </div>
     </section>

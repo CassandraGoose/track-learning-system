@@ -1,3 +1,5 @@
+'use server';
+
 import prisma from '@/app/lib/prisma';
 
 export async function getPathwaysByEmail() {
@@ -60,6 +62,18 @@ export async function getCompetency(userId: string, competencyId: string) {
           personId: userId,
         },
       },
+    },
+  });
+}
+
+export async function createProof(data: { userId: string, title: string, description: string, justification: string, competencyId: string }) {
+  return await prisma.proof.create({
+    data: {
+      title: data.title,
+      description: data.description,
+      justification: data.justification,
+      personId: data.userId,
+      competencyId: parseInt(data.competencyId),
     },
   });
 }

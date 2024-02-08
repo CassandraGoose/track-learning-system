@@ -1,6 +1,5 @@
 'use server';
 import { createProof } from '@/app/lib/queries';
-import { revalidateTag } from 'next/cache';
 
 export async function submitProof(
   identifiers: { userId: string; competencyId: string },
@@ -13,11 +12,7 @@ export async function submitProof(
     userId: identifiers.userId,
     competencyId: identifiers.competencyId,
   };
-  try {
-    await createProof(data);
-  } catch (error) {
-    console.error(error);
-  }
 
+  await createProof(data);
   return { message: `Added proof ${data.title}` };
 }

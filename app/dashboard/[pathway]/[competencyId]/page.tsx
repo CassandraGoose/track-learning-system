@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from 'react';
+import React from 'react';
 import { notFound } from 'next/navigation';
 import { Proof } from '@/app/lib/interface';
 import { getCompetency } from '@/app/lib/queries';

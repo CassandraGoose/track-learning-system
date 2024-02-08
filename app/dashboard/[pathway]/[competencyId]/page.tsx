@@ -1,6 +1,6 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import { notFound } from 'next/navigation';
-import { Competency, Proof } from '@/app/lib/interface';
+import { Proof } from '@/app/lib/interface';
 import { getCompetency } from '@/app/lib/queries';
 import NewProofForm from '@/app/components/NewProofForm';
 export default async function Page({

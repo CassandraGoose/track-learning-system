@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitProof } from '@/app/actions';
 
@@ -12,13 +12,20 @@ export default function NewProofForm({
 }) {
   const identifiers = { userId, competencyId };
   const router = useRouter();
+
+  // since we're using the form action, clearing the form becomes an issue
+  // but it's convention to utilize the form action, so we must persist. 
+  const formRef = useRef<HTMLFormElement>(null);
+
   return (
     <form
+      ref={formRef}
       className="flex flex-col space-y-2"
       action={async (formData) => {
         const submitProofWithIdentifiers = submitProof.bind(null, identifiers);
 
         await submitProofWithIdentifiers(formData);
+        formRef.current?.reset();
         router.refresh();
       }}
     >

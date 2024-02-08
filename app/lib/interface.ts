@@ -41,7 +41,7 @@ export interface Competency {
 export interface Proof {
   id: number;
   createdAt: string | Date;
-  updatedAt: string;
+  updatedAt: string | Date;
   title: string;
   description: string;
   justification: string;

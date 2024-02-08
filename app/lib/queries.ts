@@ -66,7 +66,13 @@ export async function getCompetency(userId: string, competencyId: string) {
   });
 }
 
-export async function createProof(data: { userId: string, title: string, description: string, justification: string, competencyId: string }) {
+export async function createProof(data: {
+  userId: string;
+  title: string;
+  description: string;
+  justification: string;
+  competencyId: string;
+}) {
   return await prisma.proof.create({
     data: {
       title: data.title,

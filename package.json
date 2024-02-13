@@ -11,7 +11,7 @@
     "test": "NODE_ENV=test npx playwright test"
   },
   "prisma": {
-    "seed": "node --import tsx ./prisma/seed.ts"
+    "seed": "tsx ./prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.8.1",

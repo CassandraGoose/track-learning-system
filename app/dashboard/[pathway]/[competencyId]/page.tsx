@@ -53,15 +53,10 @@ export default async function Page({
             </tbody>
           </table>
         )}
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title text-bright">Add New Proof</h2>
-            <NewProofForm
-              userId="cljvusdou00003ntltwo9mhm5"
-              competencyId={competencyId}
-            />
-          </div>
-        </div>
+        <NewProofForm
+          userId="cljvusdou00003ntltwo9mhm5"
+          competencyId={competencyId}
+        />
       </div>
     </section>
   );

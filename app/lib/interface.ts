@@ -6,7 +6,7 @@ export interface Children {
 
 export interface PathwayProps {
   id: string;
-  createdAt: Date;
+  createdAt: string | Date;
   username: string;
   email: string;
   role: string;
@@ -16,7 +16,7 @@ export interface PathwayProps {
 
 export interface Pathway {
   id: number;
-  createdAt: Date;
+  createdAt: string | Date;
   title: string;
   description: string;
   contentArea: Array<ContentArea>;
@@ -24,7 +24,7 @@ export interface Pathway {
 
 export interface ContentArea {
   id: number;
-  createdAt: Date;
+  createdAt: string | Date;
   title: string;
   description: string;
   competencies: Array<Competency>;
@@ -32,7 +32,7 @@ export interface ContentArea {
 
 export interface Competency {
   id: number;
-  createdAt: Date;
+  createdAt: string | Date;
   title: string;
   description: string;
   proofs: Array<Proof>;
@@ -40,8 +40,8 @@ export interface Competency {
 
 export interface Proof {
   id: number;
-  createdAt: Date;
-  updatedAt: string;
+  createdAt: string | Date;
+  updatedAt: string | Date;
   title: string;
   description: string;
   justification: string;

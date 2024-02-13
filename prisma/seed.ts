@@ -6,8 +6,18 @@ async function main() {
   await prisma.pathway.upsert({
     where: { id: 1 },
     create: {
-      title: "Use Track",
-      description: 'Learn to use the tool so you can leverage it to your advantage.'
+      title: 'Use Track',
+      description:
+        'Learn to use the tool so you can leverage it to your advantage.',
+    },
+    update: {},
+  });
+
+  await prisma.pathway.upsert({
+    where: { id: 2 },
+    create: {
+      title: 'Learn to Learn',
+      description: 'Utilize a growth mindset and grit to learn anything',
     },
     update: {},
   });
@@ -15,13 +25,32 @@ async function main() {
   await prisma.contentArea.upsert({
     where: { id: 1 },
     create: {
-      title: 'Navigating Qual',
+      title: 'Navigating Track',
       description: 'Practice finding things in the applicaiton.',
       pathways: {
-        connect: [{
+        connect: [
+          {
             id: 1,
-        }]
-      }
+          },
+        ],
+      },
+    },
+    update: {},
+  });
+
+  await prisma.contentArea.upsert({
+    where: { id: 2 },
+    create: {
+      title: 'Metacognition',
+      description:
+        'Being aware of your own thought process will help you learn more effectively.',
+      pathways: {
+        connect: [
+          {
+            id: 2,
+          },
+        ],
+      },
     },
     update: {},
   });
@@ -34,19 +63,37 @@ async function main() {
       contentAreas: {
         connect: [
           {
-            id: 1
-          }
-        ]
-      }
+            id: 1,
+          },
+        ],
+      },
     },
     update: {},
   });
-  
+
+  await prisma.competency.upsert({
+    where: { id: 2 },
+    create: {
+      title: 'Explain what a Growth Mindset is',
+      description:
+        'The first step in developing a skill is understanding what it is.',
+      contentAreas: {
+        connect: [
+          {
+            id: 1,
+          },
+        ],
+      },
+    },
+    update: {},
+  });
+
   await prisma.person.upsert({
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
       email: process.env.TEST_USER_EMAIL || '',
       username: 'me',
+      id: process.env.TEST_USER_ID || '', 
     },
     update: {},
   });
@@ -58,19 +105,39 @@ async function addRelations() {
     data: {
       contentArea: {
         connect: [
-          { 
+          {
             id: 1,
-          }
-        ]
+          },
+        ],
       },
       persons: {
         connect: [
           {
             username: 'me',
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
+  });
+
+  await prisma.pathway.update({
+    where: { id: 2 },
+    data: {
+      contentArea: {
+        connect: [
+          {
+            id: 2,
+          },
+        ],
+      },
+      persons: {
+        connect: [
+          {
+            username: 'me',
+          },
+        ],
+      },
+    },
   });
 
   await prisma.contentArea.update({
@@ -80,26 +147,45 @@ async function addRelations() {
         connect: [
           {
             id: 1,
-          }
-        ]
+          },
+        ],
       },
       competencies: {
         connect: [
           {
             id: 1,
-          }
-        ]
-      }
-    }
+          },
+        ],
+      },
+    },
+  });
+
+  await prisma.contentArea.update({
+    where: { id: 2 },
+    data: {
+      pathways: {
+        connect: [
+          {
+            id: 2,
+          },
+        ],
+      },
+      competencies: {
+        connect: [
+          {
+            id: 2,
+          },
+        ],
+      },
+    },
   });
 }
 
 main()
   .then(async () => {
-    addRelations()
-    .then(async () => {
+    addRelations().then(async () => {
       await prisma.$disconnect();
-    })
+    });
     await prisma.$disconnect();
   })
   .catch(async (e) => {

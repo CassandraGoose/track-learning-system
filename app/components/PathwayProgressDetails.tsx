@@ -2,12 +2,9 @@
 
 import { useState } from "react";
 import { ContentArea, Competency } from "../lib/interface";
+import Link from "next/link";
 
-export default function PathwayProgressDetails({
-  contentAreas,
-}: {
-  contentAreas: Array<ContentArea>;
-}) {
+export default function PathwayProgressDetails({ contentAreas, pathwayId }: { contentAreas: ContentArea[], pathwayId: string }) {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
@@ -68,7 +65,11 @@ export default function PathwayProgressDetails({
                       <p>{competency.description}</p>
                     </td>
                     <td>
-                      <button className="btn btn-secondary">Proof</button>
+                      <Link
+                        href={`/dashboard/${pathwayId}/${competency.id}`}
+                        className='btn btn-secondary'>
+                        Proof
+                      </Link>
                     </td>
                   </tr>
                 ))}

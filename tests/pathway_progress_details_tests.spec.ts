@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('has a title', async ({ page }) => {
-  await expect(page.getByTestId('content-area-title')).toHaveText('Navigating Qual');
+  await expect(page.getByTestId('content-area-title')).toHaveText('Navigating Track');
 });
 
 test('has a description', async ({ page }) => {
@@ -18,5 +18,5 @@ test('renders competency progress', async ({ page }) => {
 
 test('shows the table for competencies in the content area', async ({ page }) => {
   await page.getByRole('button').click();
-  await expect(page.getByRole('table')).toHaveText('CompletedCompetencyDescription✅Find personal pathwaysYou can find all of your saved pathwaysProof');
+  await expect(page.getByRole('table')).toHaveText('CompletedCompetencyDescription✅Find personal pathwaysYou can find all of your saved pathwaysProof✅Explain what a Growth Mindset isThe first step in developing a skill is understanding what it is.Proof');
 });

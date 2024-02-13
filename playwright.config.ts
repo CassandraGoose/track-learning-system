@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import { loadEnvConfig } from '@next/env';
 
+loadEnvConfig(process.cwd());
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -9,7 +11,10 @@ import { defineConfig, devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
+  // path to the global setup files.
+  globalSetup: require.resolve('./tests/global-setup'),
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -69,9 +74,10 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
+  /* Don't utilize the existing server, in case it's based on a different database */
   webServer: {
     command: 'npm run dev',
     url: 'http://127.0.0.1:3000',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
   },
 });

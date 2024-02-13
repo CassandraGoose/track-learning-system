@@ -30,6 +30,7 @@ export async function getPathwaysByEmail() {
 }
 
 export async function getPathwayByUserId(userId: string, pathwayId: string) {
+  console.log('here', userId, pathwayId);
   try {
     return await prisma.person.findFirst({
       where: {
@@ -54,6 +55,7 @@ export async function getPathwayByUserId(userId: string, pathwayId: string) {
         },
       },
     });
+
   } catch (error) {
     console.error(error);
   }

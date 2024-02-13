@@ -41,10 +41,16 @@ export default function NewProofForm({
   };
 
   return (
-    <div className="card card-compact bg-base-100 shadow-xl w-96 h-min">
+    <div className="card card-compact h-min w-96 bg-base-100 shadow-xl">
       <div className="card-body">
-        <h2 className="card-title text-bright">Add New Proof</h2>
+        <h2
+          className="card-title text-bright"
+          data-testid="new-proof-form-title"
+        >
+          Add New Proof
+        </h2>
         <form
+          data-testid="new-proof-form"
           ref={formRef}
           className="flex flex-col space-y-2"
           action={async (formData) => {
@@ -67,6 +73,7 @@ export default function NewProofForm({
             Proof Title
           </label>
           <input
+            data-testid="proof-title-input"
             className="input input-bordered w-full bg-bright"
             type="text"
             id="proofTitle"
@@ -80,6 +87,7 @@ export default function NewProofForm({
             Proof Description
           </label>
           <textarea
+            data-testid="proof-description-textarea"
             className="textarea textarea-bordered bg-bright"
             id="proofDescription"
             name="proofDescription"
@@ -93,6 +101,7 @@ export default function NewProofForm({
             Proof
           </label>
           <textarea
+            data-testid="proof-justification-textarea"
             className="textarea textarea-bordered bg-bright"
             id="proofJustification"
             name="proofJustification"
@@ -104,7 +113,7 @@ export default function NewProofForm({
             </span>
           </div>
           <div className="card-actions mt-2 justify-end">
-            <button type="submit" className="btn-bright btn btn-outline">
+            <button data-testid="new-proof-submit" type="submit" className="btn-bright btn btn-outline">
               Add
             </button>
             <div className="label">

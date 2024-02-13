@@ -21,7 +21,7 @@ export default async function Page({
 
   return (
     <section className="mx-12 my-12 flex flex-col items-center">
-      <p className="self-start pb-8 text-2xl">
+      <p className="self-start pb-8 text-2xl" data-testid="competency-title">
         Competency: {competency?.title}
       </p>
       <div className="flex w-full justify-between">
@@ -39,14 +39,16 @@ export default async function Page({
                 <tr key={proof.id}>
                   <td>
                     <span className="flex items-center space-x-3">
-                      <p>{proof.title}</p>
+                      <p data-testid="proof-title">{proof.title}</p>
                     </span>
                   </td>
                   <td>
-                    <p>{proof.description}</p>
+                    <p data-testid="proof-description">{proof.description}</p>
                   </td>
                   <td>
-                    <p>{proof.justification}</p>
+                    <p data-testid="proof-justification">
+                      {proof.justification}
+                    </p>
                   </td>
                 </tr>
               ))}

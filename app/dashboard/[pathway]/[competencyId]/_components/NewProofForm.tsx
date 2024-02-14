@@ -40,6 +40,8 @@ export default function NewProofForm({
     );
   };
 
+  console.log('uh')
+
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <div className="card-body">
@@ -60,6 +62,7 @@ export default function NewProofForm({
             );
 
             const message = await submitProofWithIdentifiers(formData);
+            console.log('hi', message);
 
             if (message.error) {
               setErrorMessage(message.error);

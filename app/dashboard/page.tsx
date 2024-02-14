@@ -41,6 +41,7 @@ export default async function Page() {
                 <p>{pathway.description}</p>
                 <div className='card-actions'>
                   <Link
+                    data-testid='view-pathway'
                     href={`/dashboard/${pathway.id}`}
                     className='btn btn-secondary text-bright'>
                     View Pathway
@@ -49,6 +50,7 @@ export default async function Page() {
               </div>
               <div className='p-8'>
                 <div
+                  data-testid="progress-radial"
                   className='radial-progress bg-secondary text-bright border-4 border-secondary'
                   style={{
                     ['--value' as string]: caluclateProgress(pathway),

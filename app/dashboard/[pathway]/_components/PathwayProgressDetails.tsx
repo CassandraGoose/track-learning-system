@@ -1,11 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { ContentArea, Competency } from "../lib/interface";
+import { ContentArea, Competency } from "../../../lib/interface";
 import Link from "next/link";
 
 export default function PathwayProgressDetails({ contentAreas, pathwayId }: { contentAreas: ContentArea[], pathwayId: string }) {
   const [collapsed, setCollapsed] = useState(false);
+
+  const getCompletedCompetencies = (competencies: Competency[]) => {
+    return competencies.reduce((acc, competency) => {
+      if (competency.proofs.length > 0) acc++;
+      return acc;
+    }, 0);
+  }
+
+  const checkCompetencyCompleted = (competency: Competency) => {
+    return competency.proofs.length > 0;
+  }
 
   return (
     <div className="flex justify-center items-start mt-0">
@@ -20,6 +31,7 @@ export default function PathwayProgressDetails({ contentAreas, pathwayId }: { co
                 {contentArea.title}
               </p>
               <button
+                data-testid="toggle-competency-details"
                 className="text-4xl"
                 aria-controls={`${contentArea.title}-details`}
                 aria-expanded={!collapsed}
@@ -31,7 +43,7 @@ export default function PathwayProgressDetails({ contentAreas, pathwayId }: { co
             <p data-testid="content-area-description">{contentArea.description}</p>
             <div className="flex items-center justify-center pt-8">
               <p className="font-thin" data-testid="competency-progress">
-                3/7 competencies met
+                {getCompletedCompetencies(contentArea.competencies)} / {contentArea.competencies.length} competencies met
               </p>
             </div>
           </div>
@@ -39,21 +51,20 @@ export default function PathwayProgressDetails({ contentAreas, pathwayId }: { co
             className={` ${collapsed ? "block" : "hidden"}`}
             id={`${contentArea.title}-details`}
           >
-            <table className="table table-zebra table-lg">
+            <table className="table">
               <thead>
                 <tr>
-                  <th>Completed</th>
-                  <th>Competency</th>
-                  <th>Description</th>
-                  <th></th>
+                  <th className="text-primary">Completed</th>
+                  <th className="text-primary">Competency</th>
+                  <th className="text-primary">Description</th>
                 </tr>
               </thead>
               <tbody>
                 {contentArea.competencies.map((competency: Competency) => (
                   <tr key={competency.id}>
                     <td>
-                      <span className="flex items-center space-x-3">
-                        <span>✅</span>
+                      <span className="flex items-center space-x-3 pl-4 text-xl" data-testid="completed-check">
+                        {checkCompetencyCompleted(competency) ? '✓' : null}
                       </span>
                     </td>
                     <td>
@@ -66,6 +77,7 @@ export default function PathwayProgressDetails({ contentAreas, pathwayId }: { co
                     </td>
                     <td>
                       <Link
+                        data-testid="view-proofs"
                         href={`/dashboard/${pathwayId}/${competency.id}`}
                         className='btn btn-secondary'>
                         Proof

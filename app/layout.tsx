@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Navbar from "@/app/components/Navbar";
-import SiteFooter from "@/app/components/SiteFooter";
+import Navbar from "@/app/_components/Navbar";
+import SiteFooter from "@/app/_components/SiteFooter";
 
 import "@/styles/globals.css";
 

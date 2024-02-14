@@ -41,7 +41,7 @@ export default function NewProofForm({
   };
 
   return (
-    <div className="card card-compact h-min w-96 bg-base-100 shadow-xl">
+    <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <div className="card-body">
         <h2
           className="card-title text-bright"
@@ -83,7 +83,7 @@ export default function NewProofForm({
           <div className="label">
             <span className="label-text-alt text-error">{titleError}</span>
           </div>
-          <label className="label-text" htmlFor="proofJustification">
+          <label className="label-text" htmlFor="proofDescription">
             Proof Description
           </label>
           <textarea

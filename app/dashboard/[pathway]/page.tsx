@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getPathwayByUserId } from '../../lib/queries';
-import PathwayProgressDetails from '../../components/PathwayProgressDetails';
+import PathwayProgressDetails from './_components/PathwayProgressDetails';
 import { Pathway } from '../../lib/interface';
 
 export default async function Page({

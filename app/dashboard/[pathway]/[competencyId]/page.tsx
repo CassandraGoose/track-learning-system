@@ -1,8 +1,9 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
-import { Proof } from '@/app/lib/interface';
 import { getCompetency } from '@/app/lib/queries';
-import NewProofForm from '@/app/components/NewProofForm';
+import NewProofForm from '@/app/dashboard/[pathway]/[competencyId]/_components/NewProofForm';
+import ProofList from './_components/ProofList';
+
 export default async function Page({
   params,
 }: {
@@ -25,36 +26,7 @@ export default async function Page({
         Competency: {competency?.title}
       </p>
       <div className="flex w-full justify-between">
-        {!!proofs && proofs.length > 0 && (
-          <table className="table w-2/3">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Proof</th>
-              </tr>
-            </thead>
-            <tbody>
-              {proofs.map((proof: Proof) => (
-                <tr key={proof.id}>
-                  <td>
-                    <span className="flex items-center space-x-3">
-                      <p data-testid="proof-title">{proof.title}</p>
-                    </span>
-                  </td>
-                  <td>
-                    <p data-testid="proof-description">{proof.description}</p>
-                  </td>
-                  <td>
-                    <p data-testid="proof-justification">
-                      {proof.justification}
-                    </p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+        <ProofList proofs={proofs} />
         <NewProofForm
           userId="cljvusdou00003ntltwo9mhm5"
           competencyId={competencyId}

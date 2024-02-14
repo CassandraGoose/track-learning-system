@@ -1,7 +1,7 @@
-import { Pathway } from '../lib/interface';
 import Link from 'next/link';
 import { getPathwaysByEmail } from '../lib/queries';
 import { notFound } from 'next/navigation';
+import { caluclateProgress } from '../lib/utilities';
 
 export default async function Page() {
   let pathways = await getPathwaysByEmail();
@@ -9,20 +9,6 @@ export default async function Page() {
   if (!pathways) {
     notFound();
   }
-
-  const caluclateProgress = (pathway: Pathway) => {
-    const thing =  pathway.contentArea.reduce((acc, contentArea) => {
-      let totalCompetencies = 0;
-      const completedProofs = contentArea.competencies.reduce((compAcc, competency) => {
-        totalCompetencies++;
-        return competency.proofs.length > 0 ? compAcc + 1 : compAcc;
-      }, 0);
-      console.log('totalProfs', totalCompetencies, 'completedProofs', completedProofs);
-      console.log(completedProofs / totalCompetencies)
-      return acc + (completedProofs / totalCompetencies) * 100;
-    }, 0);
-    return thing;
-  };
 
   return (
     <section className='mx-12 flex flex-col space-y-12'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getPathwayByUserId } from '../../lib/queries';
+import { caluclateProgress } from '../../lib/utilities';
 import PathwayProgressDetails from './_components/PathwayProgressDetails';
 import { Pathway } from '../../lib/interface';
 
@@ -20,6 +21,7 @@ export default async function Page({
   }
 
   const selectedPathway = userPathway.pathways[0] as Pathway;
+  const progress = caluclateProgress(selectedPathway);
 
   return (
     <section className="mx-12 my-12 flex flex-col items-center">
@@ -31,10 +33,10 @@ export default async function Page({
           <div className="flex items-center">
             <progress
               className="progress progress-secondary"
-              value={70}
+              value={progress}
               max="100"
             ></progress>
-            <span className="text-secondary">70%</span>
+            <span className="text-secondary">{progress}%</span>
           </div>
           <h2 data-testid="pathway-description">
             {selectedPathway.description}

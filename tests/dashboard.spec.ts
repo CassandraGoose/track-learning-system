@@ -20,7 +20,7 @@ test('shows appropriate progress', async ({ page }) => {
   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('0%');
 });
 
-test.only('updates radial progress', async ({ page }) => {
+test('updates radial progress', async ({ page }) => {
   // setup proofs to change radial
   await page.getByTestId('view-pathway').first().click();
   await page.getByTestId('toggle-competency-details').click();
@@ -32,7 +32,7 @@ test.only('updates radial progress', async ({ page }) => {
   await page.getByTestId('proof-table').waitFor({state: 'attached'});
   await page.goBack();
   await page.goBack();
-  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('50%');
+  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 
   // remove proof to keep tests stand-alone
   await page.goto('http://localhost:3000/dashboard/1/1');

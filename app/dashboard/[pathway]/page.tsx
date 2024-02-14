@@ -42,7 +42,7 @@ export default async function Page({
             {selectedPathway.description}
           </h2>
           <PathwayProgressDetails
-            contentAreas={selectedPathway.contentArea}
+            pathway={selectedPathway}
             pathwayId={pathway}
           />
         </div>

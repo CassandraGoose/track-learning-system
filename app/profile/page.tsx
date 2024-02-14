@@ -1,6 +1,7 @@
 import { getPathwaysByEmail } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
+import { Pathway } from '../lib/interface';
 import Avatar from '../../public/temp_profile_image.png';
 import Image from 'next/image';
 
@@ -10,6 +11,8 @@ export default async function Page() {
   if (!pathways) {
     notFound();
   }
+
+  console.log(pathways)
 
   return (
     <section className="mx-12 flex flex-col">
@@ -30,7 +33,7 @@ export default async function Page() {
       <div className="space-y-12">
         <p className="mt-12 text-2xl">Pathways</p>
         {pathways &&
-          pathways.pathways.map((pathway) => {
+          pathways.pathways.map((pathway : Pathway) => {
             return (
               <article
                 className="border-black card w-full rounded-md border"
@@ -60,7 +63,7 @@ export default async function Page() {
                   </div>
                 </div>
                 <div className="card-body flex flex-row flex-wrap">
-                  {pathway.contentArea[0].competencies.map((competency) => {
+                  {pathway.competencies.map((competency) => {
                     return (
                       <div
                         key={competency.id}

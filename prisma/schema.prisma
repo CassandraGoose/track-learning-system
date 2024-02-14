@@ -46,7 +46,7 @@ model Pathway {
   createdAt   DateTime      @default(now())
   title       String        @unique
   description String
-  competency  Competency[]
+  competencies  Competency[]
   persons     Person[]
 }
 

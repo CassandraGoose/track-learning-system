@@ -4,16 +4,8 @@ test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:3000/dashboard/1');
 });
 
-test('has a title', async ({ page }) => {
-  await expect(page.getByTestId('content-area-title')).toHaveText('Navigating Track');
-});
-
-test('has a description', async ({ page }) => {
-  await expect(page.getByTestId('content-area-description')).toHaveText('Practice finding things in the applicaiton.');
-});
-
 test('renders competency progress', async ({ page }) => {
-  await expect(page.getByTestId('competency-progress')).toHaveText('0 / 2 competencies met');
+  await expect(page.getByTestId('competency-progress')).toHaveText('0 / 1 competencies met');
 });
 
 test('updates competency progress when proof is added', async ({ page }) => {
@@ -26,7 +18,7 @@ test('updates competency progress when proof is added', async ({ page }) => {
   await page.getByTestId('proof-table').waitFor({state: 'attached'});
   await page.goBack();
   await page.getByTestId('toggle-competency-details').click();
-  await expect(page.getByTestId('competency-progress')).toHaveText('1 / 2 competencies met');
+  await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
   await expect(page.getByTestId('completed-check').first()).toHaveText('✓');
 
   // remove proof to keep tests stand-alone
@@ -46,7 +38,7 @@ test('updates competency progress when proof is removed', async ({ page }) => {
   await page.getByTestId('proof-table').waitFor({state: 'attached'});
   await page.goto('http://localhost:3000/dashboard/1');
   await page.getByTestId('toggle-competency-details').click();
-  await expect(page.getByTestId('competency-progress')).toHaveText('1 / 2 competencies met');
+  await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
   await expect(page.getByTestId('completed-check').first()).toHaveText('✓');
 
   await page.getByTestId('view-proofs').first().click();

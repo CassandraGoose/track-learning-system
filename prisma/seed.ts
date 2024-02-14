@@ -103,7 +103,7 @@ async function addRelations() {
   await prisma.pathway.update({
     where: { id: 1 },
     data: {
-      competency: {
+      competencies: {
         connect: [
           {
             id: 1,
@@ -123,7 +123,7 @@ async function addRelations() {
   await prisma.pathway.update({
     where: { id: 2 },
     data: {
-      competency: {
+      competencies: {
         connect: [
           {
             id: 2,

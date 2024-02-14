@@ -11,13 +11,9 @@ export async function getPathwaysByEmail() {
       include: {
         pathways: {
           include: {
-            contentArea: {
+            competencies: {
               include: {
-                competencies: {
-                  include: {
-                    proofs: true,
-                  },
-                },
+                proofs: true,
               },
             },
           },
@@ -41,20 +37,15 @@ export async function getPathwayByUserId(userId: string, pathwayId: string) {
             id: parseInt(pathwayId),
           },
           include: {
-            contentArea: {
+            competencies: {
               include: {
-                competencies: {
-                  include: {
-                    proofs: true,
-                  },
-                },
+                proofs: true,
               },
             },
           },
         },
       },
     });
-
   } catch (error) {
     console.error(error);
   }

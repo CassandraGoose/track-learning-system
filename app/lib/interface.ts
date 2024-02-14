@@ -35,6 +35,7 @@ export interface Competency {
   title: string;
   description: string;
   proofs: Array<Proof>;
+  contentAreas?: Array<ContentArea>;
 }
 
 export interface Proof {

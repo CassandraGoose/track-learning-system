@@ -1,18 +1,29 @@
 import { getPathwaysByEmail } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
-import { Pathway } from '../lib/interface';
+import { Pathway, Competency, ContentArea } from '../lib/interface';
 import Avatar from '../../public/temp_profile_image.png';
 import Image from 'next/image';
 
 export default async function Page() {
-  let pathways = await getPathwaysByEmail();
+  let userPathways = await getPathwaysByEmail();
 
-  if (!pathways) {
+  if (!userPathways) {
     notFound();
   }
 
-  console.log(pathways)
+  const pathways = userPathways.pathways;
+
+  const getAllContentAreaForPathway = (pathway: Pathway): string[] => {
+    const contentAreas = new Set();
+    pathway.competencies.forEach((competency: Competency) => {
+      console.log(competency)
+      competency.contentAreas!.forEach((contentArea) => {
+        contentAreas.add(contentArea.title);
+      });
+    });
+    return Array.from(contentAreas) as string[];
+  }
 
   return (
     <section className="mx-12 flex flex-col">
@@ -33,7 +44,7 @@ export default async function Page() {
       <div className="space-y-12">
         <p className="mt-12 text-2xl">Pathways</p>
         {pathways &&
-          pathways.pathways.map((pathway : Pathway) => {
+          pathways.map((pathway : Pathway) => {
             return (
               <article
                 className="border-black card w-full rounded-md border"
@@ -45,8 +56,9 @@ export default async function Page() {
                     <p className="card-title">{pathway.title}</p>
                     <p>{pathway.description}</p>
                     <div className="card-actions flex">
-                      <div className="badge badge-outline">Fashion</div>
-                      <div className="badge badge-outline">Products</div>
+                      {getAllContentAreaForPathway(pathway).map((contentArea: string) => {
+                        return (<div className="badge badge-outline" key={contentArea}>{contentArea}</div>);
+                      })}                      
                     </div>
                   </div>
                   <div className="p-8">
@@ -72,7 +84,7 @@ export default async function Page() {
                         <div className="card-body">
                           <p className="card-title">{competency.title}</p>
                           <p>{competency.description}</p>
-                          <div className="card-actions">
+                          <div className="card-actions flex flex-col">
                             {competency.proofs.length > 0 ? (<ul className="flex flex-wrap justify-start">
                               {competency.proofs.map((proof) => {
                                 return (
@@ -84,6 +96,9 @@ export default async function Page() {
                                 );
                               })}
                             </ul>) : (<p>No proofs to show</p>)}
+                            {competency.contentAreas && competency.contentAreas.map((contentArea: ContentArea) => {
+                              return <div className="badge badge-outline" key={contentArea.id}>{contentArea.title}</div>
+                            })}
                           </div>
                         </div>
                       </div>

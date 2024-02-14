@@ -13,6 +13,7 @@ export async function getPathwaysByEmail() {
           include: {
             competencies: {
               include: {
+                contentAreas: true,
                 proofs: true,
               },
             },
@@ -40,6 +41,7 @@ export async function getPathwayByUserId(userId: string, pathwayId: string) {
             competencies: {
               include: {
                 proofs: true,
+                contentAreas: true,
               },
             },
           },
@@ -63,6 +65,7 @@ export async function getCompetency(userId: string, competencyId: string) {
             personId: userId,
           },
         },
+        contentAreas: true,
       },
     });
   } catch (error) {

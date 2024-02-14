@@ -10,6 +10,20 @@ export default async function Page() {
     notFound();
   }
 
+  const caluclateProgress = (pathway: Pathway) => {
+    const thing =  pathway.contentArea.reduce((acc, contentArea) => {
+      let totalCompetencies = 0;
+      const completedProofs = contentArea.competencies.reduce((compAcc, competency) => {
+        totalCompetencies++;
+        return competency.proofs.length > 0 ? compAcc + 1 : compAcc;
+      }, 0);
+      console.log('totalProfs', totalCompetencies, 'completedProofs', completedProofs);
+      console.log(completedProofs / totalCompetencies)
+      return acc + (completedProofs / totalCompetencies) * 100;
+    }, 0);
+    return thing;
+  };
+
   return (
     <section className='mx-12 flex flex-col space-y-12'>
       <h2 className={`text-4xl self-center mt-8 `}>
@@ -37,10 +51,10 @@ export default async function Page() {
                 <div
                   className='radial-progress bg-secondary text-bright border-4 border-secondary'
                   style={{
-                    ['--value' as string]: 70,
+                    ['--value' as string]: caluclateProgress(pathway),
                     ['--size' as string]: '8rem',
                   }}>
-                  70%
+                  {caluclateProgress(pathway)}%
                 </div>
               </div>
             </div>

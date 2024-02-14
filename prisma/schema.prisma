@@ -28,6 +28,7 @@ model Competency {
   updatedAt    DateTime      @default(now())
   title        String        @unique
   description  String
+  pathways     Pathway[]
   contentAreas ContentArea[]
   proofs       Proof[]
 }
@@ -38,7 +39,6 @@ model ContentArea {
   title        String       @unique
   description  String
   competencies Competency[]
-  pathways     Pathway[]
 }
 
 model Pathway {
@@ -46,7 +46,7 @@ model Pathway {
   createdAt   DateTime      @default(now())
   title       String        @unique
   description String
-  contentArea ContentArea[]
+  competency  Competency[]
   persons     Person[]
 }
 

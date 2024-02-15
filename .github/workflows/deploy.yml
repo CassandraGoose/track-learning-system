@@ -27,7 +27,7 @@ jobs:
         run: npm run test
 
   Deploy-Production:
-    needs: test
+    needs: playwright-test
     env:
       NODE_ENV: ${{ secrets.NODE_ENV }}
       DATABASE_URL: ${{ secrets.DATABASE_URL}}

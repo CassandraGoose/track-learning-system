@@ -63,10 +63,10 @@ export default function Navbar() {
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box p-2 shadow"
+            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-md p-2 shadow bg-bright border border-black"
           >
             <li>
-              <a className="justify-between">Profile</a>
+              <Link href="/profile">Profile</Link>
             </li>
             <li>
               <a>Settings</a>

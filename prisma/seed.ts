@@ -22,45 +22,12 @@ async function main() {
     update: {},
   });
 
-  await prisma.contentArea.upsert({
-    where: { id: 1 },
-    create: {
-      title: 'Navigating Track',
-      description: 'Practice finding things in the applicaiton.',
-      pathways: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
-      },
-    },
-    update: {},
-  });
-
-  await prisma.contentArea.upsert({
-    where: { id: 2 },
-    create: {
-      title: 'Metacognition',
-      description:
-        'Being aware of your own thought process will help you learn more effectively.',
-      pathways: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
-    },
-    update: {},
-  });
-
   await prisma.competency.upsert({
     where: { id: 1 },
     create: {
       title: 'Find personal pathways',
       description: 'You can find all of your saved pathways',
-      contentAreas: {
+      pathways: {
         connect: [
           {
             id: 1,
@@ -77,10 +44,43 @@ async function main() {
       title: 'Explain what a Growth Mindset is',
       description:
         'The first step in developing a skill is understanding what it is.',
-      contentAreas: {
+      pathways: {
+        connect: [
+          {
+            id: 2,
+          },
+        ],
+      },
+    },
+    update: {},
+  });
+
+  await prisma.contentArea.upsert({
+    where: { id: 1 },
+    create: {
+      title: 'Navigating Track',
+      description: 'Practice finding things in the applicaiton.',
+      competencies: {
         connect: [
           {
             id: 1,
+          },
+        ],
+      },
+    },
+    update: {},
+  });
+
+  await prisma.contentArea.upsert({
+    where: { id: 2 },
+    create: {
+      title: 'Metacognition',
+      description:
+        'Being aware of your own thought process will help you learn more effectively.',
+      competencies: {
+        connect: [
+          {
+            id: 2,
           },
         ],
       },
@@ -103,7 +103,7 @@ async function addRelations() {
   await prisma.pathway.update({
     where: { id: 1 },
     data: {
-      contentArea: {
+      competencies: {
         connect: [
           {
             id: 1,
@@ -123,7 +123,7 @@ async function addRelations() {
   await prisma.pathway.update({
     where: { id: 2 },
     data: {
-      contentArea: {
+      competencies: {
         connect: [
           {
             id: 2,
@@ -143,13 +143,6 @@ async function addRelations() {
   await prisma.contentArea.update({
     where: { id: 1 },
     data: {
-      pathways: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
-      },
       competencies: {
         connect: [
           {
@@ -163,13 +156,6 @@ async function addRelations() {
   await prisma.contentArea.update({
     where: { id: 2 },
     data: {
-      pathways: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
       competencies: {
         connect: [
           {

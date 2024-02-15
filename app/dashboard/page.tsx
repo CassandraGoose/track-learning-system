@@ -1,21 +1,23 @@
-import { Pathway } from '../lib/interface';
 import Link from 'next/link';
 import { getPathwaysByEmail } from '../lib/queries';
 import { notFound } from 'next/navigation';
+import { caluclateProgress } from '../lib/utilities';
 
 export default async function Page() {
-  let pathways = await getPathwaysByEmail();
+  let userPathways = await getPathwaysByEmail();
 
-  if (!pathways) {
+  if (!userPathways) {
     notFound();
   }
+
+  const pathways = userPathways.pathways;
 
   return (
     <section className='mx-12 flex flex-col space-y-12'>
       <h2 className={`text-4xl self-center mt-8 `}>
         My Pathways
       </h2>
-      {pathways && pathways.pathways.map((pathway) => {
+      {pathways && pathways.map((pathway) => {
         return (
           <article
             className='card w-full border rounded-md border-black'
@@ -27,6 +29,7 @@ export default async function Page() {
                 <p>{pathway.description}</p>
                 <div className='card-actions'>
                   <Link
+                    data-testid='view-pathway'
                     href={`/dashboard/${pathway.id}`}
                     className='btn btn-secondary text-bright'>
                     View Pathway
@@ -35,12 +38,13 @@ export default async function Page() {
               </div>
               <div className='p-8'>
                 <div
+                  data-testid="progress-radial"
                   className='radial-progress bg-secondary text-bright border-4 border-secondary'
                   style={{
-                    ['--value' as string]: 70,
+                    ['--value' as string]: caluclateProgress(pathway),
                     ['--size' as string]: '8rem',
                   }}>
-                  70%
+                  {caluclateProgress(pathway)}%
                 </div>
               </div>
             </div>

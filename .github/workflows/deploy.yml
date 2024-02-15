@@ -7,14 +7,13 @@ on:
     branches:
       - main
 jobs:
-  test:
+  playwright-test:
     env:
-      DATABASE_URL: ${{ secrets.TEST_DATABASE_URL}}
+      DATABASE_URL: ${{ secrets.DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
       TEST_USER_ID: ${{ secrets.TEST_USER_ID }}
     runs-on: ubuntu-latest
     environment: test
-    concurrency: Production
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

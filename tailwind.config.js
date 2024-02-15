@@ -35,7 +35,8 @@ module.exports = {
           secondary: '#323031', // daisy requires, currently dark grey
           accent: '#323031', //daisy requires, currently dark grey
           'base-100': '#323031', // daisy requires, currently dark grey
-          neutral: '#323031' // daisy requires
+          neutral: '#323031', // daisy requires
+          error: '#EC6466', // daisy requires 
         },
       },
     ],

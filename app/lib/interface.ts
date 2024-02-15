@@ -19,7 +19,7 @@ export interface Pathway {
   createdAt: string | Date;
   title: string;
   description: string;
-  contentArea: Array<ContentArea>;
+  competencies: Array<Competency>;
 }
 
 export interface ContentArea {
@@ -27,7 +27,6 @@ export interface ContentArea {
   createdAt: string | Date;
   title: string;
   description: string;
-  competencies: Array<Competency>;
 }
 
 export interface Competency {
@@ -36,12 +35,13 @@ export interface Competency {
   title: string;
   description: string;
   proofs: Array<Proof>;
+  contentAreas?: Array<ContentArea>;
 }
 
 export interface Proof {
   id: number;
   createdAt: string | Date;
-  updatedAt: string;
+  updatedAt: string | Date;
   title: string;
   description: string;
   justification: string;

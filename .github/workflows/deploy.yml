@@ -11,14 +11,15 @@ jobs:
     env:
       DATABASE_URL: ${{ secrets.TEST_DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
+      TEST_USER_ID: ${{ secrets.TEST_USER_ID }}
     runs-on: ubuntu-latest
-    environment: Production
+    environment: test
     concurrency: Production
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - name: Install dependencies
         run: npm i
       - name: Install Playwright Browsers

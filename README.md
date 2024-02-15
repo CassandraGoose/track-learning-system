@@ -68,7 +68,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Context
 
-<img src="https://i.imgur.com/psxuwRX.png" alt="DB ERD" width="400" />
+<img src="https://i.imgur.com/vqfIqFj.png" alt="DB ERD" width="400" />
 
 ---
 

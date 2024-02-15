@@ -2,8 +2,6 @@ import { getPathwaysByEmail } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
 import { Pathway, Competency, ContentArea } from '../lib/interface';
-import Avatar from '../../public/temp_profile_image.png';
-import Image from 'next/image';
 
 export default async function Page() {
   let userPathways = await getPathwaysByEmail();
@@ -17,7 +15,6 @@ export default async function Page() {
   const getAllContentAreaForPathway = (pathway: Pathway): string[] => {
     const contentAreas = new Set();
     pathway.competencies.forEach((competency: Competency) => {
-      console.log(competency)
       competency.contentAreas!.forEach((contentArea) => {
         contentAreas.add(contentArea.title);
       });
@@ -28,16 +25,10 @@ export default async function Page() {
   return (
     <section className="mx-12 flex flex-col">
       <div className="my-12 flex items-center space-x-10">
-        <div className=" flex h-40 w-1/3 justify-center">
-          <Image
-            className="h-full w-auto rounded-full"
-            src={Avatar}
-            alt="default avatar blank face"
-          />
-        </div>
         <div className="flex flex-col justify-center">
-          <p className="text-4xl">USERNAME</p>
-          <p>title</p>
+          <p className="text-4xl">{userPathways.username}</p>
+          <p className="text-2xl">{userPathways.firstName} {userPathways.lastName}</p>
+          <p>{userPathways.bio}</p>
         </div>
       </div>
       <hr />

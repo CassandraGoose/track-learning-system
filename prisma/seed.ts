@@ -92,7 +92,10 @@ async function main() {
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
       email: process.env.TEST_USER_EMAIL || '',
-      username: 'me',
+      username: 'CassTheOG',
+      firstName: 'Cass',
+      lastName: 'T',
+      bio: 'I am the person who created this application. Hi!',
       id: process.env.TEST_USER_ID || '', 
     },
     update: {},
@@ -113,7 +116,7 @@ async function addRelations() {
       persons: {
         connect: [
           {
-            username: 'me',
+            username: 'CassTheOG',
           },
         ],
       },
@@ -133,7 +136,7 @@ async function addRelations() {
       persons: {
         connect: [
           {
-            username: 'me',
+            username: 'CassTheOG',
           },
         ],
       },

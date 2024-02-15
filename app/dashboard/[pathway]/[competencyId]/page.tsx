@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { getCompetency } from '@/app/lib/queries';
-import NewProofForm from '@/app/dashboard/[pathway]/[competencyId]/_components/NewProofForm';
+import NewProofForm from './_components/NewProofForm';
 import ProofList from './_components/ProofList';
 
 export default async function Page({

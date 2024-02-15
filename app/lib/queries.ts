@@ -106,3 +106,16 @@ export async function deleteProof(proofId: number) {
     console.error(error);
   }
 }
+
+export async function getProof( proof: string) {
+  // read only for profile, so no need userid.
+  try {
+    return await prisma.proof.findFirst({
+      where: {
+        id: parseInt(proof),
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}

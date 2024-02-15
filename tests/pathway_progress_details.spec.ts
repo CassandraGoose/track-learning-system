@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('renders competency progress', async ({ page }) => {
-  await expect(page.getByTestId('competency-progress')).toHaveText('0 / 1 competencies met');
+  await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
 });
 
 test('updates competency progress when proof is added', async ({ page }) => {
@@ -23,8 +23,7 @@ test('updates competency progress when proof is added', async ({ page }) => {
 
   // remove proof to keep tests stand-alone
   await page.getByTestId('view-proofs').first().click();
-  await page.getByTestId('delete-proof').click();
-  await page.getByTestId('proof-table').waitFor({state: 'detached'});
+  await page.getByTestId('delete-proof').first().click();
 });
 
 test('updates competency progress when proof is removed', async ({ page }) => {
@@ -42,9 +41,10 @@ test('updates competency progress when proof is removed', async ({ page }) => {
   await expect(page.getByTestId('completed-check').first()).toHaveText('✓');
 
   await page.getByTestId('view-proofs').first().click();
-  await expect(page.getByTestId('delete-proof')).toBeVisible();
-  await page.getByTestId('delete-proof').click();
-  await page.getByTestId('proof-table').waitFor({state: 'detached'});
+  await expect(page.getByTestId('delete-proof').first()).toBeVisible();
+  await page.getByTestId('delete-proof').first().click();
+  // will use this in the next pr
+  // await page.getByTestId('proof-table').waitFor({state: 'detached'});
 });
 
 test('shows the table for competencies in the content area', async ({ page }) => {

@@ -54,11 +54,7 @@ export default function Navbar() {
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="avatar btn btn-circle btn-ghost">
             <div className="w-10 rounded-full">
-              <Image
-                src={Avatar}
-                alt="default avatar blank face"
-                data-testid="navbar-user-avatar"
-              />
+            <p className="text-3xl" data-testid="navbar-user-button">&#9776;</p>
             </div>
           </label>
           <ul

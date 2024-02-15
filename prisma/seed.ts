@@ -87,17 +87,41 @@ async function main() {
     },
     update: {},
   });
-
+  
   await prisma.person.upsert({
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
       email: process.env.TEST_USER_EMAIL || '',
-      username: 'me',
+      username: 'CassTheOG',
+      firstName: 'Cass',
+      lastName: 'T',
+      bio: 'I am the person who created this application. Hi!',
       id: process.env.TEST_USER_ID || '', 
     },
     update: {},
   });
+  
+  await prisma.proof.upsert({
+    where: { id: 1 },
+    create: {
+      title: 'Pathway Searching',
+      description: 'I found the pathway',
+      justification: 'Here is how I did it.',
+      competency: {
+        connect: {
+          id: 1,
+        },
+      },
+      author: {
+        connect: {
+          username: 'CassTheOG',
+        },
+      },
+    },
+    update: {},
+  });
 }
+
 
 async function addRelations() {
   await prisma.pathway.update({
@@ -113,7 +137,7 @@ async function addRelations() {
       persons: {
         connect: [
           {
-            username: 'me',
+            username: 'CassTheOG',
           },
         ],
       },
@@ -133,7 +157,7 @@ async function addRelations() {
       persons: {
         connect: [
           {
-            username: 'me',
+            username: 'CassTheOG',
           },
         ],
       },
@@ -166,6 +190,7 @@ async function addRelations() {
     },
   });
 }
+
 
 main()
   .then(async () => {

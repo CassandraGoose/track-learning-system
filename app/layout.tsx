@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navbar from "@/app/_components/Navbar";
 import SiteFooter from "@/app/_components/SiteFooter";
-
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -9,13 +8,14 @@ export const metadata: Metadata = {
   description: "Personal LMS for tracking and proving your learning.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
-  children,
+  children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {
+
   return (
     <html lang="en">
       <body className="bg-bright text-secondary">

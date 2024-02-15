@@ -1,7 +1,7 @@
 import { getPathwaysByEmail, getProof } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
-import { Pathway, Competency, ContentArea, Proof } from '../lib/interface';
+import { Pathway, Competency, ContentArea } from '../lib/interface';
 import Modal from "@/app/profile/_components/Modal";
 import ProofButtons from './_components/ProofButtons';
 
@@ -27,14 +27,14 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
  
   return (
     <section className="mx-12 flex flex-col">
-      { showModal && <Modal proof={searchParams.proof} /> }
+      { showModal && <Modal /> }
       <div className="my-12 flex items-center space-x-10">
         <div className="flex flex-col justify-center">
-          <p className="text-4xl">{userPathways.username}</p>
-          <p className="text-2xl">
+          <p className="text-4xl" data-testid="username">{userPathways.username}</p>
+          <p className="text-2xl" data-testid="user-fullname">
             {userPathways.firstName} {userPathways.lastName}
           </p>
-          <p>{userPathways.bio}</p>
+          <p data-testid="user-bio">{userPathways.bio}</p>
         </div>
       </div>
       <hr />
@@ -50,14 +50,15 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
               >
                 <div className="flex">
                   <div className="card-body">
-                    <p className="card-title">{pathway.title}</p>
-                    <p>{pathway.description}</p>
+                    <p className="card-title" data-testid="pathway-card-title">{pathway.title}</p>
+                    <p data-testid="data-card-description">{pathway.description}</p>
                     <div className="card-actions flex">
                       {getAllContentAreaForPathway(pathway).map(
                         (contentArea: string) => {
                           return (
                             <div
                               className="badge badge-outline"
+                              data-testid="content-area-badge"
                               key={contentArea}
                             >
                               {contentArea}
@@ -88,7 +89,7 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                         className="border-black card max-w-sm rounded-md border"
                       >
                         <div className="card-body">
-                          <p className="card-title">{competency.title}</p>
+                          <p className="card-title" data-testid="competency-title">{competency.title}</p>
                           <p>{competency.description}</p>
                           {competency.contentAreas &&
                             competency.contentAreas.map(
@@ -97,6 +98,7 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                                   <div
                                     className="badge badge-outline"
                                     key={contentArea.id}
+                                    data-testid="competency-content-area-badge"
                                   >
                                     {contentArea.title}
                                   </div>

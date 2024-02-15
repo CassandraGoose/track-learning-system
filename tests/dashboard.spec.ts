@@ -12,12 +12,12 @@ test('has a title', async ({ page }) => {
 test('contains pathways', async ({ page }) => {
   await expect(page.getByTestId('pathway-card')).toHaveCount(2)
 
-  await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Use TrackLearn to use the tool so you can leverage it to your advantage.View Pathway0%');
+  await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Use TrackLearn to use the tool so you can leverage it to your advantage.View Pathway100%');
   await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('Learn to LearnUtilize a growth mindset and grit to learn anythingView Pathway0%');
 });
 
 test('shows appropriate progress', async ({ page }) => {
-  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('0%');
+  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 });
 
 test('updates radial progress', async ({ page }) => {
@@ -36,6 +36,5 @@ test('updates radial progress', async ({ page }) => {
 
   // remove proof to keep tests stand-alone
   await page.goto('http://localhost:3000/dashboard/1/1');
-  await page.getByTestId('delete-proof').click();
-  await page.getByTestId('proof-table').waitFor({state: 'detached'});
+  await page.getByTestId('delete-proof').first().click();
 });

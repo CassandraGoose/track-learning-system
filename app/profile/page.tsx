@@ -1,9 +1,11 @@
-import { getPathwaysByEmail } from '../lib/queries';
+import { getPathwaysByEmail, getProof } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
-import { Pathway, Competency, ContentArea } from '../lib/interface';
+import { Pathway, Competency, ContentArea, Proof } from '../lib/interface';
+import Modal from "@/app/profile/_components/Modal";
+import ProofButtons from './_components/ProofButtons';
 
-export default async function Page() {
+export default async function Page({ searchParams }: { searchParams?: { showModal: boolean, proof?: string }}) {
   let userPathways = await getPathwaysByEmail();
 
   if (!userPathways) {
@@ -11,6 +13,7 @@ export default async function Page() {
   }
 
   const pathways = userPathways.pathways;
+  const showModal = searchParams?.showModal;
 
   const getAllContentAreaForPathway = (pathway: Pathway): string[] => {
     const contentAreas = new Set();
@@ -20,14 +23,17 @@ export default async function Page() {
       });
     });
     return Array.from(contentAreas) as string[];
-  }
-
+  };
+ 
   return (
     <section className="mx-12 flex flex-col">
+      { showModal && <Modal proof={searchParams.proof} /> }
       <div className="my-12 flex items-center space-x-10">
         <div className="flex flex-col justify-center">
           <p className="text-4xl">{userPathways.username}</p>
-          <p className="text-2xl">{userPathways.firstName} {userPathways.lastName}</p>
+          <p className="text-2xl">
+            {userPathways.firstName} {userPathways.lastName}
+          </p>
           <p>{userPathways.bio}</p>
         </div>
       </div>
@@ -35,7 +41,7 @@ export default async function Page() {
       <div className="space-y-12">
         <p className="mt-12 text-2xl">Pathways</p>
         {pathways &&
-          pathways.map((pathway : Pathway) => {
+          pathways.map((pathway: Pathway) => {
             return (
               <article
                 className="border-black card w-full rounded-md border"
@@ -47,9 +53,18 @@ export default async function Page() {
                     <p className="card-title">{pathway.title}</p>
                     <p>{pathway.description}</p>
                     <div className="card-actions flex">
-                      {getAllContentAreaForPathway(pathway).map((contentArea: string) => {
-                        return (<div className="badge badge-outline" key={contentArea}>{contentArea}</div>);
-                      })}                      
+                      {getAllContentAreaForPathway(pathway).map(
+                        (contentArea: string) => {
+                          return (
+                            <div
+                              className="badge badge-outline"
+                              key={contentArea}
+                            >
+                              {contentArea}
+                            </div>
+                          );
+                        },
+                      )}
                     </div>
                   </div>
                   <div className="p-8">
@@ -75,22 +90,25 @@ export default async function Page() {
                         <div className="card-body">
                           <p className="card-title">{competency.title}</p>
                           <p>{competency.description}</p>
-                          <div className="card-actions flex flex-col">
-                            {competency.proofs.length > 0 ? (<ul className="flex flex-wrap justify-start">
-                              {competency.proofs.map((proof) => {
+                          {competency.contentAreas &&
+                            competency.contentAreas.map(
+                              (contentArea: ContentArea) => {
                                 return (
-                                  <li key={proof.id} className="mr-2 mt-2">
-                                    <button className="btn btn-secondary">
-                                      {proof.title}
-                                    </button>
-                                  </li>
+                                  <div
+                                    className="badge badge-outline"
+                                    key={contentArea.id}
+                                  >
+                                    {contentArea.title}
+                                  </div>
                                 );
-                              })}
-                            </ul>) : (<p>No proofs to show</p>)}
-                            {competency.contentAreas && competency.contentAreas.map((contentArea: ContentArea) => {
-                              return <div className="badge badge-outline" key={contentArea.id}>{contentArea.title}</div>
-                            })}
-                          </div>
+                              },
+                            )}
+                        </div>
+                        <div className="card-body card-actions flex flex-col bg-primary text-bright">
+                          <p className="text-sm">
+                            Proof of competency:
+                          </p>
+                          <ProofButtons competency={competency} />
                         </div>
                       </div>
                     );

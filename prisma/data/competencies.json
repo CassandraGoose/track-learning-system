@@ -1,0 +1,92 @@
+{
+  "competencies": [
+    {
+      "title": "Find personal pathways",
+      "description": "You can find all of your saved pathways",
+      "belongsToPathway": "Use Track",
+      "hasContentAreas": [
+        {
+        "title": "Digital Literacy"
+        }
+      ]
+    },
+    {
+      "title": "Explain what a Growth Mindset is",
+      "description": "The first step in developing a skill is understanding what it is.",
+      "belongsToPathway": "Learn to Learn",
+      "hasContentAreas": [
+        {
+        "title": "Metacognition"
+        }
+      ]
+    },
+    {
+      "title": "Apply Foundational Art Skills",
+      "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "Drawing"
+        }
+      ]
+    },
+    {
+      "title": "Accurately Depict Form and Space on Paper",
+      "description": "Accurately depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "3D Design Fundamentals"
+        }, {
+          "title": "Drawing"
+        }
+      ]
+    },
+    {
+      "title": "Implement Composition Principles",
+      "description": "Implement composition principles, such as balance, contrast, and unity, to create visually engaging and dynamic compositions in drawings and illustrations.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "Drawing"
+        }
+      ]
+    },
+    {
+      "title": "Apply Perspective Methods",
+      "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "2D Design Fundamentals"
+        }, {
+          "title": "Drawing"
+        }
+      ]
+    },
+    {
+      "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Drawing",
+      "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "Drawing"
+        }, {
+          "title": "Art History"
+        }
+      ]
+    },
+    {
+      "title": "Reflect on Design Choices and Artistic Process In Drawing",
+      "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+      "belongsToPathway": "Illustration",
+      "hasContentAreas": [
+        {
+        "title": "Metacognition"
+        }, {
+          "title": "Drawing"
+        }
+      ]
+    }
+  ]
+}

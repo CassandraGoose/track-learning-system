@@ -12,6 +12,6 @@ test('Page component renders correctly', async ({ page }) => {
     'Use Track',
   );
   await expect(page.getByTestId('content-area-badge').first()).toHaveText(
-    'Navigating Track',
+    'Digital Literacy',
   );
 });

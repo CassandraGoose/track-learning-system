@@ -13,7 +13,7 @@ test('contains pathways', async ({ page }) => {
   await expect(page.getByTestId('pathway-card')).toHaveCount(2)
 
   await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Use TrackLearn to use the tool so you can leverage it to your advantage.View Pathway100%');
-  await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('Learn to LearnUtilize a growth mindset and grit to learn anythingView Pathway0%');
+  await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('IllustrationThis pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.View Pathway0%');
 });
 
 test('shows appropriate progress', async ({ page }) => {

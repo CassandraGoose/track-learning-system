@@ -8,6 +8,9 @@ export interface PathwayProps {
   id: string;
   createdAt: string | Date;
   username: string;
+  firstName: string;
+  lastName: string;
+  bio: string;
   email: string;
   role: string;
   profileVisibility: boolean;

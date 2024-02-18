@@ -1,11 +1,11 @@
-import { getPathwaysByEmail } from '../lib/queries';
+import { getPathwaysByEmail, getProof } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
 import { Pathway, Competency, ContentArea } from '../lib/interface';
-import Avatar from '../../public/temp_profile_image.png';
-import Image from 'next/image';
+import Modal from "@/app/profile/_components/Modal";
+import ProofButtons from './_components/ProofButtons';
 
-export default async function Page() {
+export default async function Page({ searchParams }: { searchParams?: { showModal: boolean, proof?: string }}) {
   let userPathways = await getPathwaysByEmail();
 
   if (!userPathways) {
@@ -13,38 +13,35 @@ export default async function Page() {
   }
 
   const pathways = userPathways.pathways;
+  const showModal = searchParams?.showModal;
 
   const getAllContentAreaForPathway = (pathway: Pathway): string[] => {
     const contentAreas = new Set();
     pathway.competencies.forEach((competency: Competency) => {
-      console.log(competency)
       competency.contentAreas!.forEach((contentArea) => {
         contentAreas.add(contentArea.title);
       });
     });
     return Array.from(contentAreas) as string[];
-  }
-
+  };
+ 
   return (
     <section className="mx-12 flex flex-col">
+      { showModal && <Modal /> }
       <div className="my-12 flex items-center space-x-10">
-        <div className=" flex h-40 w-1/3 justify-center">
-          <Image
-            className="h-full w-auto rounded-full"
-            src={Avatar}
-            alt="default avatar blank face"
-          />
-        </div>
         <div className="flex flex-col justify-center">
-          <p className="text-4xl">USERNAME</p>
-          <p>title</p>
+          <p className="text-4xl" data-testid="username">{userPathways.username}</p>
+          <p className="text-2xl" data-testid="user-fullname">
+            {userPathways.firstName} {userPathways.lastName}
+          </p>
+          <p data-testid="user-bio">{userPathways.bio}</p>
         </div>
       </div>
       <hr />
       <div className="space-y-12">
         <p className="mt-12 text-2xl">Pathways</p>
         {pathways &&
-          pathways.map((pathway : Pathway) => {
+          pathways.map((pathway: Pathway) => {
             return (
               <article
                 className="border-black card w-full rounded-md border"
@@ -53,12 +50,22 @@ export default async function Page() {
               >
                 <div className="flex">
                   <div className="card-body">
-                    <p className="card-title">{pathway.title}</p>
-                    <p>{pathway.description}</p>
+                    <p className="card-title" data-testid="pathway-card-title">{pathway.title}</p>
+                    <p data-testid="data-card-description">{pathway.description}</p>
                     <div className="card-actions flex">
-                      {getAllContentAreaForPathway(pathway).map((contentArea: string) => {
-                        return (<div className="badge badge-outline" key={contentArea}>{contentArea}</div>);
-                      })}                      
+                      {getAllContentAreaForPathway(pathway).map(
+                        (contentArea: string) => {
+                          return (
+                            <div
+                              className="badge badge-outline"
+                              data-testid="content-area-badge"
+                              key={contentArea}
+                            >
+                              {contentArea}
+                            </div>
+                          );
+                        },
+                      )}
                     </div>
                   </div>
                   <div className="p-8">
@@ -79,27 +86,33 @@ export default async function Page() {
                     return (
                       <div
                         key={competency.id}
-                        className="border-black card max-w-sm rounded-md border"
+                        className="border-black card max-w-[32%] rounded-md border"
                       >
-                        <div className="card-body">
-                          <p className="card-title">{competency.title}</p>
-                          <p>{competency.description}</p>
-                          <div className="card-actions flex flex-col">
-                            {competency.proofs.length > 0 ? (<ul className="flex flex-wrap justify-start">
-                              {competency.proofs.map((proof) => {
-                                return (
-                                  <li key={proof.id} className="mr-2 mt-2">
-                                    <button className="btn btn-secondary">
-                                      {proof.title}
-                                    </button>
-                                  </li>
-                                );
-                              })}
-                            </ul>) : (<p>No proofs to show</p>)}
-                            {competency.contentAreas && competency.contentAreas.map((contentArea: ContentArea) => {
-                              return <div className="badge badge-outline" key={contentArea.id}>{contentArea.title}</div>
-                            })}
+                        <div className="card-body h-[70%] overflow-y-hidden">
+                          <p className="card-title" data-testid="competency-title">{competency.title}</p>
+                          <p className="text-ellipsis line-clamp-5">{competency.description}</p>
+                          <div className="flex space-x-2 flex-wrap">
+                            {competency.contentAreas &&
+                              competency.contentAreas.map(
+                                (contentArea: ContentArea) => {
+                                  return (
+                                    <div
+                                      className="badge badge-outline"
+                                      key={contentArea.id}
+                                      data-testid="competency-content-area-badge"
+                                    >
+                                      {contentArea.title}
+                                    </div>
+                                  );
+                                },
+                              )}
                           </div>
+                        </div>
+                        <div className="card-body card-actions flex flex-col bg-primary text-bright">
+                          <p className="text-sm">
+                            Proof of competency:
+                          </p>
+                          <ProofButtons competency={competency} />
                         </div>
                       </div>
                     );

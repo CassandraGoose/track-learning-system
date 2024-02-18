@@ -1,171 +1,81 @@
 import { PrismaClient } from '@prisma/client';
+import contentAreasData from './data/contentAreas.json';
+import pathwaysData from './data/pathways.json';
+import competenciesData from './data/competencies.json';
 
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.pathway.upsert({
-    where: { id: 1 },
-    create: {
-      title: 'Use Track',
-      description:
-        'Learn to use the tool so you can leverage it to your advantage.',
-    },
-    update: {},
+  await prisma.contentArea.createMany({
+    data: contentAreasData.contentAreas,
   });
 
-  await prisma.pathway.upsert({
-    where: { id: 2 },
-    create: {
-      title: 'Learn to Learn',
-      description: 'Utilize a growth mindset and grit to learn anything',
-    },
-    update: {},
+  await prisma.pathway.createMany({
+    data: pathwaysData.pathways,
   });
 
-  await prisma.competency.upsert({
-    where: { id: 1 },
-    create: {
-      title: 'Find personal pathways',
-      description: 'You can find all of your saved pathways',
-      pathways: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
+  competenciesData.competencies.forEach(async (competency) => {
+    await prisma.competency.create({
+      data: {
+        title: competency.title,
+        description: competency.description,
+        pathways: {
+          connect: [
+            {
+              title: competency.belongsToPathway,
+            },
+          ],
+        },
+        contentAreas: {
+          connect: competency.hasContentAreas,
+        }
       },
-    },
-    update: {},
-  });
-
-  await prisma.competency.upsert({
-    where: { id: 2 },
-    create: {
-      title: 'Explain what a Growth Mindset is',
-      description:
-        'The first step in developing a skill is understanding what it is.',
-      pathways: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
-    },
-    update: {},
-  });
-
-  await prisma.contentArea.upsert({
-    where: { id: 1 },
-    create: {
-      title: 'Navigating Track',
-      description: 'Practice finding things in the applicaiton.',
-      competencies: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
-      },
-    },
-    update: {},
-  });
-
-  await prisma.contentArea.upsert({
-    where: { id: 2 },
-    create: {
-      title: 'Metacognition',
-      description:
-        'Being aware of your own thought process will help you learn more effectively.',
-      competencies: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
-    },
-    update: {},
+    });
   });
 
   await prisma.person.upsert({
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
       email: process.env.TEST_USER_EMAIL || '',
-      username: 'me',
-      id: process.env.TEST_USER_ID || '', 
+      username: 'CassTheOG',
+      firstName: 'Cass',
+      lastName: 'T',
+      bio: 'I am the person who created this application. Hi!',
+      id: process.env.TEST_USER_ID || '',
+      pathways: {
+        connect: [
+          {
+            "title": "Use Track",
+          },
+          {
+            "title": "Illustration",
+          }
+        ]
+      }
     },
     update: {},
   });
-}
 
-async function addRelations() {
-  await prisma.pathway.update({
-    where: { id: 1 },
+  await prisma.proof.create({
     data: {
-      competencies: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
+      title: 'Pathway Searching',
+      description: 'I found the pathway',
+      justification: 'Here is how I did it.',
+      competency: {
+        connect: {
+          title: "Find personal pathways",
+        },
       },
-      persons: {
-        connect: [
-          {
-            username: 'me',
-          },
-        ],
+      author: {
+        connect: {
+          username: 'CassTheOG',
+        },
       },
-    },
-  });
-
-  await prisma.pathway.update({
-    where: { id: 2 },
-    data: {
-      competencies: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
-      persons: {
-        connect: [
-          {
-            username: 'me',
-          },
-        ],
-      },
-    },
-  });
-
-  await prisma.contentArea.update({
-    where: { id: 1 },
-    data: {
-      competencies: {
-        connect: [
-          {
-            id: 1,
-          },
-        ],
-      },
-    },
-  });
-
-  await prisma.contentArea.update({
-    where: { id: 2 },
-    data: {
-      competencies: {
-        connect: [
-          {
-            id: 2,
-          },
-        ],
-      },
-    },
+      }
   });
 }
+
+async function addRelations() {}
 
 main()
   .then(async () => {

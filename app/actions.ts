@@ -1,5 +1,5 @@
 'use server';
-import { createProof, deleteProof } from '@/app/lib/queries';
+import { createProof, deleteProof, getProof } from '@/app/lib/queries';
 import { z } from 'zod';
 
 const proofSchema = z.object({
@@ -35,4 +35,8 @@ export async function submitProof(
 
 export async function removeProof(proofId: number) {
   await deleteProof(proofId);
+}
+
+export async function showProof(proofId: string) {
+  return await getProof(proofId);
 }

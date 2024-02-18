@@ -15,6 +15,9 @@ model Person {
   id                String       @id @default(cuid())
   createdAt         DateTime     @default(now())
   username          String       @unique
+  firstName         String      
+  lastName          String
+  bio               String
   email             String       @unique
   role              Role         @default(USER)
   profileVisibility Boolean      @default(true)

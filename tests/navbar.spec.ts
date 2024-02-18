@@ -11,7 +11,7 @@ test('exists', async ({ page }) => {
   await expect(page.getByTestId('navbar-dashboard-link')).toBeVisible();
   await expect(page.getByTestId('navbar-pathways-link')).toBeVisible();
   await expect(page.getByTestId('navbar-about-link')).toBeVisible();
-  await expect(page.getByTestId('navbar-user-avatar')).toBeVisible();
+  await expect(page.getByTestId('navbar-user-button')).toBeVisible();
   await expect(page.getByTestId('home-link')).toBeVisible();
 });
 

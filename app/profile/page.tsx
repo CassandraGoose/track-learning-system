@@ -86,25 +86,27 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                     return (
                       <div
                         key={competency.id}
-                        className="border-black card max-w-sm rounded-md border"
+                        className="border-black card max-w-[32%] rounded-md border"
                       >
-                        <div className="card-body">
+                        <div className="card-body h-[70%] overflow-y-hidden">
                           <p className="card-title" data-testid="competency-title">{competency.title}</p>
-                          <p>{competency.description}</p>
-                          {competency.contentAreas &&
-                            competency.contentAreas.map(
-                              (contentArea: ContentArea) => {
-                                return (
-                                  <div
-                                    className="badge badge-outline"
-                                    key={contentArea.id}
-                                    data-testid="competency-content-area-badge"
-                                  >
-                                    {contentArea.title}
-                                  </div>
-                                );
-                              },
-                            )}
+                          <p className="text-ellipsis line-clamp-5">{competency.description}</p>
+                          <div className="flex space-x-2 flex-wrap">
+                            {competency.contentAreas &&
+                              competency.contentAreas.map(
+                                (contentArea: ContentArea) => {
+                                  return (
+                                    <div
+                                      className="badge badge-outline"
+                                      key={contentArea.id}
+                                      data-testid="competency-content-area-badge"
+                                    >
+                                      {contentArea.title}
+                                    </div>
+                                  );
+                                },
+                              )}
+                          </div>
                         </div>
                         <div className="card-body card-actions flex flex-col bg-primary text-bright">
                           <p className="text-sm">

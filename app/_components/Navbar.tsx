@@ -66,9 +66,6 @@ export default function Navbar() {
               <Link href="/profile">Profile</Link>
             </li>
             <li>
-              <a>Settings</a>
-            </li>
-            <li>
               <form action={logout}>
                 <button className="btn btn-primary">Log out</button>
               </form>

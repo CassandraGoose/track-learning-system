@@ -1,0 +1,68 @@
+{
+  "contentAreas": [
+    {
+      "title": "Design",
+      "description": "Learning design involves understanding how to creatively solve problems by organizing visual, interactive, or functional elements with intention. It includes exploring design history, gaining technical skills, critically analyzing designs, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Business",
+      "description": "Business involves understanding how organizations operate, how they are managed, and how they interact with their external environment. It includes exploring business history, gaining technical skills, critically analyzing business practices, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Art History",
+      "description": "Art History involves understanding the history of art, how it has evolved, and how it has impacted society. It includes exploring art history, gaining technical skills, critically analyzing art, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Research",
+      "description": "Research involves understanding how to gather, analyze, and interpret information to answer questions and solve problems. It includes exploring research methods, gaining technical skills, critically analyzing research, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Writing",
+      "description": "Writing involves understanding how to communicate ideas effectively through the written word. It includes exploring writing styles, gaining technical skills, critically analyzing writing, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Marketing",
+      "description": "Marketing involves understanding how to promote and sell products or services. It includes exploring marketing strategies, gaining technical skills, critically analyzing marketing practices, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Digital Art",
+      "description": "Digital Art involves understanding how to create art using digital tools and technologies. It includes exploring digital art history, gaining technical skills, critically analyzing digital art, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Sculpture",
+      "description": "Sculpture involves understanding how to create three-dimensional art. It includes exploring sculpture history, gaining technical skills, critically analyzing sculpture, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Photography",
+      "description": "Photography involves understanding how to capture and manipulate images. It includes exploring photography history, gaining technical skills, critically analyzing photography, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Printmaking",
+      "description": "Printmaking involves understanding how to create art using printmaking techniques. It includes exploring printmaking history, gaining technical skills, critically analyzing printmaking, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Illustration",
+      "description": "Illustration involves understanding how to create visual representations of concepts, ideas, and narratives. It includes exploring illustration history, gaining technical skills, critically analyzing illustration, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Drawing",
+      "description": "Drawing involves understanding how to create art using drawing techniques. It includes exploring drawing history, gaining technical skills, critically analyzing drawing, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "2D Design Fundamentals",
+      "description": "In the realm of two-dimensional art, learners delve into conceptual and visual elements. Through this exploration, they gain insight into fundamental design principles, honing their ability to analyze and visually express formal considerations when tackling studio problems, drawing inspiration from both contemporary and historical artworks."
+    },
+    {
+      "title": "3D Design Fundamentals",
+      "description": "Engaging with three-dimensional design, individuals delve into the elements of art and principles of design. Through this exploration, they develop an understanding of material properties, techniques, processes, and tools, while fostering critical thinking skills through written, theoretical, and verbal expression in their creative practice."
+    },
+    {
+      "title": "Digital Literacy",
+      "description": "Digital literacy encompasses the ability to navigate, access, evaluate, and utilize information effectively and ethically in the digital landscape. It involves acquiring the skills to use technology, including devices, software, and online platforms, to communicate, collaborate, and critically engage with digital content while understanding the implications of one's actions in the online environment."
+    },
+    {
+      "title": "Metacognition",
+      "description": "Engaging in metacognition involves developing an awareness and understanding of one's own thought processes. This cognitive skill encompasses the ability to reflect on and regulate one's thinking, learning strategies, and problem-solving approaches, fostering a deeper understanding of how to learn effectively and continuously improve cognitive abilities."
+    }
+  ]
+}

@@ -1,9 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import Avatar from '../../public/temp_profile_image.png';
 import { usePathname } from 'next/navigation';
+import { logout } from '@/app/actions';
 
 export default function Navbar() {
   const currentPathname = usePathname();
@@ -54,12 +53,14 @@ export default function Navbar() {
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="avatar btn btn-circle btn-ghost">
             <div className="w-10 rounded-full">
-            <p className="text-3xl" data-testid="navbar-user-button">&#9776;</p>
+              <p className="text-3xl" data-testid="navbar-user-button">
+                &#9776;
+              </p>
             </div>
           </label>
           <ul
             tabIndex={0}
-            className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-md p-2 shadow bg-bright border border-black"
+            className="border-black menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-md border bg-bright p-2 shadow"
           >
             <li>
               <Link href="/profile">Profile</Link>
@@ -68,7 +69,9 @@ export default function Navbar() {
               <a>Settings</a>
             </li>
             <li>
-              <a>Logout</a>
+              <form action={logout}>
+                <button className="btn btn-primary">Log out</button>
+              </form>
             </li>
           </ul>
         </div>

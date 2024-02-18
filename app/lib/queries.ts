@@ -150,3 +150,15 @@ export async function createUser({
     console.error(error);
   }
 }
+
+export async function getUser(username: string) {
+  try {
+    return await prisma.person.findUnique({
+      where: {
+        username: username,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}

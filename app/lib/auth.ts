@@ -1,9 +1,6 @@
 import { Lucia } from "lucia";
 import { PrismaAdapter } from "@lucia-auth/adapter-prisma";
-import { PrismaClient } from "@prisma/client";
-
-// const adapter = new BetterSQLite3Adapter(db); // your adapter
-const client = new PrismaClient();
+import client from "./prisma";
 
 const adapter = new PrismaAdapter(client.session, client.person);
 

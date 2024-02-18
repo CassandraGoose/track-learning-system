@@ -30,8 +30,7 @@ test('updates radial progress', async ({ page }) => {
   await page.getByTestId('proof-justification-textarea').fill('My justification');
   await page.getByTestId('new-proof-submit').click();
   await page.getByTestId('proof-table').waitFor({state: 'attached'});
-  await page.goBack();
-  await page.goBack();
+  await page.goto('http://localhost:3000/dashboard');
   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 
   // remove proof to keep tests stand-alone

@@ -107,12 +107,43 @@ export async function deleteProof(proofId: number) {
   }
 }
 
-export async function getProof( proof: string) {
+export async function getProof(proof: string) {
   // read only for profile, so no need userid.
   try {
     return await prisma.proof.findFirst({
       where: {
         id: parseInt(proof),
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function createUser({
+  username,
+  hashedPassword,
+  email,
+  firstName,
+  lastName,
+  bio,
+}: {
+  username: string;
+  hashedPassword: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  bio: string;
+}) {  
+  try {
+    return await prisma.person.create({
+      data: {
+        username: username,
+        hashedPassword: hashedPassword,
+        email,
+        firstName,
+        lastName,
+        bio,
       },
     });
   } catch (error) {

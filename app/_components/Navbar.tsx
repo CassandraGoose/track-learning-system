@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { logout } from '@/app/actions';
+import { logout } from '@/app/actions/actions';
 
 export default function Navbar() {
   const currentPathname = usePathname();

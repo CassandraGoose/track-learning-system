@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound, redirect } from 'next/navigation';
-import { getCompetency } from '@/app/lib/queries';
-import { checkUser } from '@/app/actions';
+import { getUserCompetency } from '@/app/lib/queries';
+import { checkUser } from '@/app/actions/actions';
 import NewProofForm from './_components/NewProofForm';
 import ProofList from './_components/ProofList';
 
@@ -17,10 +17,7 @@ export default async function Page({
   }
 
   const competencyId = params.competencyId;
-  const competency = await getCompetency(
-    'cljvusdou00003ntltwo9mhm5',
-    competencyId,
-  );
+  const competency = await getUserCompetency(competencyId);
 
   if (!competency) {
     notFound();
@@ -34,10 +31,7 @@ export default async function Page({
       </p>
       <div className="flex w-full justify-between">
         <ProofList proofs={proofs} />
-        <NewProofForm
-          userId="cljvusdou00003ntltwo9mhm5"
-          competencyId={competencyId}
-        />
+        <NewProofForm competencyId={competencyId} />
       </div>
     </section>
   );

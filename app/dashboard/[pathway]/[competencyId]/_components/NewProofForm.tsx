@@ -1,16 +1,13 @@
 'use client';
 import React, { useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { submitProof } from '@/app/actions';
+import { submitProof } from '@/app/actions/proofActions';
 
 export default function NewProofForm({
-  userId,
   competencyId,
 }: {
-  userId: string;
   competencyId: string;
 }) {
-  const identifiers = { userId, competencyId };
   const router = useRouter();
   const [titleError, setTitleError] = React.useState<string>('');
   const [descriptionError, setDescriptionError] = React.useState<string>('');
@@ -22,22 +19,16 @@ export default function NewProofForm({
     title?: string[] | undefined;
     description?: string[] | undefined;
     justification?: string[] | undefined;
-    userId?: string[] | undefined;
     competencyId?: string[] | undefined;
   };
-  // since we're using the form action, clearing the form becomes an issue
-  // but it's convention to utilize the form action, so we must persist.
+
   const formRef = useRef<HTMLFormElement>(null);
 
   const setErrorMessage = (error: zodError) => {
     setTitleError(error.title?.join(' ') || '');
     setDescriptionError(error.description?.join(' ') || '');
     setJustificationError(error.justification?.join(' ') || '');
-    setGeneralError(
-      error.userId?.join(' ') ||
-        error.competencyId?.join(' ') ||
-        'An error occurred',
-    );
+    setGeneralError(error.competencyId?.join(' ') || 'An error occurred');
   };
 
   return (
@@ -54,9 +45,11 @@ export default function NewProofForm({
           ref={formRef}
           className="flex flex-col space-y-2"
           action={async (formData) => {
+            // since we're using the form action, clearing the form becomes an issue
+            // but it's convention to utilize the form action, so we must persist.
             const submitProofWithIdentifiers = submitProof.bind(
               null,
-              identifiers,
+              competencyId,
             );
 
             const message = await submitProofWithIdentifiers(formData);
@@ -113,7 +106,11 @@ export default function NewProofForm({
             </span>
           </div>
           <div className="card-actions mt-2 justify-end">
-            <button data-testid="new-proof-submit" type="submit" className="btn-bright btn btn-outline">
+            <button
+              data-testid="new-proof-submit"
+              type="submit"
+              className="btn-bright btn btn-outline"
+            >
               Add
             </button>
             <div className="label">

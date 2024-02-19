@@ -34,7 +34,7 @@ async function main() {
     });
   });
 
-  const pw = process.env.TEST_USER_PASSWORD || '';
+  const pw = process.env.TEST_USER_PW || '';
   const hashedPassword = await new Argon2id().hash(pw);
 
   await prisma.person.upsert({

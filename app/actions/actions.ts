@@ -1,54 +1,15 @@
 'use server';
-import { createProof, deleteProof, getProof, createUser, getUser } from '@/app/lib/queries';
-import { z } from 'zod';
+import { createUser, getUser } from '@/app/lib/queries';
 import { Argon2id } from 'oslo/password';
 import { cookies } from 'next/headers';
-import { lucia, validateRequest } from './lib/auth';
+import { lucia, validateRequest } from '../lib/auth';
 import { redirect } from 'next/navigation';
 import { cache } from 'react';
 
-const proofSchema = z.object({
-  title: z.string({ invalid_type_error: 'Title must be a string', required_error: 'Title is required' }).min(1, { message: 'Title is required' }),
-  description: z.string({ invalid_type_error: 'Description must be a string'}),
-  justification: z.string({ invalid_type_error: 'Justification must be a string', required_error: 'Justification is required'}).min(1, { message: 'Justification is required' }),
-  userId: z.string({ invalid_type_error: 'User ID must be a string', required_error: 'User ID is required'}).min(1, { message: 'User ID is required' }),
-  competencyId: z.string({ invalid_type_error: 'Competency ID must be a string', required_error: 'Competency ID is required'}).min(1, { message: 'Competency ID is required' }),
-});
-
-export async function submitProof(
-  identifiers: { userId: string; competencyId: string },
-  formData: FormData,
-) {
-
-  const data = {
-    title: formData.get('proofTitle') as string,
-    description: formData.get('proofDescription') as string,
-    justification: formData.get('proofJustification') as string,
-    userId: identifiers.userId,
-    competencyId: identifiers.competencyId,
-  };
-
-  const validatedFields = proofSchema.safeParse(data);
-
-  if (!validatedFields.success) {
-    return { error: validatedFields.error.flatten().fieldErrors };
-  }
-
-  await createProof(data);
-  return { message: `Added proof ${data.title}` };
-}
-
-export async function removeProof(proofId: number) {
-  await deleteProof(proofId);
-}
-
-export async function showProof(proofId: string) {
-  return await getProof(proofId);
-}
 
 export async function signup(formData: FormData): Promise<ActionResult> {
   const username = formData.get('username');
-  // username must be between 4 ~ 31 characters, and only consists of lowercase letters, 0-9, -, and _
+  // username must b between 4 ~ 31 characters, and only consists of lowercase letters, 0-9, -, and _
   // keep in mind some database (e.g. mysql) are case insensitive
   if (
     typeof username !== 'string' ||
@@ -100,18 +61,20 @@ interface ActionResult {
 }
 
 export async function login(formData: FormData): Promise<ActionResult> {
-	const username = formData.get("username");
-	if (
-		typeof username !== "string" ||
-		username.length < 3 ||
-		username.length > 31 ||
-		!/^[a-z0-9_-]+$/.test(username)
-	) {
-    console.error('invalid username');
-		return {
-			error: "Invalid username"
-		};
-	}
+  console.log("HELLOW?")
+    const username = formData.get("username");
+
+    if (
+      typeof username !== "string" ||
+      username.length < 3 ||
+      username.length > 31 ||
+      !(/^[a-zA-Z0-9_-]+$/.test(username))
+      ) {
+      console.error('invalid username');
+      return {
+        error: "Invalid username"
+      };
+    }
 	const password = formData.get("password");
 	if (typeof password !== "string" || password.length < 6 || password.length > 255 || !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
     password,
@@ -134,6 +97,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
 		// Since protecting against this is non-trivial,
 		// it is crucial your implementation is protected against brute-force attacks with login throttling etc.
 		// If usernames are public, you may outright tell the user that the username is invalid.
+    console.error('invalide username or password');
 		return {
 			error: "Incorrect username or password"
 		};
@@ -141,6 +105,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
 
 	const validPassword = await new Argon2id().verify(existingUser.hashedPassword, password);
 	if (!validPassword) {
+    console.error('invalid username or password');
 		return {
 			error: "Incorrect username or password"
 		};
@@ -182,8 +147,8 @@ export const checkUser = cache(async () => {
 			const sessionCookie = lucia.createBlankSessionCookie();
 			cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 		}
-	} catch {
-    console.error('Error setting session cookie.')
+	} catch(e) {
+    console.error('Error setting session cookie.', e);
 	}
 	return user;
 });

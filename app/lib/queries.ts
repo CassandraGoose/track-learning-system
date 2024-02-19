@@ -1,13 +1,20 @@
 'use server';
-// TODO LOCK DOWN QUERIES AND ACTIONS APPROPRIATELY PER USER>
 
 import prisma from '@/app/lib/prisma';
+import { checkUser } from '@/app/actions/actions';
+import { redirect } from 'next/navigation';
 
-export async function getPathwaysByEmail() {
+export async function getUserPathways() {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   try {
     return await prisma.person.findFirst({
       where: {
-        email: process.env.TEST_USER_EMAIL,
+        id: user.id,
       },
       include: {
         pathways: {
@@ -27,11 +34,17 @@ export async function getPathwaysByEmail() {
   }
 }
 
-export async function getPathwayByUserId(userId: string, pathwayId: string) {
+export async function getSingleUserPathway(pathwayId: string) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   try {
     return await prisma.person.findFirst({
       where: {
-        id: userId,
+        id: user.id,
       },
       include: {
         pathways: {
@@ -54,7 +67,13 @@ export async function getPathwayByUserId(userId: string, pathwayId: string) {
   }
 }
 
-export async function getCompetency(userId: string, competencyId: string) {
+export async function getUserCompetency(competencyId: string) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   try {
     return await prisma.competency.findFirst({
       where: {
@@ -63,7 +82,7 @@ export async function getCompetency(userId: string, competencyId: string) {
       include: {
         proofs: {
           where: {
-            personId: userId,
+            personId: user.id,
           },
         },
         contentAreas: true,
@@ -75,19 +94,24 @@ export async function getCompetency(userId: string, competencyId: string) {
 }
 
 export async function createProof(data: {
-  userId: string;
   title: string;
   description: string;
   justification: string;
   competencyId: string;
 }) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   try {
     return await prisma.proof.create({
       data: {
         title: data.title,
         description: data.description,
         justification: data.justification,
-        personId: data.userId,
+        personId: user.id,
         competencyId: parseInt(data.competencyId),
       },
     });
@@ -97,10 +121,17 @@ export async function createProof(data: {
 }
 
 export async function deleteProof(proofId: number) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   try {
     return await prisma.proof.delete({
       where: {
         id: proofId,
+        personId: user.id,
       },
     });
   } catch (error) {
@@ -109,7 +140,7 @@ export async function deleteProof(proofId: number) {
 }
 
 export async function getProof(proof: string) {
-  // read only for profile, so no need userid.
+  // read only for profile, so no need for auth.
   try {
     return await prisma.proof.findFirst({
       where: {

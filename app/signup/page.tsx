@@ -1,5 +1,5 @@
 'use client';
-import { signup } from "@/app/actions";
+import { signup } from "@/app/actions/actions";
 
 export default function Page() {
   return (

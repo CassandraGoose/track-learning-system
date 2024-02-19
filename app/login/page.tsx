@@ -1,4 +1,4 @@
-import { login } from "@/app/actions";
+import { login } from "@/app/actions/actions";
 
 export default async function Page() {
 	return (

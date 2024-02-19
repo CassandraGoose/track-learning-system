@@ -1,7 +1,7 @@
 import React from 'react';
 import { notFound, redirect } from 'next/navigation';
-import { getPathwayByUserId } from '../../lib/queries';
-import { checkUser } from '@/app/actions';
+import { getSingleUserPathway } from '../../lib/queries';
+import { checkUser } from '@/app/actions/actions';
 import { caluclateProgress } from '../../lib/utilities';
 import PathwayProgressDetails from './_components/PathwayProgressDetails';
 import { Pathway } from '../../lib/interface';
@@ -18,10 +18,7 @@ export default async function Page({
   }
 
   const pathway = params.pathway;
-  const userPathway = await getPathwayByUserId(
-    'cljvusdou00003ntltwo9mhm5',
-    pathway,
-  );
+  const userPathway = await getSingleUserPathway(pathway);
 
   if (!userPathway) {
     notFound();

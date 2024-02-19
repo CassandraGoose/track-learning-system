@@ -1,9 +1,16 @@
 import Link from 'next/link';
 import { getPathwaysByEmail } from '../lib/queries';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
+import { checkUser } from '@/app/actions';
 
 export default async function Page() {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   let userPathways = await getPathwaysByEmail();
 
   if (!userPathways) {

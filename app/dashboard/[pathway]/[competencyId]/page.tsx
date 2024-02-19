@@ -1,6 +1,7 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getCompetency } from '@/app/lib/queries';
+import { checkUser } from '@/app/actions';
 import NewProofForm from './_components/NewProofForm';
 import ProofList from './_components/ProofList';
 
@@ -9,6 +10,12 @@ export default async function Page({
 }: {
   params: { competencyId: string };
 }) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   const competencyId = params.competencyId;
   const competency = await getCompetency(
     'cljvusdou00003ntltwo9mhm5',

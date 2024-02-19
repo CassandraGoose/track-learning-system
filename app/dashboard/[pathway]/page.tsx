@@ -1,6 +1,7 @@
 import React from 'react';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { getPathwayByUserId } from '../../lib/queries';
+import { checkUser } from '@/app/actions';
 import { caluclateProgress } from '../../lib/utilities';
 import PathwayProgressDetails from './_components/PathwayProgressDetails';
 import { Pathway } from '../../lib/interface';
@@ -10,6 +11,12 @@ export default async function Page({
 }: {
   params: { pathway: string };
 }) {
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
   const pathway = params.pathway;
   const userPathway = await getPathwayByUserId(
     'cljvusdou00003ntltwo9mhm5',

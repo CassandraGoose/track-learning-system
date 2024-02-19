@@ -5,6 +5,7 @@ import { Argon2id } from 'oslo/password';
 import { cookies } from 'next/headers';
 import { lucia, validateRequest } from './lib/auth';
 import { redirect } from 'next/navigation';
+import { cache } from 'react';
 
 const proofSchema = z.object({
   title: z.string({ invalid_type_error: 'Title must be a string', required_error: 'Title is required' }).min(1, { message: 'Title is required' }),
@@ -106,6 +107,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
 		username.length > 31 ||
 		!/^[a-z0-9_-]+$/.test(username)
 	) {
+    console.error('invalid username');
 		return {
 			error: "Invalid username"
 		};
@@ -114,6 +116,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
 	if (typeof password !== "string" || password.length < 6 || password.length > 255 || !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
     password,
   )) {
+    console.error('invalid pw');
 		return {
 			error: "Invalid password"
 		};
@@ -163,3 +166,24 @@ export async function logout(): Promise<ActionResult> {
 	cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 	return redirect("/");
 }
+
+export const checkUser = cache(async () => {
+	const sessionId = cookies().get(lucia.sessionCookieName)?.value ?? null;
+	if (!sessionId) return null;
+
+  const { user, session } = await lucia.validateSession(sessionId);
+
+  try {
+		if (session && session.fresh) {
+			const sessionCookie = lucia.createSessionCookie(session.id);
+			cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+		}
+		if (!session) {
+			const sessionCookie = lucia.createBlankSessionCookie();
+			cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+		}
+	} catch {
+    console.error('Error setting session cookie.')
+	}
+	return user;
+});

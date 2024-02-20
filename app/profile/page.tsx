@@ -48,7 +48,7 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                 key={pathway.id}
                 data-testid="pathway-card"
               >
-                <div className="flex">
+                <div className="flex md:flex-row flex-col">
                   <div className="card-body">
                     <p className="card-title" data-testid="pathway-card-title">{pathway.title}</p>
                     <p data-testid="data-card-description">{pathway.description}</p>
@@ -86,18 +86,18 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                     return (
                       <div
                         key={competency.id}
-                        className="border-black card max-w-[32%] rounded-md border"
+                        className="border-black card md:max-w-[32%] rounded-md border"
                       >
                         <div className="card-body h-[70%] overflow-y-hidden">
                           <p className="card-title" data-testid="competency-title">{competency.title}</p>
                           <p className="text-ellipsis line-clamp-5">{competency.description}</p>
-                          <div className="flex space-x-2 flex-wrap">
+                          <div className="flex md:space-x-2 space-y-2 md:space-y-0 flex-wrap">
                             {competency.contentAreas &&
                               competency.contentAreas.map(
                                 (contentArea: ContentArea) => {
                                   return (
                                     <div
-                                      className="badge badge-outline"
+                                      className="badge badge-outline md:h-5 h-fit"
                                       key={contentArea.id}
                                       data-testid="competency-content-area-badge"
                                     >

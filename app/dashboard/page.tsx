@@ -30,7 +30,7 @@ export default async function Page() {
             className='card w-full border rounded-md border-black'
             key={pathway.id}
             data-testid='pathway-card'>
-            <div className='flex'>
+            <div className='flex flex-col md:flex-row items-center '>
               <div className='card-body'>
                 <p className='card-title'>{pathway.title}</p>
                 <p>{pathway.description}</p>

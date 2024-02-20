@@ -40,10 +40,10 @@ export default function PathwayProgressDetails({ pathway, pathwayId }: { pathway
             </div>
           </div>
           <div
-            className={` ${collapsed ? "block" : "hidden"}`}
+            className={` ${collapsed ? "block" : "hidden"} overflow-x-auto`}
             id={`${pathway.title}-details`}
           >
-            <table className="table">
+            <table className="table table-xs">
               <thead>
                 <tr>
                   <th className="text-primary">Completed</th>

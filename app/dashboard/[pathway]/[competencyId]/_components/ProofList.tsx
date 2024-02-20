@@ -9,8 +9,8 @@ export default function ProofList({ proofs }: { proofs: Proof[] }) {
   return (
     !!proofs &&
     proofs.length > 0 && (
-      <div className="w-2/3">
-        <table className="table w-full" data-testid="proof-table">
+      <div className="md:w-2/3 overflow-x-auto">
+        <table className="table table-sm w-full" data-testid="proof-table">
           <thead>
             <tr>
               <th className="text-primary">Title</th>

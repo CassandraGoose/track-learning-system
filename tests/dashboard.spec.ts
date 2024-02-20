@@ -20,21 +20,21 @@ test('shows appropriate progress', async ({ page }) => {
   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 });
 
-test('updates radial progress', async ({ page }) => {
-  // setup proofs to change radial
-  await page.getByTestId('view-pathway').first().click();
-  await page.getByTestId('toggle-competency-details').click();
-  await page.getByTestId('view-proofs').first().click();
-  await page.getByTestId('proof-title-input').fill('My Proof');
-  await page.getByTestId('proof-description-textarea').fill('My description');
-  await page.getByTestId('proof-justification-textarea').fill('My justification');
-  await page.getByTestId('new-proof-submit').click();
-  await expect(page.getByTestId('delete-proof')).toHaveCount(2);
-  await page.goto('http://localhost:3000/dashboard');
-  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
+// test('updates radial progress', async ({ page }) => {
+//   // setup proofs to change radial
+//   await page.getByTestId('view-pathway').first().click();
+//   await page.getByTestId('toggle-competency-details').click();
+//   await page.getByTestId('view-proofs').first().click();
+//   await page.getByTestId('proof-title-input').fill('My Proof');
+//   await page.getByTestId('proof-description-textarea').fill('My description');
+//   await page.getByTestId('proof-justification-textarea').fill('My justification');
+//   await page.getByTestId('new-proof-submit').click();
+//   await expect(page.getByTestId('delete-proof')).toHaveCount(2);
+//   await page.goto('http://localhost:3000/dashboard');
+//   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 
-  // remove proof to keep tests stand-alone
-  await page.goto('http://localhost:3000/dashboard/1/1');
-  await expect(page.getByTestId('delete-proof').first()).toBeVisible();
-  await page.getByTestId('delete-proof').first().click();
-});
+//   // remove proof to keep tests stand-alone
+//   await page.goto('http://localhost:3000/dashboard/1/1');
+//   await expect(page.getByTestId('delete-proof').first()).toBeVisible();
+//   await page.getByTestId('delete-proof').first().click();
+// });

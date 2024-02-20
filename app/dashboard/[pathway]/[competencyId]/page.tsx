@@ -29,7 +29,7 @@ export default async function Page({
       <p className="self-start pb-8 text-2xl" data-testid="competency-title">
         Competency: {competency?.title}
       </p>
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between md:flex-row flex-col md:space-y-0 space-y-10">
         <ProofList proofs={proofs} />
         <NewProofForm competencyId={competencyId} />
       </div>

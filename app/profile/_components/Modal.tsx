@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { showProof } from '@/app/actions';
+import { showProof } from '@/app/actions/proofActions';
 import { notFound, useSearchParams, useRouter } from 'next/navigation';
 import { Proof } from '@/app/lib/interface';
 import Link from 'next/link';

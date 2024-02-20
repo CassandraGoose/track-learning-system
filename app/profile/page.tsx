@@ -1,4 +1,4 @@
-import { getPathwaysByEmail, getProof } from '../lib/queries';
+import { getUserPathways, getProof } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
 import { Pathway, Competency, ContentArea } from '../lib/interface';
@@ -6,7 +6,7 @@ import Modal from "@/app/profile/_components/Modal";
 import ProofButtons from './_components/ProofButtons';
 
 export default async function Page({ searchParams }: { searchParams?: { showModal: boolean, proof?: string }}) {
-  let userPathways = await getPathwaysByEmail();
+  let userPathways = await getUserPathways();
 
   if (!userPathways) {
     notFound();

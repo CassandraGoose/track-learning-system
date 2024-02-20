@@ -1,6 +1,6 @@
 'use client';
 import { Proof } from '@/app/lib/interface';
-import { removeProof } from '@/app/actions';
+import { removeProof } from '@/app/actions/proofActions';
 import { useRouter } from 'next/navigation';
 
 export default function ProofList({ proofs }: { proofs: Proof[] }) {

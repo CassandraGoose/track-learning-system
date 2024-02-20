@@ -22,19 +22,19 @@ function SiteFooter() {
           </p>
         </aside>
         <nav>
-          <header className="footer-title">Company - coming soon</header>
+          {/* <header className="footer-title">Company - coming soon</header>
           <a className="link link-hover">About us - coming soon</a>
           <a className="link link-hover">Contact - coming soon</a>
           <a className="link link-hover">Jobs - coming soon</a>
-          <a className="link link-hover">Press kit - coming soon</a>
+          <a className="link link-hover">Press kit - coming soon</a> */}
         </nav>
         <nav>
-          <header className="footer-title">
+          {/* <header className="footer-title">
             Legal - coming soon
           </header>
           <a className="link link-hover">Terms of use - coming soon</a>
           <a className="link link-hover">Privacy policy - coming soon</a>
-          <a className="link link-hover">Cookie policy - coming soon</a>
+          <a className="link link-hover">Cookie policy - coming soon</a> */}
         </nav>
       </footer>
       <footer

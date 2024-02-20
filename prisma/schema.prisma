@@ -13,6 +13,8 @@ datasource db {
 
 model Person {
   id                String       @id @default(cuid())
+  sessions          Session[]
+  hashedPassword   String
   createdAt         DateTime     @default(now())
   username          String       @unique
   firstName         String      
@@ -23,6 +25,13 @@ model Person {
   profileVisibility Boolean      @default(true)
   proofs            Proof[]
   pathways          Pathway[]
+}
+
+model Session {
+  id        String @id
+  userId    String
+  expiresAt DateTime
+  person    Person @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 
 model Competency {

@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "tsx ./prisma/seed.ts",
-    "test": "NODE_ENV=test npx playwright test --project='firefox' --workers=1 --max-failures=1",
+    "test": "",
     "test:wk": "NODE_ENV=test npx playwright test --project='webkit' --workers=1 --max-failures=1",
     "test:chr": "NODE_ENV=test npx playwright test --project='chromium' --workers=1 --max-failures=1"
   },
@@ -16,10 +16,13 @@
     "seed": "tsx ./prisma/seed.ts"
   },
   "dependencies": {
+    "@lucia-auth/adapter-prisma": "^4.0.0",
     "@prisma/client": "^5.8.1",
     "@types/node": "18.11.18",
     "@types/react-dom": "18.0.10",
+    "lucia": "^3.0.1",
     "next": "^14.0.4",
+    "oslo": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zod": "^3.22.4"

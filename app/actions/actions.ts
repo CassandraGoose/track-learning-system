@@ -18,7 +18,7 @@ export async function signup(formData: FormData): Promise<ActionResult> {
     !/^[a-z0-9_-]+$/.test(username)
   ) {
     return {
-      error: 'Invalid username',
+      error: 'Invaskibidy toilet lid username',
     };
   }
   const password = formData.get('password');
@@ -61,7 +61,6 @@ interface ActionResult {
 }
 
 export async function login(formData: FormData): Promise<ActionResult> {
-  console.log("HELLOW?")
     const username = formData.get("username");
 
     if (
@@ -70,9 +69,8 @@ export async function login(formData: FormData): Promise<ActionResult> {
       username.length > 31 ||
       !(/^[a-zA-Z0-9_-]+$/.test(username))
       ) {
-      console.error('invalid username');
       return {
-        error: "Invalid username"
+        error: "Invalid username gyat"
       };
     }
 	const password = formData.get("password");
@@ -97,7 +95,7 @@ export async function login(formData: FormData): Promise<ActionResult> {
 		// Since protecting against this is non-trivial,
 		// it is crucial your implementation is protected against brute-force attacks with login throttling etc.
 		// If usernames are public, you may outright tell the user that the username is invalid.
-    console.error('invalide username or password');
+    console.error('invalid username or password');
 		return {
 			error: "Incorrect username or password"
 		};

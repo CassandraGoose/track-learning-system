@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, firefox } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
   // Go to the starting url before each test.
@@ -29,11 +29,12 @@ test('updates radial progress', async ({ page }) => {
   await page.getByTestId('proof-description-textarea').fill('My description');
   await page.getByTestId('proof-justification-textarea').fill('My justification');
   await page.getByTestId('new-proof-submit').click();
-  await page.getByTestId('proof-table').waitFor({state: 'attached'});
+  await expect(page.getByTestId('delete-proof')).toHaveCount(2);
   await page.goto('http://localhost:3000/dashboard');
   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
 
   // remove proof to keep tests stand-alone
   await page.goto('http://localhost:3000/dashboard/1/1');
+  await expect(page.getByTestId('delete-proof').first()).toBeVisible();
   await page.getByTestId('delete-proof').first().click();
 });

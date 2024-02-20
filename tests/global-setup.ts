@@ -20,9 +20,9 @@ async function globalSetup(config: FullConfig) {
   await page.getByTestId("username").fill("CassTheOG");
   await page.getByTestId("password").fill(process.env.TEST_USER_PW || '');
   await page.getByTestId("login").click();
-  await page.waitForURL('http://localhost:3000/');
+  await page.waitForURL('http://localhost:3000/dashboard');
   await page.context().storageState({ path: storageState as string });
-  await page.waitForURL('http://localhost:3000/');
+  await page.waitForURL('http://localhost:3000/dashboard');
 
   await browser.close();
 

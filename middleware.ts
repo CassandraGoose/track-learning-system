@@ -9,9 +9,9 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/dashboard', request.url))
   }
 
-  if (!currentUser && (pathname !== '/login' && pathname !== '/signup')) {
-    return NextResponse.redirect(new URL('/signup', request.url))
-  }
+  // if (!currentUser && (pathname !== '/login' && pathname !== '/signup')) {
+  //   return NextResponse.redirect(new URL('/', request.url))
+  // }
 }
  
 export const config = {

@@ -15,7 +15,6 @@ export default function Navbar({ user }: { user: User | null}) {
 
   const [showNavItem, setShowNavItem] = useState(false);
 
-  console.log('user', user);
   useEffect(() => {
     setShowNavItem(!!user);
   }, [user])

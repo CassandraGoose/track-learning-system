@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('has a title', async ({ page }) => {
-  await expect(page.getByTestId('competency-title')).toHaveText('Competency: Explain what a Growth Mindset is');
+  await expect(page.getByTestId('competency-title')).toHaveText('Competency: Find personal pathways');
 });
 
 test('has a form', async ({ page }) => {

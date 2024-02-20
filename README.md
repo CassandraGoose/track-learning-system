@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Track</h1>
+  <h1><a href="https://track-learning-system.vercel.app/">Track</a></h1>
   <h2>Track your learning; prove your learning</h2>
   <picture>
     <img alt="nextjs badge" src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white">
@@ -34,6 +34,9 @@ At the same time, many college degrees are simply records of attendance and not 
 So, why is traditional education, in the form of college education and corporate trainings, still the only widely accepted way to prove you know something? People need to be able to prove that they have the necessary knowledge without the price tag. 
 
 This app allows users to track their learning and upload artifacts to prove their learning. Employers can veiw a user's portfolio and determine a user's qualifications without unnecessary education and without the hefty pricetag. 
+
+- Check out my progress at: https://track-learning-system.vercel.app/
+- Check out my project board to see my trajectory: https://github.com/users/CassandraGoose/projects/2
 
 ---
 

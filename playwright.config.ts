@@ -15,6 +15,7 @@ loadEnvConfig(process.cwd());
 export default defineConfig({
   // path to the global setup files.
   globalSetup: require.resolve('./tests/global-setup'),
+  globalTeardown: require.resolve('./tests/global-teardown'),
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -28,6 +29,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    storageState: 'tests/storageState.json',
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -44,7 +46,9 @@ export default defineConfig({
 
     {
       name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      use: { ...devices['Desktop Firefox'],
+        storageState: 'tests/storageState.json',
+      },
     },
 
     {

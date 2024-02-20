@@ -1,10 +1,17 @@
 import Link from 'next/link';
-import { getPathwaysByEmail } from '../lib/queries';
-import { notFound } from 'next/navigation';
+import { getUserPathways } from '../lib/queries';
+import { notFound, redirect } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
+import { checkUser } from '@/app/actions/actions';
 
 export default async function Page() {
-  let userPathways = await getPathwaysByEmail();
+  const user = await checkUser();
+
+  if (!user) {
+    redirect('/login');
+  }
+
+  let userPathways = await getUserPathways();
 
   if (!userPathways) {
     notFound();
@@ -17,7 +24,7 @@ export default async function Page() {
       <h2 className={`text-4xl self-center mt-8 `}>
         My Pathways
       </h2>
-      {pathways && pathways.map((pathway) => {
+      {pathways && pathways.length > 0 ? pathways.map((pathway) => {
         return (
           <article
             className='card w-full border rounded-md border-black'
@@ -50,7 +57,10 @@ export default async function Page() {
             </div>
           </article>
         );
-      })}
+      }) : <div className="flex flex-col justify-center items-center">
+              <p>You don&apos;t have any pathways.</p>
+              <Link href="/pathways" className="btn btn-primary my-4">Add a pathway</Link>
+            </div>}
     </section>
   );
 }

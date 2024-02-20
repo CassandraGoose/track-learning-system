@@ -4,6 +4,17 @@ export interface Children {
   children?: ReactNode;
 }
 
+export interface Person {
+  id: string,
+  username: string,
+  firstName: string,
+  lastName: string,
+  bio: string,
+  email: string, 
+  proofs: Array<Proof>,
+  pathways: Array<Pathway>,
+}
+
 export interface PathwayProps {
   id: string;
   createdAt: string | Date;

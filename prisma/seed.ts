@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import { Argon2id } from 'oslo/password';
 import contentAreasData from './data/contentAreas.json';
 import pathwaysData from './data/pathways.json';
 import competenciesData from './data/competencies.json';
@@ -33,6 +34,9 @@ async function main() {
     });
   });
 
+  const pw = process.env.TEST_USER_PW || '';
+  const hashedPassword = await new Argon2id().hash(pw);
+
   await prisma.person.upsert({
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
@@ -41,6 +45,7 @@ async function main() {
       firstName: 'Cass',
       lastName: 'T',
       bio: 'I am the person who created this application. Hi!',
+      hashedPassword: hashedPassword,
       id: process.env.TEST_USER_ID || '',
       pathways: {
         connect: [

@@ -22,6 +22,7 @@ module.exports = {
     },
     colors: {
       'bright': '#f8f7ff',
+      'loading': '#DBDBE2',
     },
   },
   plugins: [require('daisyui')],

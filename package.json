@@ -19,7 +19,7 @@
     "@lucia-auth/adapter-prisma": "^4.0.0",
     "@prisma/client": "^5.8.1",
     "@types/node": "18.11.18",
-    "@types/react-dom": "18.0.10",
+    "@types/react-dom": "^18.2.21",
     "lucia": "^3.0.1",
     "next": "^14.0.4",
     "oslo": "^1.1.2",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.64",
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "@vercel/style-guide": "^5.1.0",

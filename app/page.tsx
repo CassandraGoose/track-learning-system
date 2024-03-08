@@ -1,4 +1,5 @@
 'use client';
+import { useFormStatus } from 'react-dom';
 import Image from 'next/image';
 import Splash from '../public/temp_splash.png';
 import Happiness from '../public/happiness.png';
@@ -8,7 +9,24 @@ import Splash2 from '../public/temp_splash2.png';
 import Video from '../public/temp_video.png';
 import { login } from '@/app/actions/actions';
 
+// lives here because it won't be used in any other component
+function TryButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      className="btn btn-secondary text-bright"
+      role="link"
+      aria-disabled={pending}
+    >
+      {pending ? <span className="loading loading-spinner loading-sm bg-loading"></span> : 'Try as Cass'}
+    </button>
+  );
+}
+
 export default function Page() {
+  const { pending } = useFormStatus();
+
   return (
     <section className="flex flex-col pb-20">
       <div className="hero">
@@ -18,7 +36,7 @@ export default function Page() {
             className="w-1/2 md:w-10xl md:pr-16"
             alt="train illustration"
           />
-          <div className="md:w-1/2 text-center md:text-left">
+          <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-5xl font-bold" data-testid="splash-title">
               TRACK
             </h1>
@@ -35,40 +53,38 @@ export default function Page() {
             <form
               action={async (formData) => {
                 formData.set('username', 'CassTheOG');
-                login(formData)
+                login(formData);
               }}
             >
-              <button className="btn btn-secondary text-bright" role="link">
-                Try as Cass
-              </button>
+              <TryButton />
             </form>
           </div>
         </div>
       </div>
 
-      <div className="flex flex-col items-center border-b border-t border-secondary md:p-24 p-4 pt-16">
+      <div className="flex flex-col items-center border-b border-t border-secondary p-4 pt-16 md:p-24">
         <div
-          className="flex items-start justify-center md:flex-row flex-col"
+          className="flex flex-col items-start justify-center md:flex-row"
           data-testid="splash-info1"
         >
-          <div className="flex md:flex-1 md:flex-grow flex-col items-center">
+          <div className="flex flex-col items-center md:flex-1 md:flex-grow">
             <Image
               src={Happiness}
               className="w-1/8 mb-8 h-auto"
               alt="happy person icon"
             />
-            <p className="md:mb-4 mb-20 text-center text-2xl">
+            <p className="mb-20 text-center text-2xl md:mb-4">
               Track is a learning tool built for you, not for some corporate
               entity.
             </p>
           </div>
-          <div className="mx-8 flex md:flex-1 md:flex-grow flex-col items-center">
+          <div className="mx-8 flex flex-col items-center md:flex-1 md:flex-grow">
             <Image
               src={Community}
               className="w-1/8 mb-8 h-auto"
               alt="icon of community"
             />
-            <p className="md:mb-4 mb-20 text-center text-2xl">
+            <p className="mb-20 text-center text-2xl md:mb-4">
               Community-driven learning paths provide learning opportunities
               that can mimic college education, work training, and personal
               fulfillment.
@@ -80,7 +96,7 @@ export default function Page() {
               className="w-1/8 mb-8 h-auto"
               alt="icon of blue ribbon on a paper"
             />
-            <p className="text-center text-2xl mb-20 md:mb-0">
+            <p className="mb-20 text-center text-2xl md:mb-0">
               Find pathways created by educators, curriculum designers,
               professionals, and hobbyists.
             </p>
@@ -91,19 +107,19 @@ export default function Page() {
       <div className="flex flex-col justify-center">
         <Image
           src={Splash2}
-          className="md:mb-12 md:mt-0 mt-12 h-auto md:w-1/4 w-1/2 self-center"
+          className="mt-12 h-auto w-1/2 self-center md:mb-12 md:mt-0 md:w-1/4"
           alt="laptop displaying the use of the Track tool"
         />
         <div
           className="flex flex-col items-center text-center"
           data-testid="splash-info2"
         >
-          <p className="p-12 md:p-0 md:mb-4 text-2xl">
+          <p className="p-12 text-2xl md:mb-4 md:p-0">
             Track was designed to put you in the driver&apos;s seat of your
             learning, while also allowing you to proove your understaning and
             share your accomplishments with the world.
           </p>
-          <p className="p-12 md:-0 md:mb-4 text-2xl">
+          <p className="md:-0 p-12 text-2xl md:mb-4">
             As you complete your learning, you can add artifacts to back up your
             understanding and skills. Once you&apos;re ready, send the link to
             your portofolio for any given pathway. Potential employers,

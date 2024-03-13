@@ -4,6 +4,7 @@ import { caluclateProgress } from '../lib/utilities';
 import { Pathway, Competency, ContentArea } from '../lib/interface';
 import Modal from "@/app/profile/_components/Modal";
 import ProofButtons from './_components/ProofButtons';
+import ContentAreaPill from '../_components/ContentAreaPill';
 
 export default async function Page({ searchParams }: { searchParams?: { showModal: boolean, proof?: string }}) {
   let userPathways = await getUserPathways();
@@ -56,13 +57,9 @@ export default async function Page({ searchParams }: { searchParams?: { showModa
                       {getAllContentAreaForPathway(pathway).map(
                         (contentArea: string) => {
                           return (
-                            <div
-                              className="badge badge-outline"
-                              data-testid="content-area-badge"
-                              key={contentArea}
-                            >
-                              {contentArea}
-                            </div>
+                            <span key={contentArea}>
+                              <ContentAreaPill contentArea={contentArea} />
+                            </span>
                           );
                         },
                       )}

@@ -48,7 +48,7 @@ export interface Competency {
   createdAt: string | Date;
   title: string;
   description: string;
-  proofs: Array<Proof>;
+  proofs?: Array<Proof>;
   contentAreas?: Array<ContentArea>;
 }
 

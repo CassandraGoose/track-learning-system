@@ -194,3 +194,19 @@ export async function getUser(username: string) {
     console.error(error);
   }
 }
+
+export async function getAllPathways() {
+  try {
+    return await prisma.pathway.findMany({
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          }
+        }
+    }
+  });
+  } catch (error) {
+    console.error(error);
+  }
+}

@@ -210,3 +210,22 @@ export async function getAllPathways() {
     console.error(error);
   }
 }
+
+export async function getSinglePathway(pathwayId: string) {
+  try {
+    return await prisma.pathway.findFirst({
+      where: {
+        id: parseInt(pathwayId),
+      },
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          },
+        },
+      },
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}

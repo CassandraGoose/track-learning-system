@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAllPathways } from '../lib/queries';
 import PathwayCard from '../_components/PathwayCard';
-import { create } from 'domain';
 import { Competency } from '../lib/interface';
 import ContentAreaPill from '../_components/ContentAreaPill';
 
@@ -42,10 +41,10 @@ export default async function Page() {
     <div className="">
       <Link
         data-testid="view-pathway"
-        href={`/dashboard/${id}`}
+        href={`/pathways/${id}`}
         className="btn btn-secondary m-8 text-bright md:min-w-44"
       >
-        Competency Details
+        Pathway Details
       </Link>
     </div>
   );

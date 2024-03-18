@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        'xxs': '.6rem',
+      },
       screens: {
         sm: '480px',
         md: '768px',

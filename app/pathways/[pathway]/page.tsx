@@ -25,9 +25,15 @@ export default async function Page({
           </h1>
           <p data-testid="pathway-description">{singlePathway.description}</p>
           <div className="flex flex-col items-center justify-center space-y-8">
-            <h2 className="text-xl ">{`What will you learn?`}</h2>
-            <p className="text-center">{` Below, you can find a list of competencies that describe what skills and knowledge you will need to progress through your pathway. You can proove that you have mastered the competencies below by uploading artifacts (called "proofs") to act as proof of your skills and knowledge.`}</p>
-            <div className="card-body flex flex-row flex-wrap">
+            <h2 className="text-xl ">What will you learn?</h2>
+            <p className="text-center">
+              Below, you can find a list of competencies that describe what
+              skills and knowledge you will need to progress through your
+              pathway. You can proove that you have mastered the competencies
+              below by uploading artifacts (called &apos;proofs&apos;) to act as
+              proof of your skills and knowledge.
+            </p>
+            <div className="card-body flex flex-row flex-wrap w-full">
               {singlePathway.competencies.map((competency) => {
                 return (
                   <Fragment key={competency.id}>

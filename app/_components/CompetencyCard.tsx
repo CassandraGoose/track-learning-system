@@ -12,12 +12,12 @@ export default function CompetencyCard({competency}: { competency: Competency })
           {competency.title}
         </p>
         <p className="line-clamp-5 text-ellipsis">{competency.description}</p>
-        <div className="flex flex-wrap space-y-2 md:space-x-2 md:space-y-0">
+        <div className="flex flex-wrap space-y-2 lg:space-x-2 lg:space-y-0 sm:space-y-0 sm:space-x-2">
           {competency.contentAreas &&
             competency.contentAreas.map((contentArea: ContentArea) => {
               return (
                 <div
-                  className="badge badge-outline h-fit md:h-5"
+                  className="badge badge-outline h-fit md:text-xxs"
                   key={contentArea.id}
                   data-testid="competency-content-area-badge"
                 >

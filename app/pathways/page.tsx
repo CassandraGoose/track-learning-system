@@ -52,6 +52,13 @@ export default async function Page() {
   return (
     <section className="mx-12 flex flex-col space-y-12">
       <h2 className={`mt-8 self-center text-4xl `}>Available Pathways</h2>
+      <form className="w-full flex justify-center items-center">
+        <label className="input input-bordered bg-bright input-primary flex items-center gap-2">
+          <input type="text" className="grow bg-bright" placeholder="Search" />
+          <kbd className="kbd kbd-sm text-bright">⌘</kbd>
+          <kbd className="kbd kbd-sm text-bright">K</kbd>
+        </label>
+      </form>
       {pathways.map((pathway) => {
         return (
           <PathwayCard

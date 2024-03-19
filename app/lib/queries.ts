@@ -195,6 +195,34 @@ export async function getUser(username: string) {
   }
 }
 
+export async function getFilteredPathways(query: string, page: number) {
+  const offset = (page - 1) * 6;
+
+  try {
+    return await prisma.pathway.findMany({
+      skip: offset,
+      take: 6,
+      where: {
+        title: {
+          contains: query
+        }
+      }, 
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          }
+        }
+    }, 
+    orderBy: {
+      title: 'asc',
+    }
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 export async function getAllPathways() {
   try {
     return await prisma.pathway.findMany({

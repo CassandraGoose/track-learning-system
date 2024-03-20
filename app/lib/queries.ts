@@ -166,7 +166,7 @@ export async function createUser({
   firstName: string;
   lastName: string;
   bio: string;
-}) {  
+}) {
   try {
     return await prisma.person.create({
       data: {
@@ -204,19 +204,34 @@ export async function getFilteredPathways(query: string, page: number) {
       take: 6,
       where: {
         title: {
-          contains: query
-        }
-      }, 
+          contains: query,
+          mode: 'insensitive',
+        },
+      },
       include: {
         competencies: {
           include: {
             contentAreas: true,
-          }
-        }
-    }, 
-    orderBy: {
-      title: 'asc',
-    }
+          },
+        },
+      },
+      orderBy: {
+        title: 'asc',
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getFilteredPathwaysCount(query: string) {
+  try {
+    return await prisma.pathway.count({
+      where: {
+        title: {
+          contains: query,
+        },
+      },
     });
   } catch (error) {
     console.error(error);
@@ -230,10 +245,10 @@ export async function getAllPathways() {
         competencies: {
           include: {
             contentAreas: true,
-          }
-        }
-    }
-  });
+          },
+        },
+      },
+    });
   } catch (error) {
     console.error(error);
   }
@@ -252,7 +267,7 @@ export async function getSinglePathway(pathwayId: string) {
           },
         },
       },
-      });
+    });
   } catch (error) {
     console.error(error);
   }

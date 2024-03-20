@@ -166,7 +166,7 @@ export async function createUser({
   firstName: string;
   lastName: string;
   bio: string;
-}) {  
+}) {
   try {
     return await prisma.person.create({
       data: {
@@ -188,6 +188,84 @@ export async function getUser(username: string) {
     return await prisma.person.findUnique({
       where: {
         username: username,
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getFilteredPathways(query: string, page: number) {
+  const offset = (page - 1) * 6;
+
+  try {
+    return await prisma.pathway.findMany({
+      skip: offset,
+      take: 6,
+      where: {
+        title: {
+          contains: query,
+          mode: 'insensitive',
+        },
+      },
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          },
+        },
+      },
+      orderBy: {
+        title: 'asc',
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getFilteredPathwaysCount(query: string) {
+  try {
+    return await prisma.pathway.count({
+      where: {
+        title: {
+          contains: query,
+        },
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getAllPathways() {
+  try {
+    return await prisma.pathway.findMany({
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          },
+        },
+      },
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export async function getSinglePathway(pathwayId: string) {
+  try {
+    return await prisma.pathway.findFirst({
+      where: {
+        id: parseInt(pathwayId),
+      },
+      include: {
+        competencies: {
+          include: {
+            contentAreas: true,
+          },
+        },
       },
     });
   } catch (error) {

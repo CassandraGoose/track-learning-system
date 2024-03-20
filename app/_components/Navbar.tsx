@@ -41,11 +41,11 @@ export default function Navbar({ user }: { user: User | null}) {
               Dashboard
             </Link>
           </li>
-          {/* <li className={isActive('/pathways')}>
-            <Link className="px-2" href="/" data-testid="navbar-pathways-link">
+          <li className={isActive('/pathways')}>
+            <Link className="px-2" href="/pathways" data-testid="navbar-pathways-link">
               Pathways
             </Link>
-          </li> */}
+          </li>
           {/* <li className={isActive('/about')}>
             <Link
               className="pl-2 pr-4"

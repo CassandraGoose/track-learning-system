@@ -2,11 +2,11 @@
   "pathways": [
     {
       "title": "Use Track",
-      "description": "Learn to use the tool so you can leverage it to your advantage."
+      "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully."
     },
     {
       "title": "Learn to Learn",
-      "description": "Utilize a growth mindset and grit to learn anything"
+      "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to set goals, manage time, and develop a learning plan. This pathway is a great prerequisite for all other pathways."
     },
     {
       "title": "Illustration",
@@ -14,7 +14,87 @@
     },
     {
       "title": "Computer Science",
-      "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. Aspiring computer scientists will delve into a multitude of areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects, problem-solving exercises, and collaborative learning will be integral to the learning process. Learners are encouraged to explore various programming languages, tackle real-world challenges, and contribute to open-source projects. Understanding the theoretical foundations is equally vital, so engaging with computer science literature and research is highly recommended. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path."
+      "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. This pathway involves many content areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects and collaborative learning will be integral to the process. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path."
+    },
+    {
+      "title": "Front End Development",
+      "description": "When users interact with a web page or application, they're really interacting with the front end. This pathway is designed to help you learn the skills you need to become a front end developer. You'll learn how to build web pages and applications using HTML, CSS, and JavaScript. You'll also learn how to use popular front end frameworks and libraries like React, Vue, or Angular. This pathway does not focus on design in any way - it is a myth that front end web development is rooted in design. This pathway is for those who want to build the interactive parts of a website or application using code and problem solving skills."
+    }, 
+    {
+      "title": "Unity 2D Game Development",
+      "description": "This pathway will guide learners to create 2D games utilizing the Unity Engine. This pathway includes fundamentals of Unity's 2D features, including sprite management, physics, animation, and user interface design. Starting with basic concepts, such as setting up a project and navigating the Unity interface, learners will progress to more advanced topics like scripting in C#, implementing game mechanics, optimizing performance, and publishing games to various platforms. Learners should push to build their own games instead of simply consuming related educational content."
+    },
+    {
+      "title": "Digital Marketing",
+      "description": "Explore the dynamic field of digital marketing, encompassing social media marketing, search engine optimization (SEO), content marketing, email marketing, and digital advertising platforms like Google Ads and Facebook Ads. This pathway will guide learners to develop a comprehensive understanding of digital marketing strategies, tools, and techniques. Learners should focus on hands-on experience by creating and executing digital marketing campaigns."
+    },
+    {
+      "title": "Creative Writing",
+      "description": "Explore creative writing to refine your craft and cultivate your unique voice. Practice consistently, engage with feedback, and study storytelling fundamentals to craft compelling narratives. Develop well-rounded characters, craft engaging plots, and create vivid settings that transport readers into the heart of the narrative."
+    },
+    {
+      "title": "Public Speaking Fundamentals",
+      "description": "Develop essential public speaking skills, including overcoming stage fright, organizing speeches, delivering effective presentations, and engaging with audiences confidently."
+    },
+    {
+      "title": "Mindfulness and Meditation Fundamentals",
+      "description": "Explore the principles and techniques of meditation and mindfulness to reduce stress, improve focus, and cultivate a greater sense of well-being in daily life. This pathway will guide learners to develop a consistent meditation practice and integrate mindfulness into their daily routines."
+    },
+    {
+      "title": "Music Perforamance Fundamentals",
+      "description": "Begin a foundational journey in music performance, focusing on essential skills applicable to any instrument. This pathway introduces instrument pedagogy, covering techniques like posture and hand positioning, alongside fundamental music theory such as scales, intervals, and rhythm. Learners will develop technical proficiency through exercises and repertoire, including scales, arpeggios, and finger exercises, while also honing ear training and sight-reading abilities. Regular practice sessions and performance opportunities will solidify learning, with feedback from instructors and peers guiding progress towards confident and expressive musical performance."
+    },
+    {
+      "title": "Japanese Language",
+      "description": "Gain proficiency in the Japanese language through this pathway, which is closely modeled after traditional university degrees. Learners will practice grammar, vocubulary, reading, writing, and oral communication skills. This pathway will also guide learners to explore Japanese culture and history, and to engage with native speakers to practice their language skills. Learners should expect to spend several years to achieve proficiency in the fundamentals of Japanese language."
+    },
+    {
+      "title": "Event Planning and Management",
+      "description": "Learn the principles and practices of event planning and management, including event design, budgeting, logistics, vendor management, marketing, and coordination, to organize successful events such as conferences, weddings, and corporate functions."
+    },
+    {
+      "title": "Artistic Roller Skating",
+      "description": "Master the art of roller skating through artistic expression. Learners will develop fundamental skating skills, including balance, agility, and coordination, while also exploring artistic elements such jumps, styles, and choreography. This pathway will guide learners to develop a skating routine, and to engage in regular practice opportunities to refine their skills. Learners should also seek feedback from experienced skaters to improve their technique and artistry. This pathway is designed for people who want to learn to roller skate with no prior experience and strive for artistic expression through skating."
+    }, 
+    {
+      "title": "Project Management",
+      "description": "This pathway will prepare learners to successfully manage projects by providing a comprehensive understanding of project management principles, tools, and techniques. Learners will explore project initiation, planning, execution, monitoring, and closing, while also developing essential skills such as leadership, communication, and risk management. Learners should focus on hands-on experience by managing real-world projects, and seek mentorship from experienced project managers to guide their learning journey."
+    }, 
+    {
+      "title": "Culinary Arts",
+      "description": "This pathway mirrors the curriculum of professional culinary schools. Covering fundamental techniques, kitchen operations, culinary theory, and practical skills, learners progress from kitchen safety and knife skills to advanced cooking methods like sautéing, braising, and pastry arts. Culinary theory components include flavor profiles, menu planning, and kitchen management, complementing hands-on cooking experience. Learners should seek out feedback from industry professionals and get involved in the local culinary scene."
+    }, 
+    {
+      "title": "Emotional Intelligence Fundamentals",
+      "description": "Cultivate self-awareness, self-regulation, empathy, and social skills to navigate emotions effectively, build positive relationships, and manage interpersonal conflicts with empathy and understanding."
+    },
+    {
+      "title": "Financial Literacy Fundamentals",
+      "description": "Gain knowledge in budgeting, saving, investing, debt management, and financial planning to make informed financial decisions, achieve financial goals, and build long-term financial security."
+    },
+    {
+      "title": "Mixology Fundamentals",
+      "description": "Dive into the world of cocktails, learning about different spirits, mixers, and cocktail recipes to create delicious drinks for yourself and others."
+    },
+    {
+      "title": "Outdoor Survival Fundamentals",
+      "description": "Learn basic survival skills such as fire starting, shelter building, navigation, and foraging to feel confident and prepared for outdoor adventures."
+    },
+    {
+      "title": "Birdwatching Fundamentals",
+      "description": "Embrace the wonders of birdwatching, learning how to identify common bird species, use binoculars, and keep a bird journal to document your sightings and observations in nature"
+    },
+    {
+      "title": "Graphic Design",
+      "description": "This pathway focuses on visual communication, typography, layout design, and digital media production, providing learners with skills in graphic design software, branding, and multimedia design, and preparing them for careers in graphic design, advertising, digital media, or web design. Similar to a college degree, learners will need to develop a portfolio of work to demonstrate their skills and knowledge as well as demonstrate proficiency in fundamentals through projects, research, and collaboration. Learners should expect to spend several years to achieve proficiency in the field of graphic design."
+    },
+    {
+      "title": "Philosophy",
+      "description": "This pathway delves into the fundamental questions concerning existence, knowledge, ethics, and the nature of reality. Through rigorous inquiry and critical analysis, learners explore diverse philosophical traditions, from ancient Greek philosophy to contemporary thought. They engage with topics such as metaphysics, epistemology, ethics, logic, political philosophy, and aesthetics, examining philosophical texts, arguments, and theories to develop their analytical, critical thinking, and argumentation skills. Througout years of study, learners should emphasize research, writing, and oral communication, and forumulating and defedning their own philosophical viewpoints through essays, debates, and presentations"
+    },
+    {
+      "title": "SQL Fundamentals",
+      "description": "Learn to manipulate data using SQL commands, including SELECT, INSERT, UPDATE, and DELETE, gaining proficiency in retrieving, filtering, and organizing data from relational databases."
     }
   ]
 }

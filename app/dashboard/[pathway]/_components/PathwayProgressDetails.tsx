@@ -9,13 +9,13 @@ export default function PathwayProgressDetails({ pathway, pathwayId }: { pathway
 
   const getCompletedCompetencies = (competencies: Competency[]) => {
     return competencies.reduce((acc, competency) => {
-      if (competency.proofs.length > 0) acc++;
+      if (competency.proofs && competency.proofs.length > 0) acc++;
       return acc;
     }, 0);
   }
 
   const checkCompetencyCompleted = (competency: Competency) => {
-    return competency.proofs.length > 0;
+    return competency.proofs && competency.proofs.length > 0;
   }
 
   return (

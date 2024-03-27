@@ -272,3 +272,29 @@ export async function getSinglePathway(pathwayId: string) {
     console.error(error);
   }
 }
+
+export async function addPathwayToUser(pathwayId: number) {
+  const user = await checkUser();
+
+  if (!user) {
+    return { message: 'You must be signed in to complete this action.'};
+  }
+
+  try {
+    return await prisma.pathway.update({
+      where: {id: pathwayId},
+      data: {
+        persons: {
+          connect: [
+            {
+              id: user.id,
+            }
+          ]
+        }
+      }
+    })
+  } catch (error) {
+    return error;
+    console.error(error);
+  }
+}

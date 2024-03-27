@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { submitProof } from '@/app/actions/proofActions';
 
@@ -9,11 +9,11 @@ export default function NewProofForm({
   competencyId: string;
 }) {
   const router = useRouter();
-  const [titleError, setTitleError] = React.useState<string>('');
-  const [descriptionError, setDescriptionError] = React.useState<string>('');
+  const [titleError, setTitleError] = useState<string>('');
+  const [descriptionError, setDescriptionError] = useState<string>('');
   const [justificationError, setJustificationError] =
-    React.useState<string>('');
-  const [generalError, setGeneralError] = React.useState<string>('');
+    useState<string>('');
+  const [generalError, setGeneralError] = useState<string>('');
 
   type zodError = {
     title?: string[] | undefined;

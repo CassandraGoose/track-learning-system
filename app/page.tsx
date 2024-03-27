@@ -25,7 +25,6 @@ function TryButton() {
 }
 
 export default function Page() {
-  const { pending } = useFormStatus();
 
   return (
     <section className="flex flex-col pb-20">

@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import { notFound, redirect } from 'next/navigation';
-import { getSinglePathway } from '../../lib/queries';
-import { Pathway } from '../../lib/interface';
+import { getSinglePathway, getSingleUserPathway } from '../../lib/queries';
 import CompetencyCard from '@/app/_components/CompetencyCard';
+import FollowPathwayButton from '../_components/FollowPathwayButton';
+import { checkUser } from '@/app/actions/actions';
 
 export default async function Page({
   params,
@@ -15,14 +16,22 @@ export default async function Page({
   if (!singlePathway) {
     notFound();
   }
+// todo figure out why NaN is showing up for progress on new pathways.
 
+  const user = await checkUser();
+  const userPathways = await getSingleUserPathway(singlePathway.id.toString());
+  const hasPathway = userPathways?.pathways.find((pathway) => pathway.id === singlePathway.id);
+  
   return (
     <section className="mx-12 my-12 flex flex-col items-center">
       <div className="border-black flex w-full justify-between rounded-md border p-8">
         <div className="flex w-full flex-col space-y-8">
-          <h1 className="text-2xl" data-testid="pathway-title">
-            {singlePathway.title}
-          </h1>
+          <div className="w-ful flex items-center justify-between">
+            <h1 className="text-2xl" data-testid="pathway-title">
+              {singlePathway.title}
+            </h1>
+            <FollowPathwayButton pathway={singlePathway} user={user} hasPathway={!!hasPathway}/>
+          </div>
           <p data-testid="pathway-description">{singlePathway.description}</p>
           <div className="flex flex-col items-center justify-center space-y-8">
             <h2 className="text-xl ">What will you learn?</h2>
@@ -33,7 +42,7 @@ export default async function Page({
               below by uploading artifacts (called &apos;proofs&apos;) to act as
               proof of your skills and knowledge.
             </p>
-            <div className="card-body flex flex-row flex-wrap w-full">
+            <div className="card-body flex w-full flex-row flex-wrap">
               {singlePathway.competencies.map((competency) => {
                 return (
                   <Fragment key={competency.id}>

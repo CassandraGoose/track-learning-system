@@ -11,10 +11,10 @@ export default function ProofButtons({
 }) {
   const pathname = usePathname();
 
-  return competency.proofs.length > 0 ? (
+  return competency.proofs && competency.proofs.length > 0 ? (
     <div>
       <ul className="flex flex-wrap justify-start">
-        {competency.proofs.map((proof) => {
+        {competency.proofs?.map((proof) => {
           return (
             <li key={proof.id} className="mr-2 mt-2">
               <Link

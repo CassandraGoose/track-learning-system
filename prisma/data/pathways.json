@@ -2,99 +2,502 @@
   "pathways": [
     {
       "title": "Use Track",
-      "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully."
+      "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully.",
+      "competencies": [
+        {
+          "title": "Find personal pathways",
+          "description": "You can find all of your saved pathways",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Learn to Learn",
-      "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to set goals, manage time, and develop a learning plan. This pathway is a great prerequisite for all other pathways."
+      "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to set goals, manage time, and develop a learning plan. This pathway is a great prerequisite for all other pathways.",
+      "competencies": [
+        {
+          "title": "Explain what a Growth Mindset is",
+          "description": "The first step in developing a skill is understanding what it is.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Illustration",
-      "description": "This pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist."
+      "description": "This pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.",
+      "competencies": [
+        {
+          "title": "Apply Foundational Art Skills",
+          "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques.",
+          "hasContentAreas": [
+            {
+              "title": "Drawing"
+            }
+          ]
+        },
+        {
+          "title": "Accurately Depict Form and Space on Paper",
+          "description": "Accurately depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space.",
+          "hasContentAreas": [
+            {
+              "title": "3D Design Fundamentals"
+            },
+            {
+              "title": "Drawing"
+            }
+          ]
+        },
+        {
+          "title": "Implement Composition Principles",
+          "description": "Implement composition principles, such as balance, contrast, and unity, to create visually engaging and dynamic compositions in drawings and illustrations.",
+          "belongsToPathway": "Illustration",
+          "hasContentAreas": [
+            {
+              "title": "Drawing"
+            }
+          ]
+        },
+        {
+          "title": "Apply Perspective Methods",
+          "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth.",
+          "hasContentAreas": [
+            {
+              "title": "2D Design Fundamentals"
+            },
+            {
+              "title": "Drawing"
+            }
+          ]
+        },
+        {
+          "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Drawing",
+          "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+          "hasContentAreas": [
+            {
+              "title": "Drawing"
+            },
+            {
+              "title": "Art History"
+            }
+          ]
+        },
+        {
+          "title": "Reflect on Design Choices and Artistic Process In Drawing",
+          "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Drawing"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Computer Science",
-      "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. This pathway involves many content areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects and collaborative learning will be integral to the process. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path."
+      "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. This pathway involves many content areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects and collaborative learning will be integral to the process. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path.",
+      "competencies": [
+        {
+          "title": "Apply Concepts in Calculus",
+          "description": "Analyze and solve complex mathematical problems involving limits, derivatives, integrals, optimization, areas and volumes, as well as apply calculus principles to real-world scenarios, statistical analysis, and probability distributions. Work with functions, graphs, and polynomial, exponential, and logarithmic functions.",
+          "hasContentAreas": [
+            {
+              "title": "Mathematics"
+            }
+          ]
+        },
+        {
+          "title": "Describe and Implement Data Structures",
+          "description": "Implement and manipulate fundamental data structures such as arrays, linked lists, stacks, queues, trees, graphs, and hash tables in C#, Java, C, or C++, utilizing Object Oriented Design principles.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Describe and Implement Common Algorithms",
+          "description": "Implement and describe fundamental algorithms such as divide and conquer, dynamic programming, greedy algorithms, graph algorithms, and sorting algorithms in C#, Java, C, or C++, utilizing Object Oriented Design principles.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Explain Modern Computer Architecture",
+          "description": "Understand the organization and architecture of modern computer systems, including CPU, memory, input/output devices, and storage systems. Analyze and design digital circuits and systems using concepts such as Boolean algebra, logic gates, combinational and sequential circuits, and memory systems. Evaluate and optimize computer system performance through techniques such as pipelining, caching, and parallel processing.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Implement Fundamental Security Measures",
+          "description": "Implement security measures such as encryption, access controls, authentication mechanisms, and intrusion detection systems to protect against security threats.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Programming Language Fundamentals",
+          "description": "Utilize Java, C#, C, or C++ to design and develop applications using an Object Oriented Paradigm. Utilize and explain encapsulation, inheritance, polymorphism, and abstraction. Use libraries and frameworks to build applications.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Front End Development",
-      "description": "When users interact with a web page or application, they're really interacting with the front end. This pathway is designed to help you learn the skills you need to become a front end developer. You'll learn how to build web pages and applications using HTML, CSS, and JavaScript. You'll also learn how to use popular front end frameworks and libraries like React, Vue, or Angular. This pathway does not focus on design in any way - it is a myth that front end web development is rooted in design. This pathway is for those who want to build the interactive parts of a website or application using code and problem solving skills."
-    }, 
+      "description": "When users interact with a web page or application, they're really interacting with the front end. This pathway is designed to help you learn the skills you need to become a front end developer. You'll learn how to build web pages and applications using HTML, CSS, and JavaScript. You'll also learn how to use popular front end frameworks and libraries like React, Vue, or Angular. This pathway does not focus on design in any way - it is a myth that front end web development is rooted in design. This pathway is for those who want to build the interactive parts of a website or application using code and problem solving skills.",
+      "competencies": [
+        {
+          "title": "Utilize HTML and CSS to Create Web Pages",
+          "description": "Utilize HTML and CSS to create web pages that are visually appealing, responsive, and accessible. Implement best practices for structuring content, styling elements, and optimizing performance such as WAI-ARIA, Semantic HTML, and CSS organization.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Implement Responsive Web Design",
+          "description": "Implement responsive web design techniques using media queries, flexbox, and grid to create web pages that adapt to different screen sizes and devices.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Manipulate Data with JavaScript",
+          "description": "Loop through arrays using traditional for loops and JavaScript array methods. Work with objects, variables, math, and strings. Utilize functions, scope, and closures.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Create Web Pages with JavaScript",
+          "description": "Utilize JavaScript to manipulate the DOM, handle events, and create interactive web pages. Implement asynchronous programming using callbacks, promises, and async/await.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Use React to Create Web Applications",
+          "description": "Capture user input using forms, manage state, and create reusable components in React. Utilize React Router to create a single-page application with multiple views. Utilize hooks such as useState, useEffect, and useContext.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Unity 2D Game Development",
-      "description": "This pathway will guide learners to create 2D games utilizing the Unity Engine. This pathway includes fundamentals of Unity's 2D features, including sprite management, physics, animation, and user interface design. Starting with basic concepts, such as setting up a project and navigating the Unity interface, learners will progress to more advanced topics like scripting in C#, implementing game mechanics, optimizing performance, and publishing games to various platforms. Learners should push to build their own games instead of simply consuming related educational content."
+      "description": "This pathway will guide learners to create 2D games utilizing the Unity Engine. This pathway includes fundamentals of Unity's 2D features, including sprite management, physics, animation, and user interface design. Starting with basic concepts, such as setting up a project and navigating the Unity interface, learners will progress to more advanced topics like scripting in C#, implementing game mechanics, optimizing performance, and publishing games to various platforms. Learners should push to build their own games instead of simply consuming related educational content.",
+      "competencies": [
+        {
+          "title": "Unity 2d Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Digital Marketing",
-      "description": "Explore the dynamic field of digital marketing, encompassing social media marketing, search engine optimization (SEO), content marketing, email marketing, and digital advertising platforms like Google Ads and Facebook Ads. This pathway will guide learners to develop a comprehensive understanding of digital marketing strategies, tools, and techniques. Learners should focus on hands-on experience by creating and executing digital marketing campaigns."
+      "description": "Explore the dynamic field of digital marketing, encompassing social media marketing, search engine optimization (SEO), content marketing, email marketing, and digital advertising platforms like Google Ads and Facebook Ads. This pathway will guide learners to develop a comprehensive understanding of digital marketing strategies, tools, and techniques. Learners should focus on hands-on experience by creating and executing digital marketing campaigns.",
+      "competencies": [
+        {
+          "title": "Digital Marketing Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Creative Writing",
-      "description": "Explore creative writing to refine your craft and cultivate your unique voice. Practice consistently, engage with feedback, and study storytelling fundamentals to craft compelling narratives. Develop well-rounded characters, craft engaging plots, and create vivid settings that transport readers into the heart of the narrative."
+      "description": "Explore creative writing to refine your craft and cultivate your unique voice. Practice consistently, engage with feedback, and study storytelling fundamentals to craft compelling narratives. Develop well-rounded characters, craft engaging plots, and create vivid settings that transport readers into the heart of the narrative.",
+      "competencies": [
+        {
+          "title": "Creative Writing Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Public Speaking Fundamentals",
-      "description": "Develop essential public speaking skills, including overcoming stage fright, organizing speeches, delivering effective presentations, and engaging with audiences confidently."
+      "description": "Develop essential public speaking skills, including overcoming stage fright, organizing speeches, delivering effective presentations, and engaging with audiences confidently.",
+      "competencies": [
+        {
+          "title": "Public Speaking Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Mindfulness and Meditation Fundamentals",
-      "description": "Explore the principles and techniques of meditation and mindfulness to reduce stress, improve focus, and cultivate a greater sense of well-being in daily life. This pathway will guide learners to develop a consistent meditation practice and integrate mindfulness into their daily routines."
+      "description": "Explore the principles and techniques of meditation and mindfulness to reduce stress, improve focus, and cultivate a greater sense of well-being in daily life. This pathway will guide learners to develop a consistent meditation practice and integrate mindfulness into their daily routines.",
+      "competencies": [
+        {
+          "title": "Mindfulness and Meditation Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Music Perforamance Fundamentals",
-      "description": "Begin a foundational journey in music performance, focusing on essential skills applicable to any instrument. This pathway introduces instrument pedagogy, covering techniques like posture and hand positioning, alongside fundamental music theory such as scales, intervals, and rhythm. Learners will develop technical proficiency through exercises and repertoire, including scales, arpeggios, and finger exercises, while also honing ear training and sight-reading abilities. Regular practice sessions and performance opportunities will solidify learning, with feedback from instructors and peers guiding progress towards confident and expressive musical performance."
+      "description": "Begin a foundational journey in music performance, focusing on essential skills applicable to any instrument. This pathway introduces instrument pedagogy, covering techniques like posture and hand positioning, alongside fundamental music theory such as scales, intervals, and rhythm. Learners will develop technical proficiency through exercises and repertoire, including scales, arpeggios, and finger exercises, while also honing ear training and sight-reading abilities. Regular practice sessions and performance opportunities will solidify learning, with feedback from instructors and peers guiding progress towards confident and expressive musical performance.",
+      "competencies": [
+        {
+          "title": "Music Performance Fundamentals competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Japanese Language",
-      "description": "Gain proficiency in the Japanese language through this pathway, which is closely modeled after traditional university degrees. Learners will practice grammar, vocubulary, reading, writing, and oral communication skills. This pathway will also guide learners to explore Japanese culture and history, and to engage with native speakers to practice their language skills. Learners should expect to spend several years to achieve proficiency in the fundamentals of Japanese language."
+      "description": "Gain proficiency in the Japanese language through this pathway, which is closely modeled after traditional university degrees. Learners will practice grammar, vocubulary, reading, writing, and oral communication skills. This pathway will also guide learners to explore Japanese culture and history, and to engage with native speakers to practice their language skills. Learners should expect to spend several years to achieve proficiency in the fundamentals of Japanese language.",
+      "competencies": [
+        {
+          "title": "Japanese Language Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Event Planning and Management",
-      "description": "Learn the principles and practices of event planning and management, including event design, budgeting, logistics, vendor management, marketing, and coordination, to organize successful events such as conferences, weddings, and corporate functions."
+      "description": "Learn the principles and practices of event planning and management, including event design, budgeting, logistics, vendor management, marketing, and coordination, to organize successful events such as conferences, weddings, and corporate functions.",
+      "competencies": [
+        {
+          "title": "Event Planning Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Artistic Roller Skating",
-      "description": "Master the art of roller skating through artistic expression. Learners will develop fundamental skating skills, including balance, agility, and coordination, while also exploring artistic elements such jumps, styles, and choreography. This pathway will guide learners to develop a skating routine, and to engage in regular practice opportunities to refine their skills. Learners should also seek feedback from experienced skaters to improve their technique and artistry. This pathway is designed for people who want to learn to roller skate with no prior experience and strive for artistic expression through skating."
-    }, 
+      "description": "Master the art of roller skating through artistic expression. Learners will develop fundamental skating skills, including balance, agility, and coordination, while also exploring artistic elements such jumps, styles, and choreography. This pathway will guide learners to develop a skating routine, and to engage in regular practice opportunities to refine their skills. Learners should also seek feedback from experienced skaters to improve their technique and artistry. This pathway is designed for people who want to learn to roller skate with no prior experience and strive for artistic expression through skating.",
+      "competencies": [
+        {
+          "title": "Roller Skating Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Project Management",
-      "description": "This pathway will prepare learners to successfully manage projects by providing a comprehensive understanding of project management principles, tools, and techniques. Learners will explore project initiation, planning, execution, monitoring, and closing, while also developing essential skills such as leadership, communication, and risk management. Learners should focus on hands-on experience by managing real-world projects, and seek mentorship from experienced project managers to guide their learning journey."
-    }, 
+      "description": "This pathway will prepare learners to successfully manage projects by providing a comprehensive understanding of project management principles, tools, and techniques. Learners will explore project initiation, planning, execution, monitoring, and closing, while also developing essential skills such as leadership, communication, and risk management. Learners should focus on hands-on experience by managing real-world projects, and seek mentorship from experienced project managers to guide their learning journey.",
+      "competencies": [
+        {
+          "title": "Project Management Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Culinary Arts",
-      "description": "This pathway mirrors the curriculum of professional culinary schools. Covering fundamental techniques, kitchen operations, culinary theory, and practical skills, learners progress from kitchen safety and knife skills to advanced cooking methods like sautéing, braising, and pastry arts. Culinary theory components include flavor profiles, menu planning, and kitchen management, complementing hands-on cooking experience. Learners should seek out feedback from industry professionals and get involved in the local culinary scene."
-    }, 
+      "description": "This pathway mirrors the curriculum of professional culinary schools. Covering fundamental techniques, kitchen operations, culinary theory, and practical skills, learners progress from kitchen safety and knife skills to advanced cooking methods like sautéing, braising, and pastry arts. Culinary theory components include flavor profiles, menu planning, and kitchen management, complementing hands-on cooking experience. Learners should seek out feedback from industry professionals and get involved in the local culinary scene.",
+      "competencies": [
+        {
+          "title": "Culinary Arts Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "Emotional Intelligence Fundamentals",
-      "description": "Cultivate self-awareness, self-regulation, empathy, and social skills to navigate emotions effectively, build positive relationships, and manage interpersonal conflicts with empathy and understanding."
+      "description": "Cultivate self-awareness, self-regulation, empathy, and social skills to navigate emotions effectively, build positive relationships, and manage interpersonal conflicts with empathy and understanding.",
+      "competencies": [
+        {
+          "title": "Emotional Intelligence Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Financial Literacy Fundamentals",
-      "description": "Gain knowledge in budgeting, saving, investing, debt management, and financial planning to make informed financial decisions, achieve financial goals, and build long-term financial security."
+      "description": "Gain knowledge in budgeting, saving, investing, debt management, and financial planning to make informed financial decisions, achieve financial goals, and build long-term financial security.",
+      "competencies": [
+        {
+          "title": "Financial Literacty Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Mixology Fundamentals",
-      "description": "Dive into the world of cocktails, learning about different spirits, mixers, and cocktail recipes to create delicious drinks for yourself and others."
+      "description": "Dive into the world of cocktails, learning about different spirits, mixers, and cocktail recipes to create delicious drinks for yourself and others.",
+      "competencies": [
+        {
+          "title": "Mixology Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Outdoor Survival Fundamentals",
-      "description": "Learn basic survival skills such as fire starting, shelter building, navigation, and foraging to feel confident and prepared for outdoor adventures."
+      "description": "Learn basic survival skills such as fire starting, shelter building, navigation, and foraging to feel confident and prepared for outdoor adventures.",
+      "competencies": [
+        {
+          "title": "Outdoor Survival Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Birdwatching Fundamentals",
-      "description": "Embrace the wonders of birdwatching, learning how to identify common bird species, use binoculars, and keep a bird journal to document your sightings and observations in nature"
+      "description": "Embrace the wonders of birdwatching, learning how to identify common bird species, use binoculars, and keep a bird journal to document your sightings and observations in nature",
+      "competencies": [
+        {
+          "title": "Birdwatching Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Graphic Design",
-      "description": "This pathway focuses on visual communication, typography, layout design, and digital media production, providing learners with skills in graphic design software, branding, and multimedia design, and preparing them for careers in graphic design, advertising, digital media, or web design. Similar to a college degree, learners will need to develop a portfolio of work to demonstrate their skills and knowledge as well as demonstrate proficiency in fundamentals through projects, research, and collaboration. Learners should expect to spend several years to achieve proficiency in the field of graphic design."
+      "description": "This pathway focuses on visual communication, typography, layout design, and digital media production, providing learners with skills in graphic design software, branding, and multimedia design, and preparing them for careers in graphic design, advertising, digital media, or web design. Similar to a college degree, learners will need to develop a portfolio of work to demonstrate their skills and knowledge as well as demonstrate proficiency in fundamentals through projects, research, and collaboration. Learners should expect to spend several years to achieve proficiency in the field of graphic design.",
+      "competencies": [
+        {
+          "title": "Design Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "Philosophy",
-      "description": "This pathway delves into the fundamental questions concerning existence, knowledge, ethics, and the nature of reality. Through rigorous inquiry and critical analysis, learners explore diverse philosophical traditions, from ancient Greek philosophy to contemporary thought. They engage with topics such as metaphysics, epistemology, ethics, logic, political philosophy, and aesthetics, examining philosophical texts, arguments, and theories to develop their analytical, critical thinking, and argumentation skills. Througout years of study, learners should emphasize research, writing, and oral communication, and forumulating and defedning their own philosophical viewpoints through essays, debates, and presentations"
+      "description": "This pathway delves into the fundamental questions concerning existence, knowledge, ethics, and the nature of reality. Through rigorous inquiry and critical analysis, learners explore diverse philosophical traditions, from ancient Greek philosophy to contemporary thought. They engage with topics such as metaphysics, epistemology, ethics, logic, political philosophy, and aesthetics, examining philosophical texts, arguments, and theories to develop their analytical, critical thinking, and argumentation skills. Througout years of study, learners should emphasize research, writing, and oral communication, and forumulating and defedning their own philosophical viewpoints through essays, debates, and presentations",
+      "competencies": [
+        {
+          "title": "Philosophy Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     },
     {
       "title": "SQL Fundamentals",
-      "description": "Learn to manipulate data using SQL commands, including SELECT, INSERT, UPDATE, and DELETE, gaining proficiency in retrieving, filtering, and organizing data from relational databases."
+      "description": "Learn to manipulate data using SQL commands, including SELECT, INSERT, UPDATE, and DELETE, gaining proficiency in retrieving, filtering, and organizing data from relational databases.",
+      "competencies": [
+        {
+          "title": "SQL Fundamentals Competencies Coming Soon!",
+          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

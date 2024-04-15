@@ -2,7 +2,6 @@ import { PrismaClient } from '@prisma/client';
 import { Argon2id } from 'oslo/password';
 import contentAreasData from './data/contentAreas.json';
 import pathwaysData from './data/pathways.json';
-import competenciesData from './data/competencies.json';
 
 const prisma = new PrismaClient();
 
@@ -12,25 +11,30 @@ async function main() {
   });
 
   await prisma.pathway.createMany({
-    data: pathwaysData.pathways,
+    data: pathwaysData.pathways.map((pathway) => ({
+      title: pathway.title,
+      description: pathway.description,
+    })),
   });
 
-  competenciesData.competencies.forEach(async (competency) => {
-    await prisma.competency.create({
-      data: {
-        title: competency.title,
-        description: competency.description,
-        pathways: {
-          connect: [
-            {
-              title: competency.belongsToPathway,
-            },
-          ],
+  pathwaysData.pathways.forEach((pathway) => {
+    pathway.competencies.forEach(async (competency) => {
+      await prisma.competency.create({
+        data: {
+          title: competency.title,
+          description: competency.description,
+          pathways: {
+            connect: [
+              {
+                title: pathway.title,
+              },
+            ],
+          },
+          contentAreas: {
+            connect: competency.hasContentAreas,
+          },
         },
-        contentAreas: {
-          connect: competency.hasContentAreas,
-        }
-      },
+      });
     });
   });
 
@@ -50,13 +54,13 @@ async function main() {
       pathways: {
         connect: [
           {
-            "title": "Use Track",
+            title: 'Use Track',
           },
           {
-            "title": "Illustration",
-          }
-        ]
-      }
+            title: 'Illustration',
+          },
+        ],
+      },
     },
     update: {},
   });
@@ -68,7 +72,7 @@ async function main() {
       justification: 'Here is how I did it.',
       competency: {
         connect: {
-          title: "Find personal pathways",
+          title: 'Find personal pathways',
         },
       },
       author: {
@@ -76,7 +80,7 @@ async function main() {
           username: 'CassTheOG',
         },
       },
-      }
+    },
   });
 }
 

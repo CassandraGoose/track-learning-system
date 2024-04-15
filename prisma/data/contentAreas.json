@@ -63,6 +63,18 @@
     {
       "title": "Metacognition",
       "description": "Engaging in metacognition involves developing an awareness and understanding of one's own thought processes. This cognitive skill encompasses the ability to reflect on and regulate one's thinking, learning strategies, and problem-solving approaches, fostering a deeper understanding of how to learn effectively and continuously improve cognitive abilities."
+    },
+    {
+      "title": "Programming",
+      "description": "Programming involves understanding how to write code to create software applications, websites, and other digital tools. It includes exploring programming languages, gaining technical skills, critically analyzing code, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Mathematics",
+      "description": "Mathematics involves understanding the relationships between numbers, shapes, and quantities. It includes exploring mathematical concepts, gaining technical skills, critically analyzing mathematical problems, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Web Development",
+      "description": "Web development involves understanding how to create websites and web applications. It includes exploring web technologies, gaining technical skills, critically analyzing web design, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
     }
   ]
 }

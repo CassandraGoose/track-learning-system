@@ -25,6 +25,7 @@ export default async function Page({
   }
 
   const selectedPathway = userPathway.pathways[0] as Pathway;
+
   const progress = caluclateProgress(selectedPathway);
 
   return (

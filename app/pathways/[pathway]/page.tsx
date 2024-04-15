@@ -16,12 +16,15 @@ export default async function Page({
   if (!singlePathway) {
     notFound();
   }
-// todo figure out why NaN is showing up for progress on new pathways.
 
   const user = await checkUser();
-  const userPathways = await getSingleUserPathway(singlePathway.id.toString());
-  const hasPathway = userPathways?.pathways.find((pathway) => pathway.id === singlePathway.id);
-  
+  let userPathways;
+  let hasPathway;
+  if (!!user) {
+    userPathways = await getSingleUserPathway(singlePathway.id.toString());
+    hasPathway = userPathways?.pathways.find((pathway) => pathway.id === singlePathway.id);
+  }
+
   return (
     <section className="mx-12 my-12 flex flex-col items-center">
       <div className="border-black flex w-full justify-between rounded-md border p-8">
@@ -30,7 +33,7 @@ export default async function Page({
             <h1 className="text-2xl" data-testid="pathway-title">
               {singlePathway.title}
             </h1>
-            <FollowPathwayButton pathway={singlePathway} user={user} hasPathway={!!hasPathway}/>
+            {!!user && <FollowPathwayButton pathway={singlePathway} hasPathway={!!hasPathway}/>}
           </div>
           <p data-testid="pathway-description">{singlePathway.description}</p>
           <div className="flex flex-col items-center justify-center space-y-8">

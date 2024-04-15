@@ -8,17 +8,15 @@ import { connectPathway } from '@/app/actions/pathwayActions';
 
 export default function FollowPathwayButton({
   pathway,
-  user,
   hasPathway,
 }: {
   pathway: Pathway;
-  user: User | null;
   hasPathway: boolean;
 }) {
   const { pending } = useFormStatus();
   const [errorMessage, setErrorMessage] = useState<string>('');
 
-  return user && !hasPathway ? (
+  return  !hasPathway && (
     <form
       action={async () => {
         const message = await connectPathway(pathway.id);
@@ -44,5 +42,5 @@ export default function FollowPathwayButton({
         <span className="label-text-alt text-error">{errorMessage}</span>
       </div>
     </form>
-  ) : null;
+  );
 }

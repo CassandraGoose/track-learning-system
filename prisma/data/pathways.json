@@ -19,7 +19,9 @@
               "title": "View your profile",
               "description": "Navigate to your profile to view your learning journey."
             }
-          ]
+          ],
+          "previous": [],
+          "next": ["Using Track"]
         },
         {
           "title": "Using Track",
@@ -32,7 +34,9 @@
               "title": "Share your profile",
               "description": "Share your profile with others to showcase your learning journey and prove your knowledge and skills"
             }
-          ]
+          ],
+          "previous": ["Navigating Track"],
+          "next": []
         },
         {
           "title": "Learning",
@@ -45,7 +49,9 @@
               "title": "Identify what makes a quality proof",
               "description": "What kind of artifact will truly highlight your skills, abilities, and knowledge? What makes an artifact or explanation prove your ability? Judging the value of your work is a key skill in learning."
             }
-          ]
+          ],
+          "previous": [],
+          "next": []
         }
       ]
     },
@@ -80,7 +86,9 @@
               "title": "Receive Feedback",
               "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback."
             }
-          ]
+          ],
+          "previous": [],
+          "next": []
         },
         {
           "title": "Metacognition",
@@ -101,7 +109,9 @@
               "title": "Discover Learning Strategies That Work for You",
               "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you."
             }
-          ]
+          ],
+          "previous": [],
+          "next": []
         }
       ]
     },
@@ -109,7 +119,39 @@
       "title": "Illustration",
       "description": "This pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.",
       "contentAreas": [
-        // foundational art concepts content are to explain all the concepts below...2d and 3d design funamentals??
+        {
+          "title": "2D Design Fundamentals",
+          "competencies": [
+            {
+              "title": "Define line, shape, form, proportion, and value",
+              "description": "Define line, shape, form, proportion, and value, and explain how these elements are used in 2D design"
+            },
+            {
+              "title": "Explore form and space in 2D design",
+              "description": "Explain how to utilize and represent form and space in 2D design"
+            },
+            {
+              "title": "Define composition principles",
+              "description": "Define balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
+            },
+            {
+              "title": "Define Perspective",
+              "description": "Summarize one-point, two-point, and three-point perspective, and explain how to apply these methods to create drawings and illustrations that accurately depict spatial relationships and depth."
+            },
+            {
+              "title": "Explore 2D Design",
+              "description": "Research 2D design fundamentals and dig into a particular area that interests you. Write about what you learned and how you can apply it to your work."
+            }
+          ],
+          "previous": [],
+          "next": [
+            "Drawing",
+            "Painting",
+            "Illustration",
+            "Professional Development",
+            "Art History"
+          ]
+        },
         {
           "title": "Drawing",
           "competencies": [
@@ -123,7 +165,7 @@
             },
             {
               "title": "Implement Composition Principles",
-              "description": "Implement  balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
+              "description": "Implement balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
             },
             {
               "title": "Apply Perspective Methods",
@@ -137,7 +179,9 @@
               "title": "Reflect on Design Choices and Artistic Process In Drawing",
               "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
             }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals"],
+          "next": ["Professional Development", "Life Drawing"]
         },
         {
           "title": "Painting",
@@ -182,31 +226,58 @@
               "title": "Reflect on Design Choices and Artistic Process In Painting",
               "description": "Reflect on design choices and artistic process in painting, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
             }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing"],
+          "next": ["Professional Development"]
+        },
+        {
+          "title": "Life Drawing",
+          "competencies": [
+            {
+              "title": "Label muscles and bones of the human body",
+              "description": "Label the major muscle groups and bones of the human body to improve the proportions of your art."
+            },
+            {
+              "title": "Label common proportion of the human face",
+              "description": "Label the common proportions of the human face to improve the proportions of your art."
+            },
+            {
+              "title": "Create dynamic poses and expressions",
+              "description": "Create dynamic poses and expressions to convey life in your art."
+            },
+            {
+              "title": "Draw anatomically correct figures and faces",
+              "description": "Complete many drawings of people in various poses and expressions.Draw figures and faces from life, photographs, and imagination."
+            }
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing"],
+          "next": ["Professional Development"]
+        },
+        {
+          "title": "Illustration",
+          "competencies": [
+            {
+              "title": "Research historic and current trends in illustration",
+              "description": "Research historic and current trends in illustration and apply them to your work. Consider mediums and tools used by illustrators in the past and present. Consider styles and techniques used by illustrators in the past and present. Consider formats and genres used by illustrators in the past and present. Select a historic or current trend in illustration that interests you and write about it."
+            },
+            {
+              "title": "Develop a unique style and voice",
+              "description": "Develop a unique style and voice in your illustrations. Consider the formal elements and principles of design in your work. Consider the conceptual ideas and themes in your work. Consider the techniques and mediums in your work. Consider the formats and genres in your work. Create a series of illustrations that demonstrate your unique style and voice."
+            },
+            {
+              "title": "Explore formats and genres in illustration",
+              "description": "Create illustrations for books, magazines, advertisements, and other media. Create illustrations in genres such as fantasy, science fiction, horror, and more. Create illustrations in formats such as editorial, advertising, and children's books. Create illustrations that tell a story or convey a message. Create illustrations that evoke emotions or moods."
+            },
+            {
+              "title": "Seek out feedback",
+              "description": "Seek out feedback from peers and professionals to improve your work."
+            }
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing"],
+          "next": ["Professional Development"]
         }
       ],
       "competencies": [
-        {
-          "title": "Draw anatomically correct figures and faces",
-          "description": "Complete many drawings of people in various poses and expressions. Understand the proportions of the human body and face. Draw figures and faces from life, photographs, and imagination. Identify muscle groups and bones in the human body. Create dynamic poses and expressions to convey life.",
-          "hasContentAreas": [
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Explore Illustration Techniques and Styles",
-          "description": "Work in a variety of media to communicate ideas, stories, and concepts. Convey emotions, moods, and narratives. Create illustrations for books, magazines, advertisements, and other media. Develop a unique style and voice. Research historic and current trends in illustration and apply them to your work. Self-reflect and provide feedback to identify your weaknesses and areas for improvement. Seek out feedback from peers and professionals.",
-          "hasContentAreas": [
-            {
-              "title": "Illustration"
-            },
-            {
-              "title": "2D Design Fundamentals"
-            }
-          ]
-        },
         {
           "title": "Create Digital Art",
           "description": "Create art in Photoshop, Illustrator, and Procreate. Explain and utilize layers, vectors, raster, and brushes. Create multiple projects utilizing various techniques and styles. Utilize digital art to create illustrations, concept art, and designs. Explain the importance of file formats and resolution. Apply traditional drawing and painting techniques to your digital work. ",

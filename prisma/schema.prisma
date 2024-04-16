@@ -14,7 +14,7 @@ datasource db {
 model Person {
   id                String       @id @default(cuid())
   sessions          Session[]
-  hashedPassword   String
+  hashedPassword    String
   createdAt         DateTime     @default(now())
   username          String       @unique
   firstName         String      
@@ -35,14 +35,14 @@ model Session {
 }
 
 model Competency {
-  id           Int           @id @default(autoincrement())
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @default(now())
-  title        String        @unique
-  description  String
-  pathways     Pathway[]
-  contentAreas ContentArea[]
-  proofs       Proof[]
+  id                  Int           @id @default(autoincrement())
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @default(now())
+  title               String        @unique
+  description         String
+  pathways            Pathway[]
+  contentArea         ContentArea
+  proofs              Proof[]
 }
 
 model ContentArea {
@@ -54,12 +54,12 @@ model ContentArea {
 }
 
 model Pathway {
-  id          Int           @id @default(autoincrement())
-  createdAt   DateTime      @default(now())
-  title       String        @unique
-  description String
+  id            Int           @id @default(autoincrement())
+  createdAt     DateTime      @default(now())
+  title         String        @unique
+  description   String
   competencies  Competency[]
-  persons     Person[]
+  persons       Person[]
 }
 
 model Proof {

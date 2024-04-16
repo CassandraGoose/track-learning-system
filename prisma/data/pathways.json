@@ -3,70 +3,47 @@
     {
       "title": "Use Track",
       "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "View Pathways",
-          "description": "Explain how to view the pathways you follow, see your competencies and completion status.",
-          "hasContentAreas": [
+          "title": "Navigating Track",
+          "competencies": [
             {
-              "title": "Digital Literacy"
+              "title": "View Pathways",
+              "description": "Explain how to view the pathways you follow, see your competencies and completion status."
             },
             {
-              "title": "Navigating Track"
+              "title": "View your competencies and proofs",
+              "description": "Navigate into a pathway to view required competencies and see the proofs you have added"
+            },
+            {
+              "title": "View your profile",
+              "description": "Navigate to your profile to view your learning journey."
             }
           ]
         },
         {
-          "title": "Find pathways",
-          "description": "Identify how to find pathways that interest you and add them to your own pathways.",
-          "hasContentAreas": [
+          "title": "Using Track",
+          "competencies": [
             {
-              "title": "Digital Literacy"
+              "title": "Add proof of your learning and competency",
+              "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path."
             },
             {
-              "title": "Navigating Track"
+              "title": "Share your profile",
+              "description": "Share your profile with others to showcase your learning journey and prove your knowledge and skills"
             }
           ]
         },
         {
-          "title": "Add proof of your learning and competency",
-          "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path. Explain why it is necessary to prove your competency.",
-          "hasContentAreas": [
+          "title": "Learning",
+          "competencies": [
             {
-              "title": "Digital Literacy"
+              "title": "Explain why it is necessary to prove your competency.",
+              "description": "Proving your understanding isn't just Track functionality. Proving your understanding is a fundamental educational concept. How do you know that you know something?"
             },
             {
-              "title": "Metacognition"
-            },
-            {
-              "title": "Navigating Track"
-            }
-          ]
-        },
-        {
-          "title": "Share your profile",
-          "description": "Navigate to your profile and share your public profile to showcase your learning journey.",
-          "hasContentAreas": [
-            {
-              "title": "Digital Literacy"
-            },
-            {
-              "title": "Navigating Track"
-            }
-          ]
-        },
-        {
-          "title": "Truly Prove Competencies",
-          "description": "Watch the Using Track Introductory Video to learn how to break down any given Track Competency. This video will help you explore taking a concept and breaking it down into topics you can research and explore on the internet. It will help you use the descriptions of competencies to find learning resources so you can dig into a topic as deeply as you need.",
-          "hasContentAreas": [
-            {
-              "title": "Digital Literacy"
-            },
-            {
-              "title": "Metacognition"
-            },
-            {
-              "title": "Navigating Track"
+              "title": "Identify what makes a quality proof",
+              "description": "What kind of artifact will truly highlight your skills, abilities, and knowledge? What makes an artifact or explanation prove your ability? Judging the value of your work is a key skill in learning."
             }
           ]
         }
@@ -75,76 +52,54 @@
     {
       "title": "Learn to Learn",
       "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to manage time, self regulate, and explore learning strategies. This pathway is a great prerequisite for all other pathways.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Practice a Growth Mindset",
-          "description": "Explain and justify the importance of a growth mindset in learning, and apply strategies to develop and maintain a growth mindset in learning.",
-          "hasContentAreas": [
+          "title": "Learning",
+          "competencies": [
             {
-              "title": "Metacognition"
+              "title": "Summarize the concept of Growth Mindset",
+              "description": "Explain and justify the importance of a growth mindset in learning, and apply strategies to develop and maintain a growth mindset in learning."
             },
             {
-              "title": "Learning"
+              "title": "Practice Growth Mindset",
+              "description": "When learning, implement what you summarized when learning about the concept of a growth mindset."
+            },
+            {
+              "title": "Explore Critical Thinking",
+              "description": "Justify the importance of thinking deeply about a concept and exploring concepts from multiple perspectives. When reading, writing, or practicing during learning, push yourself to go beyond memorization and recall."
+            },
+            {
+              "title": "Reflect on Critical Thinking",
+              "description": "How have you implemented what you learned about critical thinking in your learning? Reflect on your learning and how you have applied critical thinking."
+            },
+            {
+              "title": "Research Feedback",
+              "description": "Why is feedback important in learning?"
+            },
+            {
+              "title": "Receive Feedback",
+              "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback."
             }
           ]
         },
         {
-          "title": "Self Regulate",
-          "description": "Explain the importance of managing emotions, behavior, and motivation in learning, and apply strategies to self-regulate effectively, such as limiting applications on computers and phones, silencing phones, and practicing mindfulness techniques.",
-          "hasContentAreas": [
+          "title": "Metacognition",
+          "competencies": [
             {
-              "title": "Metacognition"
+              "title": "Explore Self Regulation",
+              "description": "Explain the importance of managing emotions, behavior, and motivation in learning, and identify strategies to self-regulate effectively, such as limiting applications on computers and phones, silencing phones, and practicing mindfulness techniques."
             },
             {
-              "title": "Learning"
-            }
-          ]
-        },
-        {
-          "title": "Practice Critical Thinking",
-          "description": "Justify the importance of thinking deeply about a concept and exploring concepts from multiple perspectives. When reading, writing, or practicing during learning, push yourself to go beyond memorization and recall.",
-          "hasContentAreas": [
-            {
-              "title": "Metacognition"
+              "title": "Self Regulate",
+              "description": "Select strategies and tools that you explored when learning about self regulation. Implement these strategies and tools. Reflect and iterate."
             },
             {
-              "title": "Learning"
-            }
-          ]
-        },
-        {
-          "title": "Receive Feedback",
-          "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback.",
-          "hasContentAreas": [
-            {
-              "title": "Metacognition"
+              "title": "Discover Time Management That Works for You",
+              "description": "Research various time management strategies and tools such as time-blocking or the Pomodoro technique. Implement a time management strategy that works best for you."
             },
             {
-              "title": "Learning"
-            }
-          ]
-        },
-        {
-          "title": "Discover Time Management That Works for You",
-          "description": "Research various time management strategies and tools such as time-blocking or the Pomodoro technique. Implement a time management strategy that works best for you.",
-          "hasContentAreas": [
-            {
-              "title": "Metacognition"
-            },
-            {
-              "title": "Learning"
-            }
-          ]
-        },
-        {
-          "title": "Discover Learning Strategies That Work for You",
-          "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you.",
-          "hasContentAreas": [
-            {
-              "title": "Metacognition"
-            },
-            {
-              "title": "Learning"
+              "title": "Discover Learning Strategies That Work for You",
+              "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you."
             }
           ]
         }
@@ -153,86 +108,84 @@
     {
       "title": "Illustration",
       "description": "This pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.",
+      "contentAreas": [
+        // foundational art concepts content are to explain all the concepts below...2d and 3d design funamentals??
+        {
+          "title": "Drawing",
+          "competencies": [
+            {
+              "title": "Utilize line, shape, form, proportion, and value when drawing",
+              "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques."
+            },
+            {
+              "title": "Depict Form and Space on Paper",
+              "description": "Depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space."
+            },
+            {
+              "title": "Implement Composition Principles",
+              "description": "Implement  balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
+            },
+            {
+              "title": "Apply Perspective Methods",
+              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth."
+            },
+            {
+              "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Drawing",
+              "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+            },
+            {
+              "title": "Reflect on Design Choices and Artistic Process In Drawing",
+              "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+            }
+          ]
+        },
+        {
+          "title": "Painting",
+          "competencies": [
+            {
+              "title": "Blend",
+              "description": "Blend colors to create smooth transitions and gradations in paintings."
+            },
+            {
+              "title": "Mix Colors",
+              "description": "Mix colors to create a wide range of hues, tints, and shades in paintings."
+            },
+            {
+              "title": "Dry Brush",
+              "description": "Utilize dry brushing techniques to create texture and detail in paintings."
+            },
+            {
+              "title": "Stipple",
+              "description": "Utilize stippling techniques to create texture and detail in paintings."
+            },
+            {
+              "title": "Underpaint",
+              "description": "Establish tonal values, enhance color harmony, and create depth in paintings through underpainting techniques."
+            },
+            {
+              "title": "Utilize various mediums",
+              "description": "Practice with acrylic, oil, and watercolor mediums"
+            },
+            {
+              "title": "Implement Composition Principles",
+              "description": "Implement  balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in paintings."
+            },
+            {
+              "title": "Apply Perspective Methods",
+              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create paintings that accurately depict spatial relationships and depth."
+            },
+            {
+              "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Painting",
+              "description": "Evaluate and critique contemporary and historical art in the context of painting, identifying and analyzing the formal elements, principles of design, skills, and conceptual ideas present in the artwork."
+            },
+            {
+              "title": "Reflect on Design Choices and Artistic Process In Painting",
+              "description": "Reflect on design choices and artistic process in painting, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+            }
+          ]
+        }
+      ],
       "competencies": [
-        {
-          "title": "Apply Foundational Art Skills",
-          "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques.",
-          "hasContentAreas": [
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Accurately Depict Form and Space on Paper",
-          "description": "Accurately depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space.",
-          "hasContentAreas": [
-            {
-              "title": "3D Design Fundamentals"
-            },
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Implement Composition Principles",
-          "description": "Implement composition principles, such as balance, contrast, and unity, to create visually engaging and dynamic compositions in drawings and illustrations.",
-          "belongsToPathway": "Illustration",
-          "hasContentAreas": [
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Apply Perspective Methods",
-          "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth.",
-          "hasContentAreas": [
-            {
-              "title": "2D Design Fundamentals"
-            },
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Drawing",
-          "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
-          "hasContentAreas": [
-            {
-              "title": "Drawing"
-            },
-            {
-              "title": "Art History"
-            }
-          ]
-        },
-        {
-          "title": "Reflect on Design Choices and Artistic Process In Drawing",
-          "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
-          "hasContentAreas": [
-            {
-              "title": "Metacognition"
-            },
-            {
-              "title": "Drawing"
-            }
-          ]
-        },
-        {
-          "title": "Develop compositions in layers, considering values, colors, and textures in Painting",
-          "description": "Create realistic and abstract paintings that utilize varying tones and shades as well as demonstrate self expression and creativity. Mix colors successfully. Utilize skills such as blending, dry-brushing, stippling, layering, underpainting, and glazing throughout several paintings. Use various mediums including acrylic and oil.",
-          "hasContentAreas": [
-            {
-              "title": "Painting"
-            },
-            {
-              "title": "2D Design Fundamentals"
-            }
-          ]
-        },
         {
           "title": "Draw anatomically correct figures and faces",
           "description": "Complete many drawings of people in various poses and expressions. Understand the proportions of the human body and face. Draw figures and faces from life, photographs, and imagination. Identify muscle groups and bones in the human body. Create dynamic poses and expressions to convey life.",

@@ -273,112 +273,151 @@
               "description": "Seek out feedback from peers and professionals to improve your work."
             }
           ],
-          "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing"],
+          "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting"],
           "next": ["Professional Development"]
-        }
-      ],
-      "competencies": [
-        {
-          "title": "Create Digital Art",
-          "description": "Create art in Photoshop, Illustrator, and Procreate. Explain and utilize layers, vectors, raster, and brushes. Create multiple projects utilizing various techniques and styles. Utilize digital art to create illustrations, concept art, and designs. Explain the importance of file formats and resolution. Apply traditional drawing and painting techniques to your digital work. ",
-          "hasContentAreas": [
-            {
-              "title": "Digital Literacy"
-            },
-            {
-              "title": "Digital Art"
-            }
-          ]
         },
         {
-          "title": "Plan for Art as a Business",
-          "description": "Reseach and explore marketing, copyright laws, and business practices for artists. Identify potential markets and create a business plan. Begin to develop a portfolio and resume. Create a website and social media presence. Network with other artists and professionals. Seek out opportunities to exhibit and sell your work. Explore online ways to sell your work as well as jobs that align with your skills.",
-          "hasContentAreas": [
+          "title": "Digital Art",
+          "competencies": [
             {
-              "title": "Business"
+              "title": "Explore digital art tools",
+              "description": "Test out Photoshop, Illustrator, and Procreate. Create a series of digital illustrations using these tools. Reflect on your experience and the results."
             },
             {
-              "title": "Research"
+              "title": "Define layers, vectors, raster, and brushes",
+              "description": "Develop vocabulary to describe digital art tools."
             },
             {
-              "title": "Marketing"
+              "title": "Summarize the importance of file formats and resolution",
+              "description": "Research file format options and resolutions in digital art. Print out some of your work to see how it looks in print."
+            },
+            {
+              "title": "Apply fundamental art concepts to your digital work",
+              "description": "Apply traditional drawing and painting techniques to your digital work. Create a series of digital illustrations using these techniques. Consider line, shape, form, proportion, value, perspective, composition, color, texture, and more in your work."
             }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting"],
+          "next": ["Professional Development"]
         },
         {
-          "title": "Create Illustrations for Clients",
-          "description": "Seek out clients and create illustrations for them. Communicate with clients to understand their needs and expectations. Create multiple drafts and revisions. Deliver high-quality illustrations on time. Create contracts and invoices. Develop a professional relationship with clients. Seek out feedback from clients to improve your work. Implement workflows and processes to streamline your work.",
-          "hasContentAreas": [
+          "title": "Professional Development",
+          "competencies": [
             {
-              "title": "Business"
+              "title": "Create a portfolio",
+              "description": "Organize your work into a cohesive portfolio that demonstrates your skills and style. Consider your audience and goals when building this."
             },
             {
-              "title": "Marketing"
+              "title": "Research copyright laws",
+              "description": "Research copyright laws to protect your work and understand how to use other's work."
             },
             {
-              "title": "Illustration"
+              "title": "Research marketing as an artist",
+              "description": "Research marketing as an artist to understand how to promote your work and reach your audience. Createa marketing plan for your work."
+            },
+            {
+              "title": "Create a resume",
+              "description": "Create a resume that highlights your skills and experience as an artist. Consider your audience and goals when building this. Find examples and templates to help guide you."
+            },
+            {
+              "title": "Build a social media presence",
+              "description": "Considering your marketing research and goals, you may want to create a Instagram, TikTok, Facebook page, Society 6, Redbubble, Twitch or Youtube channel, or website. Consider your audience and goals when building this."
+            },
+            {
+              "title": "Network with other artists",
+              "description": "Find meetups, job fairs, or online communities to connect with other artists. Seek out feedback from peers and professionals to improve your work."
+            },
+            {
+              "title": "Seek out opportunities to exhibit and sell your work",
+              "description": "Research local galleries, art fairs, and online platforms to exhibit and sell your work."
+            },
+            {
+              "title": "Research jobs that align with your skills",
+              "description": "Research jobs such as illustrator, concept artist, storyboard artist, graphic designer, art director, and more. Create a list of potential jobs that interest you. Go through various job boards and find job postings that interest you. If there are any skills missing, research how to acquire them. Consider internships!"
             }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting", "Digital Art"],
+          "next": ["Professional Development"]
         },
         {
-          "title": "Explore Mediums to Innovate",
-          "description": "Create artwork using mediums such as printmaking, mixed media, sculpture, photography, and more. Research and explore new mediums and techniques. Create a series of artworks using a new medium. Reflect on your experience and the results. Seek out feedback from peers and professionals. Implement new techniques and mediums into your work.",
-          "hasContentAreas": [
+          "title": "Art History",
+          "competencies": [
             {
-              "title": "3D Design Fundamentals"
+              "title": "Identify major artists, movements, and periods including Western and non-Western art.",
+              "description": "In your writings, showcase your ability to communicate clearly and effectively."
             },
             {
-              "title": "2D Design Fundamentals"
+              "title": "Summarize time periods from prehistory to medieval and Renaissance to today",
+              "description": "In your writings, showcase your ability to communicate clearly and effectively."
             },
             {
-              "title": "Research"
+              "title": "Research and write about several topics and movements within the history of art that interests you. Reflect on how art has changed and influenced society",
+              "description": "In your writings, showcase your ability to communicate clearly and effectively."
             },
             {
-              "title": "Sculpture"
+              "title": "Justify the importance of understanding art history in the context of your own work",
+              "description": " In your writings, showcase your ability to communicate clearly and effectively."
+            },
+            {
+              "title": "Explore art in history",
+              "description": "Create a series of illustrations that are inspired by a particular time period or movement in art history. Reflect on your experience and the results."
             }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals"],
+          "next": ["Professional Development"]
         },
         {
-          "title": "Create Graphic Novels",
-          "description": "Tell a story using sequential art. Consider time, layout, and style to convey a narrative. Create characters, settings, and plot. Develop a script and storyboard. Create multiple drafts and revisions. Utilize traditional and digital techniques. Explore different styles and genres. Seek out feedback from peers and professionals. Implement feedback to improve your work.",
-          "hasContentAreas": [
+          "title": "Art Exploration",
+          "competencies": [
             {
-              "title": "Illustration"
+              "title": "Create art utilizing printmaking",
+              "description": "Create a series of prints using various printmaking techniques such as woodcut, linocut, etching, lithography, or screenprinting. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
             },
             {
-              "title": "2D Design Fundamentals"
+              "title": "Create art utilizing sculpture",
+              "description": "Create a series of prints using various sculpture techniques such as carving, modeling, casting, pottery, ceramics. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
+            },
+            {
+              "title": "Create art utilizing photography",
+              "description": "Create a series of prints using various photography techniques such as long exposure, time-lapse, macro. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
+            },
+            {
+              "title": "Reflect on your experience utlizing a new medium and the results.",
+              "description": "Summarize your experience and the results of creating in new mediums by creating a video, paper, or presentation."
             }
-          ]
+          ],
+          "previous": [],
+          "next": []
         },
         {
-          "title": "Develop a Professional Portfolio",
-          "description": "Create original illustrations that demonstrate your skills and style. Organize your work into a cohesive portfolio. Create a website or physical portfolio. Write an artist statement and update your resume and social media presence. Seek out opportunities to exhibit and sell your work. Network with other artists and professionals. Seek out feedback from peers and professionals to improve your portfolio.",
-          "hasContentAreas": [
+          "title": "Graphic Novels",
+          "competencies": [
             {
-              "title": "Illustration"
+              "title": "Explore panel layouts and pacing",
+              "description": "Layouts and pacing are crucial to the storytelling in a graphic novel. Identify ways to control the readers experience of time and space in graphic novels."
             },
             {
-              "title": "Business"
+              "title": "Control the viewer's experience of time",
+              "description": "Create a series of stories in art that convey seconds, then minutes, then hours, then days, then weeks or months. "
             },
             {
-              "title": "Marketing"
+              "title": "Identify basics of story writing",
+              "description": "Research story telling and how it applies to graphic novels. Write a short story and create a storyboard for it."
+            },
+            {
+              "title": "Design a character",
+              "description": "Research how to create a character that has depth, personality and visual appeal. Create a character to use in a short visual story."
+            },
+            {
+              "title": "Seek out feedback",
+              "description": "Have friends, peers, and professionals review and critique your work. Implement changes based on feedback."
+            },
+            {
+              "title": "Explore mediums and styles in Graphic Novels",
+              "description": "Identify the various forms that graphic novels take. Pick one that interests you and create a short visual story in that style. Consider your tools, line work, color work, texture, composition, and more."
             }
-          ]
-        },
-        {
-          "title": "Justify the Importance of the Context of Art in History",
-          "description": " Identify major artists, movements, and periods including Western and non-Western art. Research time periods from prehistory to medieval and Renaissance to today. Research and write about several topics and movements within these histories that interests you. Reflect on how art has changed and influenced society. In your writings, showcase your ability to communicate clearly and effectively.",
-          "hasContentAreas": [
-            {
-              "title": "Art History"
-            },
-            {
-              "title": "Research"
-            },
-            {
-              "title": "Writing"
-            }
-          ]
+          ],
+          "previous": ["2D Design Fundamentals", "Drawing", "Digital Art", "Life Drawing", "Painting"],
+          "next": []
         }
       ]
     },

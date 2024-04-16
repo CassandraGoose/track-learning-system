@@ -5,11 +5,68 @@
       "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully.",
       "competencies": [
         {
-          "title": "Find personal pathways",
-          "description": "You can find all of your saved pathways",
+          "title": "View Pathways",
+          "description": "Explain how to view the pathways you follow, see your competencies and completion status.",
           "hasContentAreas": [
             {
               "title": "Digital Literacy"
+            },
+            {
+              "title": "Navigating Track"
+            }
+          ]
+        },
+        {
+          "title": "Find pathways",
+          "description": "Identify how to find pathways that interest you and add them to your own pathways.",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            },
+            {
+              "title": "Navigating Track"
+            }
+          ]
+        },
+        {
+          "title": "Add proof of your learning and competency",
+          "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path. Explain why it is necessary to prove your competency.",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            },
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Navigating Track"
+            }
+          ]
+        },
+        {
+          "title": "Share your profile",
+          "description": "Navigate to your profile and share your public profile to showcase your learning journey.",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            },
+            {
+              "title": "Navigating Track"
+            }
+          ]
+        },
+        {
+          "title": "Truly Prove Competencies",
+          "description": "Watch the Using Track Introductory Video to learn how to break down any given Track Competency. This video will help you explore taking a concept and breaking it down into topics you can research and explore on the internet. It will help you use the descriptions of competencies to find learning resources so you can dig into a topic as deeply as you need.",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            },
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Navigating Track"
             }
           ]
         }
@@ -17,14 +74,77 @@
     },
     {
       "title": "Learn to Learn",
-      "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to set goals, manage time, and develop a learning plan. This pathway is a great prerequisite for all other pathways.",
+      "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to manage time, self regulate, and explore learning strategies. This pathway is a great prerequisite for all other pathways.",
       "competencies": [
         {
-          "title": "Explain what a Growth Mindset is",
-          "description": "The first step in developing a skill is understanding what it is.",
+          "title": "Practice a Growth Mindset",
+          "description": "Explain and justify the importance of a growth mindset in learning, and apply strategies to develop and maintain a growth mindset in learning.",
           "hasContentAreas": [
             {
               "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
+            }
+          ]
+        },
+        {
+          "title": "Self Regulate",
+          "description": "Explain the importance of managing emotions, behavior, and motivation in learning, and apply strategies to self-regulate effectively, such as limiting applications on computers and phones, silencing phones, and practicing mindfulness techniques.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
+            }
+          ]
+        },
+        {
+          "title": "Practice Critical Thinking",
+          "description": "Justify the importance of thinking deeply about a concept and exploring concepts from multiple perspectives. When reading, writing, or practicing during learning, push yourself to go beyond memorization and recall.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
+            }
+          ]
+        },
+        {
+          "title": "Receive Feedback",
+          "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
+            }
+          ]
+        },
+        {
+          "title": "Discover Time Management That Works for You",
+          "description": "Research various time management strategies and tools such as time-blocking or the Pomodoro technique. Implement a time management strategy that works best for you.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
+            }
+          ]
+        },
+        {
+          "title": "Discover Learning Strategies That Work for You",
+          "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you.",
+          "hasContentAreas": [
+            {
+              "title": "Metacognition"
+            },
+            {
+              "title": "Learning"
             }
           ]
         }
@@ -100,6 +220,141 @@
               "title": "Drawing"
             }
           ]
+        },
+        {
+          "title": "Develop compositions in layers, considering values, colors, and textures in Painting",
+          "description": "Create realistic and abstract paintings that utilize varying tones and shades as well as demonstrate self expression and creativity. Mix colors successfully. Utilize skills such as blending, dry-brushing, stippling, layering, underpainting, and glazing throughout several paintings. Use various mediums including acrylic and oil.",
+          "hasContentAreas": [
+            {
+              "title": "Painting"
+            },
+            {
+              "title": "2D Design Fundamentals"
+            }
+          ]
+        },
+        {
+          "title": "Draw anatomically correct figures and faces",
+          "description": "Complete many drawings of people in various poses and expressions. Understand the proportions of the human body and face. Draw figures and faces from life, photographs, and imagination. Identify muscle groups and bones in the human body. Create dynamic poses and expressions to convey life.",
+          "hasContentAreas": [
+            {
+              "title": "Drawing"
+            }
+          ]
+        },
+        {
+          "title": "Explore Illustration Techniques and Styles",
+          "description": "Work in a variety of media to communicate ideas, stories, and concepts. Convey emotions, moods, and narratives. Create illustrations for books, magazines, advertisements, and other media. Develop a unique style and voice. Research historic and current trends in illustration and apply them to your work. Self-reflect and provide feedback to identify your weaknesses and areas for improvement. Seek out feedback from peers and professionals.",
+          "hasContentAreas": [
+            {
+              "title": "Illustration"
+            },
+            {
+              "title": "2D Design Fundamentals"
+            }
+          ]
+        },
+        {
+          "title": "Create Digital Art",
+          "description": "Create art in Photoshop, Illustrator, and Procreate. Explain and utilize layers, vectors, raster, and brushes. Create multiple projects utilizing various techniques and styles. Utilize digital art to create illustrations, concept art, and designs. Explain the importance of file formats and resolution. Apply traditional drawing and painting techniques to your digital work. ",
+          "hasContentAreas": [
+            {
+              "title": "Digital Literacy"
+            },
+            {
+              "title": "Digital Art"
+            }
+          ]
+        },
+        {
+          "title": "Plan for Art as a Business",
+          "description": "Reseach and explore marketing, copyright laws, and business practices for artists. Identify potential markets and create a business plan. Begin to develop a portfolio and resume. Create a website and social media presence. Network with other artists and professionals. Seek out opportunities to exhibit and sell your work. Explore online ways to sell your work as well as jobs that align with your skills.",
+          "hasContentAreas": [
+            {
+              "title": "Business"
+            },
+            {
+              "title": "Research"
+            },
+            {
+              "title": "Marketing"
+            }
+          ]
+        },
+        {
+          "title": "Create Illustrations for Clients",
+          "description": "Seek out clients and create illustrations for them. Communicate with clients to understand their needs and expectations. Create multiple drafts and revisions. Deliver high-quality illustrations on time. Create contracts and invoices. Develop a professional relationship with clients. Seek out feedback from clients to improve your work. Implement workflows and processes to streamline your work.",
+          "hasContentAreas": [
+            {
+              "title": "Business"
+            },
+            {
+              "title": "Marketing"
+            },
+            {
+              "title": "Illustration"
+            }
+          ]
+        },
+        {
+          "title": "Explore Mediums to Innovate",
+          "description": "Create artwork using mediums such as printmaking, mixed media, sculpture, photography, and more. Research and explore new mediums and techniques. Create a series of artworks using a new medium. Reflect on your experience and the results. Seek out feedback from peers and professionals. Implement new techniques and mediums into your work.",
+          "hasContentAreas": [
+            {
+              "title": "3D Design Fundamentals"
+            },
+            {
+              "title": "2D Design Fundamentals"
+            },
+            {
+              "title": "Research"
+            },
+            {
+              "title": "Sculpture"
+            }
+          ]
+        },
+        {
+          "title": "Create Graphic Novels",
+          "description": "Tell a story using sequential art. Consider time, layout, and style to convey a narrative. Create characters, settings, and plot. Develop a script and storyboard. Create multiple drafts and revisions. Utilize traditional and digital techniques. Explore different styles and genres. Seek out feedback from peers and professionals. Implement feedback to improve your work.",
+          "hasContentAreas": [
+            {
+              "title": "Illustration"
+            },
+            {
+              "title": "2D Design Fundamentals"
+            }
+          ]
+        },
+        {
+          "title": "Develop a Professional Portfolio",
+          "description": "Create original illustrations that demonstrate your skills and style. Organize your work into a cohesive portfolio. Create a website or physical portfolio. Write an artist statement and update your resume and social media presence. Seek out opportunities to exhibit and sell your work. Network with other artists and professionals. Seek out feedback from peers and professionals to improve your portfolio.",
+          "hasContentAreas": [
+            {
+              "title": "Illustration"
+            },
+            {
+              "title": "Business"
+            },
+            {
+              "title": "Marketing"
+            }
+          ]
+        },
+        {
+          "title": "Justify the Importance of the Context of Art in History",
+          "description": " Identify major artists, movements, and periods including Western and non-Western art. Research time periods from prehistory to medieval and Renaissance to today. Research and write about several topics and movements within these histories that interests you. Reflect on how art has changed and influenced society. In your writings, showcase your ability to communicate clearly and effectively.",
+          "hasContentAreas": [
+            {
+              "title": "Art History"
+            },
+            {
+              "title": "Research"
+            },
+            {
+              "title": "Writing"
+            }
+          ]
         }
       ]
     },
@@ -109,10 +364,22 @@
       "competencies": [
         {
           "title": "Apply Concepts in Calculus",
-          "description": "Analyze and solve complex mathematical problems involving limits, derivatives, integrals, optimization, areas and volumes, as well as apply calculus principles to real-world scenarios, statistical analysis, and probability distributions. Work with functions, graphs, and polynomial, exponential, and logarithmic functions.",
+          "description": "Analyze and solve complex mathematical problems involving limits, continuity, derivatives, integrals, optimization, areas and volumes, as well as apply calculus principles to real-world scenarios, statistical analysis, and probability distributions. Work with functions, graphs, and polynomial, exponential, and logarithmic functions. Explore techniques of integration, areas and volumes, numerical integration, improper integrals, single variable continuous statistics, exponential and normal distributions, and Central Limit Theorem.",
           "hasContentAreas": [
             {
               "title": "Mathematics"
+            }
+          ]
+        },
+        {
+          "title": "Explore Discrete Mathematics",
+          "description": "Engage with abstract, discrete structures fundamental to computer science. Complete exercises with logics and proofs, boolean algebra and functions, set theory, finite and infinite sequences and series, and relations, graphs, and trees.",
+          "hasContentAreas": [
+            {
+              "title": "Mathematics"
+            },
+            {
+              "title": "Programming"
             }
           ]
         },
@@ -127,7 +394,7 @@
         },
         {
           "title": "Describe and Implement Common Algorithms",
-          "description": "Implement and describe fundamental algorithms such as divide and conquer, dynamic programming, greedy algorithms, graph algorithms, and sorting algorithms in C#, Java, C, or C++, utilizing Object Oriented Design principles.",
+          "description": "Implement and describe fundamental algorithms such as divide and conquer, dynamic programming, greedy algorithms, graph algorithms, and sorting algorithms in C#, Java, C, or C++, utilizing Object Oriented Design principles. Explain and iterate on you problem solving process. Explain Big O notation and analyze the time and space complexity of algorithms.",
           "hasContentAreas": [
             {
               "title": "Programming"
@@ -136,7 +403,7 @@
         },
         {
           "title": "Explain Modern Computer Architecture",
-          "description": "Understand the organization and architecture of modern computer systems, including CPU, memory, input/output devices, and storage systems. Analyze and design digital circuits and systems using concepts such as Boolean algebra, logic gates, combinational and sequential circuits, and memory systems. Evaluate and optimize computer system performance through techniques such as pipelining, caching, and parallel processing.",
+          "description": "Summarize the organization and architecture of modern computer systems, including CPU, memory, input/output devices, and storage systems. Analyze and design digital circuits and systems using concepts such as Boolean algebra, logic gates, combinational and sequential circuits, and memory systems. Evaluate and optimize computer system performance through techniques such as pipelining, caching, and parallel processing.",
           "hasContentAreas": [
             {
               "title": "Programming"
@@ -145,7 +412,7 @@
         },
         {
           "title": "Implement Fundamental Security Measures",
-          "description": "Implement security measures such as encryption, access controls, authentication mechanisms, and intrusion detection systems to protect against security threats.",
+          "description": "Identify and explain common threats and vulnerabilities in infosec such as malware, phishing, social engineering, DoS attacks, and vulnerabilities within software and systems. Explain the fundamentals of cryptography techniques and algorithms to improve the integrity of data. Implement security measures such as access control, authentication, authoriation, and encryption to protect data and systems. Explore network security practices such as network design, firelwalls, VPNS and secure protocols. ",
           "hasContentAreas": [
             {
               "title": "Programming"
@@ -154,7 +421,79 @@
         },
         {
           "title": "Programming Language Fundamentals",
-          "description": "Utilize Java, C#, C, or C++ to design and develop applications using an Object Oriented Paradigm. Utilize and explain encapsulation, inheritance, polymorphism, and abstraction. Use libraries and frameworks to build applications.",
+          "description": "Utilize Java, C#, C, or C++ to design and develop applications using an Object Oriented Paradigm. Utilize and explain encapsulation, inheritance, polymorphism, and abstraction. Use libraries and frameworks to build applications. Research popular debugging techniques to improve your speed and accuracy in application creation. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Create Non-trivial Applications in C#, Java, C, or C++",
+          "description": "Push yourself to create applications that mirror applications in the real world. Research and implement best practices in software development. Utilize design patterns to create scalable and maintainable applications. Utilize testing frameworks to ensure your applications are bug free. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Explore Scripting Languages",
+          "description": "Pick a scripting language and build applications with it. Utilize Python, Ruby, or JavaScript to build applications, as well as appropriate respective libraries. Research and implement best practices in software development. Utilize testing frameworks to ensure your applications are bug free. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals. Identify the ways that these languages differ from the languages you have learned before.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            },
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Explain Software Development in a Professional Setting",
+          "description": "Utilize a professional workflow to create an application. This may mean using an Agile or Scrum methodology and researching deeply to correctly implement the process. If you are able, seek out a client and create an application based on their requirements and feedback. Deliver functionality iteratively. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals. Research and plan to use modern software development practices.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Manage Data",
+          "description": "Create data models and explore the use of databases and tables. Utilize Sql to query a database by adding data, modifying data, getting data, and deleting data. Databases should include foreign and primary keys and SQL queries should utilize clauses. Use MySQL and PostgresQL databases. Explain the difference between SQL and NoSQL databases. Explain how to normalize data. Utilize an ORM. Identify performance issues with queries and databases.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            }
+          ]
+        },
+        {
+          "title": "Explore the Business Side of Software Development",
+          "description": "Create a web presence, start a portfolio, create a resume. Research and identify jobs, career paths, and companies that you are interested in. Seek out internships, apprenticeships, or jobs in the field. Research and identify the skills and tools that are in demand. Seek out feedback from peers and professionals. Research and identify the skills and tools that are in demand. Seek out feedback from peers and professionals.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            },
+            {
+              "title": "Business"
+            }
+          ]
+        },
+        {
+          "title": "Explore the use of AI in programming",
+          "description": "Practice prompting and correcting output from various AI sources such as Copilot, ChatGPT, and Llama. Utilize AI tools in creation of applications and projects while identifying the issues and limitations. Practice judging output critically and deeply thinking about code quality and security. Treat AI as a tool to be used in conjunction with your own skills.",
+          "hasContentAreas": [
+            {
+              "title": "Programming"
+            },
+            {
+              "title": "Digital Literacy"
+            }
+          ]
+        },
+        {
+          "title": "Create a Portfolio of Projects",
+          "description": "This portfolio will be the main tool to demonstrate your abilities to employers. Without it or a degree, employers may not be able to verify your ability. Your portfolio should include non-trivial projects that demonstrate skills employers want. Seek out feedback from peers and professionals. Research and identify the skills and tools that are in demand. Follow best practices, a workflow or professional work methodoly/process, version control, project boards, planning, design, testing, deployment, and maintenance. Your work should be professional and clean.",
           "hasContentAreas": [
             {
               "title": "Programming"
@@ -164,7 +503,7 @@
       ]
     },
     {
-      "title": "Front End Development",
+      "title": "Front End Development Fundamentals",
       "description": "When users interact with a web page or application, they're really interacting with the front end. This pathway is designed to help you learn the skills you need to become a front end developer. You'll learn how to build web pages and applications using HTML, CSS, and JavaScript. You'll also learn how to use popular front end frameworks and libraries like React, Vue, or Angular. This pathway does not focus on design in any way - it is a myth that front end web development is rooted in design. This pathway is for those who want to build the interactive parts of a website or application using code and problem solving skills.",
       "competencies": [
         {
@@ -186,8 +525,8 @@
           ]
         },
         {
-          "title": "Manipulate Data with JavaScript",
-          "description": "Loop through arrays using traditional for loops and JavaScript array methods. Work with objects, variables, math, and strings. Utilize functions, scope, and closures.",
+          "title": "Utilize JavaScript",
+          "description": "Loop through arrays using traditional for loops and JavaScript array methods. Work with objects, variables, math, and strings. Utilize functions, scope, and closures. You'll need to know the basics of JavaScript in order to complete this competency; content includes variables, functions, conditionals, arrays, expressions, objects, and more. Work locally and in the browser console. Utilize debugging tools to identify and fix errors. You'll need to research Node.js, npm, and the command line to complete this competency.",
           "hasContentAreas": [
             {
               "title": "Web Development"
@@ -196,7 +535,16 @@
         },
         {
           "title": "Create Web Pages with JavaScript",
-          "description": "Utilize JavaScript to manipulate the DOM, handle events, and create interactive web pages. Implement asynchronous programming using callbacks, promises, and async/await.",
+          "description": "Utilize JavaScript to manipulate the DOM, handle events, and create interactive web pages. Implement asynchronous programming using callbacks, promises, and async/await. Consider the separate of the data and the view when designing your code. Explain what event bubbling and delegation is. Utilize the fetch API to make requests to a server. Identify your debugging process and research modern debugging techniques to improve your speed and accuracy in application creation. You should utilize GitHub or Bitbucket or similar tool to manage your code. You'll need to reserach Git in order to complete this competency.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Create Web Applications with CSS, HTML, and JavaScript",
+          "description": "Complete multiple projects that manipulate data and the DOM using HTML, CSS, and JavaScript. Utilize best practices for organizing code, structuring files, and optimizing performance. Utilize the fetch API to make requests to a server. Utilize the fetch API to make requests to a server.  Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
           "hasContentAreas": [
             {
               "title": "Web Development"
@@ -205,7 +553,52 @@
         },
         {
           "title": "Use React to Create Web Applications",
-          "description": "Capture user input using forms, manage state, and create reusable components in React. Utilize React Router to create a single-page application with multiple views. Utilize hooks such as useState, useEffect, and useContext.",
+          "description": "Capture user input using forms, manage state, and create reusable components in React. Utilize React Router to create a single-page application with multiple views. Utilize hooks such as useState, useEffect, and useContext. Build multiple projects utilizing React, CSS, JSX/HTML and JavaScript. Utilize version control systems to manage your code. Utilize the fetch API to make requests to a server. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Practice TypeScript",
+          "description": "Build on your knowledge of JavaScript by learning TypeScript. Utilize TypeScript to create web applications that are more maintainable, scalable, and reliable. Utilize TypeScript's static typing, interfaces, and type annotations to catch errors early in development. Utilize TypeScript with React to create web applications that are more maintainable, scalable, and reliable.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Explore Modern Front End Tooling",
+          "description": "Research and work with the following tools: NPM, ESLint, Prettier, Webpack, Babel, and Git. Utilize these tools to improve your workflow, code quality, and collaboration. Utilize version control systems to manage your code.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Explain Network Requests",
+          "description": "Explain how network requests work on the internet. Identify and explain GET requests, POST requests. Implement various requests in your projects and code. Utilize tools such as the Fetch API or Axios to make requests in React and JavaScript code.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Handle Errors",
+          "description": "Identify and handle errors in your code. Utilize try/catch blocks, error objects, and error handling techniques. Utilize error boundaries in React to catch errors in your components. Utilize debugging tools to identify and fix errors.",
+          "hasContentAreas": [
+            {
+              "title": "Web Development"
+            }
+          ]
+        },
+        {
+          "title": "Explore advanced JavaScript",
+          "description": "Show off your skills in JavaScript by implementing code that illustrates closures, promises, higher order functions, currying, generators and any modern features or design practices that interest you.",
           "hasContentAreas": [
             {
               "title": "Web Development"

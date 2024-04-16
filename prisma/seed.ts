@@ -72,7 +72,7 @@ async function main() {
       justification: 'Here is how I did it.',
       competency: {
         connect: {
-          title: 'Find personal pathways',
+          title: 'View Pathways',
         },
       },
       author: {

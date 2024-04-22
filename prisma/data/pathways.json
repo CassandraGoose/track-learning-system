@@ -424,6 +424,41 @@
     {
       "title": "Computer Science",
       "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. This pathway involves many content areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects and collaborative learning will be integral to the process. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path.",
+      "contentAreas": [
+        {
+          "title": "Calculus",
+          "competencies": [
+            {
+              "title": "Graph Functions",
+              "description": "Graph functions including linear, quadratic, exponential, logarithmic, and trigonometric functions."
+            },
+            {
+              "title": "Interpret graphs of functions and their transformations.",
+              "description": "Given a graph of a function, correctly identify the function and its transformations."
+            },
+            {
+              "title": "Evaluate limits algebraically and graphically",
+              "description": "Calculate limits of functions including rational functions, trigonometric functions, and piecewise functions. Explain the connection of limits and continuity."
+            }
+          ]
+        },
+        {
+          "title": "",
+          "competencies": []
+        },
+        {
+          "title": "",
+          "competencies": []
+        },
+        {
+          "title": "",
+          "competencies": []
+        },
+        {
+          "title": "",
+          "competencies": []
+        }
+      ],
       "competencies": [
         {
           "title": "Apply Concepts in Calculus",

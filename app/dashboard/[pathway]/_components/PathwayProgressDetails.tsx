@@ -1,14 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Competency, Pathway } from "../../../lib/interface";
+import { Competency, Pathway, ContentArea } from "../../../lib/interface";
 import Link from "next/link";
 
 export default function PathwayProgressDetails({ pathway, pathwayId }: { pathway: Pathway, pathwayId: string }) {
   const [collapsed, setCollapsed] = useState(false);
 
-  const getCompletedCompetencies = (competencies: Competency[]) => {
-    return competencies.reduce((acc, competency) => {
+  const totalCompetencies = pathway.contentAreas.reduce((acc, contentArea) => {
+      acc.push(...contentArea.competencies);
+      return acc;
+    }, [] as Competency[]);
+
+  const getCompletedCompetencies = (contentAreas: ContentArea[]) => {
+    return totalCompetencies.reduce((acc, competency) => {
       if (competency.proofs && competency.proofs.length > 0) acc++;
       return acc;
     }, 0);
@@ -26,7 +31,7 @@ export default function PathwayProgressDetails({ pathway, pathwayId }: { pathway
           <div>
             <div className="flex justify-between items-center">
               <p className="text-xl" data-testid="competency-progress">
-                {getCompletedCompetencies(pathway.competencies)} / {pathway.competencies.length} competencies met
+                {getCompletedCompetencies(pathway.contentAreas)} / {totalCompetencies.length} competencies met
               </p>
               <button
                 data-testid="toggle-competency-details"
@@ -52,7 +57,7 @@ export default function PathwayProgressDetails({ pathway, pathwayId }: { pathway
                 </tr>
               </thead>
               <tbody>
-                {pathway.competencies.map((competency: Competency) => (
+                {totalCompetencies.map((competency: Competency) => (
                   <tr key={competency.id}>
                     <td>
                       <span className="flex items-center space-x-3 pl-4 text-xl" data-testid="completed-check">

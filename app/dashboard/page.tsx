@@ -19,7 +19,7 @@ export default async function Page() {
     notFound();
   }
 
-  const pathways = userPathways.pathways;
+  const pathways = userPathways.pathways || [];
 
   const createCardActionChild = (id: number) => (
     <div className="card-actions">

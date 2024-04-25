@@ -19,10 +19,13 @@ export async function getUserPathways() {
       include: {
         pathways: {
           include: {
-            competencies: {
+            contentAreas: {
               include: {
-                contentAreas: true,
-                proofs: true,
+                competencies: {
+                  include: {
+                    proofs: true,
+                  },
+                },
               },
             },
           },
@@ -52,10 +55,13 @@ export async function getSingleUserPathway(pathwayId: string) {
             id: parseInt(pathwayId),
           },
           include: {
-            competencies: {
+            contentAreas: {
               include: {
-                proofs: true,
-                contentAreas: true,
+                competencies: {
+                  include: {
+                    proofs: true,
+                  },
+                },
               },
             },
           },
@@ -85,7 +91,6 @@ export async function getUserCompetency(competencyId: string) {
             personId: user.id,
           },
         },
-        contentAreas: true,
       },
     });
   } catch (error) {
@@ -209,9 +214,13 @@ export async function getFilteredPathways(query: string, page: number) {
         },
       },
       include: {
-        competencies: {
+        contentAreas: {
           include: {
-            contentAreas: true,
+            competencies: {
+              include: {
+                proofs: true,
+              },
+            },
           },
         },
       },
@@ -242,9 +251,13 @@ export async function getAllPathways() {
   try {
     return await prisma.pathway.findMany({
       include: {
-        competencies: {
+        contentAreas: {
           include: {
-            contentAreas: true,
+            competencies: {
+              include: {
+                proofs: true,
+              },
+            },
           },
         },
       },
@@ -261,9 +274,13 @@ export async function getSinglePathway(pathwayId: string) {
         id: parseInt(pathwayId),
       },
       include: {
-        competencies: {
+        contentAreas: {
           include: {
-            contentAreas: true,
+            competencies: {
+              include: {
+                proofs: true,
+              },
+            },
           },
         },
       },
@@ -277,22 +294,22 @@ export async function addPathwayToUser(pathwayId: number) {
   const user = await checkUser();
 
   if (!user) {
-    return { message: 'You must be signed in to complete this action.'};
+    return { message: 'You must be signed in to complete this action.' };
   }
 
   try {
     return await prisma.pathway.update({
-      where: {id: pathwayId},
+      where: { id: pathwayId },
       data: {
         persons: {
           connect: [
             {
               id: user.id,
-            }
-          ]
-        }
-      }
-    })
+            },
+          ],
+        },
+      },
+    });
   } catch (error) {
     return error;
     console.error(error);

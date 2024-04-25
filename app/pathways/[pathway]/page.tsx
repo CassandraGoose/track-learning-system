@@ -62,7 +62,7 @@ export default async function Page({
                       key={contentArea.id}
                     >
                       <h2 className="text-xl">{contentArea.title}</h2>
-                      <div className="card-body flex w-full flex-row flex-wrap justify-around">
+                      <div className="card-body flex w-full flex-row flex-wrap justify-start">
                         {contentArea.competencies.map((competency) => {
                           return (
                             <Fragment key={competency.id}>

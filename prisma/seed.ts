@@ -56,7 +56,6 @@ async function main() {
   });
 
   const pw = process.env.TEST_USER_PW || '';
-  console.log('PW IS: ', pw);
   
   const hashedPassword = await new Argon2id().hash(pw);
 

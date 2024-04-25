@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { getUserPathways } from '../lib/queries';
 import { notFound } from 'next/navigation';
 import { caluclateProgress } from '../lib/utilities';
-import { Pathway, Competency } from '../lib/interface';
+import { Pathway, Competency, ContentArea } from '../lib/interface';
 import Modal from '@/app/profile/_components/Modal';
 import ContentAreaPill from '../_components/ContentAreaPill';
 import CompetencyCard from '../_components/CompetencyCard';
@@ -20,16 +20,6 @@ export default async function Page({
 
   const pathways = userPathways.pathways;
   const showModal = searchParams?.showModal;
-
-  const getAllContentAreaForPathway = (pathway: Pathway): string[] => {
-    const contentAreas = new Set();
-    pathway.competencies.forEach((competency: Competency) => {
-      competency.contentAreas!.forEach((contentArea) => {
-        contentAreas.add(contentArea.title);
-      });
-    });
-    return Array.from(contentAreas) as string[];
-  };
 
   return (
     <section className="mx-12 flex flex-col">
@@ -65,15 +55,16 @@ export default async function Page({
                       {pathway.description}
                     </p>
                     <div className="card-actions flex">
-                      {getAllContentAreaForPathway(pathway).map(
-                        (contentArea: string) => {
-                          return (
-                            <span key={contentArea}>
-                              <ContentAreaPill contentArea={contentArea} />
-                            </span>
-                          );
-                        },
-                      )}
+                      {pathway.contentAreas.map((contentArea: ContentArea) => {
+                        return (
+                          <span
+                            className="mr-2"
+                            key={contentArea.title + contentArea.id}
+                          >
+                            <ContentAreaPill contentArea={contentArea.title} />
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                   <div className="p-8">
@@ -90,14 +81,23 @@ export default async function Page({
                   </div>
                 </div>
                 <div className="card-body flex flex-row flex-wrap">
-                  {pathway.competencies.map((competency) => {
+                  {pathway.contentAreas.map((contentArea: ContentArea) => {
                     return (
-                      <Fragment key={competency.id}>
-                        <CompetencyCard
-                          key={competency.id}
-                          competency={competency}
-                        />
-                      </Fragment>
+                      <div key={contentArea.id} className="flex flex-col">
+                        <p className="text-xl">{contentArea.title}</p>
+                        <div className="card-body flex w-full flex-row flex-wrap justify-start">
+                          {contentArea.competencies.map(
+                            (competency: Competency) => {
+                              return (
+                                <CompetencyCard
+                                  key={competency.id}
+                                  competency={competency}
+                                />
+                              );
+                            },
+                          )}
+                        </div>
+                      </div>
                     );
                   })}
                 </div>

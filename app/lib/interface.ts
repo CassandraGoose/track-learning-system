@@ -33,14 +33,15 @@ export interface Pathway {
   createdAt: string | Date;
   title: string;
   description: string;
-  competencies: Array<Competency>;
+  approved: boolean;
+  contentAreas: Array<ContentArea>;
 }
 
 export interface ContentArea {
   id: number;
   createdAt: string | Date;
   title: string;
-  description: string;
+  competencies: Array<Competency>;
 }
 
 export interface Competency {
@@ -49,7 +50,6 @@ export interface Competency {
   title: string;
   description: string;
   proofs?: Array<Proof>;
-  contentAreas?: Array<ContentArea>;
 }
 
 export interface Proof {

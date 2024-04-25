@@ -3,6 +3,7 @@
     {
       "title": "Use Track",
       "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully.",
+      "approved": "true",
       "contentAreas": [
         {
           "title": "Navigating Track",
@@ -58,6 +59,7 @@
     {
       "title": "Learn to Learn",
       "description": "Utilize a growth mindset and grit to learn anything. Learning is a skill, just like riding a bike or cooking. In this pathway, learners will explore the science of learning and develop strategies to deepen their understanding and master skills. This pathway will help learners develop a growth mindset, resilience, and a love for learning. Learners will also learn how to manage time, self regulate, and explore learning strategies. This pathway is a great prerequisite for all other pathways.",
+      "approved": "true",
       "contentAreas": [
         {
           "title": "Learning",
@@ -118,6 +120,7 @@
     {
       "title": "Illustration",
       "description": "This pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.",
+      "approved": "true",
       "contentAreas": [
         {
           "title": "2D Design Fundamentals",
@@ -424,6 +427,7 @@
     {
       "title": "Computer Science",
       "description": "Embark on a comprehensive self-learning journey in Computer Science, inpsired by college-level programs. Achieving mastery in this pathway demands a dedicated commitment, and the process may span several years. This pathway involves many content areas, including programming, algorithms, data structures, software development methodologies, databases, and computer architecture. Hands-on coding projects and collaborative learning will be integral to the process. Networking with fellow learners, participating in online communities, and seeking mentorship from experienced professionals will enhance the learning experience. Regularly applying learned concepts in practical scenarios and staying updated with industry trends will be crucial; you must build projects. Embracing a growth mindset, resilience, and continuous curiosity are key attributes for success in this self-learning path.",
+      "approved": "false",
       "contentAreas": [
         {
           "title": "Calculus",
@@ -439,162 +443,46 @@
             {
               "title": "Evaluate limits algebraically and graphically",
               "description": "Calculate limits of functions including rational functions, trigonometric functions, and piecewise functions. Explain the connection of limits and continuity."
-            }
-          ]
-        },
-        {
-          "title": "",
-          "competencies": []
-        },
-        {
-          "title": "",
-          "competencies": []
-        },
-        {
-          "title": "",
-          "competencies": []
-        },
-        {
-          "title": "",
-          "competencies": []
-        }
-      ],
-      "competencies": [
-        {
-          "title": "Apply Concepts in Calculus",
-          "description": "Analyze and solve complex mathematical problems involving limits, continuity, derivatives, integrals, optimization, areas and volumes, as well as apply calculus principles to real-world scenarios, statistical analysis, and probability distributions. Work with functions, graphs, and polynomial, exponential, and logarithmic functions. Explore techniques of integration, areas and volumes, numerical integration, improper integrals, single variable continuous statistics, exponential and normal distributions, and Central Limit Theorem.",
-          "hasContentAreas": [
-            {
-              "title": "Mathematics"
-            }
-          ]
-        },
-        {
-          "title": "Explore Discrete Mathematics",
-          "description": "Engage with abstract, discrete structures fundamental to computer science. Complete exercises with logics and proofs, boolean algebra and functions, set theory, finite and infinite sequences and series, and relations, graphs, and trees.",
-          "hasContentAreas": [
-            {
-              "title": "Mathematics"
             },
             {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Describe and Implement Data Structures",
-          "description": "Implement and manipulate fundamental data structures such as arrays, linked lists, stacks, queues, trees, graphs, and hash tables in C#, Java, C, or C++, utilizing Object Oriented Design principles.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Describe and Implement Common Algorithms",
-          "description": "Implement and describe fundamental algorithms such as divide and conquer, dynamic programming, greedy algorithms, graph algorithms, and sorting algorithms in C#, Java, C, or C++, utilizing Object Oriented Design principles. Explain and iterate on you problem solving process. Explain Big O notation and analyze the time and space complexity of algorithms.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Explain Modern Computer Architecture",
-          "description": "Summarize the organization and architecture of modern computer systems, including CPU, memory, input/output devices, and storage systems. Analyze and design digital circuits and systems using concepts such as Boolean algebra, logic gates, combinational and sequential circuits, and memory systems. Evaluate and optimize computer system performance through techniques such as pipelining, caching, and parallel processing.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Implement Fundamental Security Measures",
-          "description": "Identify and explain common threats and vulnerabilities in infosec such as malware, phishing, social engineering, DoS attacks, and vulnerabilities within software and systems. Explain the fundamentals of cryptography techniques and algorithms to improve the integrity of data. Implement security measures such as access control, authentication, authoriation, and encryption to protect data and systems. Explore network security practices such as network design, firelwalls, VPNS and secure protocols. ",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Programming Language Fundamentals",
-          "description": "Utilize Java, C#, C, or C++ to design and develop applications using an Object Oriented Paradigm. Utilize and explain encapsulation, inheritance, polymorphism, and abstraction. Use libraries and frameworks to build applications. Research popular debugging techniques to improve your speed and accuracy in application creation. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Create Non-trivial Applications in C#, Java, C, or C++",
-          "description": "Push yourself to create applications that mirror applications in the real world. Research and implement best practices in software development. Utilize design patterns to create scalable and maintainable applications. Utilize testing frameworks to ensure your applications are bug free. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Explore Scripting Languages",
-          "description": "Pick a scripting language and build applications with it. Utilize Python, Ruby, or JavaScript to build applications, as well as appropriate respective libraries. Research and implement best practices in software development. Utilize testing frameworks to ensure your applications are bug free. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals. Identify the ways that these languages differ from the languages you have learned before.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
+              "title": "Compute derivatives using basic rules",
+              "description": "Differentiate functions using the sum rule, product rule, quotient rule, and chain rule. Apply these rules systematically to various types of functions."
             },
             {
-              "title": "Web Development"
-            }
-          ]
-        },
-        {
-          "title": "Explain Software Development in a Professional Setting",
-          "description": "Utilize a professional workflow to create an application. This may mean using an Agile or Scrum methodology and researching deeply to correctly implement the process. If you are able, seek out a client and create an application based on their requirements and feedback. Deliver functionality iteratively. Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals. Research and plan to use modern software development practices.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Manage Data",
-          "description": "Create data models and explore the use of databases and tables. Utilize Sql to query a database by adding data, modifying data, getting data, and deleting data. Databases should include foreign and primary keys and SQL queries should utilize clauses. Use MySQL and PostgresQL databases. Explain the difference between SQL and NoSQL databases. Explain how to normalize data. Utilize an ORM. Identify performance issues with queries and databases.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        },
-        {
-          "title": "Explore the Business Side of Software Development",
-          "description": "Create a web presence, start a portfolio, create a resume. Research and identify jobs, career paths, and companies that you are interested in. Seek out internships, apprenticeships, or jobs in the field. Research and identify the skills and tools that are in demand. Seek out feedback from peers and professionals. Research and identify the skills and tools that are in demand. Seek out feedback from peers and professionals.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
+              "title": "Apply derivatives to solve real-world problems",
+              "description": "Use derivatives to analyze rates of change in real-world contexts such as motion, population growth, and economics. Solve optimization problems by finding critical points and classifying them using the first and second derivative tests."
             },
             {
-              "title": "Business"
-            }
-          ]
-        },
-        {
-          "title": "Explore the use of AI in programming",
-          "description": "Practice prompting and correcting output from various AI sources such as Copilot, ChatGPT, and Llama. Utilize AI tools in creation of applications and projects while identifying the issues and limitations. Practice judging output critically and deeply thinking about code quality and security. Treat AI as a tool to be used in conjunction with your own skills.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
+              "title": "Find areas under curves using integration",
+              "description": "Compute the area enclosed by curves by setting up definite integrals over appropriate intervals. Interpret the result geometrically as the area under the curve."
             },
             {
-              "title": "Digital Literacy"
-            }
-          ]
-        },
-        {
-          "title": "Create a Portfolio of Projects",
-          "description": "This portfolio will be the main tool to demonstrate your abilities to employers. Without it or a degree, employers may not be able to verify your ability. Your portfolio should include non-trivial projects that demonstrate skills employers want. Seek out feedback from peers and professionals. Research and identify the skills and tools that are in demand. Follow best practices, a workflow or professional work methodoly/process, version control, project boards, planning, design, testing, deployment, and maintenance. Your work should be professional and clean.",
-          "hasContentAreas": [
+              "title": "Calculate the average value of a function over an interval",
+              "description": "Determine the average value of a function over a closed interval by computing the definite integral of the function over that interval and dividing by the length of the interval."
+            },
             {
-              "title": "Programming"
+              "title": "Solve problems involving accumulation and motion using integration",
+              "description": "Apply integration to solve problems related to accumulation, such as finding total distance traveled or total amount accumulated over time. Use integration to analyze motion by computing displacement, velocity, and acceleration functions."
+            },
+            {
+              "title": "Differentiate and integrate transcendental functions",
+              "description": "Apply differentiation techniques to find derivatives of trigonometric, exponential, and logarithmic functions. Integrate transcendental functions using appropriate techniques such as trigonometric substitution and integration by parts."
+            },
+            {
+              "title": "Apply differentiation and integration techniques",
+              "description": "Utilize advanced techniques such as implicit differentiation, logarithmic differentiation, and trigonometric substitution to differentiate and integrate functions efficiently."
+            },
+            {
+              "title": "Analyze convergence and divergence of sequences and series",
+              "description": "Determine convergence or divergence of sequences and series by applying various convergence tests such as the ratio test, root test, and comparison tests. Identify alternating series and demonstrate understanding by applying the alternating series test."
+            },
+            {
+              "title": "Compute Taylor and Maclaurin series expansions",
+              "description": "Compute Taylor polynomials and Maclaurin series expansions for functions centered at a given point. Demonstrate proficiency in generating accurate series expansions to approximate functions."
+            },
+            {
+              "title": "Apply Taylor and Maclaurin series expansions",
+              "description": "Apply Taylor and Maclaurin series expansions to approximate functions and estimate function values. Illustrate proficiency by accurately using series expansions in real-world or mathematical contexts."
             }
           ]
         }
@@ -603,178 +491,232 @@
     {
       "title": "Front End Development Fundamentals",
       "description": "When users interact with a web page or application, they're really interacting with the front end. This pathway is designed to help you learn the skills you need to become a front end developer. You'll learn how to build web pages and applications using HTML, CSS, and JavaScript. You'll also learn how to use popular front end frameworks and libraries like React, Vue, or Angular. This pathway does not focus on design in any way - it is a myth that front end web development is rooted in design. This pathway is for those who want to build the interactive parts of a website or application using code and problem solving skills.",
-      "competencies": [
+      "approved": "false",
+      "contentAreas": [
         {
-          "title": "Utilize HTML and CSS to Create Web Pages",
-          "description": "Utilize HTML and CSS to create web pages that are visually appealing, responsive, and accessible. Implement best practices for structuring content, styling elements, and optimizing performance such as WAI-ARIA, Semantic HTML, and CSS organization.",
-          "hasContentAreas": [
+          "title": "HTML",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "Build Pages with Semantic HTML",
+              "description": "Create valid HTML with elements that provide meaningful information about the document. Use tags like <html>, <head>, <article>, <body>, <main>, <footer>, etc."
+            },
+            {
+              "title": "Organize Text in HTML",
+              "description": "Appropriately utilize <h1> through <h6> tags, <p> tags, as well as list tags."
+            },
+            {
+              "title": "Create Hyperlinks to link to other pages",
+              "description": "Use the <a> anchor tag to create hyperlinks to other pages."
+            },
+            {
+              "title": "Include Images and other media in HTML",
+              "description": "Utilize the <img> and other tags such as <audio>, <video>, etc. to include media in your web pages."
+            },
+            {
+              "title": "Create forms",
+              "description": "Build forms to collect user imput. You'll connect JS to these forms later."
+            },
+            {
+              "title": "Show data clearly",
+              "description": "Use tables to display data."
             }
-          ]
+          ],
+          "previous": [],
+          "next": ["CSS"]
         },
         {
-          "title": "Implement Responsive Web Design",
-          "description": "Implement responsive web design techniques using media queries, flexbox, and grid to create web pages that adapt to different screen sizes and devices.",
-          "hasContentAreas": [
+          "title": "CSS",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "Define core CSS concepts",
+              "description": "Describe the box model, specificity, inheritance, and the cascade. Explain how these concepts affect the styling of web pages."
+            },
+            {
+              "title": "Use CSS Selectors",
+              "description": "Select elements using a variety of CSS selectors, including element selectors, class selectors, ID selectors, attribute selectors, pseudo-classes, and pseudo-elements."
+            },
+            {
+              "title": "Implement common layouts using CSS",
+              "description": "Find common layouts throughout the web and implment them using flexbox and grid. Ensure that spacing, alignment, and sizing are consistent and visually appealing."
+            },
+            {
+              "title": "Use CSS to create responsive pages",
+              "description": "Utilize CSS to create web pages that adjust based on the size of the viewport or device. Use media queries and use fluid measurements instead of pixels. Consider the use of flexible images and media, the viewport tag, and responsive typography."
+            },
+            {
+              "title": "Use CSS Frameworks",
+              "description": "Build sites utilizing CSS frameworks like Bootstrap, Tailwind, or Materialize. Understand the benefits and drawbacks of using a CSS framework."
+            },
+            {
+              "title": "Debug CSS issues",
+              "description": "Use tools such as the browser's developer tools to identify and fix CSS issues."
             }
-          ]
+          ],
+          "previous": ["HTML"],
+          "next": ["CSS"]
         },
         {
-          "title": "Utilize JavaScript",
-          "description": "Loop through arrays using traditional for loops and JavaScript array methods. Work with objects, variables, math, and strings. Utilize functions, scope, and closures. You'll need to know the basics of JavaScript in order to complete this competency; content includes variables, functions, conditionals, arrays, expressions, objects, and more. Work locally and in the browser console. Utilize debugging tools to identify and fix errors. You'll need to research Node.js, npm, and the command line to complete this competency.",
-          "hasContentAreas": [
+          "title": "JavaScript",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "List and define the data types in JavaScript",
+              "description": "Clearly articulate which data types are reference and which are primitive. Explain the difference between null and undefined."
+            },
+            {
+              "title": "Explain how to use Variables in JS",
+              "description": "Define the term 'variable' and explain how to declare and assign variables in JavaScript. Explain the difference between let, const, and var."
+            },
+            {
+              "title": "Define the term 'expression' and explain what truthy and falsey expressions are",
+              "description": ""
+            },
+            {
+              "title": "Use numbers, strings, arrays, and objects in JavaScript",
+              "description": "Define variables that are numbers, strings, arrays, and objects. Manipulate these variables using common methods and operators. Use dot and bracket notation to access object properties."
+            },
+            {
+              "title": "Define and Invoke Functions",
+              "description": "Create reusable functions that take parameters and return values. Use function declarations, function expressions, and arrow functions. Understand the difference between function declarations and function expressions."
+            },
+            {
+              "title": "Use for loops to iterate over arrays",
+              "description": "Manipulate data using for loops. Write code that utilizes nested for loops."
+            },
+            {
+              "title": "Manipulate Data with Arrays and Objects",
+              "description": "Use array methods like map, filter, reduce, and sort. Use object methods like Object.keys, Object.values, and Object.entries. It's helpful to explain use cases for each method."
+            },
+            {
+              "title": "Manipulate the DOM",
+              "description": "Interact with the Document Object Model (DOM) using JavaScript. Select elements, create new elements, modify elements, and remove elements. Add event listeners to elements to respond to user interactions. This is when you'll connect your HTML knowledge to JS."
+            },
+            {
+              "title": "Handle Events",
+              "description": "Handle events in JavaScript using event listeners. Explain event bubbling and event delegation. Use event objects to access information about the event."
+            },
+            {
+              "title": "Handle Errors",
+              "description": "Handle errors by using try/catch blocks. Use the console to log errors and debug code. Explain the difference between syntax errors and runtime errors."
+            },
+            {
+              "title": "Debug JavaScript",
+              "description": "Use browser tools, debuggers in IDEs, and console.log to debug JavaScript code. Identify and fix common errors like typos, incorrect variable names, and missing parentheses."
+            },
+            {
+              "title": "Make network requests with Fetch and Axios",
+              "description": "Explain what network requests are and how they work. Use the Fetch API and Axios to make GET and POST requests to a server. Handle responses using promises and async/await."
+            },
+            {
+              "title": "Describe Promises in JS",
+              "description": "Explain what promises are and how they work. Use promises to handle asynchronous code. Chain promises together and handle errors using catch."
+            },
+            {
+              "title": "Use Closures",
+              "description": "Explain what a closure is and utilize them in your code"
+            },
+            {
+              "title": "Identify Scope in JS",
+              "description": "Explain how code works in the context of its scope. Identify global and local scope. Explain that the 'this' keyword is and how to use it."
+            },
+            {
+              "title": "Destructure Objects and Arrays",
+              "description": "Use the destructuring syntax to extract values from objects and arrays. Explain the benefits of using destructuring."
+            },
+            {
+              "title": "Share code between files using modules",
+              "description": "Utilize modules to share code between files. Explain the benefits of using modules and how to import and export modules."
+            },
+            {
+              "title": "Consider performance",
+              "description": "Describe the basics of Big O notation and how it relates to JavaScript. Explain how to optimize code for performance."
+            },
+            {
+              "title": "Define higher order functions",
+              "description": "Explain what higher order functions are and how to use them. Use higher order functions like map, filter, and reduce to manipulate data."
+            },
+            {
+              "title": "Research Programming Paradigms",
+              "description": "Research and explain the difference between imperative and declarative programming. Explain the difference between procedural and object-oriented programming."
             }
-          ]
+          ],
+          "previous": [],
+          "next": ["Front End Framework"]
         },
         {
-          "title": "Create Web Pages with JavaScript",
-          "description": "Utilize JavaScript to manipulate the DOM, handle events, and create interactive web pages. Implement asynchronous programming using callbacks, promises, and async/await. Consider the separate of the data and the view when designing your code. Explain what event bubbling and delegation is. Utilize the fetch API to make requests to a server. Identify your debugging process and research modern debugging techniques to improve your speed and accuracy in application creation. You should utilize GitHub or Bitbucket or similar tool to manage your code. You'll need to reserach Git in order to complete this competency.",
-          "hasContentAreas": [
+          "title": "TypeScript",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "Annotate types for variables, functions, and objects",
+              "description": "Define variables and objects with explicit types along with function parameters and return values. Use type annotations to describe the shape of objects."
+            },
+            {
+              "title": "Utilize interfaces and types",
+              "description": "Create interfaces and types to define the shape of objects. Use interfaces to describe the structure of objects and types to define custom types."
+            },
+            {
+              "title": "Describe Generics",
+              "description": "Explain generics and how they can be used to create reusable components. Use generics to create flexible and reusable functions and classes."
             }
-          ]
+          ],
+          "previous": ["JavaScript"],
+          "next": ["Front End Framework"]
         },
         {
-          "title": "Create Web Applications with CSS, HTML, and JavaScript",
-          "description": "Complete multiple projects that manipulate data and the DOM using HTML, CSS, and JavaScript. Utilize best practices for organizing code, structuring files, and optimizing performance. Utilize the fetch API to make requests to a server. Utilize the fetch API to make requests to a server.  Utilize version control systems to manage your code. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
-          "hasContentAreas": [
+          "title": "Front End Framework",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
-          ]
+          ],
+          "previous": ["JavaScript", "TypeScript"],
+          "next": []
         },
         {
-          "title": "Use React to Create Web Applications",
-          "description": "Capture user input using forms, manage state, and create reusable components in React. Utilize React Router to create a single-page application with multiple views. Utilize hooks such as useState, useEffect, and useContext. Build multiple projects utilizing React, CSS, JSX/HTML and JavaScript. Utilize version control systems to manage your code. Utilize the fetch API to make requests to a server. Utilize IDEs or commonly used professional tools to develop. Seek out ideas for projects and feedback from peers and professionals.",
-          "hasContentAreas": [
+          "title": "Accessibility",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
-          ]
+          ],
+          "previous": ["HTML"],
+          "next": []
         },
         {
-          "title": "Practice TypeScript",
-          "description": "Build on your knowledge of JavaScript by learning TypeScript. Utilize TypeScript to create web applications that are more maintainable, scalable, and reliable. Utilize TypeScript's static typing, interfaces, and type annotations to catch errors early in development. Utilize TypeScript with React to create web applications that are more maintainable, scalable, and reliable.",
-          "hasContentAreas": [
+          "title": "The Web",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
-          ]
+          ],
+          "previous": [],
+          "next": []
         },
         {
-          "title": "Explore Modern Front End Tooling",
-          "description": "Research and work with the following tools: NPM, ESLint, Prettier, Webpack, Babel, and Git. Utilize these tools to improve your workflow, code quality, and collaboration. Utilize version control systems to manage your code.",
-          "hasContentAreas": [
+          "title": "Professional Development",
+          "competencies": [
             {
-              "title": "Web Development"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
-          ]
-        },
-        {
-          "title": "Explain Network Requests",
-          "description": "Explain how network requests work on the internet. Identify and explain GET requests, POST requests. Implement various requests in your projects and code. Utilize tools such as the Fetch API or Axios to make requests in React and JavaScript code.",
-          "hasContentAreas": [
-            {
-              "title": "Web Development"
-            }
-          ]
-        },
-        {
-          "title": "Handle Errors",
-          "description": "Identify and handle errors in your code. Utilize try/catch blocks, error objects, and error handling techniques. Utilize error boundaries in React to catch errors in your components. Utilize debugging tools to identify and fix errors.",
-          "hasContentAreas": [
-            {
-              "title": "Web Development"
-            }
-          ]
-        },
-        {
-          "title": "Explore advanced JavaScript",
-          "description": "Show off your skills in JavaScript by implementing code that illustrates closures, promises, higher order functions, currying, generators and any modern features or design practices that interest you.",
-          "hasContentAreas": [
-            {
-              "title": "Web Development"
-            }
-          ]
+          ],
+          "previous": ["HTML", "CSS", "JavaScript", "TypeScript", "Front End Framework", "Accessibility", "The Web"],
+          "next": []
         }
       ]
     },
     {
       "title": "Unity 2D Game Development",
       "description": "This pathway will guide learners to create 2D games utilizing the Unity Engine. This pathway includes fundamentals of Unity's 2D features, including sprite management, physics, animation, and user interface design. Starting with basic concepts, such as setting up a project and navigating the Unity interface, learners will progress to more advanced topics like scripting in C#, implementing game mechanics, optimizing performance, and publishing games to various platforms. Learners should push to build their own games instead of simply consuming related educational content.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Unity 2d Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Digital Marketing",
-      "description": "Explore the dynamic field of digital marketing, encompassing social media marketing, search engine optimization (SEO), content marketing, email marketing, and digital advertising platforms like Google Ads and Facebook Ads. This pathway will guide learners to develop a comprehensive understanding of digital marketing strategies, tools, and techniques. Learners should focus on hands-on experience by creating and executing digital marketing campaigns.",
-      "competencies": [
-        {
-          "title": "Digital Marketing Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Creative Writing",
-      "description": "Explore creative writing to refine your craft and cultivate your unique voice. Practice consistently, engage with feedback, and study storytelling fundamentals to craft compelling narratives. Develop well-rounded characters, craft engaging plots, and create vivid settings that transport readers into the heart of the narrative.",
-      "competencies": [
-        {
-          "title": "Creative Writing Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Public Speaking Fundamentals",
-      "description": "Develop essential public speaking skills, including overcoming stage fright, organizing speeches, delivering effective presentations, and engaging with audiences confidently.",
-      "competencies": [
-        {
-          "title": "Public Speaking Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Mindfulness and Meditation Fundamentals",
-      "description": "Explore the principles and techniques of meditation and mindfulness to reduce stress, improve focus, and cultivate a greater sense of well-being in daily life. This pathway will guide learners to develop a consistent meditation practice and integrate mindfulness into their daily routines.",
-      "competencies": [
-        {
-          "title": "Mindfulness and Meditation Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
-            {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -783,13 +725,13 @@
     {
       "title": "Music Perforamance Fundamentals",
       "description": "Begin a foundational journey in music performance, focusing on essential skills applicable to any instrument. This pathway introduces instrument pedagogy, covering techniques like posture and hand positioning, alongside fundamental music theory such as scales, intervals, and rhythm. Learners will develop technical proficiency through exercises and repertoire, including scales, arpeggios, and finger exercises, while also honing ear training and sight-reading abilities. Regular practice sessions and performance opportunities will solidify learning, with feedback from instructors and peers guiding progress towards confident and expressive musical performance.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Music Performance Fundamentals competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -798,13 +740,13 @@
     {
       "title": "Japanese Language",
       "description": "Gain proficiency in the Japanese language through this pathway, which is closely modeled after traditional university degrees. Learners will practice grammar, vocubulary, reading, writing, and oral communication skills. This pathway will also guide learners to explore Japanese culture and history, and to engage with native speakers to practice their language skills. Learners should expect to spend several years to achieve proficiency in the fundamentals of Japanese language.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Japanese Language Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -813,13 +755,13 @@
     {
       "title": "Event Planning and Management",
       "description": "Learn the principles and practices of event planning and management, including event design, budgeting, logistics, vendor management, marketing, and coordination, to organize successful events such as conferences, weddings, and corporate functions.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Event Planning Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -828,13 +770,13 @@
     {
       "title": "Artistic Roller Skating",
       "description": "Master the art of roller skating through artistic expression. Learners will develop fundamental skating skills, including balance, agility, and coordination, while also exploring artistic elements such jumps, styles, and choreography. This pathway will guide learners to develop a skating routine, and to engage in regular practice opportunities to refine their skills. Learners should also seek feedback from experienced skaters to improve their technique and artistry. This pathway is designed for people who want to learn to roller skate with no prior experience and strive for artistic expression through skating.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Roller Skating Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -843,13 +785,13 @@
     {
       "title": "Project Management",
       "description": "This pathway will prepare learners to successfully manage projects by providing a comprehensive understanding of project management principles, tools, and techniques. Learners will explore project initiation, planning, execution, monitoring, and closing, while also developing essential skills such as leadership, communication, and risk management. Learners should focus on hands-on experience by managing real-world projects, and seek mentorship from experienced project managers to guide their learning journey.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Project Management Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -858,13 +800,13 @@
     {
       "title": "Culinary Arts",
       "description": "This pathway mirrors the curriculum of professional culinary schools. Covering fundamental techniques, kitchen operations, culinary theory, and practical skills, learners progress from kitchen safety and knife skills to advanced cooking methods like sautéing, braising, and pastry arts. Culinary theory components include flavor profiles, menu planning, and kitchen management, complementing hands-on cooking experience. Learners should seek out feedback from industry professionals and get involved in the local culinary scene.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Culinary Arts Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -873,13 +815,13 @@
     {
       "title": "Emotional Intelligence Fundamentals",
       "description": "Cultivate self-awareness, self-regulation, empathy, and social skills to navigate emotions effectively, build positive relationships, and manage interpersonal conflicts with empathy and understanding.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Emotional Intelligence Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -888,13 +830,13 @@
     {
       "title": "Financial Literacy Fundamentals",
       "description": "Gain knowledge in budgeting, saving, investing, debt management, and financial planning to make informed financial decisions, achieve financial goals, and build long-term financial security.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Financial Literacty Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -903,13 +845,13 @@
     {
       "title": "Mixology Fundamentals",
       "description": "Dive into the world of cocktails, learning about different spirits, mixers, and cocktail recipes to create delicious drinks for yourself and others.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Mixology Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -918,13 +860,13 @@
     {
       "title": "Outdoor Survival Fundamentals",
       "description": "Learn basic survival skills such as fire starting, shelter building, navigation, and foraging to feel confident and prepared for outdoor adventures.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Outdoor Survival Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -933,13 +875,13 @@
     {
       "title": "Birdwatching Fundamentals",
       "description": "Embrace the wonders of birdwatching, learning how to identify common bird species, use binoculars, and keep a bird journal to document your sightings and observations in nature",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Birdwatching Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -948,13 +890,13 @@
     {
       "title": "Graphic Design",
       "description": "This pathway focuses on visual communication, typography, layout design, and digital media production, providing learners with skills in graphic design software, branding, and multimedia design, and preparing them for careers in graphic design, advertising, digital media, or web design. Similar to a college degree, learners will need to develop a portfolio of work to demonstrate their skills and knowledge as well as demonstrate proficiency in fundamentals through projects, research, and collaboration. Learners should expect to spend several years to achieve proficiency in the field of graphic design.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Design Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -963,13 +905,13 @@
     {
       "title": "Philosophy",
       "description": "This pathway delves into the fundamental questions concerning existence, knowledge, ethics, and the nature of reality. Through rigorous inquiry and critical analysis, learners explore diverse philosophical traditions, from ancient Greek philosophy to contemporary thought. They engage with topics such as metaphysics, epistemology, ethics, logic, political philosophy, and aesthetics, examining philosophical texts, arguments, and theories to develop their analytical, critical thinking, and argumentation skills. Througout years of study, learners should emphasize research, writing, and oral communication, and forumulating and defedning their own philosophical viewpoints through essays, debates, and presentations",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "Philosophy Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }
@@ -978,13 +920,13 @@
     {
       "title": "SQL Fundamentals",
       "description": "Learn to manipulate data using SQL commands, including SELECT, INSERT, UPDATE, and DELETE, gaining proficiency in retrieving, filtering, and organizing data from relational databases.",
-      "competencies": [
+      "contentAreas": [
         {
-          "title": "SQL Fundamentals Competencies Coming Soon!",
-          "description": "Competencies currently under development. All pathways will receive updated competencies soon.",
-          "hasContentAreas": [
+          "title": "Coming Soon!",
+          "competencies": [
             {
-              "title": "Programming"
+              "title": "competencies coming soon",
+              "description": "coming soon"
             }
           ]
         }

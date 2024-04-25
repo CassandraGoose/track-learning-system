@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
   binaryTargets = ["native", "rhel-openssl-3.0.x"]
 }
 
@@ -12,54 +12,56 @@ datasource db {
 }
 
 model Person {
-  id                String       @id @default(cuid())
+  id                String    @id @default(cuid())
   sessions          Session[]
   hashedPassword    String
-  createdAt         DateTime     @default(now())
-  username          String       @unique
-  firstName         String      
+  createdAt         DateTime  @default(now())
+  username          String    @unique
+  firstName         String
   lastName          String
   bio               String
-  email             String       @unique
-  role              Role         @default(USER)
-  profileVisibility Boolean      @default(true)
+  email             String    @unique
+  role              Role      @default(USER)
+  profileVisibility Boolean   @default(true)
   proofs            Proof[]
   pathways          Pathway[]
 }
 
 model Session {
-  id        String @id
+  id        String   @id
   userId    String
   expiresAt DateTime
-  person    Person @relation(references: [id], fields: [userId], onDelete: Cascade)
+  person    Person   @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 
 model Competency {
-  id                  Int           @id @default(autoincrement())
-  createdAt           DateTime      @default(now())
-  updatedAt           DateTime      @default(now())
-  title               String        @unique
-  description         String
-  pathways            Pathway[]
-  contentArea         ContentArea
-  proofs              Proof[]
+  id            Int         @id @default(autoincrement())
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @default(now())
+  title         String
+  description   String
+  contentArea   ContentArea @relation(fields: [contentAreaId], references: [id])
+  proofs        Proof[]
+  contentAreaId Int
+}
+
+model Pathway {
+  id           Int           @id @default(autoincrement())
+  createdAt    DateTime      @default(now())
+  title        String        @unique
+  approved     Boolean       @default(false)
+  description  String
+  contentAreas ContentArea[]
+  persons      Person[]
 }
 
 model ContentArea {
   id           Int          @id @default(autoincrement())
   createdAt    DateTime     @default(now())
-  title        String       @unique
-  description  String
+  title        String
+  pathway      Pathway      @relation(fields: [pathwayId], references: [id])
+  pathwayId    Int
   competencies Competency[]
-}
-
-model Pathway {
-  id            Int           @id @default(autoincrement())
-  createdAt     DateTime      @default(now())
-  title         String        @unique
-  description   String
-  competencies  Competency[]
-  persons       Person[]
 }
 
 model Proof {

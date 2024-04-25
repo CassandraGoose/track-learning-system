@@ -68,10 +68,9 @@ interface ActionResult {
 
 export async function login(formData: FormData): Promise<ActionResult> {
   const username = formData.get('username');
-
   // this is awful, but it's only for one user and it's for demo purposes.
   // i don't care if this user gets messed up.
-  if (username === 'CassTheOG') {
+  if (username === 'IAmCass') {
     formData.set('password', 'test123!');
   }
 

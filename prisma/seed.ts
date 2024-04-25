@@ -1,54 +1,73 @@
 import { PrismaClient } from '@prisma/client';
 import { Argon2id } from 'oslo/password';
-import contentAreasData from './data/contentAreas.json';
 import pathwaysData from './data/pathways.json';
 
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.contentArea.createMany({
-    data: contentAreasData.contentAreas,
-  });
-
   await prisma.pathway.createMany({
     data: pathwaysData.pathways.map((pathway) => ({
       title: pathway.title,
       description: pathway.description,
+      approved: pathway.approved === 'true',
     })),
   });
 
-  pathwaysData.pathways.forEach((pathway) => {
-    pathway.competencies.forEach(async (competency) => {
-      await prisma.competency.create({
+  const createdPathways = await prisma.pathway.findMany();
+
+  createdPathways.forEach((pathway) => {
+    const contentAreas = pathwaysData.pathways.find(
+      (p) => p.title === pathway.title,
+    )?.contentAreas;
+    if (!contentAreas) throw new Error('Content areas not found');
+
+    contentAreas.forEach(async (contentArea) => {
+      await prisma.contentArea.create({
         data: {
-          title: competency.title,
-          description: competency.description,
-          pathways: {
-            connect: [
-              {
-                title: pathway.title,
-              },
-            ],
-          },
-          contentAreas: {
-            connect: competency.hasContentAreas,
+          title: contentArea.title,
+          pathway: {
+            connect: {
+              id: pathway.id,
+            },
           },
         },
+      });
+
+      const createdContentArea = await prisma.contentArea.findFirst({
+        where: {
+          title: contentArea.title,
+        },
+      });
+
+      contentArea.competencies.forEach(async (competency) => {
+        await prisma.competency.create({
+          data: {
+            title: competency.title,
+            description: competency.description,
+            contentArea: {
+              connect: {
+                id: createdContentArea?.id,
+              },
+            },
+          },
+        });
       });
     });
   });
 
   const pw = process.env.TEST_USER_PW || '';
+  console.log('PW IS: ', pw);
+  
   const hashedPassword = await new Argon2id().hash(pw);
 
   await prisma.person.upsert({
     where: { email: process.env.TEST_USER_EMAIL },
     create: {
       email: process.env.TEST_USER_EMAIL || '',
-      username: 'CassTheOG',
+      username: 'IAmCass',
       firstName: 'Cass',
       lastName: 'T',
-      bio: 'I am the person who created this application. Hi!',
+      bio: "Hi, I'm Cassandra. I'm a JavaScript developer with a knack for weaving education and code together. I enjoy working throughout the stack and have a particular love for creating front end applications. I believe that coding is a craft and I aim to deliver thoughtful, empathetic, and elegant code. When I'm not crafting code, you can find me indulging my creative side as an artist, musician, and writer.",
       hashedPassword: hashedPassword,
       id: process.env.TEST_USER_ID || '',
       pathways: {
@@ -57,30 +76,15 @@ async function main() {
             title: 'Use Track',
           },
           {
+            title: 'Learn to Learn',
+          },
+          {
             title: 'Illustration',
           },
         ],
       },
     },
     update: {},
-  });
-
-  await prisma.proof.create({
-    data: {
-      title: 'Pathway Searching',
-      description: 'I found the pathway',
-      justification: 'Here is how I did it.',
-      competency: {
-        connect: {
-          title: 'Find personal pathways',
-        },
-      },
-      author: {
-        connect: {
-          username: 'CassTheOG',
-        },
-      },
-    },
   });
 }
 

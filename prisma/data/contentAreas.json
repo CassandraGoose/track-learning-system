@@ -49,6 +49,10 @@
       "description": "Drawing involves understanding how to create art using drawing techniques. It includes exploring drawing history, gaining technical skills, critically analyzing drawing, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
     },
     {
+      "title": "Painting",
+      "description": "Utilize brush techniques and art fundamentals to create art on paper and canvas through painting mediums such as acrylic, oil, and watercolor. Develop your artistic voice and style through color theory, composition, and subject matter."
+    },
+    {
       "title": "2D Design Fundamentals",
       "description": "In the realm of two-dimensional art, learners delve into conceptual and visual elements. Through this exploration, they gain insight into fundamental design principles, honing their ability to analyze and visually express formal considerations when tackling studio problems, drawing inspiration from both contemporary and historical artworks."
     },
@@ -65,6 +69,10 @@
       "description": "Engaging in metacognition involves developing an awareness and understanding of one's own thought processes. This cognitive skill encompasses the ability to reflect on and regulate one's thinking, learning strategies, and problem-solving approaches, fostering a deeper understanding of how to learn effectively and continuously improve cognitive abilities."
     },
     {
+      "title": "Learning",
+      "description": "The art of learning involves mastery of skills such as critical thinking, growth mindset, study strategies, time management, feedback, and self-regulation."
+    },
+    {
       "title": "Programming",
       "description": "Programming involves understanding how to write code to create software applications, websites, and other digital tools. It includes exploring programming languages, gaining technical skills, critically analyzing code, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
     },
@@ -75,6 +83,10 @@
     {
       "title": "Web Development",
       "description": "Web development involves understanding how to create websites and web applications. It includes exploring web technologies, gaining technical skills, critically analyzing web design, and developing the ability to communicate ideas effectively, fostering a comprehensive approach to problem-solving and creative expression."
+    },
+    {
+      "title": "Navigating Track",
+      "description": "Learning to use the track application will help guide your learning and allow you to share your progress and successes with friends, family, and employers."
     }
   ]
 }

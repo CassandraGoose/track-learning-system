@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getFilteredPathways, getFilteredPathwaysCount } from '../lib/queries';
 import PathwayCard from '../_components/PathwayCard';
-import { Competency } from '../lib/interface';
+import { ContentArea } from '../lib/interface';
 import ContentAreaPill from '../_components/ContentAreaPill';
 import Search from '../_components/Search';
 import Pagination from '../_components/Pagination';
@@ -24,28 +24,14 @@ export default async function Page({
     notFound();
   }
 
-  const createContentAreaList = (competencies: Competency[]) => {
-    if (!competencies) notFound();
-    return competencies.map((competency) => {
-      if (!competency.contentAreas) notFound();
-
-      return competency.contentAreas.map((contentArea) => {
-        return { title: contentArea.title, parentId: competency.id };
-      });
-    });
-  };
-
-  const createCardActionChild = (competencies: Competency[]) => {
-    const contentAreas = createContentAreaList(competencies);
-
+  const createCardActionChild = (contentAreas: ContentArea[]) => {
     return (
       <div className="flex flex-wrap">
         {contentAreas
-          .flat()
-          .map((contentArea: { title: string; parentId: number }) => (
+          .map((contentArea) => (
             <span
               className="mr-2"
-              key={contentArea.title + contentArea.parentId}
+              key={contentArea.title + contentArea.id}
             >
               <ContentAreaPill contentArea={contentArea.title} />
             </span>
@@ -79,7 +65,7 @@ export default async function Page({
                 title={pathway.title}
                 description={pathway.description}
                 rightBlockChild={createRightBlockChild(pathway.id)}
-                cardActionChild={createCardActionChild(pathway.competencies)}
+                cardActionChild={createCardActionChild(pathway.contentAreas)}
               />
             );
           })}

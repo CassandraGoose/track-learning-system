@@ -5,32 +5,18 @@ export default function CompetencyCard({competency}: { competency: Competency })
   return (
     <div
       key={competency.id}
-      className="border-black card rounded-md border md:max-w-[32%]"
+      className="border-black card rounded-md border md:w-[32%] w-full"
     >
-      <div className="card-body h-[70%] overflow-y-hidden">
-        <p className="card-title" data-testid="competency-title">
+      <div className="card-body max-h-80">
+        <p className="card-title items-start grow-0" data-testid="competency-title">
           {competency.title}
         </p>
-        <p className="line-clamp-5 text-ellipsis">{competency.description}</p>
-        <div className="flex flex-wrap space-y-2 lg:space-x-2 lg:space-y-0 sm:space-y-0 sm:space-x-2">
-          {competency.contentAreas &&
-            competency.contentAreas.map((contentArea: ContentArea) => {
-              return (
-                <div
-                  className="badge badge-outline h-fit md:text-xxs"
-                  key={contentArea.id}
-                  data-testid="competency-content-area-badge"
-                >
-                  {contentArea.title}
-                </div>
-              );
-            })}
-        </div>
+        <p className="text-clamp-5 overflow-hidden ">{competency.description}</p>
       </div>
-      {competency?.proofs?.length && (<div className="card-body card-actions flex flex-col bg-primary text-bright">
+    {competency?.proofs?.length ? (<div className="card-body card-actions flex flex-col bg-primary text-bright">
         <p className="text-sm">Proof of competency:</p>
          <ProofButtons competency={competency} />
-      </div>)}
+      </div>): null}
     </div>
   );
 }

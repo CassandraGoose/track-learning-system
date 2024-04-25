@@ -17,7 +17,7 @@ async function globalSetup(config: FullConfig) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto('http://localhost:3000/login');
-  await page.getByTestId("username").fill("CassTheOG");
+  await page.getByTestId("username").fill("IAmCass");
   await page.getByTestId("password").fill(process.env.TEST_USER_PW || '');
   await page.getByTestId("login").click();
   await page.waitForURL('http://localhost:3000/dashboard');

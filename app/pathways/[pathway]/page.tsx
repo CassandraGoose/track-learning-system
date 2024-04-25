@@ -22,7 +22,9 @@ export default async function Page({
   let hasPathway;
   if (!!user) {
     userPathways = await getSingleUserPathway(singlePathway.id.toString());
-    hasPathway = userPathways?.pathways.find((pathway) => pathway.id === singlePathway.id);
+    hasPathway = userPathways?.pathways.find(
+      (pathway) => pathway.id === singlePathway.id,
+    );
   }
 
   return (
@@ -33,7 +35,12 @@ export default async function Page({
             <h1 className="text-2xl" data-testid="pathway-title">
               {singlePathway.title}
             </h1>
-            {!!user && <FollowPathwayButton pathway={singlePathway} hasPathway={!!hasPathway}/>}
+            {!!user && (
+              <FollowPathwayButton
+                pathway={singlePathway}
+                hasPathway={!!hasPathway}
+              />
+            )}
           </div>
           <p data-testid="pathway-description">{singlePathway.description}</p>
           <div className="flex flex-col items-center justify-center space-y-8">
@@ -45,12 +52,27 @@ export default async function Page({
               below by uploading artifacts (called &apos;proofs&apos;) to act as
               proof of your skills and knowledge.
             </p>
-            <div className="card-body flex w-full flex-row flex-wrap">
-              {singlePathway.competencies.map((competency) => {
+            <div>
+              {singlePathway.contentAreas.map((contentArea) => {
                 return (
-                  <Fragment key={competency.id}>
-                    <CompetencyCard competency={competency} />
-                  </Fragment>
+                  <>
+                    <hr />
+                    <section
+                      className="my-8 flex flex-col items-center"
+                      key={contentArea.id}
+                    >
+                      <h2 className="text-xl">{contentArea.title}</h2>
+                      <div className="card-body flex w-full flex-row flex-wrap justify-around">
+                        {contentArea.competencies.map((competency) => {
+                          return (
+                            <Fragment key={competency.id}>
+                              <CompetencyCard competency={competency} />
+                            </Fragment>
+                          );
+                        })}
+                      </div>
+                    </section>
+                  </>
                 );
               })}
             </div>

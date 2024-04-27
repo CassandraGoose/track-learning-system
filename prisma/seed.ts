@@ -25,6 +25,7 @@ async function main() {
       await prisma.contentArea.create({
         data: {
           title: contentArea.title,
+          order: parseInt(contentArea.order),
           pathway: {
             connect: {
               id: pathway.id,
@@ -39,11 +40,14 @@ async function main() {
         },
       });
 
+      if (!createdContentArea) throw new Error('Content area not found');
+
       contentArea.competencies.forEach(async (competency) => {
         await prisma.competency.create({
           data: {
             title: competency.title,
             description: competency.description,
+            order: parseInt(competency.order),
             contentArea: {
               connect: {
                 id: createdContentArea?.id,

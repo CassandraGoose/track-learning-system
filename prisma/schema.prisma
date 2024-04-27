@@ -40,6 +40,7 @@ model Competency {
   updatedAt     DateTime    @default(now())
   title         String
   description   String
+  order         Int
   contentArea   ContentArea @relation(fields: [contentAreaId], references: [id])
   proofs        Proof[]
   contentAreaId Int
@@ -59,6 +60,7 @@ model ContentArea {
   id           Int          @id @default(autoincrement())
   createdAt    DateTime     @default(now())
   title        String
+  order        Int
   pathway      Pathway      @relation(fields: [pathwayId], references: [id])
   pathwayId    Int
   competencies Competency[]

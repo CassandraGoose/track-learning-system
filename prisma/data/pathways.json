@@ -7,18 +7,22 @@
       "contentAreas": [
         {
           "title": "Navigating Track",
+          "order": "1",
           "competencies": [
             {
               "title": "View Pathways",
-              "description": "Explain how to view the pathways you follow, see your competencies and completion status."
+              "description": "Explain how to view the pathways you follow, see your competencies and completion status.",
+              "order": "1"
             },
             {
               "title": "View your competencies and proofs",
-              "description": "Navigate into a pathway to view required competencies and see the proofs you have added"
+              "description": "Navigate into a pathway to view required competencies and see the proofs you have added",
+              "order": "2"
             },
             {
               "title": "View your profile",
-              "description": "Navigate to your profile to view your learning journey."
+              "description": "Navigate to your profile to view your learning journey.",
+              "order": "3"
             }
           ],
           "previous": [],
@@ -26,14 +30,17 @@
         },
         {
           "title": "Using Track",
+          "order": "2",
           "competencies": [
             {
               "title": "Add proof of your learning and competency",
-              "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path."
+              "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path.",
+              "order": "1"
             },
             {
               "title": "Share your profile",
-              "description": "Share your profile with others to showcase your learning journey and prove your knowledge and skills"
+              "description": "Share your profile with others to showcase your learning journey and prove your knowledge and skills",
+              "order": "2"
             }
           ],
           "previous": ["Navigating Track"],
@@ -41,14 +48,17 @@
         },
         {
           "title": "Learning",
+          "order": "3",
           "competencies": [
             {
               "title": "Explain why it is necessary to prove your competency.",
-              "description": "Proving your understanding isn't just Track functionality. Proving your understanding is a fundamental educational concept. How do you know that you know something?"
+              "description": "Proving your understanding isn't just Track functionality. Proving your understanding is a fundamental educational concept. How do you know that you know something?",
+              "order": "1"
             },
             {
               "title": "Identify what makes a quality proof",
-              "description": "What kind of artifact will truly highlight your skills, abilities, and knowledge? What makes an artifact or explanation prove your ability? Judging the value of your work is a key skill in learning."
+              "description": "What kind of artifact will truly highlight your skills, abilities, and knowledge? What makes an artifact or explanation prove your ability? Judging the value of your work is a key skill in learning.",
+              "order": "2"
             }
           ],
           "previous": [],
@@ -63,30 +73,37 @@
       "contentAreas": [
         {
           "title": "Learning",
+          "order": "1",
           "competencies": [
             {
               "title": "Summarize the concept of Growth Mindset",
-              "description": "Explain and justify the importance of a growth mindset in learning, and apply strategies to develop and maintain a growth mindset in learning."
+              "description": "Explain and justify the importance of a growth mindset in learning, and apply strategies to develop and maintain a growth mindset in learning.",
+              "order": "1"
             },
             {
               "title": "Practice Growth Mindset",
-              "description": "When learning, implement what you summarized when learning about the concept of a growth mindset."
+              "description": "When learning, implement what you summarized when learning about the concept of a growth mindset.",
+              "order": "2"
             },
             {
               "title": "Explore Critical Thinking",
-              "description": "Justify the importance of thinking deeply about a concept and exploring concepts from multiple perspectives. When reading, writing, or practicing during learning, push yourself to go beyond memorization and recall."
+              "description": "Justify the importance of thinking deeply about a concept and exploring concepts from multiple perspectives. When reading, writing, or practicing during learning, push yourself to go beyond memorization and recall.",
+              "order": "3"
             },
             {
               "title": "Reflect on Critical Thinking",
-              "description": "How have you implemented what you learned about critical thinking in your learning? Reflect on your learning and how you have applied critical thinking."
+              "description": "How have you implemented what you learned about critical thinking in your learning? Reflect on your learning and how you have applied critical thinking.",
+              "order": "4"
             },
             {
               "title": "Research Feedback",
-              "description": "Why is feedback important in learning?"
+              "description": "Why is feedback important in learning?",
+              "order": "5"
             },
             {
               "title": "Receive Feedback",
-              "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback."
+              "description": "Seek out feedback from a trusted source such as an instructor or professional in the field. Implement feedback to improve your learning and skills. Self-reflect and provide yourself feedback.",
+              "order": "6"
             }
           ],
           "previous": [],
@@ -94,22 +111,27 @@
         },
         {
           "title": "Metacognition",
+          "order": "2",
           "competencies": [
             {
               "title": "Explore Self Regulation",
-              "description": "Explain the importance of managing emotions, behavior, and motivation in learning, and identify strategies to self-regulate effectively, such as limiting applications on computers and phones, silencing phones, and practicing mindfulness techniques."
+              "description": "Explain the importance of managing emotions, behavior, and motivation in learning, and identify strategies to self-regulate effectively, such as limiting applications on computers and phones, silencing phones, and practicing mindfulness techniques.",
+              "order": "1"
             },
             {
               "title": "Self Regulate",
-              "description": "Select strategies and tools that you explored when learning about self regulation. Implement these strategies and tools. Reflect and iterate."
+              "description": "Select strategies and tools that you explored when learning about self regulation. Implement these strategies and tools. Reflect and iterate.",
+              "order": "2"
             },
             {
               "title": "Discover Time Management That Works for You",
-              "description": "Research various time management strategies and tools such as time-blocking or the Pomodoro technique. Implement a time management strategy that works best for you."
+              "description": "Research various time management strategies and tools such as time-blocking or the Pomodoro technique. Implement a time management strategy that works best for you.",
+              "order": "3"
             },
             {
               "title": "Discover Learning Strategies That Work for You",
-              "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you."
+              "description": "Identify and describe various learning strategies such as active learning, spaced repetition, mnemonic devices, collaborative learning, etc. Implement a learning strategy that works best for you.",
+              "order": "4"
             }
           ],
           "previous": [],
@@ -124,26 +146,32 @@
       "contentAreas": [
         {
           "title": "2D Design Fundamentals",
+          "order": "1",
           "competencies": [
             {
               "title": "Define line, shape, form, proportion, and value",
-              "description": "Define line, shape, form, proportion, and value, and explain how these elements are used in 2D design"
+              "description": "Define line, shape, form, proportion, and value, and explain how these elements are used in 2D design",
+              "order": "1"
             },
             {
               "title": "Explore form and space in 2D design",
-              "description": "Explain how to utilize and represent form and space in 2D design"
+              "description": "Explain how to utilize and represent form and space in 2D design",
+              "order": "2"
             },
             {
               "title": "Define composition principles",
-              "description": "Define balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
+              "description": "Define balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings.",
+              "order": "3"
             },
             {
               "title": "Define Perspective",
-              "description": "Summarize one-point, two-point, and three-point perspective, and explain how to apply these methods to create drawings and illustrations that accurately depict spatial relationships and depth."
+              "description": "Summarize one-point, two-point, and three-point perspective, and explain how to apply these methods to create drawings and illustrations that accurately depict spatial relationships and depth.",
+              "order": "4"
             },
             {
               "title": "Explore 2D Design",
-              "description": "Research 2D design fundamentals and dig into a particular area that interests you. Write about what you learned and how you can apply it to your work."
+              "description": "Research 2D design fundamentals and dig into a particular area that interests you. Write about what you learned and how you can apply it to your work.",
+              "order": "5"
             }
           ],
           "previous": [],
@@ -157,30 +185,37 @@
         },
         {
           "title": "Drawing",
+          "order": "2",
           "competencies": [
             {
               "title": "Utilize line, shape, form, proportion, and value when drawing",
-              "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques."
+              "description": "Apply foundational drawing skills, such as line, shape, form, and proportion, to create drawings that demonstrate proficiency and understanding of these techniques.",
+              "order": "1"
             },
             {
               "title": "Depict Form and Space on Paper",
-              "description": "Depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space."
+              "description": "Depict form and space on paper using a variety of drawing techniques, such as shading, cross-hatching, and rendering, to create the illusion of three-dimensional form and space.",
+              "order": "2"
             },
             {
               "title": "Implement Composition Principles",
-              "description": "Implement balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings."
+              "description": "Implement balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in drawings.",
+              "order": "3"
             },
             {
               "title": "Apply Perspective Methods",
-              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth."
+              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create drawings and illustrations that accurately depict spatial relationships and depth.",
+              "order": "4"
             },
             {
               "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Drawing",
-              "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+              "description": "Evaluate and critique contemporary and historical art in the context of drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+              "order": "5"
             },
             {
               "title": "Reflect on Design Choices and Artistic Process In Drawing",
-              "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+              "description": "Reflect on design choices and artistic process in drawing, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+              "order": "6"
             }
           ],
           "previous": ["2D Design Fundamentals"],
@@ -188,46 +223,57 @@
         },
         {
           "title": "Painting",
+          "order": "3",
           "competencies": [
             {
               "title": "Blend",
-              "description": "Blend colors to create smooth transitions and gradations in paintings."
+              "description": "Blend colors to create smooth transitions and gradations in paintings.",
+              "order": "1"
             },
             {
               "title": "Mix Colors",
-              "description": "Mix colors to create a wide range of hues, tints, and shades in paintings."
+              "description": "Mix colors to create a wide range of hues, tints, and shades in paintings.",
+              "order": "2"
             },
             {
               "title": "Dry Brush",
-              "description": "Utilize dry brushing techniques to create texture and detail in paintings."
+              "description": "Utilize dry brushing techniques to create texture and detail in paintings.",
+              "order": "3"
             },
             {
               "title": "Stipple",
-              "description": "Utilize stippling techniques to create texture and detail in paintings."
+              "description": "Utilize stippling techniques to create texture and detail in paintings.",
+              "order": "4"
             },
             {
               "title": "Underpaint",
-              "description": "Establish tonal values, enhance color harmony, and create depth in paintings through underpainting techniques."
+              "description": "Establish tonal values, enhance color harmony, and create depth in paintings through underpainting techniques.",
+              "order": "5"
             },
             {
               "title": "Utilize various mediums",
-              "description": "Practice with acrylic, oil, and watercolor mediums"
+              "description": "Practice with acrylic, oil, and watercolor mediums",
+              "order": "6"
             },
             {
               "title": "Implement Composition Principles",
-              "description": "Implement  balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in paintings."
+              "description": "Implement  balance, contrast, hierarchy, emphasis, simplicity, movement, rhythm, negative space, and unity, to create visually engaging and dynamic compositions in paintings.",
+              "order": "7"
             },
             {
               "title": "Apply Perspective Methods",
-              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create paintings that accurately depict spatial relationships and depth."
+              "description": "Apply perspective methods, such as one-point, two-point, and three-point perspective, to create paintings that accurately depict spatial relationships and depth.",
+              "order": "8"
             },
             {
               "title": "Evaluate and Critique Contemporary and Historical Art in the Context of Painting",
-              "description": "Evaluate and critique contemporary and historical art in the context of painting, identifying and analyzing the formal elements, principles of design, skills, and conceptual ideas present in the artwork."
+              "description": "Evaluate and critique contemporary and historical art in the context of painting, identifying and analyzing the formal elements, principles of design, skills, and conceptual ideas present in the artwork.",
+              "order": "9"
             },
             {
               "title": "Reflect on Design Choices and Artistic Process In Painting",
-              "description": "Reflect on design choices and artistic process in painting, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork."
+              "description": "Reflect on design choices and artistic process in painting, identifying and analyzing the formal elements, principles of design, and conceptual ideas present in the artwork.",
+              "order": "10"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing"],
@@ -235,22 +281,27 @@
         },
         {
           "title": "Life Drawing",
+          "order": "4",
           "competencies": [
             {
               "title": "Label muscles and bones of the human body",
-              "description": "Label the major muscle groups and bones of the human body to improve the proportions of your art."
+              "description": "Label the major muscle groups and bones of the human body to improve the proportions of your art.",
+              "order": "1"
             },
             {
               "title": "Label common proportion of the human face",
-              "description": "Label the common proportions of the human face to improve the proportions of your art."
+              "description": "Label the common proportions of the human face to improve the proportions of your art.",
+              "order": "2"
             },
             {
               "title": "Create dynamic poses and expressions",
-              "description": "Create dynamic poses and expressions to convey life in your art."
+              "description": "Create dynamic poses and expressions to convey life in your art.",
+              "order": "3"
             },
             {
               "title": "Draw anatomically correct figures and faces",
-              "description": "Complete many drawings of people in various poses and expressions.Draw figures and faces from life, photographs, and imagination."
+              "description": "Complete many drawings of people in various poses and expressions.Draw figures and faces from life, photographs, and imagination.",
+              "order": "4"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing"],
@@ -258,22 +309,27 @@
         },
         {
           "title": "Illustration",
+          "order": "5",
           "competencies": [
             {
               "title": "Research historic and current trends in illustration",
-              "description": "Research historic and current trends in illustration and apply them to your work. Consider mediums and tools used by illustrators in the past and present. Consider styles and techniques used by illustrators in the past and present. Consider formats and genres used by illustrators in the past and present. Select a historic or current trend in illustration that interests you and write about it."
+              "description": "Research historic and current trends in illustration and apply them to your work. Consider mediums and tools used by illustrators in the past and present. Consider styles and techniques used by illustrators in the past and present. Consider formats and genres used by illustrators in the past and present. Select a historic or current trend in illustration that interests you and write about it.",
+              "order": "1"
             },
             {
               "title": "Develop a unique style and voice",
-              "description": "Develop a unique style and voice in your illustrations. Consider the formal elements and principles of design in your work. Consider the conceptual ideas and themes in your work. Consider the techniques and mediums in your work. Consider the formats and genres in your work. Create a series of illustrations that demonstrate your unique style and voice."
+              "description": "Develop a unique style and voice in your illustrations. Consider the formal elements and principles of design in your work. Consider the conceptual ideas and themes in your work. Consider the techniques and mediums in your work. Consider the formats and genres in your work. Create a series of illustrations that demonstrate your unique style and voice.",
+              "order": "2"
             },
             {
               "title": "Explore formats and genres in illustration",
-              "description": "Create illustrations for books, magazines, advertisements, and other media. Create illustrations in genres such as fantasy, science fiction, horror, and more. Create illustrations in formats such as editorial, advertising, and children's books. Create illustrations that tell a story or convey a message. Create illustrations that evoke emotions or moods."
+              "description": "Create illustrations for books, magazines, advertisements, and other media. Create illustrations in genres such as fantasy, science fiction, horror, and more. Create illustrations in formats such as editorial, advertising, and children's books. Create illustrations that tell a story or convey a message. Create illustrations that evoke emotions or moods.",
+              "order": "3"
             },
             {
               "title": "Seek out feedback",
-              "description": "Seek out feedback from peers and professionals to improve your work."
+              "description": "Seek out feedback from peers and professionals to improve your work.",
+              "order": "4"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting"],
@@ -281,22 +337,27 @@
         },
         {
           "title": "Digital Art",
+          "order": "6",
           "competencies": [
             {
               "title": "Explore digital art tools",
-              "description": "Test out Photoshop, Illustrator, and Procreate. Create a series of digital illustrations using these tools. Reflect on your experience and the results."
+              "description": "Test out Photoshop, Illustrator, and Procreate. Create a series of digital illustrations using these tools. Reflect on your experience and the results.",
+              "order": "1"
             },
             {
               "title": "Define layers, vectors, raster, and brushes",
-              "description": "Develop vocabulary to describe digital art tools."
+              "description": "Develop vocabulary to describe digital art tools.",
+              "order": "2"
             },
             {
               "title": "Summarize the importance of file formats and resolution",
-              "description": "Research file format options and resolutions in digital art. Print out some of your work to see how it looks in print."
+              "description": "Research file format options and resolutions in digital art. Print out some of your work to see how it looks in print.",
+              "order": "3"
             },
             {
               "title": "Apply fundamental art concepts to your digital work",
-              "description": "Apply traditional drawing and painting techniques to your digital work. Create a series of digital illustrations using these techniques. Consider line, shape, form, proportion, value, perspective, composition, color, texture, and more in your work."
+              "description": "Apply traditional drawing and painting techniques to your digital work. Create a series of digital illustrations using these techniques. Consider line, shape, form, proportion, value, perspective, composition, color, texture, and more in your work.",
+              "order": "4"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting"],
@@ -304,38 +365,47 @@
         },
         {
           "title": "Professional Development",
+          "order": "7",
           "competencies": [
             {
               "title": "Create a portfolio",
-              "description": "Organize your work into a cohesive portfolio that demonstrates your skills and style. Consider your audience and goals when building this."
+              "description": "Organize your work into a cohesive portfolio that demonstrates your skills and style. Consider your audience and goals when building this.",
+              "order": "1"
             },
             {
               "title": "Research copyright laws",
-              "description": "Research copyright laws to protect your work and understand how to use other's work."
+              "description": "Research copyright laws to protect your work and understand how to use other's work.",
+              "order": "2"
             },
             {
               "title": "Research marketing as an artist",
-              "description": "Research marketing as an artist to understand how to promote your work and reach your audience. Createa marketing plan for your work."
+              "description": "Research marketing as an artist to understand how to promote your work and reach your audience. Createa marketing plan for your work.",
+              "order": "3"
             },
             {
               "title": "Create a resume",
-              "description": "Create a resume that highlights your skills and experience as an artist. Consider your audience and goals when building this. Find examples and templates to help guide you."
+              "description": "Create a resume that highlights your skills and experience as an artist. Consider your audience and goals when building this. Find examples and templates to help guide you.",
+              "order": "4"
             },
             {
               "title": "Build a social media presence",
-              "description": "Considering your marketing research and goals, you may want to create a Instagram, TikTok, Facebook page, Society 6, Redbubble, Twitch or Youtube channel, or website. Consider your audience and goals when building this."
+              "description": "Considering your marketing research and goals, you may want to create a Instagram, TikTok, Facebook page, Society 6, Redbubble, Twitch or Youtube channel, or website. Consider your audience and goals when building this.",
+              "order": "5"
             },
             {
               "title": "Network with other artists",
-              "description": "Find meetups, job fairs, or online communities to connect with other artists. Seek out feedback from peers and professionals to improve your work."
+              "description": "Find meetups, job fairs, or online communities to connect with other artists. Seek out feedback from peers and professionals to improve your work.",
+              "order": "6"
             },
             {
               "title": "Seek out opportunities to exhibit and sell your work",
-              "description": "Research local galleries, art fairs, and online platforms to exhibit and sell your work."
+              "description": "Research local galleries, art fairs, and online platforms to exhibit and sell your work.",
+              "order": "7"
             },
             {
               "title": "Research jobs that align with your skills",
-              "description": "Research jobs such as illustrator, concept artist, storyboard artist, graphic designer, art director, and more. Create a list of potential jobs that interest you. Go through various job boards and find job postings that interest you. If there are any skills missing, research how to acquire them. Consider internships!"
+              "description": "Research jobs such as illustrator, concept artist, storyboard artist, graphic designer, art director, and more. Create a list of potential jobs that interest you. Go through various job boards and find job postings that interest you. If there are any skills missing, research how to acquire them. Consider internships!",
+              "order": "8"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing", "Life Drawing", "Painting", "Digital Art"],
@@ -343,26 +413,32 @@
         },
         {
           "title": "Art History",
+          "order": "8",
           "competencies": [
             {
               "title": "Identify major artists, movements, and periods including Western and non-Western art.",
-              "description": "In your writings, showcase your ability to communicate clearly and effectively."
+              "description": "In your writings, showcase your ability to communicate clearly and effectively.",
+              "order": "1"
             },
             {
               "title": "Summarize time periods from prehistory to medieval and Renaissance to today",
-              "description": "In your writings, showcase your ability to communicate clearly and effectively."
+              "description": "In your writings, showcase your ability to communicate clearly and effectively.",
+              "order": "2"
             },
             {
               "title": "Research and write about several topics and movements within the history of art that interests you. Reflect on how art has changed and influenced society",
-              "description": "In your writings, showcase your ability to communicate clearly and effectively."
+              "description": "In your writings, showcase your ability to communicate clearly and effectively.",
+              "order": "3"
             },
             {
               "title": "Justify the importance of understanding art history in the context of your own work",
-              "description": " In your writings, showcase your ability to communicate clearly and effectively."
+              "description": " In your writings, showcase your ability to communicate clearly and effectively.",
+              "order": "4"
             },
             {
               "title": "Explore art in history",
-              "description": "Create a series of illustrations that are inspired by a particular time period or movement in art history. Reflect on your experience and the results."
+              "description": "Create a series of illustrations that are inspired by a particular time period or movement in art history. Reflect on your experience and the results.",
+              "order": "5"
             }
           ],
           "previous": ["2D Design Fundamentals"],
@@ -370,22 +446,27 @@
         },
         {
           "title": "Art Exploration",
+          "order": "9",
           "competencies": [
             {
               "title": "Create art utilizing printmaking",
-              "description": "Create a series of prints using various printmaking techniques such as woodcut, linocut, etching, lithography, or screenprinting. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
+              "description": "Create a series of prints using various printmaking techniques such as woodcut, linocut, etching, lithography, or screenprinting. Note how the process differs from drawing and painting and how it affects your ability to communicate visually.",
+              "order": "1"
             },
             {
               "title": "Create art utilizing sculpture",
-              "description": "Create a series of prints using various sculpture techniques such as carving, modeling, casting, pottery, ceramics. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
+              "description": "Create a series of prints using various sculpture techniques such as carving, modeling, casting, pottery, ceramics. Note how the process differs from drawing and painting and how it affects your ability to communicate visually.",
+              "order": "2"
             },
             {
               "title": "Create art utilizing photography",
-              "description": "Create a series of prints using various photography techniques such as long exposure, time-lapse, macro. Note how the process differs from drawing and painting and how it affects your ability to communicate visually."
+              "description": "Create a series of prints using various photography techniques such as long exposure, time-lapse, macro. Note how the process differs from drawing and painting and how it affects your ability to communicate visually.",
+              "order": "3"
             },
             {
               "title": "Reflect on your experience utlizing a new medium and the results.",
-              "description": "Summarize your experience and the results of creating in new mediums by creating a video, paper, or presentation."
+              "description": "Summarize your experience and the results of creating in new mediums by creating a video, paper, or presentation.",
+              "order": "4"
             }
           ],
           "previous": [],
@@ -393,30 +474,37 @@
         },
         {
           "title": "Graphic Novels",
+          "order": "10",
           "competencies": [
             {
               "title": "Explore panel layouts and pacing",
-              "description": "Layouts and pacing are crucial to the storytelling in a graphic novel. Identify ways to control the readers experience of time and space in graphic novels."
+              "description": "Layouts and pacing are crucial to the storytelling in a graphic novel. Identify ways to control the readers experience of time and space in graphic novels.",
+              "order": "1"
             },
             {
               "title": "Control the viewer's experience of time",
-              "description": "Create a series of stories in art that convey seconds, then minutes, then hours, then days, then weeks or months. "
+              "description": "Create a series of stories in art that convey seconds, then minutes, then hours, then days, then weeks or months. ",
+              "order": "2"
             },
             {
               "title": "Identify basics of story writing",
-              "description": "Research story telling and how it applies to graphic novels. Write a short story and create a storyboard for it."
+              "description": "Research story telling and how it applies to graphic novels. Write a short story and create a storyboard for it.",
+              "order": "3"
             },
             {
               "title": "Design a character",
-              "description": "Research how to create a character that has depth, personality and visual appeal. Create a character to use in a short visual story."
+              "description": "Research how to create a character that has depth, personality and visual appeal. Create a character to use in a short visual story.",
+              "order": "4"
             },
             {
               "title": "Seek out feedback",
-              "description": "Have friends, peers, and professionals review and critique your work. Implement changes based on feedback."
+              "description": "Have friends, peers, and professionals review and critique your work. Implement changes based on feedback.",
+              "order": "5"
             },
             {
               "title": "Explore mediums and styles in Graphic Novels",
-              "description": "Identify the various forms that graphic novels take. Pick one that interests you and create a short visual story in that style. Consider your tools, line work, color work, texture, composition, and more."
+              "description": "Identify the various forms that graphic novels take. Pick one that interests you and create a short visual story in that style. Consider your tools, line work, color work, texture, composition, and more.",
+              "order": "6"
             }
           ],
           "previous": ["2D Design Fundamentals", "Drawing", "Digital Art", "Life Drawing", "Painting"],
@@ -431,58 +519,72 @@
       "contentAreas": [
         {
           "title": "Calculus",
+          "order": "1",
           "competencies": [
             {
               "title": "Graph Functions",
-              "description": "Graph functions including linear, quadratic, exponential, logarithmic, and trigonometric functions."
+              "description": "Graph functions including linear, quadratic, exponential, logarithmic, and trigonometric functions.",
+              "order": "1"
             },
             {
               "title": "Interpret graphs of functions and their transformations.",
-              "description": "Given a graph of a function, correctly identify the function and its transformations."
+              "description": "Given a graph of a function, correctly identify the function and its transformations.",
+              "order": "1"
             },
             {
               "title": "Evaluate limits algebraically and graphically",
-              "description": "Calculate limits of functions including rational functions, trigonometric functions, and piecewise functions. Explain the connection of limits and continuity."
+              "description": "Calculate limits of functions including rational functions, trigonometric functions, and piecewise functions. Explain the connection of limits and continuity.",
+              "order": "1"
             },
             {
               "title": "Compute derivatives using basic rules",
-              "description": "Differentiate functions using the sum rule, product rule, quotient rule, and chain rule. Apply these rules systematically to various types of functions."
+              "description": "Differentiate functions using the sum rule, product rule, quotient rule, and chain rule. Apply these rules systematically to various types of functions.",
+              "order": "1"
             },
             {
               "title": "Apply derivatives to solve real-world problems",
-              "description": "Use derivatives to analyze rates of change in real-world contexts such as motion, population growth, and economics. Solve optimization problems by finding critical points and classifying them using the first and second derivative tests."
+              "description": "Use derivatives to analyze rates of change in real-world contexts such as motion, population growth, and economics. Solve optimization problems by finding critical points and classifying them using the first and second derivative tests.",
+              "order": "1"
             },
             {
               "title": "Find areas under curves using integration",
-              "description": "Compute the area enclosed by curves by setting up definite integrals over appropriate intervals. Interpret the result geometrically as the area under the curve."
+              "description": "Compute the area enclosed by curves by setting up definite integrals over appropriate intervals. Interpret the result geometrically as the area under the curve.",
+              "order": "1"
             },
             {
               "title": "Calculate the average value of a function over an interval",
-              "description": "Determine the average value of a function over a closed interval by computing the definite integral of the function over that interval and dividing by the length of the interval."
+              "description": "Determine the average value of a function over a closed interval by computing the definite integral of the function over that interval and dividing by the length of the interval.",
+              "order": "1"
             },
             {
               "title": "Solve problems involving accumulation and motion using integration",
-              "description": "Apply integration to solve problems related to accumulation, such as finding total distance traveled or total amount accumulated over time. Use integration to analyze motion by computing displacement, velocity, and acceleration functions."
+              "description": "Apply integration to solve problems related to accumulation, such as finding total distance traveled or total amount accumulated over time. Use integration to analyze motion by computing displacement, velocity, and acceleration functions.",
+              "order": "1"
             },
             {
               "title": "Differentiate and integrate transcendental functions",
-              "description": "Apply differentiation techniques to find derivatives of trigonometric, exponential, and logarithmic functions. Integrate transcendental functions using appropriate techniques such as trigonometric substitution and integration by parts."
+              "description": "Apply differentiation techniques to find derivatives of trigonometric, exponential, and logarithmic functions. Integrate transcendental functions using appropriate techniques such as trigonometric substitution and integration by parts.",
+              "order": "1"
             },
             {
               "title": "Apply differentiation and integration techniques",
-              "description": "Utilize advanced techniques such as implicit differentiation, logarithmic differentiation, and trigonometric substitution to differentiate and integrate functions efficiently."
+              "description": "Utilize advanced techniques such as implicit differentiation, logarithmic differentiation, and trigonometric substitution to differentiate and integrate functions efficiently.",
+              "order": "1"
             },
             {
               "title": "Analyze convergence and divergence of sequences and series",
-              "description": "Determine convergence or divergence of sequences and series by applying various convergence tests such as the ratio test, root test, and comparison tests. Identify alternating series and demonstrate understanding by applying the alternating series test."
+              "description": "Determine convergence or divergence of sequences and series by applying various convergence tests such as the ratio test, root test, and comparison tests. Identify alternating series and demonstrate understanding by applying the alternating series test.",
+              "order": "1"
             },
             {
               "title": "Compute Taylor and Maclaurin series expansions",
-              "description": "Compute Taylor polynomials and Maclaurin series expansions for functions centered at a given point. Demonstrate proficiency in generating accurate series expansions to approximate functions."
+              "description": "Compute Taylor polynomials and Maclaurin series expansions for functions centered at a given point. Demonstrate proficiency in generating accurate series expansions to approximate functions.",
+              "order": "1"
             },
             {
               "title": "Apply Taylor and Maclaurin series expansions",
-              "description": "Apply Taylor and Maclaurin series expansions to approximate functions and estimate function values. Illustrate proficiency by accurately using series expansions in real-world or mathematical contexts."
+              "description": "Apply Taylor and Maclaurin series expansions to approximate functions and estimate function values. Illustrate proficiency by accurately using series expansions in real-world or mathematical contexts.",
+              "order": "1"
             }
           ]
         }
@@ -495,30 +597,37 @@
       "contentAreas": [
         {
           "title": "HTML",
+          "order": "1",
           "competencies": [
             {
               "title": "Build Pages with Semantic HTML",
-              "description": "Create valid HTML with elements that provide meaningful information about the document. Use tags like <html>, <head>, <article>, <body>, <main>, <footer>, etc."
+              "description": "Create valid HTML with elements that provide meaningful information about the document. Use tags like <html>, <head>, <article>, <body>, <main>, <footer>, etc.",
+              "order": "1"
             },
             {
               "title": "Organize Text in HTML",
-              "description": "Appropriately utilize <h1> through <h6> tags, <p> tags, as well as list tags."
+              "description": "Appropriately utilize <h1> through <h6> tags, <p> tags, as well as list tags.",
+              "order": "2"
             },
             {
               "title": "Create Hyperlinks to link to other pages",
-              "description": "Use the <a> anchor tag to create hyperlinks to other pages."
+              "description": "Use the <a> anchor tag to create hyperlinks to other pages.",
+              "order": "3"
             },
             {
               "title": "Include Images and other media in HTML",
-              "description": "Utilize the <img> and other tags such as <audio>, <video>, etc. to include media in your web pages."
+              "description": "Utilize the <img> and other tags such as <audio>, <video>, etc. to include media in your web pages.",
+              "order": "4"
             },
             {
               "title": "Create forms",
-              "description": "Build forms to collect user imput. You'll connect JS to these forms later."
+              "description": "Build forms to collect user imput. You'll connect JS to these forms later.",
+              "order": "5"
             },
             {
               "title": "Show data clearly",
-              "description": "Use tables to display data."
+              "description": "Use tables to display data.",
+              "order": "6"
             }
           ],
           "previous": [],
@@ -526,30 +635,37 @@
         },
         {
           "title": "CSS",
+          "order": "2",
           "competencies": [
             {
               "title": "Define core CSS concepts",
-              "description": "Describe the box model, specificity, inheritance, and the cascade. Explain how these concepts affect the styling of web pages."
+              "description": "Describe the box model, specificity, inheritance, and the cascade. Explain how these concepts affect the styling of web pages.",
+              "order": "1"
             },
             {
               "title": "Use CSS Selectors",
-              "description": "Select elements using a variety of CSS selectors, including element selectors, class selectors, ID selectors, attribute selectors, pseudo-classes, and pseudo-elements."
+              "description": "Select elements using a variety of CSS selectors, including element selectors, class selectors, ID selectors, attribute selectors, pseudo-classes, and pseudo-elements.",
+              "order": "2"
             },
             {
               "title": "Implement common layouts using CSS",
-              "description": "Find common layouts throughout the web and implment them using flexbox and grid. Ensure that spacing, alignment, and sizing are consistent and visually appealing."
+              "description": "Find common layouts throughout the web and implment them using flexbox and grid. Ensure that spacing, alignment, and sizing are consistent and visually appealing.",
+              "order": "3"
             },
             {
               "title": "Use CSS to create responsive pages",
-              "description": "Utilize CSS to create web pages that adjust based on the size of the viewport or device. Use media queries and use fluid measurements instead of pixels. Consider the use of flexible images and media, the viewport tag, and responsive typography."
+              "description": "Utilize CSS to create web pages that adjust based on the size of the viewport or device. Use media queries and use fluid measurements instead of pixels. Consider the use of flexible images and media, the viewport tag, and responsive typography.",
+              "order": "4"
             },
             {
               "title": "Use CSS Frameworks",
-              "description": "Build sites utilizing CSS frameworks like Bootstrap, Tailwind, or Materialize. Understand the benefits and drawbacks of using a CSS framework."
+              "description": "Build sites utilizing CSS frameworks like Bootstrap, Tailwind, or Materialize. Understand the benefits and drawbacks of using a CSS framework.",
+              "order": "5"
             },
             {
               "title": "Debug CSS issues",
-              "description": "Use tools such as the browser's developer tools to identify and fix CSS issues."
+              "description": "Use tools such as the browser's developer tools to identify and fix CSS issues.",
+              "order": "6"
             }
           ],
           "previous": ["HTML"],
@@ -557,86 +673,107 @@
         },
         {
           "title": "JavaScript",
+          "order": "3",
           "competencies": [
             {
               "title": "List and define the data types in JavaScript",
-              "description": "Clearly articulate which data types are reference and which are primitive. Explain the difference between null and undefined."
+              "description": "Clearly articulate which data types are reference and which are primitive. Explain the difference between null and undefined.",
+              "order": "1"
             },
             {
               "title": "Explain how to use Variables in JS",
-              "description": "Define the term 'variable' and explain how to declare and assign variables in JavaScript. Explain the difference between let, const, and var."
+              "description": "Define the term 'variable' and explain how to declare and assign variables in JavaScript. Explain the difference between let, const, and var.",
+              "order": "2"
             },
             {
               "title": "Define the term 'expression' and explain what truthy and falsey expressions are",
-              "description": ""
+              "description": "",
+              "order": "3"
             },
             {
               "title": "Use numbers, strings, arrays, and objects in JavaScript",
-              "description": "Define variables that are numbers, strings, arrays, and objects. Manipulate these variables using common methods and operators. Use dot and bracket notation to access object properties."
+              "description": "Define variables that are numbers, strings, arrays, and objects. Manipulate these variables using common methods and operators. Use dot and bracket notation to access object properties.",
+              "order": "4"
             },
             {
               "title": "Define and Invoke Functions",
-              "description": "Create reusable functions that take parameters and return values. Use function declarations, function expressions, and arrow functions. Understand the difference between function declarations and function expressions."
+              "description": "Create reusable functions that take parameters and return values. Use function declarations, function expressions, and arrow functions. Understand the difference between function declarations and function expressions.",
+              "order": "5"
             },
             {
               "title": "Use for loops to iterate over arrays",
-              "description": "Manipulate data using for loops. Write code that utilizes nested for loops."
+              "description": "Manipulate data using for loops. Write code that utilizes nested for loops.",
+              "order": "6"
             },
             {
               "title": "Manipulate Data with Arrays and Objects",
-              "description": "Use array methods like map, filter, reduce, and sort. Use object methods like Object.keys, Object.values, and Object.entries. It's helpful to explain use cases for each method."
+              "description": "Use array methods like map, filter, reduce, and sort. Use object methods like Object.keys, Object.values, and Object.entries. It's helpful to explain use cases for each method.",
+              "order": "7"
             },
             {
               "title": "Manipulate the DOM",
-              "description": "Interact with the Document Object Model (DOM) using JavaScript. Select elements, create new elements, modify elements, and remove elements. Add event listeners to elements to respond to user interactions. This is when you'll connect your HTML knowledge to JS."
+              "description": "Interact with the Document Object Model (DOM) using JavaScript. Select elements, create new elements, modify elements, and remove elements. Add event listeners to elements to respond to user interactions. This is when you'll connect your HTML knowledge to JS.",
+              "order": "8"
             },
             {
               "title": "Handle Events",
-              "description": "Handle events in JavaScript using event listeners. Explain event bubbling and event delegation. Use event objects to access information about the event."
+              "description": "Handle events in JavaScript using event listeners. Explain event bubbling and event delegation. Use event objects to access information about the event.",
+              "order": "9"
             },
             {
               "title": "Handle Errors",
-              "description": "Handle errors by using try/catch blocks. Use the console to log errors and debug code. Explain the difference between syntax errors and runtime errors."
+              "description": "Handle errors by using try/catch blocks. Use the console to log errors and debug code. Explain the difference between syntax errors and runtime errors.",
+              "order": "10"
             },
             {
               "title": "Debug JavaScript",
-              "description": "Use browser tools, debuggers in IDEs, and console.log to debug JavaScript code. Identify and fix common errors like typos, incorrect variable names, and missing parentheses."
+              "description": "Use browser tools, debuggers in IDEs, and console.log to debug JavaScript code. Identify and fix common errors like typos, incorrect variable names, and missing parentheses.",
+              "order": "11"
             },
             {
               "title": "Make network requests with Fetch and Axios",
-              "description": "Explain what network requests are and how they work. Use the Fetch API and Axios to make GET and POST requests to a server. Handle responses using promises and async/await."
+              "description": "Explain what network requests are and how they work. Use the Fetch API and Axios to make GET and POST requests to a server. Handle responses using promises and async/await.",
+              "order": "12"
             },
             {
               "title": "Describe Promises in JS",
-              "description": "Explain what promises are and how they work. Use promises to handle asynchronous code. Chain promises together and handle errors using catch."
+              "description": "Explain what promises are and how they work. Use promises to handle asynchronous code. Chain promises together and handle errors using catch.",
+              "order": "13"
             },
             {
               "title": "Use Closures",
-              "description": "Explain what a closure is and utilize them in your code"
+              "description": "Explain what a closure is and utilize them in your code",
+              "order": "14"
             },
             {
               "title": "Identify Scope in JS",
-              "description": "Explain how code works in the context of its scope. Identify global and local scope. Explain that the 'this' keyword is and how to use it."
+              "description": "Explain how code works in the context of its scope. Identify global and local scope. Explain that the 'this' keyword is and how to use it.",
+              "order": "15"
             },
             {
               "title": "Destructure Objects and Arrays",
-              "description": "Use the destructuring syntax to extract values from objects and arrays. Explain the benefits of using destructuring."
+              "description": "Use the destructuring syntax to extract values from objects and arrays. Explain the benefits of using destructuring.",
+              "order": "16"
             },
             {
               "title": "Share code between files using modules",
-              "description": "Utilize modules to share code between files. Explain the benefits of using modules and how to import and export modules."
+              "description": "Utilize modules to share code between files. Explain the benefits of using modules and how to import and export modules.",
+              "order": "17"
             },
             {
               "title": "Consider performance",
-              "description": "Describe the basics of Big O notation and how it relates to JavaScript. Explain how to optimize code for performance."
+              "description": "Describe the basics of Big O notation and how it relates to JavaScript. Explain how to optimize code for performance.",
+              "order": "18"
             },
             {
               "title": "Define higher order functions",
-              "description": "Explain what higher order functions are and how to use them. Use higher order functions like map, filter, and reduce to manipulate data."
+              "description": "Explain what higher order functions are and how to use them. Use higher order functions like map, filter, and reduce to manipulate data.",
+              "order": "19"
             },
             {
               "title": "Research Programming Paradigms",
-              "description": "Research and explain the difference between imperative and declarative programming. Explain the difference between procedural and object-oriented programming."
+              "description": "Research and explain the difference between imperative and declarative programming. Explain the difference between procedural and object-oriented programming.",
+              "order": "20"
             }
           ],
           "previous": [],
@@ -644,18 +781,22 @@
         },
         {
           "title": "TypeScript",
+          "order": "4",
           "competencies": [
             {
               "title": "Annotate types for variables, functions, and objects",
-              "description": "Define variables and objects with explicit types along with function parameters and return values. Use type annotations to describe the shape of objects."
+              "description": "Define variables and objects with explicit types along with function parameters and return values. Use type annotations to describe the shape of objects.",
+              "order": "1,"
             },
             {
               "title": "Utilize interfaces and types",
-              "description": "Create interfaces and types to define the shape of objects. Use interfaces to describe the structure of objects and types to define custom types."
+              "description": "Create interfaces and types to define the shape of objects. Use interfaces to describe the structure of objects and types to define custom types.",
+              "order": "2"
             },
             {
               "title": "Describe Generics",
-              "description": "Explain generics and how they can be used to create reusable components. Use generics to create flexible and reusable functions and classes."
+              "description": "Explain generics and how they can be used to create reusable components. Use generics to create flexible and reusable functions and classes.",
+              "order": "3"
             }
           ],
           "previous": ["JavaScript"],
@@ -663,10 +804,12 @@
         },
         {
           "title": "Front End Framework",
+          "order": "5",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ],
           "previous": ["JavaScript", "TypeScript"],
@@ -674,10 +817,12 @@
         },
         {
           "title": "Accessibility",
+          "order": "6",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ],
           "previous": ["HTML"],
@@ -685,10 +830,12 @@
         },
         {
           "title": "The Web",
+          "order": "7",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ],
           "previous": [],
@@ -696,10 +843,12 @@
         },
         {
           "title": "Professional Development",
+          "order": "8",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ],
           "previous": ["HTML", "CSS", "JavaScript", "TypeScript", "Front End Framework", "Accessibility", "The Web"],
@@ -713,10 +862,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -728,10 +879,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -743,10 +896,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -758,10 +913,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -773,10 +930,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -788,10 +947,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -803,10 +964,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -818,10 +981,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -833,25 +998,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Mixology Fundamentals",
-      "description": "Dive into the world of cocktails, learning about different spirits, mixers, and cocktail recipes to create delicious drinks for yourself and others.",
-      "contentAreas": [
-        {
-          "title": "Coming Soon!",
-          "competencies": [
-            {
-              "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -863,25 +1015,12 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "Birdwatching Fundamentals",
-      "description": "Embrace the wonders of birdwatching, learning how to identify common bird species, use binoculars, and keep a bird journal to document your sightings and observations in nature",
-      "contentAreas": [
-        {
-          "title": "Coming Soon!",
-          "competencies": [
-            {
-              "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
@@ -893,40 +1032,30 @@
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }
       ]
     },
-    {
-      "title": "Philosophy",
-      "description": "This pathway delves into the fundamental questions concerning existence, knowledge, ethics, and the nature of reality. Through rigorous inquiry and critical analysis, learners explore diverse philosophical traditions, from ancient Greek philosophy to contemporary thought. They engage with topics such as metaphysics, epistemology, ethics, logic, political philosophy, and aesthetics, examining philosophical texts, arguments, and theories to develop their analytical, critical thinking, and argumentation skills. Througout years of study, learners should emphasize research, writing, and oral communication, and forumulating and defedning their own philosophical viewpoints through essays, debates, and presentations",
-      "contentAreas": [
-        {
-          "title": "Coming Soon!",
-          "competencies": [
-            {
-              "title": "competencies coming soon",
-              "description": "coming soon"
-            }
-          ]
-        }
-      ]
-    },
+
     {
       "title": "SQL Fundamentals",
       "description": "Learn to manipulate data using SQL commands, including SELECT, INSERT, UPDATE, and DELETE, gaining proficiency in retrieving, filtering, and organizing data from relational databases.",
       "contentAreas": [
         {
           "title": "Coming Soon!",
+          "order": "1",
           "competencies": [
             {
               "title": "competencies coming soon",
-              "description": "coming soon"
+              "description": "coming soon",
+              "order": "1"
             }
           ]
         }

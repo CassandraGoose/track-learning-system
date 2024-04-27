@@ -20,8 +20,14 @@ export async function getUserPathways() {
         pathways: {
           include: {
             contentAreas: {
+              orderBy: {
+                order: 'asc',
+              },
               include: {
                 competencies: {
+                  orderBy: {
+                    order: 'asc',
+                  },
                   include: {
                     proofs: true,
                   },
@@ -56,8 +62,14 @@ export async function getSingleUserPathway(pathwayId: string) {
           },
           include: {
             contentAreas: {
+              orderBy: {
+                order: 'asc',
+              },
               include: {
                 competencies: {
+                  orderBy: {
+                    order: 'asc',
+                  },
                   include: {
                     proofs: true,
                   },
@@ -215,8 +227,14 @@ export async function getFilteredPathways(query: string, page: number) {
       },
       include: {
         contentAreas: {
+          orderBy: {
+            order: 'asc',
+          },
           include: {
             competencies: {
+              orderBy: {
+                order: 'asc',
+              },
               include: {
                 proofs: true,
               },
@@ -252,8 +270,14 @@ export async function getAllPathways() {
     return await prisma.pathway.findMany({
       include: {
         contentAreas: {
+          orderBy: {
+            order: 'asc',
+          },
           include: {
             competencies: {
+              orderBy: {
+                order: 'asc',
+              },
               include: {
                 proofs: true,
               },
@@ -275,8 +299,14 @@ export async function getSinglePathway(pathwayId: string) {
       },
       include: {
         contentAreas: {
+          orderBy: {
+            order: 'asc',
+          },
           include: {
             competencies: {
+              orderBy: {
+                order: 'asc',
+              },
               include: {
                 proofs: true,
               },

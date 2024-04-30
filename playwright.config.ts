@@ -15,7 +15,6 @@ loadEnvConfig(process.cwd());
 export default defineConfig({
   // path to the global setup files.
   globalSetup: require.resolve('./tests/global-setup'),
-  globalTeardown: require.resolve('./tests/global-teardown'),
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,

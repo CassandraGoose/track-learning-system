@@ -9,23 +9,7 @@ import { chromium, type FullConfig } from '@playwright/test';
 
 async function globalSetup(config: FullConfig) {
   
-  // hate this. not sure what else to do at this time as no programmitic options exist from prisma.
   execSync(`npx prisma db push --force-reset && npx prisma db seed`, { stdio: 'inherit' });
-
-  // when mocking is more reasonable in Next, then we will mock this, along with the prisma calls.
-  // const { storageState } = config.projects[0].use;
-  // const browser = await chromium.launch();
-  // const page = await browser.newPage();
-  // await page.goto('http://localhost:3000/login');
-  // await page.getByTestId("username").fill("IAmCass");
-  // await page.getByTestId("password").fill(process.env.TEST_USER_PW || '');
-  // await page.getByTestId("login").click();
-  // await page.waitForURL('http://localhost:3000/dashboard');
-  // await page.context().storageState({ path: storageState as string });
-  // await page.waitForURL('http://localhost:3000/dashboard');
-
-  // await browser.close();
-
 }
 
 export default globalSetup;

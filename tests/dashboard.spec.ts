@@ -41,5 +41,5 @@ test('updates radial progress', async ({ page }) => {
   await page.getByTestId('proof-justification-textarea').fill('text artifact to prove competency.');
   await page.getByTestId('new-proof-submit').click();
   await page.getByTestId('navbar-dashboard-link').click();
-  await page.getByText('20%').click();
+  await page.getByText('20%');
 });

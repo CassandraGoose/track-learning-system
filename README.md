@@ -41,7 +41,7 @@ This app allows users to track their learning and upload artifacts to prove thei
 ---
 
 ## Check It Out
-![Animated gif of website being used in mobile view](https://i.imgur.com/OsxZDl7.gif)
+![Animated gif of website being used in mobile view](https://i.imgur.com/EsAxJRW.gif)
 
 ---
 

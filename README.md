@@ -40,6 +40,11 @@ This app allows users to track their learning and upload artifacts to prove thei
 
 ---
 
+## Check It Out
+![Animated gif of website being used in mobile view](https://i.imgur.com/OsxZDl7.gif)
+
+---
+
 ## Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

@@ -43,17 +43,26 @@ async function main() {
       if (!createdContentArea) throw new Error('Content area not found');
 
       contentArea.competencies.forEach(async (competency) => {
-        await prisma.competency.create({
-          data: {
-            title: competency.title,
-            description: competency.description,
-            order: parseInt(competency.order),
-            contentArea: {
-              connect: {
-                id: createdContentArea?.id,
+        try {
+          await prisma.competency.create({
+            data: {
+              title: competency.title,
+              description: competency.description,
+              order: parseInt(competency.order),
+              contentArea: {
+                connect: {
+                  id: createdContentArea?.id,
+                },
               },
             },
-          },
+          });
+        } catch (e) {
+          throw new Error('Error creating competency' + competency.title);
+        }
+        const createdCompetency = await prisma.competency.findMany({
+          where: {
+            title: competency.title
+          }
         });
       });
     });

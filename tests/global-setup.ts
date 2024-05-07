@@ -9,7 +9,7 @@ import { chromium, type FullConfig } from '@playwright/test';
 
 async function globalSetup(config: FullConfig) {
   
-  execSync(`npx prisma db push --force-reset && npx prisma db seed`, { stdio: 'inherit' });
+  execSync(`APP_ENV=test npx prisma db push --force-reset && npx prisma db seed`, { stdio: 'inherit' });
 }
 
 export default globalSetup;

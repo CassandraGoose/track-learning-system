@@ -1,53 +1,48 @@
-// import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
-// test.beforeEach(async ({ page }) => {
-//   await page.goto('http://localhost:3000/dashboard/1');
-// });
 
-// test('renders competency progress', async ({ page }) => {
-//   await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
-// });
+test.beforeEach(async ({ page }) => {
+  page.context().clearCookies();
+  await page.goto('http://localhost:3000/login');
+  await page.getByTestId('username').click();
+  await page.getByTestId('username').fill('IAmCass');
+  await page.getByTestId('password').click();
+  await page.getByTestId('password').fill(process.env.TEST_USER_PW || '');
+  await page.getByTestId('login').click();
+  await page.goto('http://localhost:3000/dashboard/1');
+});
 
-// test('updates competency progress when proof is added', async ({ page }) => {
-//   await page.getByTestId('toggle-competency-details').click();
-//   await page.getByTestId('view-proofs').first().click();
-//   await page.getByTestId('proof-title-input').fill('My Proof');
-//   await page.getByTestId('proof-description-textarea').fill('My description');
-//   await page.getByTestId('proof-justification-textarea').fill('My justification');
-//   await page.getByTestId('new-proof-submit').click();
-//   await page.getByTestId('proof-table').waitFor({state: 'attached'});
-//   await page.goBack();
-//   await page.getByTestId('toggle-competency-details').click();
-//   await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
-//   await expect(page.getByTestId('completed-check').first()).toHaveText('✓');
 
-//   // remove proof to keep tests stand-alone
-//   await page.getByTestId('view-proofs').first().click();
-//   await page.getByTestId('delete-proof').first().click();
-// });
+test('renders competency progress', async ({ page }) => {
+  await page.locator('article').filter({ hasText: 'Use TrackLearn to use the' }).getByTestId('view-pathway').click();
+  await expect(page.getByTestId('competency-progress')).toHaveText('0 / 13 competencies met');
+});
 
-// test('updates competency progress when proof is removed', async ({ page }) => {
-//   // add proof to keep tests stand-alone
-//   await page.getByTestId('toggle-competency-details').click();
-//   await page.getByTestId('view-proofs').first().click();
-//   await page.getByTestId('proof-title-input').fill('My Proof');
-//   await page.getByTestId('proof-description-textarea').fill('My description');
-//   await page.getByTestId('proof-justification-textarea').fill('My justification');
-//   await page.getByTestId('new-proof-submit').click();
-//   await page.getByTestId('proof-table').waitFor({state: 'attached'});
-//   await page.goto('http://localhost:3000/dashboard/1');
-//   await page.getByTestId('toggle-competency-details').click();
-//   await expect(page.getByTestId('competency-progress')).toHaveText('1 / 1 competencies met');
-//   await expect(page.getByTestId('completed-check').first()).toHaveText('✓');
 
-//   await page.getByTestId('view-proofs').first().click();
-//   await expect(page.getByTestId('delete-proof').first()).toBeVisible();
-//   await page.getByTestId('delete-proof').first().click();
-//   // will use this in the next pr
-//   // await page.getByTestId('proof-table').waitFor({state: 'detached'});
-// });
+test('updates competency progress when proof is added and removed', async ({ page }) => {
+  await page.getByTestId('toggle-competency-details').nth(1).click();
+  await expect(page.getByRole('row', { name: 'Add proof of your learning' }).getByRole('cell').first()).toBeEmpty();
+  await page.getByRole('row', { name: 'Add proof of your learning' }).getByTestId('view-proofs').click();
+  await page.getByTestId('proof-title-input').click();
+  await page.getByTestId('proof-title-input').fill('test');
+  await page.getByTestId('proof-title-input').press('Tab');
+  await page.getByTestId('proof-description-textarea').fill('test');
+  await page.getByTestId('proof-description-textarea').press('Tab');
+  await page.getByTestId('proof-justification-textarea').fill('test');
+  await page.getByTestId('new-proof-submit').click();
+  await page.getByTestId('navbar-dashboard-link').click();
+  await page.locator('article').filter({ hasText: 'Use TrackLearn to use the' }).getByTestId('view-pathway').click();
+  await expect(page.getByTestId('competency-progress')).toContainText('1 / 13 competencies met');
+  await page.getByTestId('toggle-competency-details').nth(1).click();
+  await expect(page.getByRole('table')).toContainText('✓');
+  await page.getByRole('row', { name: '✓ Add proof of your learning' }).getByTestId('view-proofs').click();
+  await page.getByTestId('delete-proof').click();
 
-// test('shows the table for competencies in the content area', async ({ page }) => {
-//   await page.getByTestId('toggle-competency-details').click();
-//   await expect(page.getByRole('table')).toBeVisible();
-// });
+  await page.goto('http://localhost:3000/dashboard/1');
+  await expect(page.getByTestId('competency-progress')).toContainText('0 / 13 competencies met');
+  await page.getByTestId('toggle-competency-details').nth(1).click();
+  await expect(page.getByRole('row', { name: 'Add proof of your learning' }).getByRole('cell').first()).toBeVisible();
+  await page.getByRole('row', { name: 'Add proof of your learning' }).getByTestId('view-proofs').click();
+  await expect(page.getByRole('row', { name: 'Add proof of your learning' }).getByRole('cell').first()).toBeEmpty();
+});
+

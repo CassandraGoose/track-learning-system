@@ -8,8 +8,11 @@ import { chromium, type FullConfig } from '@playwright/test';
 // really, though, it seems like mocking a service worker would work? but next 13 isn't yet compatible for some reason, apparently. 
 
 async function globalSetup(config: FullConfig) {
-  
-  execSync(`APP_ENV=test npx prisma db push --force-reset && npx prisma db seed`, { stdio: 'inherit' });
+  let schemaSeedCommand = 'npx prisma db push --force-reset && npx prisma db seed';
+  if (!process.env.GITHUB_ACTIONS) {
+    schemaSeedCommand = 'source .env.test && ' + schemaSeedCommand;
+  }
+  execSync(schemaSeedCommand, { stdio: 'inherit' });
 }
 
 export default globalSetup;

@@ -15,13 +15,13 @@ async function main() {
 
   const createdPathways = await prisma.pathway.findMany();
 
-  createdPathways.forEach((pathway) => {
+  for (const pathway of createdPathways) {
     const contentAreas = pathwaysData.pathways.find(
       (p) => p.title === pathway.title,
     )?.contentAreas;
     if (!contentAreas) throw new Error('Content areas not found');
 
-    contentAreas.forEach(async (contentArea) => {
+    for (const contentArea of contentAreas) {
       await prisma.contentArea.create({
         data: {
           title: contentArea.title,
@@ -40,9 +40,9 @@ async function main() {
         },
       });
 
-      if (!createdContentArea) throw new Error('Content area not found');
+      if (!createdContentArea) throw new Error('Content area not found: ');
 
-      contentArea.competencies.forEach(async (competency) => {
+      for (const competency of contentArea.competencies) {
         try {
           await prisma.competency.create({
             data: {
@@ -57,19 +57,14 @@ async function main() {
             },
           });
         } catch (e) {
-          throw new Error('Error creating competency' + competency.title);
+          throw new Error('Error creating competency ' + competency.title + ': ' + e);
         }
-        const createdCompetency = await prisma.competency.findMany({
-          where: {
-            title: competency.title
-          }
-        });
-      });
-    });
-  });
+      }
+    }
+  }
+
 
   const pw = process.env.TEST_USER_PW || '';
-  
   const hashedPassword = await new Argon2id().hash(pw);
 
   await prisma.person.upsert({

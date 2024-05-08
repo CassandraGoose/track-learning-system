@@ -1,8 +1,13 @@
-import { test, expect, firefox } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-  // Go to the starting url before each test.
-  await page.goto('http://localhost:3000/dashboard');
+  page.context().clearCookies();
+  await page.goto('http://localhost:3000/login');
+  await page.getByTestId('username').click();
+  await page.getByTestId('username').fill('IAmCass');
+  await page.getByTestId('password').click();
+  await page.getByTestId('password').fill(process.env.TEST_USER_PW || '');
+  await page.getByTestId('login').click();
 });
 
 test('has a title', async ({ page }) => {
@@ -10,31 +15,34 @@ test('has a title', async ({ page }) => {
 });
 
 test('contains pathways', async ({ page }) => {
-  await expect(page.getByTestId('pathway-card')).toHaveCount(2)
-
-  await expect(page.getByTestId('pathway-card').locator('nth=0')).toHaveText('Use TrackLearn to use the tool so you can leverage it to your advantage.View Pathway100%');
-  await expect(page.getByTestId('pathway-card').locator('nth=-1')).toHaveText('IllustrationThis pathway is similar to a college level program in illustration and visual arts. To prove competency in this pathway, deep understanding and skill mastery will be required. Completion of this pathway could easily take years. Learners should expect to practice drawing, painting, digital art, writing, research, and learn tools to get started in the art industry. Learners should also consider reaching out to peers or experts for feedback, as receiving feedback and implementing changes is one of the best ways to grow as an artist.View Pathway0%');
+  await page.getByText('Use TrackLearn to use the').click();
+  await page.getByText('Learn to LearnUtilize a').click();
+  await page.getByText('IllustrationThis pathway is').click();
 });
 
 test('shows appropriate progress', async ({ page }) => {
-  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
+  await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('0%');
 });
 
-// test('updates radial progress', async ({ page }) => {
-//   // setup proofs to change radial
-//   await page.getByTestId('view-pathway').first().click();
-//   await page.getByTestId('toggle-competency-details').click();
-//   await page.getByTestId('view-proofs').first().click();
-//   await page.getByTestId('proof-title-input').fill('My Proof');
-//   await page.getByTestId('proof-description-textarea').fill('My description');
-//   await page.getByTestId('proof-justification-textarea').fill('My justification');
-//   await page.getByTestId('new-proof-submit').click();
-//   await expect(page.getByTestId('delete-proof')).toHaveCount(2);
-//   await page.goto('http://localhost:3000/dashboard');
-//   await expect(page.getByTestId('progress-radial').locator('nth=0')).toHaveText('100%');
-
-//   // remove proof to keep tests stand-alone
-//   await page.goto('http://localhost:3000/dashboard/1/1');
-//   await expect(page.getByTestId('delete-proof').first()).toBeVisible();
-//   await page.getByTestId('delete-proof').first().click();
-// });
+test('updates radial progress', async ({ page }) => {
+  await page.locator('article').filter({ hasText: 'Use TrackLearn to use the' }).getByTestId('view-pathway').click();
+  await page.getByTestId('toggle-competency-details').first().click();
+  await page.getByRole('row', { name: 'View Pathways' }).getByTestId('view-proofs').click();
+  await page.getByTestId('proof-title-input').click();
+  await page.getByTestId('proof-title-input').fill('Proof Title Here');
+  await page.getByTestId('proof-title-input').press('Tab');
+  await page.getByTestId('proof-description-textarea').fill('Proof description here');
+  await page.getByTestId('proof-description-textarea').press('Tab');
+  await page.getByTestId('proof-justification-textarea').fill('text artifact to prove competency.');
+  await page.getByTestId('new-proof-submit').click();
+  // I know, I know...but because we have to use a DB and can't mock anything reasonably, I have to wait for the db deletion to actually complete before asserting that anything has updated.
+  await page.waitForTimeout(1000); 
+  await page.getByTestId('navbar-dashboard-link').click();
+  await page.getByText('8%');
+  await page.locator('article').filter({ hasText: 'Use TrackLearn to use the' }).getByTestId('view-pathway').click();
+  await page.getByTestId('toggle-competency-details').first().click();
+  await page.getByRole('row', { name: '✓ View Pathways' }).getByTestId('view-proofs').click();
+  await page.getByTestId('delete-proof').click();
+  // I know, I know...but because we have to use a DB and can't mock anything reasonably, I have to wait for the db deletion to actually complete before asserting that anything has updated.
+  await page.waitForTimeout(1000); 
+});

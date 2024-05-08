@@ -1,0 +1,131 @@
+{
+  "data": {
+    "userPathwaysData": {
+      "id": "cljvusdou00003ntltwo9mhm5",
+      "hashedPassword": "$argon2id$v=19$m=19456,t=2,p=1$obTpEvGR1hYGmYn82Gl/ng$0blIFCt5gYlAnNPPgABavjZVUgqMDL92UJvf6f0BfwA",
+      "createdAt": "2024-04-25T20:54:48.564Z",
+      "username": "IAmCass",
+      "firstName": "Cass",
+      "lastName": "T",
+      "bio": "Hi, I'm Cassandra. I'm a JavaScript developer with a knack for weaving education and code together. I enjoy working throughout the stack and have a particular love for creating front end applications. I believe that coding is a craft and I aim to deliver thoughtful, empathetic, and elegant code. When I'm not crafting code, you can find me indulging my creative side as an artist, musician, and writer.",
+      "email": "tors2720@gmail.com",
+      "role": "USER",
+      "profileVisibility": true,
+      "pathways": [
+        {
+          "id": 1,
+          "createdAt": "2024-04-25T20:54:48.322Z",
+          "title": "Use Track",
+          "approved": true,
+          "description": "Learn to use the tool so you can leverage it to your advantage. Successfully using any tool requires some knowledge and skill. This pathway will help you learn how to navigate Track so that you can track and prove your learning successfully.",
+          "contentAreas": [
+            {
+              "id": 1,
+              "createdAt": "2024-04-25T20:54:48.538Z",
+              "title": "Using Track",
+              "pathwayId": 1,
+              "competencies": [
+                {
+                  "id": 27,
+                  "createdAt": "2024-04-25T20:54:49.297Z",
+                  "updatedAt": "2024-04-25T20:54:49.297Z",
+                  "title": "Add proof of your learning and competency",
+                  "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path.",
+                  "contentAreaId": 1,
+                  "proofs": []
+                },
+                {
+                  "id": 29,
+                  "createdAt": "2024-04-25T20:54:49.297Z",
+                  "updatedAt": "2024-04-25T20:54:49.297Z",
+                  "title": "Share your profile",
+                  "description": "Share your profile with others to showcase your learning journey and prove your knowledge and skills",
+                  "contentAreaId": 1,
+                  "proofs": []
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "createdAt": "2024-04-25T20:54:48.538Z",
+              "title": "Navigating Track",
+              "pathwayId": 1,
+              "competencies": [
+                {
+                  "id": 28,
+                  "createdAt": "2024-04-25T20:54:49.314Z",
+                  "updatedAt": "2024-04-25T20:54:49.314Z",
+                  "title": "View Pathways",
+                  "description": "Explain how to view the pathways you follow, see your competencies and completion status.",
+                  "contentAreaId": 7,
+                  "proofs": []
+                },
+                {
+                  "id": 31,
+                  "createdAt": "2024-04-25T20:54:49.314Z",
+                  "updatedAt": "2024-04-25T20:54:49.314Z",
+                  "title": "View your profile",
+                  "description": "Navigate to your profile to view your learning journey.",
+                  "contentAreaId": 7,
+                  "proofs": []
+                },
+                {
+                  "id": 32,
+                  "createdAt": "2024-04-25T20:54:49.314Z",
+                  "updatedAt": "2024-04-25T20:54:49.314Z",
+                  "title": "View your competencies and proofs",
+                  "description": "Navigate into a pathway to view required competencies and see the proofs you have added",
+                  "contentAreaId": 7,
+                  "proofs": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "firstCompetency": {
+      "id": 27,
+      "createdAt": "2024-04-25T20:54:49.297Z",
+      "updatedAt": "2024-04-25T20:54:49.297Z",
+      "title": "Add proof of your learning and competency",
+      "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path.",
+      "contentAreaId": 1,
+      "proofs": []
+    },
+    "createdProof": {
+      "id": 1,
+      "createdAt": "2024-04-26T21:48:49.644Z",
+      "updatedAt": "2024-04-26T21:48:49.644Z",
+      "justification": "a text explanation of the proof",
+      "title": "a serious proof title",
+      "description": "a proof description",
+      "personId": "cljvusdou00003ntltwo9mhm5",
+      "competencyId": 27
+    },
+    "firstCompetencyAfterCreatedProof": {
+      "id": 27,
+      "createdAt": "2024-04-25T20:54:49.297Z",
+      "updatedAt": "2024-04-25T20:54:49.297Z",
+      "title": "Add proof of your learning and competency",
+      "description": "Utilize the 'Proof' feature to view and add a new proof to each competency in a learning path.",
+      "contentAreaId": 1,
+      "proofs": [
+        {
+          "id": 1,
+          "createdAt": "2024-04-26T21:48:49.644Z",
+          "updatedAt": "2024-04-26T21:48:49.644Z",
+          "justification": "a text explanation of the proof",
+          "title": "a serious proof title",
+          "description": "a proof description",
+          "personId": "cljvusdou00003ntltwo9mhm5",
+          "competencyId": 27
+        }
+      ]
+    }
+    
+    
+    
+    
+  }
+}

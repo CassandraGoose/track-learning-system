@@ -35,12 +35,14 @@ test('updates radial progress', async ({ page }) => {
   await page.getByTestId('proof-description-textarea').press('Tab');
   await page.getByTestId('proof-justification-textarea').fill('text artifact to prove competency.');
   await page.getByTestId('new-proof-submit').click();
+  // I know, I know...but because we have to use a DB and can't mock anything reasonably, I have to wait for the db deletion to actually complete before asserting that anything has updated.
+  await page.waitForTimeout(1000); 
   await page.getByTestId('navbar-dashboard-link').click();
   await page.getByText('8%');
   await page.locator('article').filter({ hasText: 'Use TrackLearn to use the' }).getByTestId('view-pathway').click();
   await page.getByTestId('toggle-competency-details').first().click();
   await page.getByRole('row', { name: '✓ View Pathways' }).getByTestId('view-proofs').click();
   await page.getByTestId('delete-proof').click();
-    // I know, I know...but because we have to use a DB and can't mock anything reasonably, I have to wait for the db deletion to actually complete before asserting that anything has updated.
-    await page.waitForTimeout(1000); 
+  // I know, I know...but because we have to use a DB and can't mock anything reasonably, I have to wait for the db deletion to actually complete before asserting that anything has updated.
+  await page.waitForTimeout(1000); 
 });

@@ -20,11 +20,6 @@ test('has a description', async ({ page }) => {
 
 });
 
-test('shows completion percentage', async ({ page }) => {
-  await page.locator('article').filter({ hasText: 'IllustrationThis pathway is' }).getByTestId('view-pathway').click();
-
-});
-
 test('shows competency progress', async ({ page }) => {
   await page.locator('article').filter({ hasText: 'IllustrationThis pathway is' }).getByTestId('view-pathway').click();
   await page.locator('.text-4xl').first().click();

@@ -15,7 +15,6 @@ loadEnvConfig(process.cwd());
 export default defineConfig({
   // path to the global setup files.
   globalSetup: require.resolve('./tests/global-setup'),
-  globalTeardown: require.resolve('./tests/global-teardown'),
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -80,7 +79,7 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   /* Don't utilize the existing server, in case it's based on a different database */
   webServer: {
-    command: 'npm run dev',
+    command: process.env.GITHUB_ACTIONS ? 'npm run dev' : 'source .env.test && npm run dev',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: false,
   },

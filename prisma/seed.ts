@@ -15,16 +15,17 @@ async function main() {
 
   const createdPathways = await prisma.pathway.findMany();
 
-  createdPathways.forEach((pathway) => {
+  for (const pathway of createdPathways) {
     const contentAreas = pathwaysData.pathways.find(
       (p) => p.title === pathway.title,
     )?.contentAreas;
     if (!contentAreas) throw new Error('Content areas not found');
 
-    contentAreas.forEach(async (contentArea) => {
+    for (const contentArea of contentAreas) {
       await prisma.contentArea.create({
         data: {
           title: contentArea.title,
+          order: parseInt(contentArea.order),
           pathway: {
             connect: {
               id: pathway.id,
@@ -39,24 +40,31 @@ async function main() {
         },
       });
 
-      contentArea.competencies.forEach(async (competency) => {
-        await prisma.competency.create({
-          data: {
-            title: competency.title,
-            description: competency.description,
-            contentArea: {
-              connect: {
-                id: createdContentArea?.id,
+      if (!createdContentArea) throw new Error('Content area not found: ');
+
+      for (const competency of contentArea.competencies) {
+        try {
+          await prisma.competency.create({
+            data: {
+              title: competency.title,
+              description: competency.description,
+              order: parseInt(competency.order),
+              contentArea: {
+                connect: {
+                  id: createdContentArea?.id,
+                },
               },
             },
-          },
-        });
-      });
-    });
-  });
+          });
+        } catch (e) {
+          throw new Error('Error creating competency ' + competency.title + ': ' + e);
+        }
+      }
+    }
+  }
+
 
   const pw = process.env.TEST_USER_PW || '';
-  
   const hashedPassword = await new Argon2id().hash(pw);
 
   await prisma.person.upsert({

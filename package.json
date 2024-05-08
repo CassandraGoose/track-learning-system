@@ -8,9 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "seed": "tsx ./prisma/seed.ts",
-    "test": "",
-    "test:wk": "NODE_ENV=test npx playwright test --project='webkit' --workers=1 --max-failures=1",
-    "test:chr": "NODE_ENV=test npx playwright test --project='chromium' --workers=1 --max-failures=1"
+    "test": "npx playwright test --project='firefox' --workers=1"
   },
   "prisma": {
     "seed": "tsx ./prisma/seed.ts"

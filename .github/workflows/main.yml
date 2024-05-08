@@ -11,6 +11,7 @@ jobs:
       DATABASE_URL: ${{ secrets.DATABASE_URL}}
       TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
       TEST_USER_ID: ${{ secrets.TEST_USER_ID }}
+      TEST_USER_PW: ${{ secrets.TEST_USER_PW }}
     runs-on: ubuntu-latest
     environment: test
     steps:

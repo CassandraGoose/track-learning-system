@@ -32,6 +32,7 @@ test('shows appropriate content areas and competency details', async ({ page }) 
   await expect(page.locator('section')).toContainText('2D Design Fundamentals');
   await expect(page.locator('section')).toContainText('Drawing');
   await expect(page.locator('section')).toContainText('Painting');
+  await page.getByTestId('toggle-competency-details').first().click();
   await expect(page.getByRole('cell', { name: 'Completed' })).toBeVisible();
   await expect(page.getByRole('cell', { name: 'Competency' })).toBeVisible();
   await expect(page.getByRole('cell', { name: 'Description' })).toBeVisible();

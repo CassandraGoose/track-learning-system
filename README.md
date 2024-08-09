@@ -25,7 +25,7 @@
 
 (Under construction)
 
-This application is a personal project that is basically a glorified learning journal. I like to learn things and whil I value formal education, I recognize that many people do not have access to traditional learning. There are many barriers to learning, including money, time, and energy. 
+This application is a personal project that is basically a glorified learning journal. I like to learn things and while I value formal education, I recognize that many people do not have access to traditional learning. There are many barriers to learning, including money, time, and energy. 
 
 However, with modern technology, education is no longer locked behind an unfathomable paywall. YouTube, course sites, and educational sites now bring learning to more people than ever before. This technology has also helped so many more people learn _how to learn_, which results in even more learning. People are capable, critical thinkers and may be competent workers in fields in which they do not have degrees.
 
